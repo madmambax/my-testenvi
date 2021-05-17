@@ -1,0 +1,1 @@
+# jak_automatizovat_testy
