@@ -1,1 +1,1 @@
-# jak_automatizovat_testy
+# Kurz Jak automatizovat testy (verzovací systém)
