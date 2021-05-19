@@ -1,3 +1,11 @@
+"""
+
+Cvičení 01
+poznámka: Mezi trojté uvozovky se píší víceřádkové komentáře
+
+"""
+
+
 *** Settings ***
 Library	Collections
 Library	RequestsLibrary
