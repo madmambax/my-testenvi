@@ -24,7 +24,6 @@ Login overeno v KS
 Login overeni po akci
     [Documentation]  	Uspesne prihlaseni s navratovym kodem po akci
     ${data}=   Login_V2   novak       tajnenovak
-#    Dictionary Should Contain Key     ${data}      response
     Dictionary Should Contain Value     ${data}      200
 
 
