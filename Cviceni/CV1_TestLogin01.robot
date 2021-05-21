@@ -3,8 +3,21 @@
 Cvičení 01
 poznámka: Mezi trojté uvozovky se píší víceřádkové komentáře
 
+Tento příklad potřebuje robotframework-requests balíček
+instalace:
+pip install robotframework-requests
+
+Testovací Data - tento test používá následují testovací data - přihlašovací údaje
+Login novak
+Heslo tajnenovak
+Login admin
+Heslo tajneadmin
+adresa api je http://testovani.kitner.cz/login_app/userauth.php
+
 """
 #kratký komentář
+
+
 
 *** Settings ***
 Library	Collections
@@ -15,16 +28,20 @@ Library	RequestsLibrary
 ${url}		http://testovani.kitner.cz/
 
 
+
+
 *** Test Cases ***
 Login overeno v KS
     [Documentation]  	Uspesne prihlaseni s vnorenym navratovym kodem
     Login   novak       tajnenovak  200
 
-
 Login overeni po akci
     [Documentation]  	Uspesne prihlaseni s navratovym kodem po akci
     ${data}=   Login_V2   novak       tajnenovak
     Dictionary Should Contain Value     ${data}      200
+
+
+
 
 
 *** Keywords ***
@@ -51,10 +68,3 @@ Login_V2
     ${resp} =    Post Request    apilogin    login_app/userauth.php  data=${json_string}  headers=${header}
     Log	Responce: @{resp}
     [return]  ${resp.json()}
-    
-
-
-
-
-
- 
