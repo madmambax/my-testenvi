@@ -28,8 +28,6 @@ Library	RequestsLibrary
 ${url}		http://testovani.kitner.cz/
 
 
-
-
 *** Test Cases ***
 Login overeno v KS
     [Documentation]  	Uspesne prihlaseni s vnorenym navratovym kodem
