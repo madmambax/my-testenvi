@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Ukázka využití fuknce při programování
+# Ukázka využití funkce při programování
 
 # definujeme novou funkci pro sčítání
 def add(x,y):
