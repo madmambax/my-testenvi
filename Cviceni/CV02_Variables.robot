@@ -4,6 +4,7 @@
 
 *** Settings ***
 Documentation     Ukázka práce s promennými
+Library           OperatingSystem
 
 
 
@@ -14,6 +15,7 @@ ${NAME}      Daniel
 
 #2. způsob zápisu
 ${GREET2} =  Hello
+
 
 
 *** Test Cases ***
@@ -60,3 +62,7 @@ Test promné typu Environment
     Log to console  Path = %{PATH}
     Log to console  Computer name %{COMPUTERNAME}
     Log to console  Number of processors %{NUMBER_OF_PROCESSORS}
+
+
+
+*** Keywords ***
