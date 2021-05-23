@@ -29,15 +29,31 @@ ${url}		http://testovani.kitner.cz/
 
 
 *** Test Cases ***
-Login overeno v KS
+Login overeno v KS novak
     [Documentation]  	Uspesne prihlaseni s vnorenym navratovym kodem
     Login   novak       tajnenovak  200
+
+Login overeno v KS admin
+    [Documentation]  	Uspesne prihlaseni s vnorenym navratovym kodem
+    Login   admin       tajneadmin  200
+
+Login overeno v KS negativni novak
+    [Documentation]  	Neuspesne prihlaseni s vnorenym navratovym kodem
+    Login   novak       tajnenXovak  403
+
+Login overeno v KS negativni admin
+    [Documentation]  	Neuspesne prihlaseni s vnorenym navratovym kodem
+    Login   adminX      tajnenadmin  403
 
 Login overeni po akci
     [Documentation]  	Uspesne prihlaseni s navratovym kodem po akci
     ${data}=   Login_V2   novak       tajnenovak
     Dictionary Should Contain Value     ${data}      200
 
+Login overeni po akci
+    [Documentation]  	Uspesne prihlaseni s navratovym kodem po akci
+    ${data}=   Login_V2   admin       tajneadmin
+    Dictionary Should Contain Value     ${data}      200
 
 
 

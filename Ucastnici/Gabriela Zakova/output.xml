@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.2 (Python 3.9.5 on win32)" generated="20210523 20:10:21.130" rpa="false" schemaversion="2">
+<suite id="s1" name="CV1 TestLogin01" source="D:\testování\kurz2\jak_automatizovat_testy-main\Cviceni\CV1_TestLogin01.robot">
+<test id="s1-t1" name="Login overeno v KS novak">
+<kw name="Login">
+<arg>novak</arg>
+<arg>tajnenovak</arg>
+<arg>200</arg>
+<kw name="Catenate" library="BuiltIn">
+<var>${json_string}</var>
+<arg>{"username":"${username}","password":"${password}","useragent":"Chrome"}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20210523 20:10:22.280" level="INFO">${json_string} = {"username":"novak","password":"tajnenovak","useragent":"Chrome"}</msg>
+<status status="PASS" starttime="20210523 20:10:22.280" endtime="20210523 20:10:22.280"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{header}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210523 20:10:22.286" level="INFO">&amp;{header} = { Content-Type=application/json }</msg>
+<status status="PASS" starttime="20210523 20:10:22.280" endtime="20210523 20:10:22.286"/>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>apilogin</arg>
+<arg>${url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20210523 20:10:22.286" level="INFO">Creating Session using : alias=apilogin, url=http://testovani.kitner.cz/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20210523 20:10:22.286" endtime="20210523 20:10:22.286"/>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<var>${resp}</var>
+<arg>apilogin</arg>
+<arg>login_app/userauth.php</arg>
+<arg>data=${json_string}</arg>
+<arg>headers=${header}</arg>
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<msg timestamp="20210523 20:10:22.286" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20210523 20:10:22.603" level="INFO">POST Request : url=http://testovani.kitner.cz/login_app/userauth.php 
+ path_url=/login_app/userauth.php 
+ headers={'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '65'} 
+ body=b'{"username":"novak","password":"tajnenovak","useragent":"Chrome"}' 
+ </msg>
+<msg timestamp="20210523 20:10:22.603" level="INFO">POST Response : url=http://testovani.kitner.cz/login_app/userauth.php 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.14.2', 'Date': 'Sun, 23 May 2021 18:10:25 GMT', 'Content-Type': 'application/json;charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'PHP/7.3.27-1~deb10u1', 'Expires': 'Thu, 19 Nov 1981 08:52:00 GMT', 'Cache-Control': 'no-store, no-cache, must-revalidate', 'Pragma': 'no-cache', 'Set-Cookie': 'PHPSESSID=d88cf88f89f3a023c38e3f6effe065d2; path=/'} 
+ body={"response":"200","reason":"correct","agent":{"browser":"Chrome","version":""}} 
+ </msg>
+<msg timestamp="20210523 20:10:22.603" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210523 20:10:22.286" endtime="20210523 20:10:22.618"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Responce: @{resp}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210523 20:10:22.618" level="INFO">Responce: [b'{"response":"200","reason":"correct","agent":{"browser":"Chrome","version":""}}']</msg>
+<status status="PASS" starttime="20210523 20:10:22.618" endtime="20210523 20:10:22.618"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${resp.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20210523 20:10:22.618" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20210523 20:10:22.618" endtime="20210523 20:10:22.618"/>
+</kw>
+<kw name="Dictionary Should Contain Key" library="Collections">
+<arg>${resp.json()}</arg>
+<arg>response</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" starttime="20210523 20:10:22.618" endtime="20210523 20:10:22.618"/>
+</kw>
+<kw name="Dictionary Should Contain Value" library="Collections">
+<arg>${resp.json()}</arg>
+<arg>${responce_code}</arg>
+<doc>Fails if ``value`` is not found from ``dictionary``.</doc>
+<status status="PASS" starttime="20210523 20:10:22.618" endtime="20210523 20:10:22.618"/>
+</kw>
+<status status="PASS" starttime="20210523 20:10:22.264" endtime="20210523 20:10:22.618"/>
+</kw>
+<doc>Uspesne prihlaseni s vnorenym navratovym kodem</doc>
+<status status="PASS" starttime="20210523 20:10:22.264" endtime="20210523 20:10:22.618"/>
+</test>
+<test id="s1-t2" name="Login overeno v KS admin">
+<kw name="Login">
+<arg>admin</arg>
+<arg>tajneadmin</arg>
+<arg>200</arg>
+<kw name="Catenate" library="BuiltIn">
+<var>${json_string}</var>
+<arg>{"username":"${username}","password":"${password}","useragent":"Chrome"}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20210523 20:10:22.634" level="INFO">${json_string} = {"username":"admin","password":"tajneadmin","useragent":"Chrome"}</msg>
+<status status="PASS" starttime="20210523 20:10:22.634" endtime="20210523 20:10:22.634"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{header}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210523 20:10:22.634" level="INFO">&amp;{header} = { Content-Type=application/json }</msg>
+<status status="PASS" starttime="20210523 20:10:22.634" endtime="20210523 20:10:22.634"/>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>apilogin</arg>
+<arg>${url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20210523 20:10:22.634" level="INFO">Creating Session using : alias=apilogin, url=http://testovani.kitner.cz/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20210523 20:10:22.634" endtime="20210523 20:10:22.634"/>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<var>${resp}</var>
+<arg>apilogin</arg>
+<arg>login_app/userauth.php</arg>
+<arg>data=${json_string}</arg>
+<arg>headers=${header}</arg>
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<msg timestamp="20210523 20:10:22.634" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20210523 20:10:22.703" level="INFO">POST Request : url=http://testovani.kitner.cz/login_app/userauth.php 
+ path_url=/login_app/userauth.php 
+ headers={'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '65'} 
+ body=b'{"username":"admin","password":"tajneadmin","useragent":"Chrome"}' 
+ </msg>
+<msg timestamp="20210523 20:10:22.703" level="INFO">POST Response : url=http://testovani.kitner.cz/login_app/userauth.php 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.14.2', 'Date': 'Sun, 23 May 2021 18:10:25 GMT', 'Content-Type': 'application/json;charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'PHP/7.3.27-1~deb10u1', 'Expires': 'Thu, 19 Nov 1981 08:52:00 GMT', 'Cache-Control': 'no-store, no-cache, must-revalidate', 'Pragma': 'no-cache', 'Set-Cookie': 'PHPSESSID=bb9b87f17bf13f371023a8cb8ed105c6; path=/'} 
+ body={"response":"200","reason":"correct","agent":{"browser":"Chrome","version":""}} 
+ </msg>
+<msg timestamp="20210523 20:10:22.703" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210523 20:10:22.634" endtime="20210523 20:10:22.703"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Responce: @{resp}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210523 20:10:22.703" level="INFO">Responce: [b'{"response":"200","reason":"correct","agent":{"browser":"Chrome","version":""}}']</msg>
+<status status="PASS" starttime="20210523 20:10:22.703" endtime="20210523 20:10:22.719"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${resp.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20210523 20:10:22.719" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20210523 20:10:22.719" endtime="20210523 20:10:22.719"/>
+</kw>
+<kw name="Dictionary Should Contain Key" library="Collections">
+<arg>${resp.json()}</arg>
+<arg>response</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" starttime="20210523 20:10:22.719" endtime="20210523 20:10:22.719"/>
+</kw>
+<kw name="Dictionary Should Contain Value" library="Collections">
+<arg>${resp.json()}</arg>
+<arg>${responce_code}</arg>
+<doc>Fails if ``value`` is not found from ``dictionary``.</doc>
+<status status="PASS" starttime="20210523 20:10:22.719" endtime="20210523 20:10:22.719"/>
+</kw>
+<status status="PASS" starttime="20210523 20:10:22.618" endtime="20210523 20:10:22.719"/>
+</kw>
+<doc>Uspesne prihlaseni s vnorenym navratovym kodem</doc>
+<status status="PASS" starttime="20210523 20:10:22.618" endtime="20210523 20:10:22.719"/>
+</test>
+<test id="s1-t3" name="Login overeno v KS negativni novak">
+<kw name="Login">
+<arg>novak</arg>
+<arg>tajnenXovak</arg>
+<arg>403</arg>
+<kw name="Catenate" library="BuiltIn">
+<var>${json_string}</var>
+<arg>{"username":"${username}","password":"${password}","useragent":"Chrome"}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20210523 20:10:22.719" level="INFO">${json_string} = {"username":"novak","password":"tajnenXovak","useragent":"Chrome"}</msg>
+<status status="PASS" starttime="20210523 20:10:22.719" endtime="20210523 20:10:22.719"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{header}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210523 20:10:22.734" level="INFO">&amp;{header} = { Content-Type=application/json }</msg>
+<status status="PASS" starttime="20210523 20:10:22.734" endtime="20210523 20:10:22.734"/>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>apilogin</arg>
+<arg>${url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20210523 20:10:22.734" level="INFO">Creating Session using : alias=apilogin, url=http://testovani.kitner.cz/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20210523 20:10:22.734" endtime="20210523 20:10:22.734"/>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<var>${resp}</var>
+<arg>apilogin</arg>
+<arg>login_app/userauth.php</arg>
+<arg>data=${json_string}</arg>
+<arg>headers=${header}</arg>
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<msg timestamp="20210523 20:10:22.734" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20210523 20:10:22.819" level="INFO">POST Request : url=http://testovani.kitner.cz/login_app/userauth.php 
+ path_url=/login_app/userauth.php 
+ headers={'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '66'} 
+ body=b'{"username":"novak","password":"tajnenXovak","useragent":"Chrome"}' 
+ </msg>
+<msg timestamp="20210523 20:10:22.819" level="INFO">POST Response : url=http://testovani.kitner.cz/login_app/userauth.php 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.14.2', 'Date': 'Sun, 23 May 2021 18:10:25 GMT', 'Content-Type': 'application/json;charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'PHP/7.3.27-1~deb10u1', 'Expires': 'Thu, 19 Nov 1981 08:52:00 GMT', 'Cache-Control': 'no-store, no-cache, must-revalidate', 'Pragma': 'no-cache', 'Set-Cookie': 'PHPSESSID=9e44b5365a2c99bfdf627cd4e074f7d1; path=/'} 
+ body={"response":"403","reason":"spatne heslo","agent":{"browser":"Chrome","version":""}} 
+ </msg>
+<msg timestamp="20210523 20:10:22.819" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210523 20:10:22.734" endtime="20210523 20:10:22.819"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Responce: @{resp}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210523 20:10:22.819" level="INFO">Responce: [b'{"response":"403","reason":"spatne heslo","agent":{"browser":"Chrome","version":""}}']</msg>
+<status status="PASS" starttime="20210523 20:10:22.819" endtime="20210523 20:10:22.819"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${resp.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20210523 20:10:22.819" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20210523 20:10:22.819" endtime="20210523 20:10:22.819"/>
+</kw>
+<kw name="Dictionary Should Contain Key" library="Collections">
+<arg>${resp.json()}</arg>
+<arg>response</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" starttime="20210523 20:10:22.819" endtime="20210523 20:10:22.819"/>
+</kw>
+<kw name="Dictionary Should Contain Value" library="Collections">
+<arg>${resp.json()}</arg>
+<arg>${responce_code}</arg>
+<doc>Fails if ``value`` is not found from ``dictionary``.</doc>
+<status status="PASS" starttime="20210523 20:10:22.819" endtime="20210523 20:10:22.835"/>
+</kw>
+<status status="PASS" starttime="20210523 20:10:22.719" endtime="20210523 20:10:22.835"/>
+</kw>
+<doc>Neuspesne prihlaseni s vnorenym navratovym kodem</doc>
+<status status="PASS" starttime="20210523 20:10:22.719" endtime="20210523 20:10:22.835"/>
+</test>
+<test id="s1-t4" name="Login overeno v KS negativni admin">
+<kw name="Login">
+<arg>adminX</arg>
+<arg>tajnenadmin</arg>
+<arg>403</arg>
+<kw name="Catenate" library="BuiltIn">
+<var>${json_string}</var>
+<arg>{"username":"${username}","password":"${password}","useragent":"Chrome"}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20210523 20:10:22.835" level="INFO">${json_string} = {"username":"adminX","password":"tajnenadmin","useragent":"Chrome"}</msg>
+<status status="PASS" starttime="20210523 20:10:22.835" endtime="20210523 20:10:22.835"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{header}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210523 20:10:22.835" level="INFO">&amp;{header} = { Content-Type=application/json }</msg>
+<status status="PASS" starttime="20210523 20:10:22.835" endtime="20210523 20:10:22.835"/>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>apilogin</arg>
+<arg>${url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20210523 20:10:22.835" level="INFO">Creating Session using : alias=apilogin, url=http://testovani.kitner.cz/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20210523 20:10:22.835" endtime="20210523 20:10:22.835"/>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<var>${resp}</var>
+<arg>apilogin</arg>
+<arg>login_app/userauth.php</arg>
+<arg>data=${json_string}</arg>
+<arg>headers=${header}</arg>
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<msg timestamp="20210523 20:10:22.850" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20210523 20:10:22.919" level="INFO">POST Request : url=http://testovani.kitner.cz/login_app/userauth.php 
+ path_url=/login_app/userauth.php 
+ headers={'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '67'} 
+ body=b'{"username":"adminX","password":"tajnenadmin","useragent":"Chrome"}' 
+ </msg>
+<msg timestamp="20210523 20:10:22.919" level="INFO">POST Response : url=http://testovani.kitner.cz/login_app/userauth.php 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.14.2', 'Date': 'Sun, 23 May 2021 18:10:25 GMT', 'Content-Type': 'application/json;charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'PHP/7.3.27-1~deb10u1', 'Expires': 'Thu, 19 Nov 1981 08:52:00 GMT', 'Cache-Control': 'no-store, no-cache, must-revalidate', 'Pragma': 'no-cache', 'Set-Cookie': 'PHPSESSID=c17c408b8eb3f5864d42318c4154c6ea; path=/'} 
+ body={"response":"403","reason":"neexistujici uzivatel","agent":{"browser":"Chrome","version":""}} 
+ </msg>
+<msg timestamp="20210523 20:10:22.919" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210523 20:10:22.835" endtime="20210523 20:10:22.935"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Responce: @{resp}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210523 20:10:22.935" level="INFO">Responce: [b'{"response":"403","reason":"neexistujici uzivatel","agent":{"browser":"Chrome","version":""}}']</msg>
+<status status="PASS" starttime="20210523 20:10:22.935" endtime="20210523 20:10:22.935"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${resp.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20210523 20:10:22.935" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20210523 20:10:22.935" endtime="20210523 20:10:22.935"/>
+</kw>
+<kw name="Dictionary Should Contain Key" library="Collections">
+<arg>${resp.json()}</arg>
+<arg>response</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" starttime="20210523 20:10:22.935" endtime="20210523 20:10:22.935"/>
+</kw>
+<kw name="Dictionary Should Contain Value" library="Collections">
+<arg>${resp.json()}</arg>
+<arg>${responce_code}</arg>
+<doc>Fails if ``value`` is not found from ``dictionary``.</doc>
+<status status="PASS" starttime="20210523 20:10:22.935" endtime="20210523 20:10:22.935"/>
+</kw>
+<status status="PASS" starttime="20210523 20:10:22.835" endtime="20210523 20:10:22.935"/>
+</kw>
+<doc>Neuspesne prihlaseni s vnorenym navratovym kodem</doc>
+<status status="PASS" starttime="20210523 20:10:22.835" endtime="20210523 20:10:22.935"/>
+</test>
+<test id="s1-t5" name="Login overeni po akci">
+<kw name="Login_V2">
+<var>${data}</var>
+<arg>novak</arg>
+<arg>tajnenovak</arg>
+<kw name="Catenate" library="BuiltIn">
+<var>${json_string}</var>
+<arg>{"username":"${username}","password":"${password}","useragent":"Chrome"}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20210523 20:10:22.951" level="INFO">${json_string} = {"username":"novak","password":"tajnenovak","useragent":"Chrome"}</msg>
+<status status="PASS" starttime="20210523 20:10:22.935" endtime="20210523 20:10:22.951"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{header}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210523 20:10:22.951" level="INFO">&amp;{header} = { Content-Type=application/json }</msg>
+<status status="PASS" starttime="20210523 20:10:22.951" endtime="20210523 20:10:22.951"/>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>apilogin</arg>
+<arg>${url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20210523 20:10:22.951" level="INFO">Creating Session using : alias=apilogin, url=http://testovani.kitner.cz/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20210523 20:10:22.951" endtime="20210523 20:10:22.951"/>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<var>${resp}</var>
+<arg>apilogin</arg>
+<arg>login_app/userauth.php</arg>
+<arg>data=${json_string}</arg>
+<arg>headers=${header}</arg>
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<msg timestamp="20210523 20:10:22.951" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20210523 20:10:23.035" level="INFO">POST Request : url=http://testovani.kitner.cz/login_app/userauth.php 
+ path_url=/login_app/userauth.php 
+ headers={'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '65'} 
+ body=b'{"username":"novak","password":"tajnenovak","useragent":"Chrome"}' 
+ </msg>
+<msg timestamp="20210523 20:10:23.035" level="INFO">POST Response : url=http://testovani.kitner.cz/login_app/userauth.php 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.14.2', 'Date': 'Sun, 23 May 2021 18:10:25 GMT', 'Content-Type': 'application/json;charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'PHP/7.3.27-1~deb10u1', 'Expires': 'Thu, 19 Nov 1981 08:52:00 GMT', 'Cache-Control': 'no-store, no-cache, must-revalidate', 'Pragma': 'no-cache', 'Set-Cookie': 'PHPSESSID=53a3167370fe1db1204a6bc491957c50; path=/'} 
+ body={"response":"200","reason":"correct","agent":{"browser":"Chrome","version":""}} 
+ </msg>
+<msg timestamp="20210523 20:10:23.035" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210523 20:10:22.951" endtime="20210523 20:10:23.035"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Responce: @{resp}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210523 20:10:23.035" level="INFO">Responce: [b'{"response":"200","reason":"correct","agent":{"browser":"Chrome","version":""}}']</msg>
+<status status="PASS" starttime="20210523 20:10:23.035" endtime="20210523 20:10:23.035"/>
+</kw>
+<msg timestamp="20210523 20:10:23.035" level="INFO">${data} = {'response': '200', 'reason': 'correct', 'agent': {'browser': 'Chrome', 'version': ''}}</msg>
+<status status="PASS" starttime="20210523 20:10:22.935" endtime="20210523 20:10:23.035"/>
+</kw>
+<kw name="Dictionary Should Contain Value" library="Collections">
+<arg>${data}</arg>
+<arg>200</arg>
+<doc>Fails if ``value`` is not found from ``dictionary``.</doc>
+<status status="PASS" starttime="20210523 20:10:23.035" endtime="20210523 20:10:23.035"/>
+</kw>
+<doc>Uspesne prihlaseni s navratovym kodem po akci</doc>
+<status status="PASS" starttime="20210523 20:10:22.935" endtime="20210523 20:10:23.035"/>
+</test>
+<test id="s1-t6" name="Login overeni po akci">
+<kw name="Login_V2">
+<var>${data}</var>
+<arg>admin</arg>
+<arg>tajneadmin</arg>
+<kw name="Catenate" library="BuiltIn">
+<var>${json_string}</var>
+<arg>{"username":"${username}","password":"${password}","useragent":"Chrome"}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20210523 20:10:23.051" level="INFO">${json_string} = {"username":"admin","password":"tajneadmin","useragent":"Chrome"}</msg>
+<status status="PASS" starttime="20210523 20:10:23.051" endtime="20210523 20:10:23.051"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{header}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210523 20:10:23.051" level="INFO">&amp;{header} = { Content-Type=application/json }</msg>
+<status status="PASS" starttime="20210523 20:10:23.051" endtime="20210523 20:10:23.051"/>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>apilogin</arg>
+<arg>${url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20210523 20:10:23.051" level="INFO">Creating Session using : alias=apilogin, url=http://testovani.kitner.cz/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20210523 20:10:23.051" endtime="20210523 20:10:23.051"/>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<var>${resp}</var>
+<arg>apilogin</arg>
+<arg>login_app/userauth.php</arg>
+<arg>data=${json_string}</arg>
+<arg>headers=${header}</arg>
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<msg timestamp="20210523 20:10:23.051" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20210523 20:10:23.132" level="INFO">POST Request : url=http://testovani.kitner.cz/login_app/userauth.php 
+ path_url=/login_app/userauth.php 
+ headers={'User-Agent': 'python-requests/2.25.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '65'} 
+ body=b'{"username":"admin","password":"tajneadmin","useragent":"Chrome"}' 
+ </msg>
+<msg timestamp="20210523 20:10:23.132" level="INFO">POST Response : url=http://testovani.kitner.cz/login_app/userauth.php 
+ status=200, reason=OK 
+ headers={'Server': 'nginx/1.14.2', 'Date': 'Sun, 23 May 2021 18:10:25 GMT', 'Content-Type': 'application/json;charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'PHP/7.3.27-1~deb10u1', 'Expires': 'Thu, 19 Nov 1981 08:52:00 GMT', 'Cache-Control': 'no-store, no-cache, must-revalidate', 'Pragma': 'no-cache', 'Set-Cookie': 'PHPSESSID=5c43a9da7966c5749b77878989f94648; path=/'} 
+ body={"response":"200","reason":"correct","agent":{"browser":"Chrome","version":""}} 
+ </msg>
+<msg timestamp="20210523 20:10:23.132" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20210523 20:10:23.051" endtime="20210523 20:10:23.132"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Responce: @{resp}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210523 20:10:23.132" level="INFO">Responce: [b'{"response":"200","reason":"correct","agent":{"browser":"Chrome","version":""}}']</msg>
+<status status="PASS" starttime="20210523 20:10:23.132" endtime="20210523 20:10:23.132"/>
+</kw>
+<msg timestamp="20210523 20:10:23.148" level="INFO">${data} = {'response': '200', 'reason': 'correct', 'agent': {'browser': 'Chrome', 'version': ''}}</msg>
+<status status="PASS" starttime="20210523 20:10:23.051" endtime="20210523 20:10:23.148"/>
+</kw>
+<kw name="Dictionary Should Contain Value" library="Collections">
+<arg>${data}</arg>
+<arg>200</arg>
+<doc>Fails if ``value`` is not found from ``dictionary``.</doc>
+<status status="PASS" starttime="20210523 20:10:23.148" endtime="20210523 20:10:23.148"/>
+</kw>
+<doc>Uspesne prihlaseni s navratovym kodem po akci</doc>
+<status status="PASS" starttime="20210523 20:10:23.051" endtime="20210523 20:10:23.148"/>
+</test>
+<status status="PASS" starttime="20210523 20:10:21.146" endtime="20210523 20:10:23.148"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="CV1 TestLogin01">CV1 TestLogin01</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210523 20:10:22.286" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20210523 20:10:22.634" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20210523 20:10:22.734" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20210523 20:10:22.850" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20210523 20:10:22.951" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20210523 20:10:23.035" level="WARN">Multiple test cases with name 'Login overeni po akci' executed in test suite 'CV1 TestLogin01'.</msg>
+<msg timestamp="20210523 20:10:23.051" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+</errors>
+</robot>
