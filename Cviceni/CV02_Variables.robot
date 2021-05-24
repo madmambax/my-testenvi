@@ -5,6 +5,7 @@
 *** Settings ***
 Documentation     Ukázka práce s promennými
 Library           OperatingSystem
+Library	          Collections
 
 
 
@@ -54,11 +55,9 @@ Ukázka práce s proměnnu typu List
     ${list3} =      Evaluate    [['a', 'b', 'c'], {'key': ['x', 'y']}]
     Log Many        @{list3}[0]         # Logs 'a', 'b' and 'c'.
     Log Many        @{list3}[1][key]    # Logs 'x' and 'y'.
-    # hodí se na ???
+    # hodí se např. na ukládání údajů z webu (uložení seznamu prvků)
 
-    #Příklad: ?
-
-
+    #Příklad: Načtení souborů z adresáře
 
 
 Ukázka práce s proměnnu typu Dictionary
@@ -68,7 +67,7 @@ Ukázka práce s proměnnu typu Dictionary
     # hodí se na ředávání parametrů klíčovým slovům
     # configuraci
 
-    #Příklad: TestLogin a KS Login - JSON se ukládo do dictionary
+    #Příklad: TestLogin a KS Login - JSON se ukládá do dictionary
 
 
 Ukázka práce s proměnnu typu Environment
@@ -79,8 +78,20 @@ Ukázka práce s proměnnu typu Environment
     Log to console  Number of processors %{NUMBER_OF_PROCESSORS}
     #hodí se na parametrizaci testů z OS
 
-    #Příklad: Výpis síťových karet podle OS (ipconfig vs ifconfig)
 
+#Příklad: Načtení souborů z adresáře a uložení do seznamu (List)
+Test načtení souborů z adresáře
+    @{files} =	List Files In Directory  /Test 	*.log
+    Log Many  @{files}
+    List Should Contain Value   ${files}    procesy.log
+
+
+#Příklad:   Výpis síťových karet podle OS (ipconfig vs ifconfig)
+#           nastavené proměnné
+#           výstup do konzole
+#           výstup do logu
+#           využití promné prostředí
+#           porovnání proměnných
 Test sítě nezávislý na OS
     Log to console  OS = '%{OS}'
     # porovnání řetězců musí být v apostrofech '%{OS}'
@@ -90,5 +101,6 @@ Test sítě nezávislý na OS
     ${output} =     Run     ${ifconfig_cmd}
     #zapíše výstup příkazu do logu
     Log             ${output}
+
 
 *** Keywords ***
