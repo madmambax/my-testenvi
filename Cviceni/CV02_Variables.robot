@@ -68,7 +68,7 @@ Ukázka práce s proměnnu typu Dictionary
     # hodí se na ředávání parametrů klíčovým slovům
     # configuraci
 
-    #Příklad: ?
+    #Příklad: TestLogin a KS Login - JSON se ukládo do dictionary
 
 
 Ukázka práce s proměnnu typu Environment
@@ -77,10 +77,18 @@ Ukázka práce s proměnnu typu Environment
     Log to console  Path = %{PATH}
     Log to console  Computer name %{COMPUTERNAME}
     Log to console  Number of processors %{NUMBER_OF_PROCESSORS}
-    #hodí se na paramerizaci testů z OS
+    #hodí se na parametrizaci testů z OS
 
     #Příklad: Výpis síťových karet podle OS (ipconfig vs ifconfig)
 
+Test sítě nezávislý na OS
+    Log to console  OS = '%{OS}'
+    # porovnání řetězců musí být v apostrofech '%{OS}'
+    ${ifconfig_cmd} =	Set Variable If  '%{OS}' == 'Windows_NT'  ipconfig	ifconfig
 
+    # spustí přikaz podle typu OS
+    ${output} =     Run     ${ifconfig_cmd}
+    #zapíše výstup příkazu do logu
+    Log             ${output}
 
 *** Keywords ***
