@@ -19,27 +19,27 @@ ${GREET2} =  Hello
 
 
 *** Test Cases ***
-Test Konstatny
+Ukázka práce s konstatny
     Log to console  -
     Log to console  Hello
     Log to console  Hello, world!!
 
 
-Test proměné typu Scalar
+Ukázka práce s proměnnu typu Scalar
     Log to console  ${GREET}
     Log to console  ${GREET2}
     Log to console  ${GREET}, ${NAME}!!
 
 
-Test nastavení proměné
+Ukázka práce nastavení proměnné
     ${x} =          Set Variable    10
     Log to console  Jakou má hodnot proměná \${x}: ${x}!
 
 
-Test čísel
+Ukázka práce s čísely
     Log to console  10
 
-Test promné typu List
+Ukázka práce s proměnnu typu List
     @{list1} =      Create List    first    second    third
     Log to console  ${list1}[1]
 
@@ -50,13 +50,13 @@ Test promné typu List
     Log Many        @{list3}[1][key]    # Logs 'x' and 'y'.
 
 
-Test promné typu Dictionary
+Ukázka práce s proměnnu typu Dictionary
     &{Dict} =	    Create Dictionary	key=value	foo=bar
     Log Many        &{Dict}         #zalogování celeho slovníku (Dictionary)
     Log Many        ${Dict.key}     #zalogování kokrétní hodnoty ze slovníku (Dictionary)
 
 
-Test promné typu Environment
+Ukázka práce s proměnnu typu Environment
     Log to console  Username %{USERNAME}
     Log to console  OS %{OS}
     Log to console  Path = %{PATH}
