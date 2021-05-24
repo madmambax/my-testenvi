@@ -81,9 +81,11 @@ Ukázka práce s proměnnu typu Environment
 
 #Příklad: Načtení souborů z adresáře a uložení do seznamu (List)
 Test načtení souborů z adresáře
-    @{files} =	List Files In Directory  /Test 	*.log
-    Log Many  @{files}
-    List Should Contain Value   ${files}    procesy.log
+    @{files} =	                List Files In Directory     /Test       *.log
+    Log Many                    @{files}
+
+    #Vyhodnocení testu
+    List Should Contain Value   ${files}                    procesy.log
 
 
 #Příklad:   Výpis síťových karet podle OS (ipconfig vs ifconfig)
@@ -93,14 +95,15 @@ Test načtení souborů z adresáře
 #           využití promné prostředí
 #           porovnání proměnných
 Test sítě nezávislý na OS
-    Log to console  OS = '%{OS}'
+    Log to console      OS = '%{OS}'
     # porovnání řetězců musí být v apostrofech '%{OS}'
-    ${ifconfig_cmd} =	Set Variable If  '%{OS}' == 'Windows_NT'  ipconfig	ifconfig
+    ${ifconfig_cmd} =	Set Variable If     '%{OS}' == 'Windows_NT'     ipconfig	    ifconfig
 
     # spustí přikaz podle typu OS
-    ${output} =     Run     ${ifconfig_cmd}
+    ${output} =         Run                 ${ifconfig_cmd}
     #zapíše výstup příkazu do logu
-    Log             ${output}
+    Log                 ${output}
 
+    #Vyhodnocení testu
+    Should Contain      ${output}           Ethernet
 
-*** Keywords ***
