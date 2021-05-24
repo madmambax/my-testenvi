@@ -33,7 +33,9 @@ Ukázka práce s proměnnu typu Scalar
 
 Ukázka práce nastavení proměnné
     ${x} =          Set Variable    10
-    Log to console  Jakou má hodnot proměná \${x}: ${x}!
+    Log to console  ${\n}Jakou má hodnot proměnná \${x}: ${x}
+    ${text} =       Set Variable    Tady bude nejaky text
+    Log to console  ${\n}Jakou má hodnutu proměnná \${text}: ${text}
 
 
 Ukázka práce s čísely
