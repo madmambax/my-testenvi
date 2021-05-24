@@ -37,7 +37,11 @@ Ukázka práce nastavení proměnné
 
 
 Ukázka práce s čísely
-    Log to console  10
+    ${x} =          Set Variable    10
+    ${y} =          Set Variable    3
+    ${v} =          Evaluate    ${x}*${y}
+    Log to console  Vysledek: ${v}
+
 
 Ukázka práce s proměnnu typu List
     @{list1} =      Create List    first    second    third
