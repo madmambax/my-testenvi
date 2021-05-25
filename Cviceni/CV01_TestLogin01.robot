@@ -50,7 +50,7 @@ Login
     ${json_string}=     catenate  {"username":"${username}","password":"${password}","useragent":"Chrome"}
     &{header}=    Create Dictionary    Content-Type=application/json
     CreateSession    apilogin    ${url}
-    ${resp} =    Post Request    apilogin    login_app/userauth.php  data=${json_string}  headers=${header}
+    ${resp} =    Post on Session    apilogin    login_app/userauth.php  data=${json_string}  headers=${header}
     Log	Responce: @{resp}
     Should Be Equal As Strings	${resp.status_code}     200
     Dictionary Should Contain Key	${resp.json()}      response
@@ -63,6 +63,6 @@ Login_V2
     ${json_string}=     catenate  {"username":"${username}","password":"${password}","useragent":"Chrome"}
     &{header}=    Create Dictionary    Content-Type=application/json
     CreateSession    apilogin    ${url}
-    ${resp} =    Post Request    apilogin    login_app/userauth.php  data=${json_string}  headers=${header}
+    ${resp} =    Post on Session    apilogin    login_app/userauth.php  data=${json_string}  headers=${header}
     Log	Responce: @{resp}
     [return]  ${resp.json()}
