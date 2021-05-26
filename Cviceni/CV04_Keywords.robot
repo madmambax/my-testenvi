@@ -13,7 +13,7 @@ Ukázka klíčového slova s parametrem
 
 
 Sečti dvě čísla
-        ${result}=  Calculate  20  15  +            # use double spaces or tab between arguments
+        ${result}=  Secti  20  15              # use double spaces or tab between arguments
         Should Be Equal  ${result}  ${35}
 
 
@@ -22,18 +22,18 @@ Sečti dvě čísla
 *** Keywords ***
 
 Moje první kličové slovo
-    Documentation  Klíčové slovo bez parametru
+    [Documentation]  Klíčové slovo bez parametru
     Log to console      Karel Novy
 
 
 Vypis
     [Arguments]         ${parametrA}
-    Documentation  Klíčové slovo s parametrem
+    [Documentation]  Klíčové slovo s parametrem
     Log to console      ${parametrA}
 
 
-Calculate
-    [Arguments]    ${numberA}    ${numberB}   ${operator}
-    Documentation  Klíčové slovo s parametry a návratovou hodnotou
+Secti
+    [Arguments]    ${numberA}    ${numberB}
+    [Documentation]  Klíčové slovo s parametry a návratovou hodnotou
     ${res}=        Evaluate    ${numberA}+${numberB}
     [return]       ${res}
