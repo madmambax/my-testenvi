@@ -44,6 +44,7 @@ Ukázka práce s čísely
     ${y} =          Set Variable    3
     ${v} =          Evaluate    ${x}*${y}
     Log to console  Vysledek: ${v}
+    Log             Vysledek: ${v}
 
 
 Ukázka práce s proměnnu typu List
