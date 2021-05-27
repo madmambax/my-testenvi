@@ -23,7 +23,8 @@ Sečti dvě čísla
 
 Moje první kličové slovo
     [Documentation]  Klíčové slovo bez parametru
-    Log to console      Karel Novy
+    Log to console      Karel
+    Log to console      Novy
 
 
 Vypis

@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation     Cvičení na klíčová slova
-...               Připravte 4 klíčová slova pro kalkulačku
+...               Připravte klíčové slovo pro kalkulačku
 
 
 *** Test Cases ***
