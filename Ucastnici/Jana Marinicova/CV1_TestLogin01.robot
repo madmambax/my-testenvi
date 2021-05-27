@@ -39,17 +39,17 @@ Login overeno v KS
     [Documentation]  	Neuspesne prihlaseni se spatnym heslem s vnorenym navratovym kodem
     Login   novak       tajneNovak  403
 
-Login overeni po akci
+Login uspech
     [Documentation]  	Uspesne prihlaseni s navratovym kodem po akci
     ${data}=   Login_V2   novak       tajnenovak
     Dictionary Should Contain Value     ${data}      200
 
-Login overeni po akci
+Login neuspech
     [Documentation]  	Neuspesne prihlaseni se spatnym heslem s navratovym kodem po akci
     ${data}=   Login_V2   novak       @
     Dictionary Should Contain Value     ${data}      403
 
-Login overeni po akci
+Login prazdne heslo
     [Documentation]  	Neuspesne prihlaseni s prazdnim heslem s navratovym kodem po akci
     ${data}=   Login_V2   novak     ""
     Dictionary Should Contain Value     ${data}      403
