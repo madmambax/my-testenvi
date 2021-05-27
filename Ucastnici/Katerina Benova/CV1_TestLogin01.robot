@@ -1,3 +1,8 @@
+
+#víceřádkové
+#komentáře
+#Ctrl+Shift+ú nebo """ a """ ale to není tak úplně podporovaný
+
 #kratký komentář
 
 *** Settings ***
@@ -7,13 +12,13 @@ Library	RequestsLibrary
 
 *** Variables ***
 ${url}		http://testovani.kitner.cz/
-${url2}     https://cloud.memsource.com/web/api2/
-
+${url2}  https://cloud.memsource.com/web/api2/
 
 *** Test Cases ***
 Login novak OK overeno v KS
     [Documentation]  	Uspesne prihlaseni s vnorenym navratovym kodem
     Login   novak       tajnenovak  200
+ #   Log To Console  url ${url}
 
 Login novak notOK overeno v KS
     [Documentation]  	Uspesne prihlaseni s vnorenym navratovym kodem
