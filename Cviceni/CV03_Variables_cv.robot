@@ -3,7 +3,7 @@
 #
 
 *** Settings ***
-Documentation     Ukázka práce s promennými
+Documentation     Cvičení: práce s promennými
 
 
 
