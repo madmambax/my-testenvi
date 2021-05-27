@@ -15,7 +15,7 @@ Heslo tajneadmin
 adresa api je http://testovani.kitner.cz/login_app/userauth.php
 
 """
-#kratký komentář
+# kratký komentář
 
 
 
