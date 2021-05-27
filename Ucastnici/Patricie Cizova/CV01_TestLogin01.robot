@@ -50,7 +50,7 @@ Login overeni po akci
     ${data}=   Login_V2   novak       tajnenovak
     Dictionary Should Contain Value     ${data}      200
 
-Login overeni po akci
+Login overeni po akci notOK
     [Documentation]  	Neuspesne prihlaseni s navratovym kodem po akci
     ${data}=   Login_V2   nova/k       tajnenovak
     Dictionary Should Contain Value     ${data}      403
