@@ -1,15 +1,20 @@
 #
-#  Prerequsita: web driver musí být nahrán v cestě (PATH)
+# požadavky:
+#
+# web driver musí být nahrán v cestě (PATH)
+# pip install selenium
+# pip install robotframework-seleniumlibrary
 #
 
 *** Settings ***
 Documentation     Simple example using SeleniumLibrary.
 Library           SeleniumLibrary
 
+
 *** Variables ***
 ${LOGIN URL}      http://testovani.kitner.cz/login_app/
 ${BROWSER}        Chrome
-${SEL_DRIVER}     C:\Users\radek\AppData\Local\Programs\Python\Python37-32\Scripts\   # nepoužívá se
+${SEL_DRIVER}     C:\Users\radek\AppData\Local\Programs\Python\Python37-32\Scripts\   # nepoužívá se, ale webdriver je nahraný v cestě
 
 *** Test Cases ***
 Valid Login
@@ -27,11 +32,11 @@ Open Browser To Login Page
 
 Input Username
     [Arguments]    ${username}
-    Input Text    name    ${username}
+    Input Text    inputUsername    ${username}
 
 Input Password
     [Arguments]    ${password}
-    Input Text    password    ${password}
+    Input Text    inputPassword    ${password}
 
 Submit Credentials
     Click Button    butt
