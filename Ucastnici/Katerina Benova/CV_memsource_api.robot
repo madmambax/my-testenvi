@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation     Testy pro Linguisty v Memsource
+Documentation     Testování API Memsource
 Library     RequestsLibrary
 Library     Collections
 
