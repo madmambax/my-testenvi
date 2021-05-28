@@ -10,8 +10,8 @@ ${url}      https://cloud.memsource.com/web/api2/
 
 *** Test Cases ***
 
-Login linguist
-    [Documentation]     Uspesne prihlaseni s odpovedi
+Login user
+    [Documentation]     Uspesne prihlaseni a získání tokenu
     ${data}=    Login    jane.brown   ***
     Dictionary Should Contain Key     ${data}      token
     Set Suite Variable   ${token}    ${data}[token]
