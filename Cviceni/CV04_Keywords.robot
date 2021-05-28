@@ -13,8 +13,8 @@ Ukázka klíčového slova s parametrem
 
 
 Sečti dvě čísla
-        ${result}=  Secti  20  15              # use double spaces or tab between arguments
-        Should Be Equal  ${result}  ${35}
+        ${result}=          Secti       20      15              # use double spaces or tab between arguments
+        Should Be Equal     ${result}   ${35}
 
 
 
