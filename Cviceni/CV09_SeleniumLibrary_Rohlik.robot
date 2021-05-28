@@ -19,38 +19,37 @@ ${BROWSER}        Chrome
 *** Test Cases ***
 Valid Login
     Open Browser To Login Page
-#    Click Link        headerLogin
-#    Click Link        css:#headerLogin
-#    Click Link        xpath://*[@id="headerLogin"]/x-translation
-#    Click Link        class:sc-18g3ccf-3 fnBZyB
-#    Click Link        xpath://x-translation[contains(text(),'Přihlásit')]
-    Click Element   headerLogin
+#    Click Link                 headerLogin
+#    Click Link                 css:#headerLogin
+#    Click Link                 xpath://*[@id="headerLogin"]/x-translation
+#    Click Link                 class:sc-18g3ccf-3 fnBZyB
+#    Click Link                 xpath://x-translation[contains(text(),'Přihlásit')]
+    Click Element               headerLogin
 
+    ${AllLinks}=                Get All Links
+    Log                         ${AllLinks}
 
-    ${AllLinks}=      Get All Links
-    Log               ${AllLinks}
-
-    Input Username    testuser
-    Input Password    tajneheslo
+    Input Username              testuser
+    Input Password              tajneheslo
     Submit Credentials
     Element Text Should Be      emailError  Zadejte platný email
     [Teardown]    Close Browser
 
 *** Keywords ***
 Open Browser To Login Page
-    Open Browser        ${LOGIN URL}    ${BROWSER}
+    Open Browser        ${LOGIN URL}                                                    ${BROWSER}
     Title Should Be     Online supermarket Rohlik.cz — nejrychlejší doručení ve městě
 
 Input Username
-    [Arguments]    ${username}
-    Input Text    email    ${username}
+    [Arguments]         ${username}
+    Input Text          email           ${username}
 
 Input Password
-    [Arguments]    ${password}
-    Input Text    password    ${password}
+    [Arguments]         ${password}
+    Input Text          password        ${password}
 
 Submit Credentials
-    Click Element    xpath://x-translation[contains(text(),'Přihlásit se')]
+    Click Element       xpath://x-translation[contains(text(),'Přihlásit se')]
 
 
 
