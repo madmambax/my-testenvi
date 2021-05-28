@@ -1,9 +1,13 @@
 
-#víceřádkové
-#komentáře
-#Ctrl+Shift+ú nebo """ a """ ale to není tak úplně podporovaný
+# víceřádkové komentáře
+# vlastní zkratka Ctrl+Shift+ú
+# nebo """ a """ ale to není tak úplně podporovaný v Pycharmu
 
-#kratký komentář
+Jakýkoliv text na začátku souboru je ignorovaný, protože nemá žádné klíčové slovo.
+IntelliBot ho obarví na šedo, jako skutečné komentáře s #
+
+
+# kratký komentář
 
 *** Settings ***
 Library	Collections
@@ -13,12 +17,12 @@ Library	RequestsLibrary
 *** Variables ***
 ${url}		http://testovani.kitner.cz/
 ${url2}  https://cloud.memsource.com/web/api2/
+${password}     ***
 
 *** Test Cases ***
 Login novak OK overeno v KS
     [Documentation]  	Uspesne prihlaseni s vnorenym navratovym kodem
     Login   novak       tajnenovak  200
- #   Log To Console  url ${url}
 
 Login novak notOK overeno v KS
     [Documentation]  	Uspesne prihlaseni s vnorenym navratovym kodem
@@ -44,10 +48,13 @@ Login NotOK overeni po akci
     ${data}=   Login_V2   novak       tajne
     Dictionary Should Contain Value     ${data}      403
 
+
+#######  moje aplikace  ##############
+
 #Tohle funguje se správným heslem (heslo záměrně odtraněno)
 Login Memsource
     [Documentation]     Uspesne prihlaseni s odpovedi
-    ${data}=    Login_V3    benkat  -
+    ${data}=    Login_V3    jane.brown   ${password}
     Dictionary Should Contain Key     ${data}      token
 
 
