@@ -32,7 +32,7 @@ ${endpoint}     login_app/userauth.php
 Login novak overeno v KS
     [Documentation]  	Uspesne prihlaseni s vnorenym navratovym kodem
     Login   novak       tajnenovak  200
-    Log to console      ${url}
+    Log to console      ${\n}Adresa aplikace: ${url}
     # Log to console      ${responce_code}
     # Log to console      ${username}     ${password}     ${responce_code}
 
@@ -43,7 +43,7 @@ Login admin overeno v KS
 Login novak overeno v KS notOK
     [Documentation]  	Neuspesne prihlaseni s vnorenym navratovym kodem
     Login   nova/k      tajnenovak  403
-    Log to console      ${url}${endpoint}
+    Log to console      ${\n}Adresa aplikace včetně endpointu:${url}${endpoint}
 
 Login admin overeno v KS notOK
     [Documentation]  	Neuspesne prihlaseni s vnorenym navratovym kodem
