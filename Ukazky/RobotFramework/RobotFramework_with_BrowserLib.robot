@@ -17,9 +17,8 @@ ${URL}         https://rohlik.cz
 
 *** Test Cases ***
 Example Test
-#    Open Available Browser      ${URL}      headless=True
+#    Open Browser                ${URL}      headless=false     #dá se použít místo New Page - umožňuje např vypnout headless mode
     New Page                    ${URL}
-#    Get Text                    h1    ==    Playwright enables reliable end-to-end testing for modern web apps.
 #    Get Element
     Get Title                  contains        Online supermarket Rohlik.cz
 
