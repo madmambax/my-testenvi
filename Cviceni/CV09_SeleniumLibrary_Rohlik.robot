@@ -9,6 +9,7 @@
 *** Settings ***
 Documentation     Automatizace rohlik.cz.
 Library           SeleniumLibrary
+#Library           DebugLibrary     # knihova pro ladění, pokud chcete ledit test stačí to přislušéno místa dat KS: Debug
 
 
 *** Variables ***
@@ -31,6 +32,7 @@ Valid Login
 
     Input Username              testuser
     Input Password              tajneheslo
+#    Debug
     Submit Credentials
     Element Text Should Be      emailError  Zadejte platný email
     [Teardown]    Close Browser
