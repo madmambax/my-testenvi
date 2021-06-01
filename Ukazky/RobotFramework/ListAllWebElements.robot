@@ -17,11 +17,12 @@ ${BROWSER}        Chrome
 
 
 *** Test Cases ***
-Valid Login
+Get Elements
     Open Browser To Login Page
     ${elements}=    Get WebElements    //div
     FOR    ${element}    IN    @{elements}
-            Log    ${element.text}
+            Log             ${element.text}
+            Log to console  ${element.text}
     END
 
     [Teardown]    Close Browser
