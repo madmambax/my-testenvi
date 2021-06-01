@@ -35,7 +35,7 @@ Test Objednavky
     Click               id=cartContent
     Take Screenshot
     Take Screenshot
-    Vysypat kos
+    Vysypat kos         5
     Take Screenshot
     Take Screenshot
     Logout
@@ -83,10 +83,11 @@ Logout
 
 
 Vysypat kos
+    [Arguments]                 ${Kusu}
 #    Repeat Keyword      42 times          Click               data-test=btnMinus
 #    Repeat Keyword      42                          Click                               data-test=btnMinus
-    Repeat Keyword      5                          Odstran
-#    Sleep               3
+    Repeat Keyword      ${Kusu}                     Odstran
+    Sleep               3
 
 
 
