@@ -1,9 +1,9 @@
 #
 # požadavky:
 #
-# web driver musí být nahrán v cestě (PATH)
-# pip install selenium
-# pip install robotframework-seleniumlibrary
+#   web driver musí být nahrán v cestě (PATH)
+#   pip install selenium
+#   pip install robotframework-seleniumlibrary
 #
 
 *** Settings ***
@@ -19,32 +19,32 @@ ${SEL_DRIVER}     C:\Users\radek\AppData\Local\Programs\Python\Python37-32\Scrip
 *** Test Cases ***
 Valid Login
     Open Browser To Login Page
-    Input Username    novak
-    Input Password    tajnenovak
+    Input Username                  novak
+    Input Password                  tajnenovak
     Submit Credentials
     Welcome Page Should Be Open
-    [Teardown]    Close Browser
+    [Teardown]                      Close Browser
 
 *** Keywords ***
 Open Browser To Login Page
-    Open Browser    ${LOGIN URL}    ${BROWSER}
-    Title Should Be    test_login
+    Open Browser        ${LOGIN URL}    ${BROWSER}
+    Title Should Be     test_login
 
 Input Username
-    [Arguments]    ${username}
-    Input Text    inputUsername    ${username}
+    [Arguments]         ${username}
+    Input Text          inputUsername   ${username}
 
 Input Password
-    [Arguments]    ${password}
-    Input Text    inputPassword    ${password}
+    [Arguments]         ${password}
+    Input Text          inputPassword   ${password}
 
 Submit Credentials
-    Click Button    butt
+    Click Button        butt
 
 Welcome Page Should Be Open
     Log Location
-    Wait Until Page Contains    Vitej
-    #    Wait Until Page Contains Element    username           # další možný způsob kontroly
+    Wait Until Page Contains            Vitej
+#    Wait Until Page Contains Element    username           # další možný způsob kontroly
     Log Location
 
 
