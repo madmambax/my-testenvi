@@ -22,6 +22,11 @@ Who Am I
     Make GET Call   v1/auth/whoAmI
     Status Should Be  200
 
+Who Am I Wrong Token
+    [Documentation]     Ověř neplatnost tokenu
+    Make GET Call Wrong Token  v1/auth/whoAmI
+    Status Should Be  401
+
 
 List projects
     [Documentation]     vypiš projekty
@@ -31,9 +36,18 @@ List projects
 
 *** Keywords ***
 Make GET Call
+    Skip If  '${token}'=='skip'    msg = Skipped with Skip keyword.
     [Arguments]  ${path}     @{parameters}
     &{header}=    Create Dictionary    Authorization=ApiToken ${token}
     ${resp} =    GET    ${url}${path}  params=${parameters}  headers=${header}
+    Log	Response: @{resp}
+    [return]    ${resp.json()}
+
+
+Make GET Call Wrong Token
+    [Arguments]  ${path}     @{parameters}
+    &{header}=    Create Dictionary    Authorization=ApiToken abc
+    ${resp} =    GET    ${url}${path}  params=${parameters}  headers=${header}  expected_status=Anything
     Log	Response: @{resp}
     [return]    ${resp.json()}
 
@@ -46,4 +60,5 @@ Login
     CreateSession    apilogin    ${url}
     ${resp} =   POST On Session  apilogin  v1/auth/login  data=${json_string}  headers=${header}  expected_status=Anything
     Log	Response: @{resp}
+    Set Suite Variable  ${token}  skip
     [return]    ${resp.json()}
