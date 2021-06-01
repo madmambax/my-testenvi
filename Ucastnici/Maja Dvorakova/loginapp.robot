@@ -3,8 +3,21 @@
 Cvičení 01
 poznámka: Mezi trojté uvozovky se píší víceřádkové komentáře
 
+Tento příklad potřebuje robotframework-requests balíček
+instalace:
+pip install robotframework-requests
+
+Testovací Data - tento test používá následují testovací data - přihlašovací údaje
+Login novak
+Heslo tajnenovak
+Login admin
+Heslo tajneadmin
+adresa api je http://testovani.kitner.cz/login_app/userauth.php
+
 """
 #kratký komentář
+
+
 
 *** Settings ***
 Library	Collections
@@ -13,30 +26,40 @@ Library	RequestsLibrary
 
 *** Variables ***
 ${url}		http://testovani.kitner.cz/
-
+${endpoint}     login_app/userauth.php
 
 *** Test Cases ***
-Login overeno v KS Novak
+Login novak overeno v KS
     [Documentation]  	Uspesne prihlaseni s vnorenym navratovym kodem
     Login   novak       tajnenovak  200
+    Log to console      ${\n}Adresa aplikace: ${url}
+    # Log to console      ${responce_code}
+    # Log to console      ${username}     ${password}     ${responce_code}
 
-Login overeni po akci Novak
+Login admin overeno v KS
+    [Documentation]  	Uspesne prihlaseni s vnorenym navratovym kodem
+    Login   admin       tajneadmin  200
+
+Login novak overeno v KS notOK
+    [Documentation]  	Neuspesne prihlaseni s vnorenym navratovym kodem
+    Login   nova/k      tajnenovak  403
+    Log to console      ${\n}Adresa aplikace včetně endpointu:${url}${endpoint}
+
+Login admin overeno v KS notOK
+    [Documentation]  	Neuspesne prihlaseni s vnorenym navratovym kodem
+    Login   admin       tajne/admin  403
+
+Login overeni po akci
     [Documentation]  	Uspesne prihlaseni s navratovym kodem po akci
     ${data}=   Login_V2   novak       tajnenovak
     Dictionary Should Contain Value     ${data}      200
 
-Login overeno v KS Novak negativni spatne heslo
-    [Documentation]  	Uspesne prihlaseni s vnorenym navratovym kodem
-    Login   novak       tajne  403
+Login overeni po akci notOK
+    [Documentation]  	Neuspesne prihlaseni s navratovym kodem po akci
+    ${data}=   Login_V2   nova/k       tajnenovak
+    Dictionary Should Contain Value     ${data}      403
 
-Login overeno v KS Admin
-    [Documentation]  	Uspesne prihlaseni s vnorenym navratovym kodem
-    Login   admin       tajneadmin  200
 
-Login overeni po akci Admin
-    [Documentation]  	Uspesne prihlaseni s navratovym kodem po akci
-    ${data}=   Login_V2   admin       tajneadmin
-    Dictionary Should Contain Value     ${data}      200
 
 *** Keywords ***
 
@@ -46,7 +69,7 @@ Login
     ${json_string}=     catenate  {"username":"${username}","password":"${password}","useragent":"Chrome"}
     &{header}=    Create Dictionary    Content-Type=application/json
     CreateSession    apilogin    ${url}
-    ${resp} =    Post Request    apilogin    login_app/userauth.php  data=${json_string}  headers=${header}
+    ${resp} =    Post on Session    apilogin    login_app/userauth.php  data=${json_string}  headers=${header}
     Log	Responce: @{resp}
     Should Be Equal As Strings	${resp.status_code}     200
     Dictionary Should Contain Key	${resp.json()}      response
@@ -59,11 +82,6 @@ Login_V2
     ${json_string}=     catenate  {"username":"${username}","password":"${password}","useragent":"Chrome"}
     &{header}=    Create Dictionary    Content-Type=application/json
     CreateSession    apilogin    ${url}
-    ${resp} =    Post Request    apilogin    login_app/userauth.php  data=${json_string}  headers=${header}
+    ${resp} =    Post on Session    apilogin    login_app/userauth.php  data=${json_string}  headers=${header}
     Log	Responce: @{resp}
     [return]  ${resp.json()}
-
-
-
-
-
