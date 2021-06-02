@@ -49,7 +49,8 @@ Test Objednavky
 
 Login
     [Arguments]                 ${Email}                        ${Heslo}                                ${Text}
-#    Open Browser                ${URL}                          headless=false     #dá se použít místo New Page - umožňuje např vypnout headless mode
+#    Open Browser                ${URL}                          headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
+#    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
     New Page                    ${URL}
 #    Get Element
     Get Title                  contains                         Online supermarket Rohlik.cz
@@ -80,6 +81,7 @@ Pridat do kosiku
 Logout
     Click               xpath=//div[@class='u-mr--8']
     Click               text=Odhlásit se
+#    Log                 ${OUTPUT_DIR}
 
 
 Vysypat kos
