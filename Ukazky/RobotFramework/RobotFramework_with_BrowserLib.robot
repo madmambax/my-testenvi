@@ -66,7 +66,7 @@ Login
 
 
 Pridat do kosiku
-    [Arguments]                 ${Zbozi}    ${Kusu}
+    [Arguments]         ${Zbozi}                    ${Kusu}
     Type Text           id=searchGlobal             ${Zbozi}
     Click               text=Hledat
     Click               text=Do košíku
