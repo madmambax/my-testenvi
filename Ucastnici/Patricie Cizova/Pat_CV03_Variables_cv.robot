@@ -4,7 +4,7 @@
 
 *** Settings ***
 Documentation     Cvičení: práce s promennými
-
+Library	Collections
 
 *** Variables ***
 #vytvořte seznam obsahující názvy prohlížečů
@@ -27,4 +27,4 @@ Test pro oveření, že 0 položka seznamu obsahuje Chrome
 
 Test pro oveření položky v seznamu
     Should Contain Any  ${list}     Edge                #TEST FUNGUJE
-    List Should Contain Value   ${listBrs}  Safari      #TEST NEFUNGUJE! PROČ???
+    List Should Contain Value   ${list}  Safari      #TEST NEFUNGUJE! PROČ???

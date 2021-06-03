@@ -33,8 +33,8 @@ Login novak overeno v KS
     [Documentation]  	Uspesne prihlaseni s vnorenym navratovym kodem
     Login   novak       tajnenovak  200
     Log to console      ${\n}Adresa aplikace: ${url}
-    # Log to console      ${responce_code}
-    # Log to console      ${username}     ${password}     ${responce_code}
+    Log                 ${responce_code}
+    Log                 ${username}     ${password}     ${responce_code}
 
 Login admin overeno v KS
     [Documentation]  	Uspesne prihlaseni s vnorenym navratovym kodem
