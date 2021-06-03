@@ -49,7 +49,7 @@ Test Objednavky
 
 Login
     [Arguments]                 ${Email}                            ${Heslo}                                ${Text}
-    Open Browser                ${URL}                              headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
+#    Open Browser                ${URL}                              headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
 #    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
     New Page                    ${URL}
 #    Get Element
@@ -61,7 +61,7 @@ Login
 #    Debug
     Click                       data-test=btnSignIn
 
-    Get Text                    data-test=header-user-icon          contains                                ${Text}
+    Get Text                    xpath=//div[@class='u-mr--8']          contains                                ${Text}
 
 
 
