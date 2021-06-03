@@ -14,9 +14,28 @@ ${URL}      https://www.rohlik.cz/
 
 *** Test Cases ***
 
-Test webu
+Prihlaseni bad login
+    Login               dsadsad@sdas.cz                     dasdas                      Přihlásit
+
+Prihlaseni bad heslo
+    Login               radek.tester@seznam.cz              dasdas                      Přihlásit
+
+Prihlaseni success
+    Login               radek.tester@seznam.cz              tajneheslotajneheslo        JT
+
+
+
+*** Keywords ***
+
+Login
+    [Arguments]         ${email}                            ${heslo}                    ${validation}
     New Page            ${URL}
     Get Title           contains                            Rohlik
     Click               id=headerLogin
-    Type Text           data-test=user-login-form-email     kfjhdskjfhsadjkf
+    Type Text           data-test=user-login-form-email     ${email}
+    Type Text           data-test=user-login-form-password  ${heslo}
+    Click               data-test=btnSignIn
+    Get Text            data-test=header-user-icon          ==                          ${validation}
+    ${log}=             Get Text                            data-test=header-user-icon
+    Log                 ${log}
     Take Screenshot
