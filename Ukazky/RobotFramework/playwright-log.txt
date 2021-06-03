@@ -1,0 +1,76 @@
+{"level":30,"time":"2021-06-03T15:31:21.734Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Listening on 60573"}
+{"level":30,"time":"2021-06-03T15:31:23.182Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2021-06-03T15:31:23.226Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active context"}
+{"level":30,"time":"2021-06-03T15:31:23.231Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2021-06-03T15:31:24.999Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Video path: undefined"}
+{"level":30,"time":"2021-06-03T15:31:24.999Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active page"}
+{"level":30,"time":"2021-06-03T15:31:32.287Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2021-06-03T15:31:32.904Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Video path: undefined"}
+{"level":30,"time":"2021-06-03T15:31:32.904Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active page"}
+{"level":30,"time":"2021-06-03T15:31:40.541Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Retrieved text for element xpath=//div[@class='u-mr--8'] containing Přihlásit\nPřihlášení\nPřihlásit přes Facebook\n \nPřihlásit přes Apple\n \nNEBO\nVáš e-mail\n\nZadejte platný email\n\nVaše heslo\nPřihlásit se\nRegistrace\nZapomenuté heslo?\nNastavit doručovací adresu"}
+{"level":30,"time":"2021-06-03T15:31:40.575Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active context"}
+{"level":30,"time":"2021-06-03T15:31:40.576Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changing current active page"}
+{"level":30,"time":"2021-06-03T15:31:40.578Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active page"}
+{"level":30,"time":"2021-06-03T15:31:40.640Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active context"}
+{"level":30,"time":"2021-06-03T15:31:40.641Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changing current active page"}
+{"level":30,"time":"2021-06-03T15:31:40.641Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active page"}
+{"level":30,"time":"2021-06-03T15:31:41.853Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2021-06-03T15:31:41.935Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active context"}
+{"level":30,"time":"2021-06-03T15:31:41.938Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2021-06-03T15:31:42.768Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Video path: undefined"}
+{"level":30,"time":"2021-06-03T15:31:42.768Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active page"}
+{"level":30,"time":"2021-06-03T15:31:49.060Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2021-06-03T15:31:49.539Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Video path: undefined"}
+{"level":30,"time":"2021-06-03T15:31:49.539Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active page"}
+{"level":30,"time":"2021-06-03T15:31:56.955Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Retrieved text for element xpath=//div[@class='u-mr--8'] containing Přihlásit\nPřihlášení\nPřihlásit přes Facebook\n \nPřihlásit přes Apple\n \nNEBO\nVáš e-mail\nVaše heslo\nZadal(a) jste nesprávný e-mail nebo heslo.\nPřihlásit se\nRegistrace\nZapomenuté heslo?\nNastavit doručovací adresu"}
+{"level":30,"time":"2021-06-03T15:31:57.026Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active context"}
+{"level":30,"time":"2021-06-03T15:31:57.026Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changing current active page"}
+{"level":30,"time":"2021-06-03T15:31:57.026Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active page"}
+{"level":30,"time":"2021-06-03T15:31:57.071Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active context"}
+{"level":30,"time":"2021-06-03T15:31:57.071Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changing current active page"}
+{"level":30,"time":"2021-06-03T15:31:57.071Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active page"}
+{"level":30,"time":"2021-06-03T15:31:58.143Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2021-06-03T15:31:58.182Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active context"}
+{"level":30,"time":"2021-06-03T15:31:58.185Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2021-06-03T15:31:59.207Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Video path: undefined"}
+{"level":30,"time":"2021-06-03T15:31:59.207Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active page"}
+{"level":30,"time":"2021-06-03T15:32:05.978Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2021-06-03T15:32:06.518Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Video path: undefined"}
+{"level":30,"time":"2021-06-03T15:32:06.518Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active page"}
+{"level":30,"time":"2021-06-03T15:32:15.882Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Retrieved text for element xpath=//div[@class='u-mr--8'] containing JT"}
+{"level":30,"time":"2021-06-03T15:32:16.559Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active context"}
+{"level":30,"time":"2021-06-03T15:32:16.559Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changing current active page"}
+{"level":30,"time":"2021-06-03T15:32:16.559Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active page"}
+{"level":30,"time":"2021-06-03T15:32:16.591Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active context"}
+{"level":30,"time":"2021-06-03T15:32:16.591Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changing current active page"}
+{"level":30,"time":"2021-06-03T15:32:16.591Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active page"}
+{"level":30,"time":"2021-06-03T15:32:17.683Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2021-06-03T15:32:17.695Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active context"}
+{"level":30,"time":"2021-06-03T15:32:17.699Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2021-06-03T15:32:18.872Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Video path: undefined"}
+{"level":30,"time":"2021-06-03T15:32:18.872Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active page"}
+{"level":30,"time":"2021-06-03T15:32:25.675Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2021-06-03T15:32:26.255Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Video path: undefined"}
+{"level":30,"time":"2021-06-03T15:32:26.255Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active page"}
+{"level":30,"time":"2021-06-03T15:32:33.921Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Retrieved text for element xpath=//div[@class='u-mr--8'] containing Přihlásit\nPřihlášení\nPřihlásit přes Facebook\n \nPřihlásit přes Apple\n \nNEBO\nVáš e-mail\nVaše heslo\nPřihlásit se\nRegistrace\nZapomenuté heslo?\nNastavit doručovací adresu"}
+{"level":30,"time":"2021-06-03T15:32:34.653Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Retrieved text for element xpath=//div[@class='u-mr--8'] containing JT"}
+{"level":30,"time":"2021-06-03T15:32:39.200Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Retrieved text for element id=cart containing Košík funguje i jako nákupní seznam\n\nZboží můžete přidávat průběžně, jak vám doma dochází, nebo když si zrovna na něco vzpomenete. Počká tu na vás do příští objednávky.\n\nNakupujte bez omezení minimální výše objednávky. Vyzkoušet Premium\n\nMinimální výše objednávky je 500 Kč při doručení domů a 100 Kč do Rohlik Pointu."}
+{"level":30,"time":"2021-06-03T15:32:39.266Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Retrieved text for element id=cart containing Košík funguje i jako nákupní seznam\n\nZboží můžete přidávat průběžně, jak vám doma dochází, nebo když si zrovna na něco vzpomenete. Počká tu na vás do příští objednávky.\n\nNakupujte bez omezení minimální výše objednávky. Vyzkoušet Premium\n\nMinimální výše objednávky je 500 Kč při doručení domů a 100 Kč do Rohlik Pointu."}
+{"level":30,"time":"2021-06-03T15:32:39.329Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Retrieved text for element id=cart containing Košík funguje i jako nákupní seznam\n\nZboží můžete přidávat průběžně, jak vám doma dochází, nebo když si zrovna na něco vzpomenete. Počká tu na vás do příští objednávky.\n\nNakupujte bez omezení minimální výše objednávky. Vyzkoušet Premium\n\nMinimální výše objednávky je 500 Kč při doručení domů a 100 Kč do Rohlik Pointu."}
+{"level":30,"time":"2021-06-03T15:32:39.393Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Retrieved text for element id=cart containing Košík funguje i jako nákupní seznam\n\nZboží můžete přidávat průběžně, jak vám doma dochází, nebo když si zrovna na něco vzpomenete. Počká tu na vás do příští objednávky.\n\nNakupujte bez omezení minimální výše objednávky. Vyzkoušet Premium\n\nMinimální výše objednávky je 500 Kč při doručení domů a 100 Kč do Rohlik Pointu."}
+{"level":30,"time":"2021-06-03T15:32:39.460Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Retrieved text for element id=cart containing Košík funguje i jako nákupní seznam\n\nZboží můžete přidávat průběžně, jak vám doma dochází, nebo když si zrovna na něco vzpomenete. Počká tu na vás do příští objednávky.\n\nNakupujte bez omezení minimální výše objednávky. Vyzkoušet Premium\n\nMinimální výše objednávky je 500 Kč při doručení domů a 100 Kč do Rohlik Pointu."}
+{"level":30,"time":"2021-06-03T15:32:39.511Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Retrieved text for element id=cart containing Košík funguje i jako nákupní seznam\n\nZboží můžete přidávat průběžně, jak vám doma dochází, nebo když si zrovna na něco vzpomenete. Počká tu na vás do příští objednávky.\n\nNakupujte bez omezení minimální výše objednávky. Vyzkoušet Premium\n\nMinimální výše objednávky je 500 Kč při doručení domů a 100 Kč do Rohlik Pointu."}
+{"level":30,"time":"2021-06-03T15:32:39.570Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Retrieved text for element id=cart containing Košík funguje i jako nákupní seznam\n\nZboží můžete přidávat průběžně, jak vám doma dochází, nebo když si zrovna na něco vzpomenete. Počká tu na vás do příští objednávky.\n\nNakupujte bez omezení minimální výše objednávky. Vyzkoušet Premium\n\nMinimální výše objednávky je 500 Kč při doručení domů a 100 Kč do Rohlik Pointu."}
+{"level":30,"time":"2021-06-03T15:32:39.603Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Retrieved text for element id=cart containing Košík funguje i jako nákupní seznam\n\nZboží můžete přidávat průběžně, jak vám doma dochází, nebo když si zrovna na něco vzpomenete. Počká tu na vás do příští objednávky.\n\nNakupujte bez omezení minimální výše objednávky. Vyzkoušet Premium\n\nMinimální výše objednávky je 500 Kč při doručení domů a 100 Kč do Rohlik Pointu."}
+{"level":30,"time":"2021-06-03T15:32:39.647Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Retrieved text for element id=cart containing Košík funguje i jako nákupní seznam\n\nZboží můžete přidávat průběžně, jak vám doma dochází, nebo když si zrovna na něco vzpomenete. Počká tu na vás do příští objednávky.\n\nNakupujte bez omezení minimální výše objednávky. Vyzkoušet Premium\n\nMinimální výše objednávky je 500 Kč při doručení domů a 100 Kč do Rohlik Pointu."}
+{"level":30,"time":"2021-06-03T15:32:39.685Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Retrieved text for element id=cart containing Košík funguje i jako nákupní seznam\n\nZboží můžete přidávat průběžně, jak vám doma dochází, nebo když si zrovna na něco vzpomenete. Počká tu na vás do příští objednávky.\n\nNakupujte bez omezení minimální výše objednávky. Vyzkoušet Premium\n\nMinimální výše objednávky je 500 Kč při doručení domů a 100 Kč do Rohlik Pointu."}
+{"level":30,"time":"2021-06-03T15:32:39.748Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Retrieved text for element id=cart containing Košík funguje i jako nákupní seznam\n\nZboží můžete přidávat průběžně, jak vám doma dochází, nebo když si zrovna na něco vzpomenete. Počká tu na vás do příští objednávky.\n\nNakupujte bez omezení minimální výše objednávky. Vyzkoušet Premium\n\nMinimální výše objednávky je 500 Kč při doručení domů a 100 Kč do Rohlik Pointu."}
+{"level":30,"time":"2021-06-03T15:32:39.820Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Retrieved text for element id=cart containing Košík funguje i jako nákupní seznam\n\nZboží můžete přidávat průběžně, jak vám doma dochází, nebo když si zrovna na něco vzpomenete. Počká tu na vás do příští objednávky.\n\nNakupujte bez omezení minimální výše objednávky. Vyzkoušet Premium\n\nMinimální výše objednávky je 500 Kč při doručení domů a 100 Kč do Rohlik Pointu."}
+{"level":30,"time":"2021-06-03T15:32:39.888Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Retrieved text for element id=cart containing Košík funguje i jako nákupní seznam\n\nZboží můžete přidávat průběžně, jak vám doma dochází, nebo když si zrovna na něco vzpomenete. Počká tu na vás do příští objednávky.\n\nNakupujte bez omezení minimální výše objednávky. Vyzkoušet Premium\n\nMinimální výše objednávky je 500 Kč při doručení domů a 100 Kč do Rohlik Pointu."}
+{"level":30,"time":"2021-06-03T15:32:40.528Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Retrieved text for element id=cart containing Maso a ryby\nLosos porce s kůžícca 310 g\n945,00 Kč\nK objednávce"}
+{"level":30,"time":"2021-06-03T15:32:47.237Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active context"}
+{"level":30,"time":"2021-06-03T15:32:47.237Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changing current active page"}
+{"level":30,"time":"2021-06-03T15:32:47.237Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active page"}
+{"level":30,"time":"2021-06-03T15:32:47.268Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active context"}
+{"level":30,"time":"2021-06-03T15:32:47.268Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changing current active page"}
+{"level":30,"time":"2021-06-03T15:32:47.268Z","pid":26124,"hostname":"Notebook-Acer-R4K","msg":"Changed active page"}
