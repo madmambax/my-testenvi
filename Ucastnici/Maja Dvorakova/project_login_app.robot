@@ -34,8 +34,8 @@ Valid Login
 
 Setting Variables
     Do Something    first argument    second argument
-    ${value} =    Get Some Value
-    Should Be Equal    ${value}    Expected value
+    ${value} =      Get Some Value
+    Should Be Equal    ${value}       Expected value
 
 *** Keywords ***
 
