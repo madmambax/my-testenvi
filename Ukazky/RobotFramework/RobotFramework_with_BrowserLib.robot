@@ -48,20 +48,20 @@ Test Objednavky
 *** Keywords ***
 
 Login
-    [Arguments]                 ${Email}                        ${Heslo}                                ${Text}
-    Open Browser                ${URL}                          headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
+    [Arguments]                 ${Email}                            ${Heslo}                                ${Text}
+    Open Browser                ${URL}                              headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
 #    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
     New Page                    ${URL}
 #    Get Element
-    Get Title                  contains                         Online supermarket Rohlik.cz
+    Get Title                  contains                             Online supermarket Rohlik.cz
 
     Click                       id=headerLogin
-    Type Text                   id=email                        ${Email}
-    Type Text                   id=password                     ${Heslo}
+    Type Text                   data-test=user-login-form-email     ${Email}
+    Type Text                   data-test=user-login-form-password  ${Heslo}
 #    Debug
-    Click                       xpath=//x-translation[contains(text(),'Přihlásit se')]
+    Click                       data-test=btnSignIn
 
-    Get Text                    xpath=//div[@class='u-mr--8']   contains                                ${Text}
+    Get Text                    data-test=header-user-icon          contains                                ${Text}
 
 
 
