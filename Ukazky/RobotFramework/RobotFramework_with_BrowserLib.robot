@@ -49,7 +49,7 @@ Test Objednavky
 
 Login
     [Arguments]                 ${Email}                        ${Heslo}                                ${Text}
-#    Open Browser                ${URL}                          headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
+    Open Browser                ${URL}                          headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
 #    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
     New Page                    ${URL}
 #    Get Element
@@ -88,8 +88,10 @@ Vysypat kos
     [Arguments]                 ${Kusu}
 #    Repeat Keyword      42 times          Click               data-test=btnMinus
 #    Repeat Keyword      42                          Click                               data-test=btnMinus
-    Repeat Keyword      ${Kusu}                     Odstran
+    Click               data-test=btnMinus           clickCount=${Kusu}
+#    Repeat Keyword      ${Kusu}                     Odstran                    #debug, loguje cenu
     Sleep               3
+#    Keyboard Key        press                        PageUp
 
 
 
