@@ -1,0 +1,13 @@
+{"level":30,"time":"2021-06-05T15:38:36.553Z","pid":10284,"hostname":"LAPTOP-RSNM80PG","msg":"Listening on 56481"}
+{"level":30,"time":"2021-06-05T15:38:36.680Z","pid":10284,"hostname":"LAPTOP-RSNM80PG","msg":"currentBrowser: undefined"}
+{"level":30,"time":"2021-06-05T15:38:38.565Z","pid":10284,"hostname":"LAPTOP-RSNM80PG","msg":"Changed active context"}
+{"level":30,"time":"2021-06-05T15:38:39.188Z","pid":10284,"hostname":"LAPTOP-RSNM80PG","msg":"Video path: undefined"}
+{"level":30,"time":"2021-06-05T15:38:39.189Z","pid":10284,"hostname":"LAPTOP-RSNM80PG","msg":"Changed active page"}
+{"level":30,"time":"2021-06-05T15:38:51.686Z","pid":10284,"hostname":"LAPTOP-RSNM80PG","msg":"Retrieved text for element id=csw-fast-step-new-invoice-button containing Nová faktura"}
+{"level":30,"time":"2021-06-05T15:38:51.812Z","pid":10284,"hostname":"LAPTOP-RSNM80PG","msg":"Retrieved text for element id=csw-fast-step-new-invoice-button containing Nová faktura"}
+{"level":30,"time":"2021-06-05T15:38:52.393Z","pid":10284,"hostname":"LAPTOP-RSNM80PG","msg":"Changed active context"}
+{"level":30,"time":"2021-06-05T15:38:52.394Z","pid":10284,"hostname":"LAPTOP-RSNM80PG","msg":"Changing current active page"}
+{"level":30,"time":"2021-06-05T15:38:52.394Z","pid":10284,"hostname":"LAPTOP-RSNM80PG","msg":"Changed active page"}
+{"level":30,"time":"2021-06-05T15:38:52.437Z","pid":10284,"hostname":"LAPTOP-RSNM80PG","msg":"Changed active context"}
+{"level":30,"time":"2021-06-05T15:38:52.437Z","pid":10284,"hostname":"LAPTOP-RSNM80PG","msg":"Changing current active page"}
+{"level":30,"time":"2021-06-05T15:38:52.438Z","pid":10284,"hostname":"LAPTOP-RSNM80PG","msg":"Changed active page"}
