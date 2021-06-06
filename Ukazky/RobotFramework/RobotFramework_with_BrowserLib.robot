@@ -68,12 +68,12 @@ Login
 Pridat do kosiku
     [Arguments]         ${Zbozi}                    ${Kusu}
     Type Text           id=searchGlobal             ${Zbozi}
+    #1x
     Click               text=Hledat
     Click               text=Do košíku
-    Click               data-test=btnPlus
-    Click               data-test=btnPlus
-    Click               data-test=btnPlus
-    Click               data-test=btnPlus
+    # Kusu - 1
+    ${Pocet}            Evaluate                    ${Kusu} - 1
+    Click               data-test=btnMinus          clickCount=${Pocet}
     Get Text            id=cart                     contains                            ${Zbozi}
     Take Screenshot
 
