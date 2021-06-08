@@ -8,11 +8,14 @@ Documentation   Automatizace rohlik.cz s BrowserLibrary
 Library         Browser
 Library         DebugLibrary     # knihova pro ladění, pokud chcete ledit test stačí to přislušéno místa dat KS: Debug
 
+#Test Timeout    25 s
+
 Suite Setup     Pred Celou Sadou                     # nachází se v sekci *** Settings ***
 Suite Teardown  Ukonceni
 
 #Test Setup      Pred Celou Sadou
 #Test Teardown   Ukonceni
+
 
 *** Variables ***
 ${URL}          https://rohlik.cz
@@ -107,7 +110,9 @@ Vysypat kos
 #    Repeat Keyword      ${Kusu}                      Click                             data-test=btnMinus
 #    Repeat Keyword      ${Kusu}                     Odstran                    #debug, loguje cenu
     Take Screenshot
+    #přidat ověření že košík obsahuje ${Kusu} kusů
     Click               data-test=btnMinus           clickCount=${Kusu}
+    #přidat ověření že košík obsahuje 0 kusů
     Take Screenshot
     Sleep               3                                                       #timeout
     Take Screenshot
@@ -129,9 +134,13 @@ Odstran
 
 Pred Celou Sadou
     Log                 nstartuje prohlizec a novou stranku
-#    Open Browser                ${URL}                              headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
+#    Open Browser        ${URL}                                    headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
 #    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
-    New Page                    ${URL}
+    New Page            ${URL}
+
+    #Timeouty
+    ${b_timeput} =      Set Browser Timeout                       20                 #20s je vhodné pro rohlik.cz
+    Log                 Browser timeout is ${b_timeput}
 
 
 
