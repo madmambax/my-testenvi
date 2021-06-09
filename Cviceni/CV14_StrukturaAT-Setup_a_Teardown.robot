@@ -12,7 +12,7 @@ Resource        Data_and_Config/TestData.robot
 Resource        Data_and_Config/Configuration.robot
 
 *** Variables ***
-${URL}              https://rohlik.cz
+
 
 
 
@@ -21,14 +21,14 @@ Login spatny email
     Login           chyba                       ${USER1_PASSWORD}                       ${ERROR_TEXT_FillCorrectEmail}
 
     # je nutné zavřít prihlašovací form
-    Click           id=logo
+    Click           ${SEL_HeaderLogo}
 
 
 Login spatne heslo
     Login           ${USER1_NAME}               bad                                     ${ERROR_TEXT_IncorrectEmailOrPwd}
 
     # je nutné zavřít prihlašovací form
-    Click                       id=logo
+    Click           ${SEL_HeaderLogo}
 
 
 
@@ -57,45 +57,46 @@ Test Objednavky
 *** Keywords ***
 
 Login
-    [Arguments]                 ${Email}                            ${Heslo}                                ${Text}
+    [Arguments]                ${Email}                            ${Heslo}                                ${Text}
+    ${b_timeput} =             Set Browser Timeout                 20                 #20s je vhodné pro rohlik.cz
+
 #    Open Browser        ${URL}                                    headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
 #    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
     New Page            ${URL}
-     ${b_timeput} =             Set Browser Timeout                 20                 #20s je vhodné pro rohlik.cz
 
 #    Get Element
-    Get Title                   contains                            Online supermarket Rohlik.cz
+    Get Title                   contains                            ${TEXT_MainTitle}
 
-    Click                       id=headerLogin
-    Type Text                   data-test=user-login-form-email     ${Email}
-    Type Text                   data-test=user-login-form-password  ${Heslo}
+    Click                       ${SEL_HeaderLogin}
+    Type Text                   ${SEL_LoginFormEmail}               ${Email}
+    Type Text                   ${SEL_LoginFormPwd}                 ${Heslo}
 #    Debug
-    Click                       data-test=btnSignIn
+    Click                       ${SEL_BtnSignIn}
 
-    Get Text                    xpath=//div[@class='u-mr--8']       contains                                ${Text}
+    Get Text                    ${SEL_HeaderLoginErrorTxt}           contains                                ${Text}
 
 
 
 Pridat do kosiku
     [Arguments]         ${Zbozi}                    ${Kusu}
-    Type Text           id=searchGlobal             ${Zbozi}
+    Type Text           ${SEL_SearchGlobal}         ${Zbozi}
     #1x
     Sleep               1
-    Click               text=Hledat                 # ???
+    Click               ${SEL_BtnSearchGlobal}      # tlačítko Hledat
     Sleep               1                           # čeká 1 sekundu
-    Click               data-test=btnAdd            # způsobuje někdy zmizení uživatele, scrol donwn, důvod někdy klikne na zboží níže
+    Click               ${SEL_BtnAdd}               # způsobuje někdy zmizení uživatele, scrol donwn, důvod někdy klikne na zboží níže
     Sleep               1
     # Kusu - 1
     ${Pocet}            Evaluate                    ${Kusu} - 1
-    Click               data-test=btnPlus           clickCount=${Pocet}
-    Get Text            id=cart                     contains                            ${Zbozi}
+    Click               ${SEL_BtnPlus}              clickCount=${Pocet}
+    Get Text            ${SEL_Cart}                 contains                            ${Zbozi}
     Take Screenshot
 
 
 Logout
 #    Hover               xpath=//div[@class='u-mr--8']
-    Click               xpath=//div[@class='u-mr--8']
-    Click               data-test=user-box-logout-button
+    Click               ${SEL_HeaderLoginErrorTxt}
+    Click               ${SEL_UserBoxLogoutBtn}
 #    Log                 ${OUTPUT_DIR}
 
 
@@ -104,18 +105,18 @@ Odebrat z kose
 
     Take Screenshot
     #přidat ověření že košík obsahuje ${Kusu} kusů
-    Click               data-test=btnMinus           clickCount=${Kusu}
+    Click               ${SEL_BtnMinus}             clickCount=${Kusu}
     #přidat ověření že košík obsahuje 0 kusů
     Take Screenshot
     Sleep               3                                                       #timeout
     Take Screenshot
-    Go to                https://www.rohlik.cz/
+    Go to               ${URL}
     Take Screenshot
 
 
 
 Odstran
-    Click               data-test=btnMinus
+    Click               ${SEL_BtnMinus}
     ${log}=             Get Text                    data-test=headerPrice
     Log                 ${log}
 #    Get Text            data-test=headerPrice       contains                        0
@@ -125,22 +126,6 @@ Odstran
 
 
 
-Pred Celou Sadou
-    Log                 nstartuje prohlizec a novou stranku
-#    Open Browser        ${URL}                                    headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
-#    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
-    New Page            ${URL}
-
-    #Timeouty
-    ${b_timeput} =      Set Browser Timeout                       20                 #20s je vhodné pro rohlik.cz
-    Log                 Browser timeout is ${b_timeput}
 
 
 
-Ukonceni
-#    Log                nastavení do "výchozí polohy"    # pro stabilní funkci testů je nutné např: zavřít prihlašovací
-                                                         # form, nebo košík atd. vše se vyřeší kliknutím na logo
-    Clic                id=logo
-
-#    Log                 ukonci prohlizec
-#    Close Browser
