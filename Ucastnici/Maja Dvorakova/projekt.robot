@@ -23,7 +23,7 @@ Prihlaseni success
 
 *** Keywords ***
 
-Login
+Login/Log Out
 
     Open Browser        ${LOGIN URL}    ${BROWSER}
     Title Should Be     test_login
@@ -38,4 +38,9 @@ Login
     ${log}=             Get Text                            data-test=header-user-icon
     Log                 ${log}
     Take Screenshot
+
+    Click               id=headerUser
+    Click               data-test=user-box-logout-button
+
+
 
