@@ -111,34 +111,3 @@ Odebrat z kose
     Take Screenshot
 
 
-
-Odstran
-    Click               data-test=btnMinus
-    ${log}=             Get Text                    data-test=headerPrice
-    Log                 ${log}
-#    Get Text            data-test=headerPrice       contains                        0
-#    Sleep               1
-    Take Screenshot
-
-
-
-
-Pred Celou Sadou
-    Log                 nstartuje prohlizec a novou stranku
-#    Open Browser        ${URL}                                    headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
-#    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
-    New Page            ${URL}
-
-    #Timeouty
-    ${b_timeput} =      Set Browser Timeout                       20                 #20s je vhodné pro rohlik.cz
-    Log                 Browser timeout is ${b_timeput}
-
-
-
-Ukonceni
-#    Log                nastavení do "výchozí polohy"    # pro stabilní funkci testů je nutné např: zavřít prihlašovací
-                                                         # form, nebo košík atd. vše se vyřeší kliknutím na logo
-    Clic                id=logo
-
-#    Log                 ukonci prohlizec
-#    Close Browser

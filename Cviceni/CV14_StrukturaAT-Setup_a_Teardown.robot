@@ -115,15 +115,6 @@ Odebrat z kose
 
 
 
-Odstran
-    Click               ${SEL_BtnMinus}
-    ${log}=             Get Text                    data-test=headerPrice
-    Log                 ${log}
-#    Get Text            data-test=headerPrice       contains                        0
-#    Sleep               1
-    Take Screenshot
-
-
 
 
 
