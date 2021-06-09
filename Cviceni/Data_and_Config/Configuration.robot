@@ -4,3 +4,4 @@
 
 *** Variables ***
 ${URL}              https://rohlik.cz
+${PORT}             80
