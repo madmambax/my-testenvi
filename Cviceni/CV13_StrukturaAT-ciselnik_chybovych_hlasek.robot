@@ -18,7 +18,7 @@ ${URL}              https://rohlik.cz
 
 *** Test Cases ***
 Login spatny email
-    Login           chyba                       tajneheslotajneheslo                    Zadejte platný email
+    Login           chyba                       ${USER1_PASSWORD}                       Zadejte platný email
 
     # je nutné zavřít prihlašovací form
     Click           id=logo
