@@ -10,9 +10,9 @@ Library         DebugLibrary     # knihova pro ladění, pokud chcete ledit test
 
 
 
-*** Variables ***
-${URL}          https://rohlik.cz
 
+*** Variables ***
+${URL}              https://rohlik.cz
 
 
 *** Test Cases ***
@@ -79,7 +79,7 @@ Pridat do kosiku
     [Arguments]         ${Zbozi}                    ${Kusu}
     Type Text           id=searchGlobal             ${Zbozi}
     #1x
-    Sleep               1
+    Sleep               1                           # čeká 1 sekundu
     Click               text=Hledat                 # ???
     Sleep               1                           # čeká 1 sekundu
     Click               data-test=btnAdd            # způsobuje někdy zmizení uživatele, scrol donwn, důvod někdy klikne na zboží níže
@@ -101,9 +101,6 @@ Logout
 Odebrat z kose
     [Arguments]                 ${Kusu}
 
-#    Repeat Keyword      42 times                     Click                             data-test=btnMinus
-#    Repeat Keyword      ${Kusu}                      Click                             data-test=btnMinus
-#    Repeat Keyword      ${Kusu}                     Odstran                    #debug, loguje cenu
     Take Screenshot
     #přidat ověření že košík obsahuje ${Kusu} kusů
     Click               data-test=btnMinus           clickCount=${Kusu}
