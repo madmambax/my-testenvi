@@ -93,10 +93,8 @@ Pridat do kosiku
 
 
 Logout
-#    Hover               xpath=//div[@class='u-mr--8']
     Click               xpath=//div[@class='u-mr--8']
     Click               data-test=user-box-logout-button
-#    Log                 ${OUTPUT_DIR}
 
 
 Odebrat z kose
