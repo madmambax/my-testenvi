@@ -8,13 +8,6 @@ Documentation   Automatizace rohlik.cz s BrowserLibrary
 Library         Browser
 Library         DebugLibrary     # knihova pro ladění, pokud chcete ledit test stačí to přislušéno místa dat KS: Debug
 
-#Test Timeout    25 s
-
-Suite Setup     Pred Celou Sadou                     # nachází se v sekci *** Settings ***
-Suite Teardown  Ukonceni
-
-#Test Setup      Pred Celou Sadou
-#Test Teardown   Ukonceni
 
 
 *** Variables ***
@@ -27,10 +20,7 @@ Login spatny email
     Login           chyba                       tajneheslotajneheslo                    Zadejte platný email
 
     # je nutné zavřít prihlašovací form
-    # přidat reset
-        # kde se nacházím - stránka
-        # kliknout na něco co mě hodí do základu
-    Click                       id=logo
+    Click           id=logo
 
 
 Login spatne heslo
@@ -53,7 +43,7 @@ Test Objednavky
     Click               id=cartContent
     Take Screenshot
     Take Screenshot
-    Vysypat kos         ${kusu}
+    Odebrat z kose      ${kusu}
     Take Screenshot
     Take Screenshot
     Logout
@@ -67,6 +57,11 @@ Test Objednavky
 
 Login
     [Arguments]                 ${Email}                            ${Heslo}                                ${Text}
+#    Open Browser        ${URL}                                    headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
+#    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
+    New Page            ${URL}
+     ${b_timeput} =             Set Browser Timeout                 20                 #20s je vhodné pro rohlik.cz
+
 #    Get Element
     Get Title                   contains                            Online supermarket Rohlik.cz
 
@@ -86,7 +81,7 @@ Pridat do kosiku
     #1x
     Sleep               1
     Click               text=Hledat                 # ???
-    Sleep               1
+    Sleep               1                           # čeká 1 sekundu
     Click               data-test=btnAdd            # způsobuje někdy zmizení uživatele, scrol donwn, důvod někdy klikne na zboží níže
     Sleep               1
     # Kusu - 1
@@ -103,7 +98,7 @@ Logout
 #    Log                 ${OUTPUT_DIR}
 
 
-Vysypat kos
+Odebrat z kose
     [Arguments]                 ${Kusu}
 
 #    Repeat Keyword      42 times                     Click                             data-test=btnMinus
@@ -145,5 +140,9 @@ Pred Celou Sadou
 
 
 Ukonceni
-    Log                 ukonci prohlizec
-    Close Browser
+#    Log                nastavení do "výchozí polohy"    # pro stabilní funkci testů je nutné např: zavřít prihlašovací
+                                                         # form, nebo košík atd. vše se vyřeší kliknutím na logo
+    Clic                id=logo
+
+#    Log                 ukonci prohlizec
+#    Close Browser
