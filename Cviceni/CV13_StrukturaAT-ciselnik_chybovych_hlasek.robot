@@ -4,7 +4,7 @@
 
 
 *** Settings ***
-Documentation   Automatizace rohlik.cz s BrowserLibrary
+Documentation   CV: Testovaci data - pripravit ciselnik chybovych hlasek
 Library         Browser
 Library         DebugLibrary     # knihova pro ladění, pokud chcete ledit test stačí to přislušéno místa dat KS: Debug
 
