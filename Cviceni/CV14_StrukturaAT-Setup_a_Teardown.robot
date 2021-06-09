@@ -9,7 +9,7 @@ Library         Browser
 Library         DebugLibrary     # knihova pro ladění, pokud chcete ledit test stačí to přislušéno místa dat KS: Debug
 
 Resource        Data_and_Config/TestData.robot
-
+Resource        Data_and_Config/Configuration.robot
 
 *** Variables ***
 ${URL}              https://rohlik.cz
@@ -18,14 +18,14 @@ ${URL}              https://rohlik.cz
 
 *** Test Cases ***
 Login spatny email
-    Login           chyba                       ${USER1_PASSWORD}                       Zadejte platný email
+    Login           chyba                       ${USER1_PASSWORD}                       ${ERROR_TEXT_FillCorrectEmail}
 
     # je nutné zavřít prihlašovací form
     Click           id=logo
 
 
 Login spatne heslo
-    Login           ${USER1_NAME}               bad                                     Zadal(a) jste nesprávný e-mail nebo heslo.
+    Login           ${USER1_NAME}               bad                                     ${ERROR_TEXT_IncorrectEmailOrPwd}
 
     # je nutné zavřít prihlašovací form
     Click                       id=logo
@@ -41,7 +41,7 @@ Test Objednavky
     ${kusu} =	        Set Variable	         5
     Login               ${USER1_NAME}            ${USER1_PASSWORD}                   JT
     Pridat do kosiku    Losos                    ${kusu}
-    Click               id=cartContent
+    Click               ${SEL_CartContent}
     Take Screenshot
     Take Screenshot
     Odebrat z kose      ${kusu}
