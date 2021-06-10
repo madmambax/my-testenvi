@@ -89,7 +89,7 @@ Pridat do kosiku
     # Kusu - 1
     ${Pocet}            Evaluate                    ${Kusu} - 1
     Click               data-test=btnPlus           clickCount=${Pocet}
-    Get Text            id=cart                     contains                            ${Zbozi}
+    Get Text            id=cart                     matches                             (?i)${Zbozi}    # (?i)  znamená že se bere case insensitive
     Take Screenshot
 
 

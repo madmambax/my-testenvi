@@ -62,7 +62,7 @@ Login
 
 #    Open Browser        ${URL}                                    headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
 #    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
-    New Page            ${URL}
+    New Page                    ${URL}
 
 #    Get Element
     Get Title                   contains                            ${TEXT_MainTitle}
@@ -89,7 +89,9 @@ Pridat do kosiku
     # Kusu - 1
     ${Pocet}            Evaluate                    ${Kusu} - 1
     Click               ${SEL_BtnPlus}              clickCount=${Pocet}
-    Get Text            ${SEL_Cart}                 contains                            ${Zbozi}
+    ${cart_text}=       Get Text                    ${SEL_Cart}
+    Log                 ${cart_text}
+    Get Text            ${SEL_Cart}                 matches                             (?i)${Zbozi}    # (?i)  znamená že se bere case insensitive
     Take Screenshot
 
 
