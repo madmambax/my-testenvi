@@ -3,31 +3,36 @@ Web login to cloud.memsource.com
 *** Settings ***
 Documentation   Automatizace Memsource s Browser Library
 Library  Browser
+Resource  Data_and_Config/testData_memsource.robot
 
+Suite Setup                     #spustí se před celou suite
+Suite Teardown                  #spustí se po doběhnutí celé suite
+Test Setup      Before Test     #spustí se před každým testem zvlášť
+Test Teardown   After Test      #spustí se po každým testu zvlášť
+
+Test Timeout  20    ¨¨
+Resource  Data_and_Config/testData_memsource.robot
 
 *** Variables ***
-${URL}              https://cloud.memsource.com/web/login
-${logged_id}        title
-${bad_login_id}     div > .errors
-${bad_login_txt}    Sorry, we were not able to find a user with that username and password.
-
 
 *** Test Cases ***
 
 Login valid
-    Login       ${logged_id}    Jobs - Memsource    ben_ling2   mpls6868
+#   [Setup]     Before Test   pretest pro jeden test
+    Login       ${logged_id}    Jobs - Memsource    ${username}    ${pwd}
+#   [Teardown]  prázdný teardown zruší obecný teardown nastavený v setupu
 
 Login wrong username
-    Login       ${bad_login_id}     ${bad_login_txt}      ab@ce.df    mpls6868
+    Login       ${bad_login_id}     ${bad_login_txt}      abcd    ${pwd}
 
 Login wrong password
-    Login       ${bad_login_id}     ${bad_login_txt}      ben_ling2   abcd
+    Login       ${bad_login_id}     ${bad_login_txt}      ${username}   abcd
 
 Login empty Username
-    Login Empty  1      input#username      password=mpls6868
+    Login Empty  1      input#username      password=${pwd}
 
 Login empty password
-    Login Empty  1      input#password      username=ben_ling2
+    Login Empty  1      input#password      username=${username}
 
 Login empty password and username
     Login Empty  2
@@ -38,7 +43,6 @@ Login empty password and username
 Login Page
     [Documentation]     Opens the login page and fills the username and password
     [Arguments]         ${username}     ${password}
-    New Page            ${URL}
     Get Title           contains        Memsource
     Type Text           id=username     ${username}
     Type Text           id=password     ${password}
