@@ -7,6 +7,8 @@ ${USER1_NAME}               radek.tester@seznam.cz
 ${USER1_PASSWORD}           tajneheslotajneheslo
 ${USER1_SHORT}              JT
 
+
+
 #Strings
 ${TEXT_MainTitle}                   Online supermarket Rohlik.cz
 ${TEXT_EmptyCart}                   Vysypat košík
