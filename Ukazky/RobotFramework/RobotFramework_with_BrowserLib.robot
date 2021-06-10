@@ -8,6 +8,7 @@ Documentation   Automatizace rohlik.cz s BrowserLibrary
 Library         Browser
 Library         DebugLibrary     # knihova pro ladění, pokud chcete ledit test stačí to přislušéno místa dat KS: Debug
 
+Test Timeout    25
 
 *** Variables ***
 ${URL}          https://rohlik.cz
