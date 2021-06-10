@@ -11,16 +11,14 @@ Test Setup      Before Test     #spustí se před každým testem zvlášť
 Test Teardown   After Test      #spustí se po každým testu zvlášť
 
 Test Timeout  20    ¨¨
-Resource  Data_and_Config/testData_memsource.robot
+Resource    Data_and_Config/testData_memsource.robot
 
 *** Variables ***
 
 *** Test Cases ***
 
 Login valid
-#   [Setup]     Before Test   pretest pro jeden test
     Login       ${logged_id}    Jobs - Memsource    ${username}    ${pwd}
-#   [Teardown]  prázdný teardown zruší obecný teardown nastavený v setupu
 
 Login wrong username
     Login       ${bad_login_id}     ${bad_login_txt}      abcd    ${pwd}
