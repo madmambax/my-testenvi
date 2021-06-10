@@ -142,13 +142,12 @@ Uklid_sada
     #je košik prázdný?
     ${cart_overview_text}   Get Text                ${SEL_CartReview}
     Log                     ${cart_overview_text}
-#    Keyboard Key            press                   PageDown
-    Take Screenshot
+
     #pokud ne vysypat nákupní koš
     Run Keyword If          '${TEXT_EmptyCart}' in '''${cart_overview_text}'''       Click               text="${TEXT_EmptyCart}"
     Take Screenshot
-#    sleep                   1
+
+    #Logout
     Go to                   ${URL}
-    Take Screenshot
     Logout
     Close Browser
