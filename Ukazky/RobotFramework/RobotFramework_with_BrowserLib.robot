@@ -30,12 +30,13 @@ Login vse OK
 
 
 Test Objednavky
+    ${kusu} =	        Set Variable	            5
     Login               radek.tester@seznam.cz      tajneheslotajneheslo                JT
-    Pridat do kosiku    Losos                       5
+    Pridat do kosiku    Losos                       ${kusu}
     Click               id=cartContent
     Take Screenshot
     Take Screenshot
-    Vysypat kos         5
+    Vysypat kos         ${kusu}
     Take Screenshot
     Take Screenshot
     Logout
@@ -74,7 +75,8 @@ Pridat do kosiku
     # Kusu - 1
     ${Pocet}            Evaluate                    ${Kusu} - 1
     Click               data-test=btnMinus          clickCount=${Pocet}
-    Get Text            id=cart                     contains                            ${Zbozi}
+
+    Get Text            id=cart                     matches                             (?i)${Zbozi}    # (?i)  znamená že se bere case insensitive
     Take Screenshot
 
 
@@ -86,11 +88,12 @@ Logout
 
 Vysypat kos
     [Arguments]                 ${Kusu}
-#    Repeat Keyword      42 times          Click               data-test=btnMinus
-#    Repeat Keyword      42                          Click                               data-test=btnMinus
+
+#    Repeat Keyword      42 times                     Click                             data-test=btnMinus
+#    Repeat Keyword      ${Kusu}                      Click                             data-test=btnMinus
     Click               data-test=btnMinus           clickCount=${Kusu}
 #    Repeat Keyword      ${Kusu}                     Odstran                    #debug, loguje cenu
-    Sleep               3
+    Sleep               3                                                       #timeout
 #    Keyboard Key        press                        PageUp
 
 

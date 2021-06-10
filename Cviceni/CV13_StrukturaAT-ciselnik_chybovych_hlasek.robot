@@ -4,27 +4,28 @@
 
 
 *** Settings ***
-Documentation   CV: Testovaci data
+Documentation   CV: Testovaci data - pripravit ciselnik chybovych hlasek
 Library         Browser
 Library         DebugLibrary     # knihova pro ladění, pokud chcete ledit test stačí to přislušéno místa dat KS: Debug
 
-
+Resource        Data_and_Config/TestData.robot
 
 
 *** Variables ***
 ${URL}              https://rohlik.cz
 
 
+
 *** Test Cases ***
 Login spatny email
-    Login           chyba                       tajneheslotajneheslo                    Zadejte platný email
+    Login           chyba                       ${USER1_PASSWORD}                       Zadejte platný email
 
     # je nutné zavřít prihlašovací form
     Click           id=logo
 
 
 Login spatne heslo
-    Login           radek.tester@seznam.cz      bad                                     Zadal(a) jste nesprávný e-mail nebo heslo.
+    Login           ${USER1_NAME}               bad                                     Zadal(a) jste nesprávný e-mail nebo heslo.
 
     # je nutné zavřít prihlašovací form
     Click                       id=logo
@@ -32,13 +33,13 @@ Login spatne heslo
 
 
 Login vse OK
-    Login           radek.tester@seznam.cz      tajneheslotajneheslo                    JT
+    Login           ${USER1_NAME}               ${USER1_PASSWORD}                    JT
     Logout
 
 
 Test Objednavky
     ${kusu} =	        Set Variable	            5
-    Login               radek.tester@seznam.cz      tajneheslotajneheslo                JT
+    Login               ${USER1_NAME}               ${USER1_PASSWORD}                    JT
     Pridat do kosiku    Losos                       ${kusu}
     Click               id=cartContent
     Take Screenshot
@@ -57,9 +58,9 @@ Test Objednavky
 
 Login
     [Arguments]                 ${Email}                            ${Heslo}                                ${Text}
+    Set Browser Timeout         20                                  #20s je vhodné pro rohlik.cz
 
-     Set Browser Timeout        20                                  #20s je vhodné pro rohlik.cz
-#    Open Browser               ${URL}                               headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
+#    Open Browser        ${URL}                                    headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
 #    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
     New Page            ${URL}
 
@@ -81,7 +82,7 @@ Pridat do kosiku
     [Arguments]         ${Zbozi}                    ${Kusu}
     Type Text           id=searchGlobal             ${Zbozi}
     #1x
-    Sleep               1                           # čeká 1 sekundu
+    Sleep               1
     Click               text=Hledat                 # ???
     Sleep               1                           # čeká 1 sekundu
     Click               data-test=btnAdd            # způsobuje někdy zmizení uživatele, scrol donwn, důvod někdy klikne na zboží níže
@@ -94,10 +95,8 @@ Pridat do kosiku
 
 
 Logout
-#    Hover               xpath=//div[@class='u-mr--8']
     Click               xpath=//div[@class='u-mr--8']
     Click               data-test=user-box-logout-button
-#    Log                 ${OUTPUT_DIR}
 
 
 Odebrat z kose
