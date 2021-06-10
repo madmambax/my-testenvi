@@ -132,9 +132,6 @@ Uklid_po_testu
     Go to       ${URL}
 
 
-#Uklid_sada
-#    Log                     Uklid na konci test planu.
-
 Uklid_sada
     Login                   ${USER1_NAME}           ${USER1_PASSWORD}           ${USER1_SHORT}
     Go to                   ${URL_cart}
