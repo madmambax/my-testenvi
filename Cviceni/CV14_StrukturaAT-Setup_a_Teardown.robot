@@ -11,6 +11,7 @@ Library         DebugLibrary     # knihova pro ladění, pokud chcete ledit test
 Resource        Data_and_Config/TestData.robot
 Resource        Data_and_Config/Configuration.robot
 
+
 *** Variables ***
 
 
@@ -114,11 +115,6 @@ Odebrat z kose
     Take Screenshot
     Go to               ${URL}
     Take Screenshot
-
-
-
-
-
 
 
 
