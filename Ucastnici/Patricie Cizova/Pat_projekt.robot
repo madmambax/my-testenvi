@@ -43,7 +43,7 @@ Login
     [Documentation]  	Uspesne prihlaseni
     [Arguments]         ${username}         ${password}
     New Page            ${URL}
-    Get Title           contains           Rohlik      # Hláška: TimeoutError: page.goto: Timeout 10000ms exceeded.
+        Get Title           contains           Rohlik      # Hláška: TimeoutError: page.goto: Timeout 10000ms exceeded.
     Click               id=headerLogin
     Type Text           data-test=user-login-form-email             ${username}
     Type Text           data-test=user-login-form-password          ${password}
