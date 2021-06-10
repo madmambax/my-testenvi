@@ -104,11 +104,9 @@ Odebrat z kose
     [Arguments]                 ${Kusu}
 
     Take Screenshot
-    #přidat ověření že košík obsahuje ${Kusu} kusů
     Click               data-test=btnMinus           clickCount=${Kusu}
-    #přidat ověření že košík obsahuje 0 kusů
     Take Screenshot
-    Sleep               3                                                       #timeout
+    Sleep               3                                                       #statické čekání
     Take Screenshot
     Go to                https://www.rohlik.cz/
     Take Screenshot

@@ -107,11 +107,9 @@ Odebrat z kose
     [Arguments]                 ${Kusu}
 
     Take Screenshot
-    #přidat ověření že košík obsahuje ${Kusu} kusů
     Click               ${SEL_BtnMinus}             clickCount=${Kusu}
-    #přidat ověření že košík obsahuje 0 kusů
     Take Screenshot
-    Sleep               3                                                       #timeout
+    Sleep               3                                                       #statické čekání
     Take Screenshot
     Go to               ${URL}
     Take Screenshot
