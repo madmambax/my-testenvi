@@ -14,18 +14,18 @@ Resource        Data_and_Config/TestData.robot
 *** Variables ***
 ${URL}              https://rohlik.cz
 
-${ERROR0}           Zadejte platný email
-${ERROR1}           Zadal(a) jste nesprávný e-mail nebo heslo.
+
+
 *** Test Cases ***
 Login spatny email
-    Login           chyba                       ${USER1_PASSWORD}                       ${ERROR1}
+    Login           chyba                       ${USER1_PASSWORD}                       ${ERROR_TEXT_FillCorrectEmail}
 
     # je nutné zavřít prihlašovací form
-    Click           id=logo                                                             ${ERROR1}
+    Click           id=logo                                                             ${ERROR_TEXT_IncorrectEmailOrPwd}
 
 
 Login spatne heslo
-    Login           ${USER1_NAME}               bad                                     ${ERROR1}
+    Login           ${USER1_NAME}               bad                                     ${ERROR_TEXT_IncorrectEmailOrPwd}
 
     # je nutné zavřít prihlašovací form
     Click                       id=logo
@@ -33,13 +33,13 @@ Login spatne heslo
 
 
 Login vse OK
-    Login           ${USER1_NAME}               ${USER1_PASSWORD}                    JT
+    Login           ${USER1_NAME}               ${USER1_PASSWORD}                       JT
     Logout
 
 
 Test Objednavky
     ${kusu} =	        Set Variable	            5
-    Login               ${USER1_NAME}               ${USER1_PASSWORD}                    JT
+    Login               ${USER1_NAME}               ${USER1_PASSWORD}                   JT
     Pridat do kosiku    Losos                       ${kusu}
     Click               id=cartContent
     Take Screenshot
