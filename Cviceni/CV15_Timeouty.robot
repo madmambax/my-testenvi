@@ -79,11 +79,8 @@ Pridat do kosiku
     [Arguments]         ${Zbozi}                    ${Kusu}
     Type Text           ${SEL_SearchGlobal}         ${Zbozi}
     #1x
-    Sleep               1
     Click               ${SEL_BtnSearchGlobal}      # tlačítko Hledat
-    Sleep               1                           # čeká 1 sekundu
     Click               ${SEL_BtnAdd}               # způsobuje někdy zmizení uživatele, scrol donwn, důvod někdy klikne na zboží níže
-    Sleep               1
     # Kusu - 1
     ${Pocet}            Evaluate                    ${Kusu} - 1
     Click               ${SEL_BtnPlus}              clickCount=${Pocet}
