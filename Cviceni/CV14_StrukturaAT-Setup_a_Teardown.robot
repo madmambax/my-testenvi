@@ -34,13 +34,13 @@ Login spatne heslo
 
 
 Login vse OK
-    Login           ${USER1_NAME}               ${USER1_PASSWORD}                    JT
+    Login           ${USER1_NAME}               ${USER1_PASSWORD}                    ${USER1_SHORT}
     Logout
 
 
 Test Objednavky
     ${kusu} =	        Set Variable	         5
-    Login               ${USER1_NAME}            ${USER1_PASSWORD}                   JT
+    Login               ${USER1_NAME}            ${USER1_PASSWORD}                   ${USER1_SHORT}
     Pridat do kosiku    Losos                    ${kusu}
     Click               ${SEL_CartContent}
     Take Screenshot
