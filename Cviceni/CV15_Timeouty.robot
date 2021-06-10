@@ -125,21 +125,6 @@ Odebrat z kose
     #  Get Text                id=obsah_kosiku      contains      V košíku máte 0 kusů za 0 Kč
 
 
-
-Odebrat z kose OLD
-    [Arguments]                 ${Kusu}
-
-    #přidat ověření že košík obsahuje ${Kusu} kusů
-    Take Screenshot
-
-
-    Click                   ${SEL_BtnMinus}             clickCount=${Kusu}
-    Take Screenshot
-
-    #Statický timeout
-    Sleep                   3
-    Take Screenshot
-
 Pred_testem
     Go to               ${URL}   #jdi na hlavní stránku
 
