@@ -17,6 +17,7 @@ Suite Teardown  Uklid_sada
 Test Setup      Pred_testem
 Test Teardown   Uklid_po_testu
 
+Test Timeout    25      # Timeout pro všechny KS z RobotFW
 
 *** Variables ***
 
@@ -56,6 +57,8 @@ Test Objednavky
 
 Login
     [Arguments]                ${Email}                            ${Heslo}                                ${Text}
+
+    #Timeouty pro Browser library
     ${b_timeput} =             Set Browser Timeout                 20                 #20s je vhodné pro rohlik.cz
 
 #    Open Browser        ${URL}                                    headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
@@ -80,10 +83,11 @@ Pridat do kosiku
     Type Text           ${SEL_SearchGlobal}         ${Zbozi}
     #1x
     Click               ${SEL_BtnSearchGlobal}      # tlačítko Hledat
-    Click               ${SEL_BtnAdd}               # způsobuje někdy zmizení uživatele, scrol donwn, důvod někdy klikne na zboží níže
+    Click               ${SEL_BtnAdd}               delay=100ms     # způsobuje někdy zmizení uživatele, scrol donwn, důvod někdy klikne na zboží níže
     # Kusu - 1
     ${Pocet}            Evaluate                    ${Kusu} - 1
     Click               ${SEL_BtnPlus}              clickCount=${Pocet}
+    Sleep               1                           #Statický timeout -  čeká na aktualizaci košíku
     ${cart_text}=       Get Text                    ${SEL_Cart}
     Log                 ${cart_text}
     Get Text            ${SEL_Cart}                 matches                             (?i)${Zbozi}    # (?i)  znamená že se bere case insensitive
@@ -100,19 +104,43 @@ Logout
 Odebrat z kose
     [Arguments]                 ${Kusu}
 
-    Take Screenshot
     #přidat ověření že košík obsahuje ${Kusu} kusů
-    Click               ${SEL_BtnMinus}             clickCount=${Kusu}
-    #přidat ověření že košík obsahuje 0 kusů
-    Take Screenshot
-    Sleep               3                                                       #timeout
-    Take Screenshot
-    Go to               ${URL}
     Take Screenshot
 
+
+    Click                   ${SEL_BtnMinus}             clickCount=${Kusu}      delay=100ms
+    Take Screenshot
+
+    # nějakou dobu trvá než se zboží přidá do košíku, možnosti
+
+    #Statický timeout
+    Sleep                   3
+    Take Screenshot
+
+    # Dynamický timeout
+    # je třeba vědět co je synchronyzační bod. Na co čeakt. Co se stane když se z košíku odebere X položek?
+    # v případě košíku to je aktuální počet zboží v košíku (bohužel rohlík jej nemá označený pomocí id nebo data-test
+    # a tak se k němu nedá dostat)
+
+
+
+
+Odebrat z kose OLD
+    [Arguments]                 ${Kusu}
+
+    #přidat ověření že košík obsahuje ${Kusu} kusů
+    Take Screenshot
+
+
+    Click                   ${SEL_BtnMinus}             clickCount=${Kusu}
+    Take Screenshot
+
+    #Statický timeout
+    Sleep                   3
+    Take Screenshot
 
 Pred_testem
-    Go to               ${URL}
+    Go to               ${URL}   #jdi na hlavní stránku
 
 
 Prerekvizita
@@ -130,6 +158,7 @@ Uklid_po_testu
 
 
 Uklid_sada
+    New Page                ${URL}    # pro stabilitu vše dělá v novém tabu
     Login                   ${USER1_NAME}           ${USER1_PASSWORD}           ${USER1_SHORT}
     Go to                   ${URL_cart}
 
