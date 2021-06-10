@@ -33,8 +33,8 @@ Login novak overeno v KS
     [Documentation]  	Uspesne prihlaseni s vnorenym navratovym kodem
     Login   novak       tajnenovak  200
     Log to console      ${\n}Adresa aplikace: ${url}
-    Log                 ${responce_code}
-    Log                 ${username}     ${password}     ${responce_code}
+    Log                 ${responce_code}    #stále to hlásí, že to proměnnou nepozná :-(
+    Log                 ${username}     ${password}     ${responce_code}    #stále to hlásí, že to proměnné nepozná :-(
 
 Login admin overeno v KS
     [Documentation]  	Uspesne prihlaseni s vnorenym navratovym kodem
@@ -43,7 +43,7 @@ Login admin overeno v KS
 Login novak overeno v KS notOK
     [Documentation]  	Neuspesne prihlaseni s vnorenym navratovym kodem
     Login   nova/k      tajnenovak  403
-    Log to console      ${\n}Adresa aplikace včetně endpointu:${url}${endpoint}
+    Log to console      ${\n}Adresa aplikace včetně endpointu: ${url}${endpoint}
 
 Login admin overeno v KS notOK
     [Documentation]  	Neuspesne prihlaseni s vnorenym navratovym kodem

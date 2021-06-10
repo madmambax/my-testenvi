@@ -26,5 +26,5 @@ Test pro oveření, že 0 položka seznamu obsahuje Chrome
     Should Contain      ${list}[0]       Google_Chrome
 
 Test pro oveření položky v seznamu
-    Should Contain Any  ${list}     Edge                #TEST FUNGUJE
-    List Should Contain Value   ${list}  Safari      #TEST NEFUNGUJE! PROČ???
+    Should Contain Any  ${list}     Edge
+    List Should Contain Value   ${list}  Safari
