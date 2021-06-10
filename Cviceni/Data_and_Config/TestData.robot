@@ -9,6 +9,7 @@ ${USER1_SHORT}              JT
 
 #Strings
 ${TEXT_MainTitle}                   Online supermarket Rohlik.cz
+${TEXT_EmptyCart}                   Vysypat košík
 
 #Error strings
 ${ERROR_TEXT_FillCorrectEmail}      Zadejte platný email
@@ -36,3 +37,4 @@ ${SEL_BtnMinus}             data-test=btnMinus
 #Cart
 ${SEL_Cart}                 id=cart
 ${SEL_CartContent}          id=cartContent
+${SEL_CartReview}           id=cartReviewMainTitle
