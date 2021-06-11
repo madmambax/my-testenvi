@@ -6,8 +6,8 @@
 ${USER1_NAME}               radek.tester@seznam.cz
 ${USER1_PASSWORD}           tajneheslotajneheslo
 ${USER1_SHORT}              JT
-
-
+${msg_1}                    Zadejte platný email
+${msg_2}                    Zadal(a) jste nesprávný e-mail nebo heslo.
 
 #Strings
 ${TEXT_MainTitle}                   Online supermarket Rohlik.cz
