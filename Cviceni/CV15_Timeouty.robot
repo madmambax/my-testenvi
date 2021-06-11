@@ -125,14 +125,13 @@ Odebrat z kose
     # pokud by rohlík udělal změnu dalo by se udělat
     #  Get Text                id=obsah_kosiku      contains      V košíku máte 0 kusů za 0 Kč
     #debug
-    ${CartContentText}=     Get Text                id=cartContent
+    ${CartContentText}=     Get Text                ${SEL_CartContent}
     Log                     ${CartContentText}
 
     FOR    ${i}    IN RANGE    100
            sleep    200ms
-           ${CartContentText}=     Get Text         id=cartContent
-#           Exit For Loop If        '${CartContentText}' == 'Košík funguje i jako nákupní seznam'
-           Exit For Loop If         'Košík funguje i jako nákupní seznam' in '''${CartContentText}'''
+           ${CartContentText}=     Get Text         ${SEL_CartContent}
+           Exit For Loop If         '${ERROR_TEXT_EmptyCart}' in '''${CartContentText}'''
 
            Log                     ${CartContentText}
            Log                     ${i}
