@@ -39,7 +39,7 @@ Login vse OK
 Test Objednavky
     ${kusu} =	        Set Variable	         5
     Login               ${USER1_NAME}            ${USER1_PASSWORD}                   ${USER1_SHORT}
-    Pridat do kosiku    máslo                    ${kusu}
+    Pridat do kosiku    banán                    ${kusu}
     Click               ${SEL_CartContent}
     Take Screenshot
     Take Screenshot
@@ -115,8 +115,8 @@ Odebrat z kose
     # nějakou dobu trvá než se zboží přidá do košíku, možnosti
 
     #Statický timeout
-    Sleep                   3 s
-    Take Screenshot
+#    Sleep                   3 s
+#    Take Screenshot
 
     # Dynamický timeout
     # je třeba vědět co je synchronyzační bod. Na co čeakt. Co se stane když se z košíku odebere X položek?
@@ -125,14 +125,18 @@ Odebrat z kose
     # pokud by rohlík udělal změnu dalo by se udělat
     #  Get Text                id=obsah_kosiku      contains      V košíku máte 0 kusů za 0 Kč
     #debug
-    Get Text                id=cartContent      contains      Košík funguje i jako nákupní seznam
+    ${CartContentText}=     Get Text                id=cartContent
+    Log                     ${CartContentText}
 
-#    ${text} =  Set Variable     ""
-#    While    ${text}  ==   V košíku máte 0 kusů za 0 Kč
-#        sleep       100 ms
-#        ${text} =   Get Text                id=obsah_kosiku
-#        if exit loop pro FOR
-#    END
+    FOR    ${i}    IN RANGE    100
+           sleep    200ms
+           ${CartContentText}=     Get Text         id=cartContent
+#           Exit For Loop If        '${CartContentText}' == 'Košík funguje i jako nákupní seznam'
+           Exit For Loop If         'Košík funguje i jako nákupní seznam' in '''${CartContentText}'''
+
+           Log                     ${CartContentText}
+           Log                     ${i}
+    END
 
 
 Pred_testem
