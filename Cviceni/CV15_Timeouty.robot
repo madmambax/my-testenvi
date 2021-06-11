@@ -33,20 +33,20 @@ Login spatne heslo
 
 Login vse OK
     Login           ${USER1_NAME}               ${USER1_PASSWORD}                    ${USER1_SHORT}
-    Logout
+    [Teardown]      Logout         #provede se i když test zfailuje
 
 
 Test Objednavky
     ${kusu} =	        Set Variable	         5
     Login               ${USER1_NAME}            ${USER1_PASSWORD}                   ${USER1_SHORT}
-    Pridat do kosiku    Losos                    ${kusu}
+    Pridat do kosiku    máslo                    ${kusu}
     Click               ${SEL_CartContent}
     Take Screenshot
     Take Screenshot
     Odebrat z kose      ${kusu}
     Take Screenshot
     Take Screenshot
-    Logout
+    [Teardown]          Logout         #provede se i když test zfailuje
     Take Screenshot
     Take Screenshot
 
@@ -96,6 +96,7 @@ Pridat do kosiku
 
 Logout
 #    Hover               xpath=//div[@class='u-mr--8']
+    Go to               ${URL}
     Click               ${SEL_HeaderLoginErrorTxt}
     Click               ${SEL_UserBoxLogoutBtn}
 #    Log                 ${OUTPUT_DIR}
@@ -114,7 +115,7 @@ Odebrat z kose
     # nějakou dobu trvá než se zboží přidá do košíku, možnosti
 
     #Statický timeout
-    Sleep                   3
+    Sleep                   3 s
     Take Screenshot
 
     # Dynamický timeout
@@ -123,6 +124,15 @@ Odebrat z kose
     # a tak se k němu nedá dostat)
     # pokud by rohlík udělal změnu dalo by se udělat
     #  Get Text                id=obsah_kosiku      contains      V košíku máte 0 kusů za 0 Kč
+    #debug
+    Get Text                id=cartContent      contains      Košík funguje i jako nákupní seznam
+
+#    ${text} =  Set Variable     ""
+#    While    ${text}  ==   V košíku máte 0 kusů za 0 Kč
+#        sleep       100 ms
+#        ${text} =   Get Text                id=obsah_kosiku
+#        if exit loop pro FOR
+#    END
 
 
 Pred_testem
@@ -131,7 +141,8 @@ Pred_testem
 
 Prerekvizita
     ${b_timeput} =             Set Browser Timeout                 20                 #20s je vhodné pro rohlik.cz
-#    Open Browser        ${URL}                                    headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
+    Log                        ${b_timeput}
+#    Open Browser        ${URL}                                     headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
 #    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
     New Page                    ${URL}
 
