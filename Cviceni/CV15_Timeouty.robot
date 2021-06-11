@@ -83,7 +83,7 @@ Pridat do kosiku
     Type Text           ${SEL_SearchGlobal}         ${Zbozi}
     #1x
     Click               ${SEL_BtnSearchGlobal}      # tlačítko Hledat
-    Click               ${SEL_BtnAdd}               delay=100ms     # způsobuje někdy zmizení uživatele, scrol donwn, důvod někdy klikne na zboží níže
+    Click               ${SEL_BtnAdd}               delay=${TIME_BETWEEN_CLICKS}     # způsobuje někdy zmizení uživatele, scrol donwn, důvod někdy klikne na zboží níže
     # Kusu - 1
     ${Pocet}            Evaluate                    ${Kusu} - 1
     Click               ${SEL_BtnPlus}              clickCount=${Pocet}
@@ -129,7 +129,7 @@ Odebrat z kose
     Log                     ${CartContentText}
 
     FOR    ${i}    IN RANGE    100
-           sleep    200ms
+           sleep                   ${TIME_BETWEEN_CHECKS}
            ${CartContentText}=     Get Text         ${SEL_CartContent}
            Exit For Loop If         '${ERROR_TEXT_EmptyCart}' in '''${CartContentText}'''
 
