@@ -120,11 +120,8 @@ Odebrat z kose
 
     # Dynamický timeout
     # je třeba vědět co je synchronyzační bod. Na co čeakt. Co se stane když se z košíku odebere X položek?
-    # v případě košíku to je aktuální počet zboží v košíku (bohužel rohlík jej nemá označený pomocí id nebo data-test
-    # a tak se k němu nedá dostat)
-    # pokud by rohlík udělal změnu dalo by se udělat
-    #  Get Text                id=obsah_kosiku      contains      V košíku máte 0 kusů za 0 Kč
-    #debug
+    # v případě košíku to je aktuální počet zboží v košíku
+
     ${CartContentText}=     Get Text                ${SEL_CartContent}
     Log                     ${CartContentText}
 
