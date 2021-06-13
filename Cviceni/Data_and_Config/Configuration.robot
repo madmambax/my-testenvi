@@ -9,3 +9,7 @@ ${URL_cart}             https://www.rohlik.cz/objednavka/prehled-kosiku#cartRevi
 
 ${TIME_BETWEEN_CLICKS}  100ms
 ${TIME_BETWEEN_CHECKS}  200ms
+
+
+${TIMEOUT_BROWSER}      20 s
+${TIMEOUT_ROBOT_KW}     25 s
