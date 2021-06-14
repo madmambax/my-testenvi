@@ -1,11 +1,10 @@
 *** Settings ***
 Documentation   Testing website rohlik.cz
 Library         SeleniumLibrary
-Resource        TestovaciData.robot
 
 
 *** Variables ***
-
+${URL}              http://rohlik.cz
 
 
 
@@ -13,19 +12,19 @@ Resource        TestovaciData.robot
 
 Login and logout with valid data
 
-    Open Browser                        ${URL}                                 chrome
+    Open Browser                        ${URL}                                                                                                       chrome
     Click Element                       id=headerLogin
     ${AllLinks}=                        Get All Links
     Log                                 ${AllLinks}
-    Input Text                          ${SEL_LoginValidEmail}                 TesterNotARobot12@gmail.com
-    Input Text                          ${SEL_LoginValidPwd}                   hesloNeniPassword34
-    Press Keys                          ${SEL_BtnSignIn}                       [Return]
+    Input Text                          xpath=//*[@id="email"]                                                                                       TesterNotARobot12@gmail.com
+    Input Text                          xpath=//*[@id="password"]                                                                                    hesloNeniPassword34
+    Press Keys                          xpath=//*[@id="header"]/div[1]/div[1]/div/div[2]/div/div[2]/div/div[1]/form/button/x-translation             [Return]
     ${AllLinks}=                        Get All Links
     Log                                 ${AllLinks}
-    Press Keys                          ${SEL_TTBtn}                           [Return]
+    Press Keys                          xpath=//*[@id="headerUser"]/div                                                                              [Return]
     ${AllLinks}=                        Get All Links
     Log                                 ${AllLinks}
-    Press Keys                          ${SEL_UserBoxLogoutBtn}                [Return]
+    Press Keys                          xpath=//*[@id="header"]/div[1]/div[1]/div/div[2]/div/div[2]/div[5]/a/x-translation                           [Return]
     Close Browser
 
 
@@ -59,3 +58,10 @@ Login with invalid password
 
 
 *** Keywords ***
+
+
+
+
+
+
+
