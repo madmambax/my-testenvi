@@ -3,6 +3,8 @@ Documentation   Testing website rohlik.cz
 Library         SeleniumLibrary
 Resource        TestovaciData.robot
 
+Test Setup      Open ${URL} Chrome
+Test Teardown   Close Browser
 
 *** Variables ***
 
@@ -13,7 +15,7 @@ Resource        TestovaciData.robot
 
 Login and logout with valid data
 
-    Open Browser                        ${URL}                                 ${BROWSER}
+
     Click Element                       id=headerLogin
     ${AllLinks}=                        Get All Links
     Log                                 ${AllLinks}
@@ -26,12 +28,11 @@ Login and logout with valid data
     ${AllLinks}=                        Get All Links
     Log                                 ${AllLinks}
     Press Keys                          ${SEL_UserBoxLogoutBtn}                [Return]
-    Close Browser
 
 
 Login with invalid username
 
-    Open Browser                        ${URL}                                  ${BROWSER}
+
     Click Element                       ${SEL_HeaderLogin}
     ${AllLinks}=                        Get All Links
     Log                                 ${AllLinks}
@@ -39,12 +40,12 @@ Login with invalid username
     Input Text                          ${SEL_LoginValidPwd}                    ${USER1_PWD}
     Press Keys                          ${SEL_BtnSignIn}                        [Return]
     Element Text Should Be              emailError                              ${ERROR_TEXT_FillCorrectEmail}
-    Close Browser
+
 
 
 Login with invalid password
 
-    Open Browser                        ${URL}                                  ${BROWSER}
+
     Click Element                       ${SEL_HeaderLogin}
     ${AllLinks}=                        Get All Links
     Log                                 ${AllLinks}
@@ -54,8 +55,12 @@ Login with invalid password
     ${AllLinks}=                        Get All Links
     Log                                 ${AllLinks}
     Element Text Should Be              emailError                              ${ERROR_TEXT_IncorrectEmailOrPwd}
-    Close Browser
+
 
 
 
 *** Keywords ***
+
+Login and logout with valid data
+
+
