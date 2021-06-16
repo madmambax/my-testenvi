@@ -13,12 +13,12 @@ Resource        TestovaciData.robot
 
 Login and logout with valid data
 
-    Open Browser                        ${URL}                                 chrome
+    Open Browser                        ${URL}                                 ${BROWSER}
     Click Element                       id=headerLogin
     ${AllLinks}=                        Get All Links
     Log                                 ${AllLinks}
-    Input Text                          ${SEL_LoginValidEmail}                 TesterNotARobot12@gmail.com
-    Input Text                          ${SEL_LoginValidPwd}                   hesloNeniPassword34
+    Input Text                          ${SEL_LoginValidEmail}                 ${USER1_NAME}
+    Input Text                          ${SEL_LoginValidPwd}                   ${USER1_PWD}
     Press Keys                          ${SEL_BtnSignIn}                       [Return]
     ${AllLinks}=                        Get All Links
     Log                                 ${AllLinks}
@@ -31,12 +31,12 @@ Login and logout with valid data
 
 Login with invalid username
 
-    Open Browser                        ${URL}                                  Chrome
+    Open Browser                        ${URL}                                  ${BROWSER}
     Click Element                       ${SEL_HeaderLogin}
     ${AllLinks}=                        Get All Links
     Log                                 ${AllLinks}
-    Input Text                          ${SEL_LoginValidEmail}                  jsemprihlasen
-    Input Text                          ${SEL_LoginValidPwd}                    hesloNeniPassword34
+    Input Text                          ${SEL_LoginValidEmail}                  ${BAD_USER1}
+    Input Text                          ${SEL_LoginValidPwd}                    ${USER1_PWD}
     Press Keys                          ${SEL_BtnSignIn}                        [Return]
     Element Text Should Be              emailError                              ${ERROR_TEXT_FillCorrectEmail}
     Close Browser
@@ -44,12 +44,12 @@ Login with invalid username
 
 Login with invalid password
 
-    Open Browser                        ${URL}                                  Chrome
+    Open Browser                        ${URL}                                  ${BROWSER}
     Click Element                       ${SEL_HeaderLogin}
     ${AllLinks}=                        Get All Links
     Log                                 ${AllLinks}
-    Input Text                          ${SEL_LoginValidEmail}                  TesterNotARobot12@gmail.com
-    Input Text                          ${SEL_LoginValidPwd}                    passwordispassword
+    Input Text                          ${SEL_LoginValidEmail}                  ${USER1_NAME}
+    Input Text                          ${SEL_LoginValidPwd}                    ${BAD_USER1_PWD}
     Press Keys                          ${SEL_BtnSignIn}                        [Return]
     ${AllLinks}=                        Get All Links
     Log                                 ${AllLinks}
