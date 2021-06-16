@@ -2,49 +2,43 @@ Web login to cloud.memsource.com
 
 *** Settings ***
 Documentation   Automatizace Memsource s Browser Library
-Library  Browser
-Resource  Data_and_Config/testData_memsource.robot
+Library         Browser
+Resource        Data_and_Config/resources.robot
 
-Suite Setup                     #spustí se před celou suite
-Suite Teardown                  #spustí se po doběhnutí celé suite
-Test Setup      Before Test     #spustí se před každým testem zvlášť
-Test Teardown   After Test      #spustí se po každým testu zvlášť
-
-Test Timeout  20    ¨¨
-Resource    Data_and_Config/testData_memsource.robot
 
 *** Variables ***
 
 *** Test Cases ***
 
 Login valid
-    Login       ${logged_id}    Jobs - Memsource    ${username}    ${pwd}
+    Login           ${logged_id}        ${logged_txt}       ${username}     ${pwd}
 
 Login wrong username
-    Login       ${bad_login_id}     ${bad_login_txt}      abcd    ${pwd}
+    Login           ${bad_login_id}     ${bad_login_txt}    abcd            ${pwd}
 
 Login wrong password
-    Login       ${bad_login_id}     ${bad_login_txt}      ${username}   abcd
+    Login           ${bad_login_id}     ${bad_login_txt}    ${username}     abcd
 
 Login empty Username
-    Login Empty  1      input#username      password=${pwd}
+    Login Empty     1      ${empty_input_un}      password=${pwd}
 
 Login empty password
-    Login Empty  1      input#password      username=${username}
+    Login Empty     1      ${empty_input_pw}      username=${username}
 
 Login empty password and username
-    Login Empty  2
+    Login Empty     2      ${empty_input}
 
 
 
 *** Keywords ***
 Login Page
     [Documentation]     Opens the login page and fills the username and password
-    [Arguments]         ${username}     ${password}
-    Get Title           contains        Memsource
-    Type Text           id=username     ${username}
-    Type Text           id=password     ${password}
-    Click               id=submit
+    [Arguments]         ${username}         ${password}
+    New Page            ${url_login}
+    Get Title           contains            ${web_title}
+    Type Text           ${input_username}   ${username}
+    Type Text           ${input_password}   ${password}
+    Click               ${button_submit}
 
 
 Login
@@ -59,5 +53,5 @@ Login Empty
     [Documentation]     Evaluates Login where username and password can be empty, counts number of red fields
     [Arguments]         ${count}        ${element}=     ${username}=    ${password}=
     Login Page          ${username}     ${password}
-    Get Element Count	.ms-text-field-wrapper--error ${element}    ==  ${count}
+    Get Element Count	${element}    ==  ${count}
     Take Screenshot
