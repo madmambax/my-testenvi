@@ -26,7 +26,7 @@ Login uspesne data-test
 Login uspesne id
     [Documentation]  Uspesne prihlaseni pomoci id
     Login_id                    ${USER_RIGHT_NAME}      ${USER_RIGHT_PWD}
-    Logout
+    [Teardown]      Logout
 
 Login zapomenute heslo
     [Documentation]  Zapomenute heslo
