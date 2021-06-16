@@ -25,16 +25,21 @@ Library	RequestsLibrary
 
 
 *** Variables ***
-${url}		http://testovani.kitner.cz/
+${url}		    http://testovani.kitner.cz/
 ${endpoint}     login_app/userauth.php
+${responce_code} =      Set Variable         200
+#${username} =      Set Variable     novak
+${password} =      Set Variable     tajnenovak
 
 *** Test Cases ***
 Login novak overeno v KS
     [Documentation]  	Uspesne prihlaseni s vnorenym navratovym kodem
     Login   novak       tajnenovak  200
     Log to console      ${\n}Adresa aplikace: ${url}
-    Log                 ${responce_code}    #stále to hlásí, že to proměnnou nepozná :-(
-    Log                 ${username}     ${password}     ${responce_code}    #stále to hlásí, že to proměnné nepozná :-(
+    Log                 ${responce_code}
+    ${username} =       Set Variable     novak
+    Log to console      ${username}
+    Log                 ${password}
 
 Login admin overeno v KS
     [Documentation]  	Uspesne prihlaseni s vnorenym navratovym kodem

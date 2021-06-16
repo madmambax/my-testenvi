@@ -1,34 +1,44 @@
 *** Settings ***
 Library     SeleniumLibrary
 
+Resource        Ucastnici/Maja Dvorakova/projekt/TestovaciData.robot
+
+Suite Setup     Pred kazdym testem
+
+Suite Teardown  Na konci kazdeho testu
+
+
+
 *** Variables ***
-${LOGIN URL}      http://rohlik.cz
-${BROWSER}        Chrome
+
 
 
 *** Test Cases ***
 
 Prihlaseni bad username
-    Login                       jsemprihlasen                           hesloNeniPassword34                    Přihlásit
+    Login                       ${BAD_USER1}              ${USER1_PWD}
     Element Text Should Be      emailError Zadal(a) jste nesprávný e-mail nebo heslo.
 
 Prihlaseni bad heslo
-    Login                       TesterNotARobot12@gmail.com             passwordispassword                     Přihlásit
+    Login                       ${USER1_NAME}             ${BAD_USER1_PWD}
     Element Text Should Be      emailError Zadal(a) jste nesprávný e-mail nebo heslo.
 
 Prihlaseni success
-    Login                       TesterNotARobot12@gmail.com             hesloNeniPassword34                    TT
+    Login                       ${USER1_NAME}             ${USER1_PWD}                   ${USER1_SHORT}
 
 
 
 *** Keywords ***
 
-Login/Log Out
+Login
 
-    Open Browser        ${LOGIN URL}    ${BROWSER}
+    Open Browser        ${URL}                              ${BROWSER}
     Title Should Be     test_login
+
     [Arguments]         ${email}                            ${heslo}                    ${validation}
-    New Page            ${URL}
+
+    Open Browser        ${URL}
+
     Get Title           contains                            Rohlik
     Click               id=headerLogin
     Type Text           data-test=user-login-form-email     ${email}
@@ -39,8 +49,16 @@ Login/Log Out
     Log                 ${log}
     Take Screenshot
 
+Logout
     Click               id=headerUser
-    Click               data-test=user-box-logout-button
+    Click               data-test=user-box-logout-button    odhlaseni
+
+Pred kazdym testem
+
+    Open Browser        ${URL}
 
 
+Na konci kazdeho testu
+
+    Close Browser
 

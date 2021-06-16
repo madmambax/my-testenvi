@@ -6,8 +6,8 @@
 ${USER1_NAME}               radek.tester@seznam.cz
 ${USER1_PASSWORD}           tajneheslotajneheslo
 ${USER1_SHORT}              JT
-
-
+${msg_1}                    Zadejte platný email
+${msg_2}                    Zadal(a) jste nesprávný e-mail nebo heslo.
 
 #Strings
 ${TEXT_MainTitle}                   Online supermarket Rohlik.cz
@@ -16,7 +16,6 @@ ${TEXT_EmptyCart}                   Vysypat košík
 #Error strings
 ${ERROR_TEXT_FillCorrectEmail}      Zadejte platný email
 ${ERROR_TEXT_IncorrectEmailOrPwd}   Zadal(a) jste nesprávný e-mail nebo heslo.
-${ERROR_TEXT_EmptyCart}             Košík funguje i jako nákupní seznam
 
 #Login
 ${SEL_HeaderLoginErrorTxt}  xpath=//div[@class='u-mr--8']

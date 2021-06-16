@@ -33,20 +33,20 @@ Login spatne heslo
 
 Login vse OK
     Login           ${USER1_NAME}               ${USER1_PASSWORD}                    ${USER1_SHORT}
-    Logout
+    [Teardown]      Logout         #provede se i když test zfailuje
 
 
 Test Objednavky
     ${kusu} =	        Set Variable	         5
     Login               ${USER1_NAME}            ${USER1_PASSWORD}                   ${USER1_SHORT}
-    Pridat do kosiku    Losos                    ${kusu}
+    Pridat do kosiku    banán                    ${kusu}
     Click               ${SEL_CartContent}
     Take Screenshot
     Take Screenshot
     Odebrat z kose      ${kusu}
     Take Screenshot
     Take Screenshot
-    Logout
+    [Teardown]          Logout         #provede se i když test zfailuje
     Take Screenshot
     Take Screenshot
 
@@ -83,7 +83,7 @@ Pridat do kosiku
     Type Text           ${SEL_SearchGlobal}         ${Zbozi}
     #1x
     Click               ${SEL_BtnSearchGlobal}      # tlačítko Hledat
-    Click               ${SEL_BtnAdd}               delay=100ms     # způsobuje někdy zmizení uživatele, scrol donwn, důvod někdy klikne na zboží níže
+    Click               ${SEL_BtnAdd}               delay=${TIME_BETWEEN_CLICKS}     # způsobuje někdy zmizení uživatele, scrol donwn, důvod někdy klikne na zboží níže
     # Kusu - 1
     ${Pocet}            Evaluate                    ${Kusu} - 1
     Click               ${SEL_BtnPlus}              clickCount=${Pocet}
@@ -96,6 +96,7 @@ Pridat do kosiku
 
 Logout
 #    Hover               xpath=//div[@class='u-mr--8']
+    Go to               ${URL}
     Click               ${SEL_HeaderLoginErrorTxt}
     Click               ${SEL_UserBoxLogoutBtn}
 #    Log                 ${OUTPUT_DIR}
@@ -114,31 +115,25 @@ Odebrat z kose
     # nějakou dobu trvá než se zboží přidá do košíku, možnosti
 
     #Statický timeout
-    Sleep                   3
-    Take Screenshot
+#    Sleep                   3 s
+#    Take Screenshot
 
     # Dynamický timeout
     # je třeba vědět co je synchronyzační bod. Na co čeakt. Co se stane když se z košíku odebere X položek?
-    # v případě košíku to je aktuální počet zboží v košíku (bohužel rohlík jej nemá označený pomocí id nebo data-test
-    # a tak se k němu nedá dostat)
-    # pokud by rohlík udělal změnu dalo by se udělat
-    #  Get Text                id=obsah_kosiku      contains      V košíku máte 0 kusů za 0 Kč
+    # v případě košíku to je aktuální počet zboží v košíku
 
+    ${CartContentText}=     Get Text                ${SEL_CartContent}
+    Log                     ${CartContentText}
 
+    FOR    ${i}    IN RANGE    100
+           sleep                   ${TIME_BETWEEN_CHECKS}
+           ${CartContentText}=     Get Text         ${SEL_CartContent}
+           Exit For Loop If         '${ERROR_TEXT_EmptyCart}' in '''${CartContentText}'''
 
-Odebrat z kose OLD
-    [Arguments]                 ${Kusu}
+           Log                     ${CartContentText}
+           Log                     ${i}
+    END
 
-    #přidat ověření že košík obsahuje ${Kusu} kusů
-    Take Screenshot
-
-
-    Click                   ${SEL_BtnMinus}             clickCount=${Kusu}
-    Take Screenshot
-
-    #Statický timeout
-    Sleep                   3
-    Take Screenshot
 
 Pred_testem
     Go to               ${URL}   #jdi na hlavní stránku
@@ -146,7 +141,8 @@ Pred_testem
 
 Prerekvizita
     ${b_timeput} =             Set Browser Timeout                 20                 #20s je vhodné pro rohlik.cz
-#    Open Browser        ${URL}                                    headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
+    Log                        ${b_timeput}
+#    Open Browser        ${URL}                                     headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
 #    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
     New Page                    ${URL}
 
