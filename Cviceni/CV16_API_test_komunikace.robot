@@ -78,7 +78,9 @@ API Comunicaication
   # odeslání zprávy a uložení odpovědi do ${resp}
   ${resp} =           Post on Session     apilogin   ${app}   data=${json_string}   headers=${header}
   Log	              Responce: @{resp}
-  Log                 ${resp["response"]}
+#  Log                  ${resp.json()}[response]
+#  Log                  ${resp.json()}[name]
+
 
   Status Should Be    ${resp_status_code}
 
