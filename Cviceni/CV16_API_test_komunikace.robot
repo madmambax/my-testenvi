@@ -8,8 +8,8 @@ pip install robotframework-requests
 
 
 *** Settings ***
-Library	 Collections
 Library	 RequestsLibrary
+Library	 Collections
 Library  String
 
 
@@ -17,14 +17,27 @@ Library  String
 ${url}		    http://testovani.kitner.cz/
 ${app}          /regkurz/formsave.php
 
-${ok_json}      {"targetid":"","kurz":"2","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}
+#${json}      {"targetid":"","kurz":"2","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}
 
 *** Test Cases ***
 
 
+registrace ok
+    API Comunicaication   {"targetid":"","kurz":"2","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}  200
 
-spavny format JSON
-    API Comunicaication  {"targetid":"","kurz":"2","name":"Jan787878","surname":"Novak","email":"jan.novak@abc.cz","phone":"777123123","person":"fyz","address":"Brno","ico":"1","count":"1","comment":null,"souhlas":false}  200
+registrace chyba
+    API Comunicaication   {"targetid":"","kurz":"","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}   500
+
+
+
+
+
+
+
+#spavny format JSON
+#    API Comunicaication  {"targetid":"","kurz":"2","name":"Jan787878","surname":"Novak","email":"jan.novak@abc.cz","phone":"777123123","person":"fyz","address":"Brno","ico":"1","count":"1","comment":null,"souhlas":false}  200
+
+
 
 
 #chybny format JSON (bez kurzu)
@@ -60,44 +73,81 @@ spavny format JSON
 *** Keywords ***
 
 
+
+
 API Comunicaication
-  [Arguments]  ${json}  ${resp_status_code}
+    [Arguments]         ${json}    ${error_resp}
 
    # zapis jako DATA
    ${json_string}=    catenate    ${json}
 
-   # zapis jako JSON
-#   ${json_string}=    Create Dictionary  kurz=1  name=Jan  surname=Novak  email=jan.novak@abc.cz  phone=608123123  person=fyz  address=Brno  ico=234563234  count=1  comment=${EMPTY}  souhlas=${TRUE}
-
   #vytoření hlavičky (header) zprávy
-  &{header}=          Create Dictionary   Content-Type=application/json     charset=utf-8
+  &{header}=          Create Dictionary   Content-Type=application/json
 
   #vytvoření spojení (session)
   CreateSession       apilogin            ${url}
 
   # odeslání zprávy a uložení odpovědi do ${resp}
-  ${resp} =           Post on Session     apilogin   ${app}   data=${json_string}   headers=${header}
-  Log	              Responce: @{resp}
-#  Log                  ${resp.json()}[response]
-#  Log                  ${resp.json()}[name]
+  ${resp} =    Post on Session    apilogin  ${app}    data=${json_string}  headers=${header}       expected_status=Anything
 
-
-  Status Should Be    ${resp_status_code}
+  Status Should Be    ${error_resp}
 
 
 
-API Comunicaication Post Error
-  [Arguments]  ${json}  ${error_string}
 
 
-  ${json_string}=     catenate    ${json}
-
-  #vytoření hlavičky (header) zprávy
-  &{header}=          Create Dictionary   Content-Type=application/json     charset=utf-8
-
-  #vytvoření spojení (session)
-  CreateSession       apilogin            ${url}
-
-  Run Keyword And Expect Error   ${error_string}   Post on Session   apilogin   ${app}   data=${json_string}   headers=${header}
 
 
+
+
+
+
+
+
+
+
+
+
+
+#API Comunicaication
+#  [Arguments]  ${json}  ${resp_status_code}
+#
+#   # zapis jako DATA
+#   ${json_string}=    catenate    ${json}
+#
+#   # zapis jako JSON
+##   ${json_string}=    Create Dictionary  kurz=1  name=Jan  surname=Novak  email=jan.novak@abc.cz  phone=608123123  person=fyz  address=Brno  ico=234563234  count=1  comment=${EMPTY}  souhlas=${TRUE}
+#
+#  #vytoření hlavičky (header) zprávy
+#  &{header}=          Create Dictionary   Content-Type=application/json     charset=utf-8
+#
+#  #vytvoření spojení (session)
+#  CreateSession       apilogin            ${url}
+#
+#  # odeslání zprávy a uložení odpovědi do ${resp}
+#  ${resp} =           Post on Session     apilogin   ${app}   data=${json_string}   headers=${header}
+#  Log	              Responce: @{resp}
+##  Log                  ${resp.json()}[response]
+##  Log                  ${resp.json()}[name]
+##  Should Be Equal
+#
+#
+#  Status Should Be    ${resp_status_code}
+#
+#
+#
+#API Comunicaication Post Error
+#  [Arguments]  ${json}  ${error_string}
+#
+#
+#  ${json_string}=     catenate    ${json}
+#
+#  #vytoření hlavičky (header) zprávy
+#  &{header}=          Create Dictionary   Content-Type=application/json     charset=utf-8
+#
+#  #vytvoření spojení (session)
+#  CreateSession       apilogin            ${url}
+#
+#  Run Keyword And Expect Error   ${error_string}   Post on Session   apilogin   ${app}   data=${json_string}   headers=${header}
+#
+#
