@@ -64,18 +64,16 @@ API Comunicaication
 
   ${json_string}=     catenate    ${json}
 
-   #vytoření hlavičky (header) zprávy
+  #vytoření hlavičky (header) zprávy
   &{header}=          Create Dictionary   Content-Type=application/json     charset=utf-8
 
   #vytvoření spojení (session)
   CreateSession       apilogin            ${url}
 
   # odeslání zprávy a uložení odpovědi do ${resp}
-#  body.encode('utf-8')
   ${resp} =           Post on Session     apilogin    ${app}   data=${json_string}  headers=${header}
   Log	              Responce: @{resp}
 
-#  Should Be Equal As Strings	${resp.status_code}     ${resp_status_code}
   Status Should Be  ${resp_status_code}
 
 
@@ -86,8 +84,7 @@ API Comunicaication Post Error
 
   ${json_string}=     catenate    ${json}
 
-   #vytoření hlavičky (header) zprávy
-
+  #vytoření hlavičky (header) zprávy
   &{header}=          Create Dictionary   Content-Type=application/json     charset=utf-8
 
   #vytvoření spojení (session)
