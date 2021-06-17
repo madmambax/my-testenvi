@@ -21,6 +21,10 @@ ${app}          /regkurz/formsave.php
 
 *** Test Cases ***
 
+test
+    GET     https://www.google.com
+    Status Should Be    200
+
 registrace ok
     API Comunicaication   {"targetid":"","kurz":"2","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}  200
 
