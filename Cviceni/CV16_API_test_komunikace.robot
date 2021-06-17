@@ -14,9 +14,10 @@ Library  String
 
 
 *** Variables ***
-${url}		        http://testovani.kitner.cz/
-${app}              /regkurz/formsave.php
+${url}		    http://testovani.kitner.cz/
+${app}          /regkurz/formsave.php
 
+${ok_json}      {"targetid":"","kurz":"2","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}
 
 *** Test Cases ***
 
@@ -26,30 +27,30 @@ spavny format JSON
     API Comunicaication  {"targetid":"","kurz":"2","name":"Jan787878","surname":"Novak","email":"jan.novak@abc.cz","phone":"777123123","person":"fyz","address":"Brno","ico":"1","count":"1","comment":null,"souhlas":false}  200
 
 
-chybny format JSON (bez kurzu)
-    API Comunicaication Post Error  {"targetid":"","name":"Jan787878","surname":"Novak","email":"jan.novak@abc.cz","phone":"777123123","person":"fyz","address":"Údolni 21, Brno","ico":"1","count":"1","comment":null,"souhlas":false}    HTTPError: 400 Client Error:*
-
-
-chybny telefon (moc dlouhy)
-# Internal server error je chyba, správně se má očekávat odmítnití ze strny serveru 400
-#    API comunicaication post error  {"targetid":"","kurz":"2","name":"Jan787878","surname":"Novak","email":"jan.novak@abc.cz","phone":"77712312300000000000","person":"fyz","address":"Brno","ico":"1","count":"1","comment":null,"souhlas":false}   HTTPError: 500 Server Error:*
-    API Comunicaication Post Error  {"targetid":"","kurz":"2","name":"Jan787878","surname":"Novak","email":"jan.novak@abc.cz","phone":"77712312300000000000","person":"fyz","address":"Brno","ico":"1","count":"1","comment":null,"souhlas":false}   HTTPError: 400 Client Error:*
-
-
-chybne cislo kurzu
-    API Comunicaication  {"targetid":"","kurz":"5","name":"Jan787878","surname":"Novak","email":"jan.novak@abc.cz","phone":"777123123","person":"fyz","address":"Brno","ico":"1","count":"1","comment":null,"souhlas":false}  400
-
-
-nevyplneny kurz
-    API Comunicaication Post Error  {"targetid":"","kurz":"","name":"Jan787878","surname":"Novak","email":"jan.novak@abc.cz","phone":"777123123","person":"fyz","address":"Brno","ico":"1","count":"1","comment":null,"souhlas":false}  HTTPError: 500 Server Error*
-
-
-#Háčky a carky - problém s českými znaky v Request Library
-##    ${str} =      Set Variable     {"targetid":"","kurz":"3","name":"DalsiJanž","surname":"Novak","email":"jan.novak@abc.cz","phone":"777123123","person":"fyz","address":"Brno","ico":"1","count":"1","comment":"nic","souhlas":true}
-##    ${JSON} =	Encode String To Bytes	${str}	UTF-8
-##    API comunicaication          ${JSON}    200
-#    API comunicaication  {"targetid":"","kurz":"3","name":"Janž","surname":"Novak","email":"jan.novak@abc.cz","phone":"777123123","person":"fyz","address":"Brno","ico":"1","count":"1","comment":"nic","souhlas":true}  200
-
+#chybny format JSON (bez kurzu)
+#    API Comunicaication Post Error  {"targetid":"","name":"Jan787878","surname":"Novak","email":"jan.novak@abc.cz","phone":"777123123","person":"fyz","address":"Údolni 21, Brno","ico":"1","count":"1","comment":null,"souhlas":false}    HTTPError: 400 Client Error:*
+#
+#
+#chybny telefon (moc dlouhy)
+## Internal server error je chyba, správně se má očekávat odmítnití ze strny serveru 400
+##    API comunicaication post error  {"targetid":"","kurz":"2","name":"Jan787878","surname":"Novak","email":"jan.novak@abc.cz","phone":"77712312300000000000","person":"fyz","address":"Brno","ico":"1","count":"1","comment":null,"souhlas":false}   HTTPError: 500 Server Error:*
+#    API Comunicaication Post Error  {"targetid":"","kurz":"2","name":"Jan787878","surname":"Novak","email":"jan.novak@abc.cz","phone":"77712312300000000000","person":"fyz","address":"Brno","ico":"1","count":"1","comment":null,"souhlas":false}   HTTPError: 400 Client Error:*
+#
+#
+#chybne cislo kurzu
+#    API Comunicaication  {"targetid":"","kurz":"5","name":"Jan787878","surname":"Novak","email":"jan.novak@abc.cz","phone":"777123123","person":"fyz","address":"Brno","ico":"1","count":"1","comment":null,"souhlas":false}  400
+#
+#
+#nevyplneny kurz
+#    API Comunicaication Post Error  {"targetid":"","kurz":"","name":"Jan787878","surname":"Novak","email":"jan.novak@abc.cz","phone":"777123123","person":"fyz","address":"Brno","ico":"1","count":"1","comment":null,"souhlas":false}  HTTPError: 500 Server Error*
+#
+#
+##Háčky a carky - problém s českými znaky v Request Library
+###    ${str} =      Set Variable     {"targetid":"","kurz":"3","name":"DalsiJanž","surname":"Novak","email":"jan.novak@abc.cz","phone":"777123123","person":"fyz","address":"Brno","ico":"1","count":"1","comment":"nic","souhlas":true}
+###    ${JSON} =	Encode String To Bytes	${str}	UTF-8
+###    API comunicaication          ${JSON}    200
+##    API comunicaication  {"targetid":"","kurz":"3","name":"Janž","surname":"Novak","email":"jan.novak@abc.cz","phone":"777123123","person":"fyz","address":"Brno","ico":"1","count":"1","comment":"nic","souhlas":true}  200
+#
 
 
 
@@ -62,8 +63,11 @@ nevyplneny kurz
 API Comunicaication
   [Arguments]  ${json}  ${resp_status_code}
 
+   # zapis jako DATA
+   ${json_string}=    catenate    ${json}
 
-  ${json_string}=     catenate    ${json}
+   # zapis jako JSON
+#   ${json_string}=    Create Dictionary  kurz=1  name=Jan  surname=Novak  email=jan.novak@abc.cz  phone=608123123  person=fyz  address=Brno  ico=234563234  count=1  comment=${EMPTY}  souhlas=${TRUE}
 
   #vytoření hlavičky (header) zprávy
   &{header}=          Create Dictionary   Content-Type=application/json     charset=utf-8
@@ -74,8 +78,9 @@ API Comunicaication
   # odeslání zprávy a uložení odpovědi do ${resp}
   ${resp} =           Post on Session     apilogin   ${app}   data=${json_string}   headers=${header}
   Log	              Responce: @{resp}
+  Log                 ${resp["response"]}
 
-  Status Should Be  ${resp_status_code}
+  Status Should Be    ${resp_status_code}
 
 
 
