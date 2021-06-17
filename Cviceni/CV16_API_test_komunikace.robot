@@ -22,7 +22,7 @@ ${app}              /regkurz/formsave.php
 
 
 
-spávný format JSON
+spavny format JSON
     API Comunicaication  {"targetid":"","kurz":"2","name":"Jan787878","surname":"Novak","email":"jan.novak@abc.cz","phone":"777123123","person":"fyz","address":"Brno","ico":"1","count":"1","comment":null,"souhlas":false}  200
 
 
@@ -30,7 +30,7 @@ chybny format JSON (bez kurzu)
     API Comunicaication Post Error  {"targetid":"","name":"Jan787878","surname":"Novak","email":"jan.novak@abc.cz","phone":"777123123","person":"fyz","address":"Údolni 21, Brno","ico":"1","count":"1","comment":null,"souhlas":false}    HTTPError: 400 Client Error:*
 
 
-chybný telefon (moc dlouhy)
+chybny telefon (moc dlouhy)
 # Internal server error je chyba, správně se má očekávat odmítnití ze strny serveru 400
 #    API comunicaication post error  {"targetid":"","kurz":"2","name":"Jan787878","surname":"Novak","email":"jan.novak@abc.cz","phone":"77712312300000000000","person":"fyz","address":"Brno","ico":"1","count":"1","comment":null,"souhlas":false}   HTTPError: 500 Server Error:*
     API Comunicaication Post Error  {"targetid":"","kurz":"2","name":"Jan787878","surname":"Novak","email":"jan.novak@abc.cz","phone":"77712312300000000000","person":"fyz","address":"Brno","ico":"1","count":"1","comment":null,"souhlas":false}   HTTPError: 400 Client Error:*
@@ -39,6 +39,9 @@ chybný telefon (moc dlouhy)
 chybne cislo kurzu
     API Comunicaication  {"targetid":"","kurz":"5","name":"Jan787878","surname":"Novak","email":"jan.novak@abc.cz","phone":"777123123","person":"fyz","address":"Brno","ico":"1","count":"1","comment":null,"souhlas":false}  400
 
+
+nevyplneny kurz
+    API Comunicaication Post Error  {"targetid":"","kurz":"","name":"Jan787878","surname":"Novak","email":"jan.novak@abc.cz","phone":"777123123","person":"fyz","address":"Brno","ico":"1","count":"1","comment":null,"souhlas":false}  HTTPError: 500 Server Error*
 
 
 #Háčky a carky - problém s českými znaky v Request Library
@@ -69,7 +72,7 @@ API Comunicaication
   CreateSession       apilogin            ${url}
 
   # odeslání zprávy a uložení odpovědi do ${resp}
-  ${resp} =           Post on Session     apilogin   ${app}   data=${json_string}   headers=${header}
+  ${resp} =           Post on Session     apilogin   ${app}   json=${json_string}   headers=${header}
   Log	              Responce: @{resp}
 
   Status Should Be  ${resp_status_code}
