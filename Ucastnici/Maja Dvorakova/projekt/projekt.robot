@@ -3,7 +3,7 @@ Documentation   Testing website rohlik.cz
 Library         SeleniumLibrary
 Resource        TestovaciData.robot
 
-Test Setup      Open ${URL} Chrome
+Test Setup      Open Browser    ${URL}
 Test Teardown   Close Browser
 
 *** Variables ***
