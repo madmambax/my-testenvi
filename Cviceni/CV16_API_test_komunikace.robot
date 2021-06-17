@@ -8,15 +8,19 @@ pip install robotframework-requests
 
 
 *** Settings ***
-Library	Collections
-Library	RequestsLibrary
+Library	 Collections
+Library	 RequestsLibrary
+Library  String
 
 
 *** Variables ***
 ${url}		        http://testovani.kitner.cz/
+${app}              /regkurz/formsave.php
 
 
 *** Test Cases ***
+
+
 
 spávný format JSON
     API comunicaication  {"targetid":"","kurz":"2","name":"Jan787878","surname":"Novak","email":"jan.novak@abc.cz","phone":"777123123","person":"fyz","address":"Brno","ico":"1","count":"1","comment":null,"souhlas":false}  200
@@ -27,15 +31,24 @@ chybny format JSON (bez kurzu)
 
 
 chybný telefon (moc dlouhy)
-    API comunicaication  {"targetid":"","kurz":"2","name":"Jan787878","surname":"Novak","email":"jan.novak@abc.cz","phone":"77712312300000000000","person":"fyz","address":"Brno","ico":"1","count":"1","comment":null,"souhlas":false}   500
+# tohle je špatně, správně se má očekávat odmítnití ze strny servru
+#    API comunicaication post error  {"targetid":"","kurz":"2","name":"Jan787878","surname":"Novak","email":"jan.novak@abc.cz","phone":"77712312300000000000","person":"fyz","address":"Brno","ico":"1","count":"1","comment":null,"souhlas":false}   HTTPError: 500 Server Error:*
+    API comunicaication post error  {"targetid":"","kurz":"2","name":"Jan787878","surname":"Novak","email":"jan.novak@abc.cz","phone":"77712312300000000000","person":"fyz","address":"Brno","ico":"1","count":"1","comment":null,"souhlas":false}   HTTPError: 400 Client Error:
 
 
 chybne cislo kurzu
     API comunicaication  {"targetid":"","kurz":"5","name":"Jan787878","surname":"Novak","email":"jan.novak@abc.cz","phone":"777123123","person":"fyz","address":"Brno","ico":"1","count":"1","comment":null,"souhlas":false}  400
 
 
-Hacky a carky
-    API comunicaication  {"targetid":"","kurz":"3","name":"Janěščřžýáíé","surname":"Novák","email":"jan.novak@abc.cz","phone":"777123123","person":"fyz","address":"Brnoěščřžýáíé","ico":"1","count":"1","comment":"nic","souhlas":true}  200
+
+#Háčky a carky - problém s českými znaky v Request Library
+##    ${str} =      Set Variable     {"targetid":"","kurz":"3","name":"DalsiJanž","surname":"Novak","email":"jan.novak@abc.cz","phone":"777123123","person":"fyz","address":"Brno","ico":"1","count":"1","comment":"nic","souhlas":true}
+##    ${JSON} =	Encode String To Bytes	${str}	UTF-8
+##    API comunicaication          ${JSON}    200
+#    API comunicaication  {"targetid":"","kurz":"3","name":"Janž","surname":"Novak","email":"jan.novak@abc.cz","phone":"777123123","person":"fyz","address":"Brno","ico":"1","count":"1","comment":"nic","souhlas":true}  200
+
+
+
 
 
 # POST Request : url=http://testovani.kitner.cz/regkurz/formsave.php
@@ -69,13 +82,17 @@ API comunicaication
   ${json_string}=     catenate    ${json}
 
    #vytoření hlavičky (header) zprávy
-  &{header}=          Create Dictionary   Content-Type=application/json
+  &{header}=          Create Dictionary   Content-Type=application/json; charset=utf-8'
+
+#  headers = {'Content-Type': 'text/text; charset=utf-8'}
+#  requests.post(url,data = text.encode('utf-8'), headers = headers)
 
   #vytvoření spojení (session)
   CreateSession       apilogin            ${url}
 
   # odeslání zprávy a uložení odpovědi do ${resp}
-  ${resp} =           Post on Session     apilogin    /regkurz/formsave.php  data=${json_string}  headers=${header}
+#  body.encode('utf-8')
+  ${resp} =           Post on Session     apilogin    ${app}   data=${json_string}  headers=${header}
    Log	               Responce: @{resp}
 
 #  Should Be Equal As Strings	${resp.status_code}     ${resp_status_code}
@@ -94,5 +111,6 @@ API comunicaication post error
   #vytvoření spojení (session)
   CreateSession       apilogin            ${url}
 
-  Run Keyword And Expect Error  HTTPError: 400 Client Error:*  Post on Session     apilogin    /regkurz/formsave.php  data=${json_string}  headers=${header}
+  Run Keyword And Expect Error  ${error_string}  Post on Session     apilogin    ${app}   data=${json_string}  headers=${header}
+
 
