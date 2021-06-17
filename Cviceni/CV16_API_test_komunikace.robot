@@ -72,7 +72,7 @@ API Comunicaication
   CreateSession       apilogin            ${url}
 
   # odeslání zprávy a uložení odpovědi do ${resp}
-  ${resp} =           Post on Session     apilogin   ${app}   json=${json_string}   headers=${header}
+  ${resp} =           Post on Session     apilogin   ${app}   data=${json_string}   headers=${header}
   Log	              Responce: @{resp}
 
   Status Should Be  ${resp_status_code}
