@@ -11,7 +11,7 @@ Library         DebugLibrary     # knihova pro ladění, pokud chcete ledit test
 Resource        Data_and_Config/TestData.robot
 Resource        Data_and_Config/Configuration.robot
 
-Suite Setup     Prerekvizita
+Suite Setup     Pred_sadou
 Suite Teardown  Uklid_sada
 
 Test Setup      Pred_testem
@@ -139,7 +139,7 @@ Pred_testem
     Go to               ${URL}   #jdi na hlavní stránku
 
 
-Prerekvizita
+Pred_sadou
     ${b_timeput} =             Set Browser Timeout                 20                 #20s je vhodné pro rohlik.cz
     Log                        ${b_timeput}
 #    Open Browser        ${URL}                                     headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
