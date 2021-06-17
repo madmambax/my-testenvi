@@ -61,6 +61,22 @@ Login with invalid password
 
 *** Keywords ***
 
+Login
+    [Arguments]                         ${USERNAME}                           ${PASSWORD}               ${ERROR_TEXT}
+
+    Click Element                       ${SEL_HeaderLogin}
+    ${AllLinks}=                        Get All Links
+    Log                                 ${AllLinks}
+    Input Text                          ${SEL_LoginValidEmail}                  ${USERNAME}
+    Input Text                          ${SEL_LoginValidPwd}                    ${PASSWORD}
+    Press Keys                          ${SEL_BtnSignIn}                        [Return]
+    ${AllLinks}=                        Get All Links
+    Log                                 ${AllLinks}
+    Element Text Should Be              emailError                              ${ERROR_TEXT}
+
+
+
+
 Login and logout with valid data
 
 
