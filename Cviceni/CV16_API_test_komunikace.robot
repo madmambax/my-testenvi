@@ -21,7 +21,7 @@ ${app}          /regkurz/formsave.php
 
 *** Test Cases ***
 
-test
+bonus test
     GET     https://www.google.com
     Status Should Be    200
 
