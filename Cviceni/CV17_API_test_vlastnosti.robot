@@ -33,7 +33,7 @@ Registrace na kurz
     [Arguments]    ${course}  ${name}  ${surname}  ${email}  ${phone}  ${person}  ${address}  ${souhlas}  ${responce_code}
 
     # vytvoření těla (body) zprávy
-    ${json_string}=     catenate     {"targetid":"","kurz":"${course}","name":"${name}","surname":"${surname}","email":"${email}","phone":"${phone}","person":"${person}","address":"${address}","ico":"1","count":"1","comment":null,"souhlas":${souhlas}}
+    ${json}=     Catenate      {"targetid":"","kurz":"${course}","name":"${name}","surname":"${surname}","email":"${email}","phone":"${phone}","person":"${person}","address":"${address}","ico":"1","count":"1","comment":null,"souhlas":${souhlas}}
 
     #vytoření hlavičky (header) zprávy
     &{header}=          Create Dictionary   Content-Type=application/json
@@ -42,7 +42,7 @@ Registrace na kurz
     CreateSession       apilogin            ${url}
 
     # odeslání zprávy a uložení odpovědi do ${resp}
-    ${resp} =           Post on Session     apilogin    /regkurz/formsave.php  data=${json_string}  headers=${header}
+    ${resp} =           Post on Session     apilogin    /regkurz/formsave.php  data=${json}  headers=${header}
     Log	                Responce: @{resp}
 
     #vyhodnocení odpovědi a návratové hodnoty
