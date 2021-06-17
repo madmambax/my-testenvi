@@ -55,8 +55,6 @@ chybne cislo kurzu
 
 *** Keywords ***
 
-API
-
 
 API Comunicaication
   [Arguments]  ${json}  ${resp_status_code}
@@ -71,7 +69,7 @@ API Comunicaication
   CreateSession       apilogin            ${url}
 
   # odeslání zprávy a uložení odpovědi do ${resp}
-  ${resp} =           Post on Session     apilogin    ${app}   data=${json_string}  headers=${header}
+  ${resp} =           Post on Session     apilogin   ${app}   data=${json_string}   headers=${header}
   Log	              Responce: @{resp}
 
   Status Should Be  ${resp_status_code}
@@ -90,6 +88,6 @@ API Comunicaication Post Error
   #vytvoření spojení (session)
   CreateSession       apilogin            ${url}
 
-  Run Keyword And Expect Error  ${error_string}  Post on Session     apilogin    ${app}   data=${json_string}  headers=${header}
+  Run Keyword And Expect Error   ${error_string}   Post on Session   apilogin   ${app}   data=${json_string}   headers=${header}
 
 
