@@ -38,9 +38,6 @@ chybny format JSON (bez kurzu)
     API Comunicaication   {"targetid":"","kurz":,"name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}  400
 
 Háčky a carky - problém s českými znaky v Request Library
-###    ${str} =      Set Variable     {"targetid":"","kurz":"3","name":"DalsiJanž","surname":"Novak","email":"jan.novak@abc.cz","phone":"777123123","person":"fyz","address":"Brno","ico":"1","count":"1","comment":"nic","souhlas":true}
-###    ${JSON} =	Encode String To Bytes	${str}	UTF-8
-###    API comunicaication          ${JSON}    200
     API Comunicaication  {"targetid":"","kurz":"3","name":"Janž","surname":"Novak","email":"jan.novak@abc.cz","phone":"777123123","person":"fyz","address":"Brno","ico":"1","count":"1","comment":"nic","souhlas":true}  200
 
 
@@ -54,17 +51,17 @@ Háčky a carky - problém s českými znaky v Request Library
 API Comunicaication
     [Arguments]       ${json}     ${error_resp}
 
-   # zapis jako DATA
-   ${json_string}=    catenate    ${json}
+   #převedení do UTF-8
+   ${json_utf8} =     Encode String To Bytes     ${json}     UTF-8
 
   #vytoření hlavičky (header) zprávy
-  &{header}=          Create Dictionary   Content-Type=application/json
+  &{header}=          Create Dictionary   Content-Type=application/json     charset=utf-8
 
   #vytvoření spojení (session)
   CreateSession       apilogin            ${url}
 
   # odeslání zprávy a uložení odpovědi do ${resp}
-  ${resp} =    Post on Session    apilogin  ${app}    data=${json_string}  headers=${header}       expected_status=Anything
+  ${resp} =    Post on Session    apilogin  ${app}    data=${json_utf8}  headers=${header}       expected_status=Anything
 
   Status Should Be    ${error_resp}
 
