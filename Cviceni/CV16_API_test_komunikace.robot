@@ -44,8 +44,6 @@ Háčky a carky - problém s českými znaky v Request Library
 
 
 
-
-
 *** Keywords ***
 
 API Comunicaication
