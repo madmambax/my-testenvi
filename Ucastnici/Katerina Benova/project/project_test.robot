@@ -8,23 +8,18 @@ Resource        Data_and_Config/resources.robot
 
 Suite Setup         Before Suite   #spustí se před celou suite
 Suite Teardown      After Suite    #spustí se po doběhnutí celé suite
-#Test Setup      Before Test     #spustí se před každým testem zvlášť
-#Test Teardown   After Test      #spustí se po každým testu zvlášť
-#
-#Test Timeout  20
 
 *** Variables ***
 
 *** Test Cases ***
 Create project
-    Click       xpath=//a[@href="/web/project/create"]
-    Take Screenshot
-    Fill Text   id=name                Test project 1
-    Click       id=targetLangs-cs      clickCount=2
-    Select Options By   id=sourceLang   value   en
-    Click       ${button_create}
-    Wait For Elements State     id=newJobButton     visible
-    Get Text    css=.main-box > .title   ==  Test project 1
+    Click                       xpath=//a[@href="/web/project/create"]
+    Fill Text                   id=name                     Test project 1
+    Click                       id=targetLangs-cs           clickCount=2
+    Select Options By           id=sourceLang               value              en
+    Click                       ${button_create}
+    Wait For Elements State     id=newJobButton             visible
+    Get Text                    css=.main-box > .title      ==          Test project 1
     Take Screenshot
 
 
@@ -32,9 +27,9 @@ Create project
 
 Before Suite
     Open Browser
-    Login Page                  ${username}     ${pwd}
-    Sleep       3s
-    Get Url                     contains        list
+    Login Page      ${username}     ${pwd}
+    Sleep           3s
+    Get Url         contains        list
 
 After Suite
     Close Browser
