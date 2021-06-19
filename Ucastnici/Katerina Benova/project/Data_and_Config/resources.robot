@@ -8,17 +8,17 @@ ${pwd}              Mpls6868
 ${URL}                  https://cloud.memsource.com/web
 
 #login
-${url_login}            ${URL}/login
-${logged_id}            title
-${logged_txt}           Projects - Memsource
-${bad_login_id}         div > .errors
-${bad_login_txt}        Sorry, we were not able to find a user with that username and password.
-${empty_input}          .ms-text-field-wrapper--error
-${empty_input_un}       ${empty_input} input#username
-${empty_input_pw}       ${empty_input} input#password
-${input_username}       id=username
-${input_password}       id=password
-${web_title}            Memsource
+${url_login}                ${URL}/login
+${SEL_logged}               title
+${TXT_logged}               Projects - Memsource
+${SEL_bad_login}            div > .errors
+${TXT_bad_login}            Sorry, we were not able to find a user with that username and password.
+${SEL_empty_input}          .ms-text-field-wrapper--error
+${SEL_empty_input_un}       ${SEL_empty_input} input#username
+${SEL_empty_input_pw}       ${SEL_empty_input} input#password
+${SEL_input_username}       id=username
+${SEL_input_password}       id=password
+${TXT_web_title}            Memsource
 
 
 ${url_setup}            ${URL}/setup
@@ -34,7 +34,7 @@ Login Page
     [Documentation]     Opens the login page and fills the username and password
     [Arguments]         ${username}         ${password}
     New Page            ${url_login}
-    Get Title           contains            ${web_title}
+    Get Title           contains            ${TXT_web_title}
     Type Text           ${input_username}   ${username}
     Type Text           ${input_password}   ${password}
     Click               ${button_submit}

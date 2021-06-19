@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation     Testování API Memsource
+Documentation   Testování API Memsource
 Library         RequestsLibrary
 Library         Collections
 Resource        Data_and_Config/var_and_keywords.robot
@@ -7,42 +7,35 @@ Resource        Data_and_Config/var_and_keywords.robot
 Suite Setup     API Login Admin  #log in and get token
 
 
-*** Variables ***
-
 
 *** Test Cases ***
-
-# positive tests
+Login - wrong data
+    API Login           ${admin_user}       wrongPassword
+    Status Should Be    401
 
 Who Am I
-    [Documentation]     Ověř platnost tokenu
-    Make GET Call   v1/auth/whoAmI      ${token}
-    Status Should Be  200
+    Make GET Call       v1/auth/whoAmI      ${token}
+    Status Should Be    200
 
 Who Am I - wrong Token
-    [Documentation]     Ověř neplatnost tokenu
-    Make GET Call  v1/auth/whoAmI      wrongToken
-    Status Should Be  401
+    Make GET Call       v1/auth/whoAmI      wrongToken
+    Status Should Be    401
 
 List projects
-    [Documentation]     vypiš projekty
-    Make GET Call   v1/projects     ${token}
-    Status Should Be  200
+    Make GET Call       v1/projects         ${token}
+    Status Should Be    200
 
 List projects - wrong Token
-    [Documentation]     vypiš projekty
-    Make GET Call  v1/projects      wrongToken
-    Status Should Be  401
+    Make GET Call       v1/projects         wrongToken
+    Status Should Be    401
 
 List Clients
-    [Documentation]     vypiš klienty
-    Make GET Call       v1/clients      ${token}
+    Make GET Call       v1/clients          ${token}
     Status Should Be    200
 
 List Clients - wrong Token
-    [Documentation]     vypiš klienty
-    Make GET Call   v1/clients      wrongToken
-    Status Should Be  401
+    Make GET Call       v1/clients          wrongToken
+    Status Should Be    401
 
 Create client
     ${data}=                Make POST Call      v1/clients      ${token}    body={"name":"Client ABC"}

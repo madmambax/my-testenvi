@@ -1,15 +1,13 @@
 *** Settings ***
-Documentation     Testování API Memsource
-Library     RequestsLibrary
-Library     Collections
+Documentation   Testování API Memsource
+Library         RequestsLibrary
+Library         Collections
 
 *** Variables ***
 ${url}      https://cloud.memsource.com/web/api2/
 ${admin_user}   marek.kure82
 ${admin_pwd}    Mpls6868
 ${client_id}    skip
-
-
 
 
 *** Keywords ***
