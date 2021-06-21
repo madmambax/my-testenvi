@@ -36,11 +36,7 @@ registrace chyba telefon
     API Comunication   {"targetid":"","kurz":"1","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"608123123608123123608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}   400
 
 
-
 *** Keywords ***
-
-
-
 
 API Comunication
     [Arguments]         ${json}    ${error_resp}

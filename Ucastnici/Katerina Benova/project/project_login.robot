@@ -11,33 +11,33 @@ Resource        Data_and_Config/resources.robot
 *** Test Cases ***
 
 Login valid
-    Login           ${logged_id}        ${logged_txt}       ${username}     ${pwd}
+    Login           ${SEL_logged}        ${TXT_logged}       ${username}     ${pwd}
 
 Login wrong username
-    Login           ${bad_login_id}     ${bad_login_txt}    abcd            ${pwd}
+    Login           ${SEL_bad_login}     ${TXT_bad_login}    abcd            ${pwd}
 
 Login wrong password
-    Login           ${bad_login_id}     ${bad_login_txt}    ${username}     abcd
+    Login           ${SEL_bad_login}     ${TXT_bad_login}    ${username}     abcd
 
 Login empty Username
-    Login Empty     1      ${empty_input_un}      password=${pwd}
+    Login Empty     1      ${SEL_empty_input_un}      password=${pwd}
 
 Login empty password
-    Login Empty     1      ${empty_input_pw}      username=${username}
+    Login Empty     1      ${SEL_empty_input_pw}      username=${username}
 
 Login empty password and username
-    Login Empty     2      ${empty_input}
+    Login Empty     2      ${SEL_empty_input}
 
 
 
 *** Keywords ***
 Login Page
     [Documentation]     Opens the login page and fills the username and password
-    [Arguments]         ${username}         ${password}
+    [Arguments]         ${username}             ${password}
     New Page            ${url_login}
-    Get Title           contains            ${web_title}
-    Type Text           ${input_username}   ${username}
-    Type Text           ${input_password}   ${password}
+    Get Title           contains                ${TXT_web_title}
+    Type Text           ${SEL_input_username}   ${username}
+    Type Text           ${SEL_input_password}   ${password}
     Click               ${button_submit}
 
 
