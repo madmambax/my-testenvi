@@ -93,7 +93,7 @@ Háčky a čárky - problém s českými znaky v Request Library  #200
 
 Háčky a čárky - v emailu  #500
     API Comunication  {"targetid":"","kurz":"3","name":"Gabriela","surname":"Zakova","email":"gabriela.žáková@seznam.cz","phone":"604904589","person":"fyz","address":"Praha","ico":"123456789","count":"5","comment":null,"souhlas":false}  500
-
+  
 
 *** Keywords ***
 
