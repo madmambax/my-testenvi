@@ -10,8 +10,9 @@ Suite Setup     API Login Admin  #log in and get token
 
 *** Test Cases ***
 Login - wrong data
-    API Login           ${admin_user}       wrongPassword
+    ${data}=            API Login           ${admin_user}       wrongPassword
     Status Should Be    401
+    Check Error Msg     ${data}             Unauthorized
 
 Who Am I
     Make GET Call       v1/auth/whoAmI      ${token}
@@ -26,8 +27,9 @@ List projects
     Status Should Be    200
 
 List projects - wrong endpoint
-    Make GET Call       v1/project         ${token}
+    ${data}=            Make GET Call       v1/project         ${token}
     Status Should Be    404
+    Check Error Msg     ${data}             Not Found
 
 List Clients
     Make GET Call       v1/clients          ${token}
@@ -36,12 +38,12 @@ List Clients
 Create client - wrong parameter name
     ${data}=                Make POST Call      v1/clients      ${token}    body={"names":"Client ABC"}
     Status Should Be        400
-
+    Check Error Msg         ${data}   The field "name" cannot be empty.
 
 Create client - long name
     ${data}=                Make POST Call      v1/clients      ${token}    body={"name":"Client with very long name ABC very long name ABC very long name ABC very long name ABC very long name ABC very long name ABC very long name ABC very long name ABC very long name ABC very long name ABC very long name ABC very long name ABC very long name ABC"}
     Status Should Be        400
-    Should Be Equal As Strings      ${data}[errorDescription]    The size of "name" must be between 0 and 255
+    Check Error Msg         ${data}   The size of "name" must be between 0 and 255
 
 
 Create client

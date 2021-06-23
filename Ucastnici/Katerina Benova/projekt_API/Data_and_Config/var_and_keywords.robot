@@ -11,6 +11,10 @@ ${client_id}    skip
 
 
 *** Keywords ***
+Check Error Msg
+    [Arguments]     ${data}    ${msg}
+    Should Be Equal As Strings      ${data}[errorDescription]   ${msg}
+
 Make GET Call
     Skip If  '${token}'=='skip'    msg = Skipped with Skip keyword.
     [Arguments]  ${path}    ${token}    ${parameters}=    ${body}=
