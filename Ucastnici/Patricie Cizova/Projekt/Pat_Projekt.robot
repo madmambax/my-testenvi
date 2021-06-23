@@ -10,6 +10,7 @@ Resource        Pat_Projekt_TestData.robot
 Resource        Pat_Projekt_Configuration.robot
 
 Test Setup      Pred_testem
+Suite Teardown  Uklid_sada
 
 
 *** Variables ***
@@ -99,3 +100,6 @@ Logout
 Pred_testem
     New Page                ${URL}
     Set Browser Timeout     20
+
+Uklid_sada
+    Close Page          ${URL}

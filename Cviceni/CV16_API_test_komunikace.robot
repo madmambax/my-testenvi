@@ -50,7 +50,7 @@ API Comunicaication
     [Arguments]       ${json}     ${error_resp}
 
    #převedení do UTF-8
-   ${json_utf8} =     Encode String To Bytes     ${json}     UTF-8
+   ${json_utf8} =     Encode String To Bytes     ${json}     UTF-8          #vyžaduje knihovnu String
 
   #vytoření hlavičky (header) zprávy
   &{header}=          Create Dictionary   Content-Type=application/json     charset=utf-8
