@@ -6,7 +6,6 @@
 *** Settings ***
 Documentation   CV: akce pred testem a po skonceni testu
 Library         Browser
-Library         DebugLibrary     # knihova pro ladění, pokud chcete ledit test stačí to přislušéno místa dat KS: Debug
 
 Resource        Data_and_Config/TestData.robot
 Resource        Data_and_Config/Configuration.robot
@@ -71,7 +70,7 @@ Login
     Click                       ${SEL_HeaderLogin}
     Type Text                   ${SEL_LoginFormEmail}               ${Email}
     Type Text                   ${SEL_LoginFormPwd}                 ${Heslo}
-#    Debug
+
     Click                       ${SEL_BtnSignIn}
 
     Get Text                    ${SEL_HeaderLoginErrorTxt}           contains                                ${Text}
