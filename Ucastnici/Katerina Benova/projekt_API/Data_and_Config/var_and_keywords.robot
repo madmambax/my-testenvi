@@ -15,7 +15,8 @@ Make GET Call
     Skip If  '${token}'=='skip'    msg = Skipped with Skip keyword.
     [Arguments]  ${path}    ${token}    ${parameters}=    ${body}=
     &{header}=    Create Dictionary    Authorization=ApiToken ${token}
-    ${resp} =    GET    ${url}${path}  params=${parameters}     data=${body}     headers=${header}  expected_status=Anything
+    CreateSession    apisession    ${url}
+    ${resp} =    GET on Session    apisession   ${path}  params=${parameters}     data=${body}     headers=${header}  expected_status=Anything
     Log	Response: @{resp}
     [return]    ${resp.json()}
 
@@ -35,7 +36,8 @@ Make DELETE Call
     Skip If  '${client_id}'=='skip'    msg = Skipped with Skip keyword.
     [Arguments]  ${path}    ${token}
     &{header}=    Create Dictionary    Authorization=ApiToken ${token}
-    ${resp} =    DELETE   ${url}${path}   headers=${header}     expected_status=Anything
+    CreateSession    apisession    ${url}
+    ${resp} =    DELETE On Session  apisession  ${path}   headers=${header}     expected_status=Anything
     Log	Response: @{resp}
 
 
