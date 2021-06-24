@@ -51,22 +51,16 @@ Háčky a carky - problém s českými znaky v Request Library
 
 Ukazka logovani
 # úrovně logování: TRACE, DEBUG, INFO (default), HTML, WARN, and ERROR
-  Log                Log na úrovní ERROR    ERROR
-  Log                Log na úrovní WARN     WARN
-  Log                Log na úrovní HTML     HTML
-  Log                Log na úrovní INFO     INFO
-  Log                Log na úrovní DEBUG    DEBUG
-  Log                Log na úrovní TRACE    TRACE
+  Log                Ahoj
 
 
   @{list1} =      Create List    first    second    third
-  Log             ${list1}[1]
-#  Log             @{list1}  #nefunguje
-  Log Many  @{list1}
+
 
   &{Dict} =	    Create Dictionary	key=value	foo=bar
-  Log Many        &{Dict}         #zalogování celeho slovníku (Dictionary)
-  Log Many        ${Dict.key}     #zalogování kokrétní hodnoty ze slovníku (Dictionary)
+
+
+
 
 
 
