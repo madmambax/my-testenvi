@@ -16,7 +16,7 @@ ${URL}      https://www.aboutyou.cz/
 *** Test Cases ***
 Login ok
     Prihlaseni        ${USER1_NAME}            ${USER1_PASSWORD}         ${OVERENI_1}
-
+    Log               Chyba           ERROR
 Spatne heslo
     Prihlaseni        ${USER1_NAME}            Heslo            ${OVERENI_1}
     Get Text          ${SEL_XPATH_CHYBOVA_HLASKA}            ==       ${chybovahlaska}
@@ -42,7 +42,7 @@ Prihlaseni
     #Open Browser
     #New Page        ${URL}
     Click           ${SEL_KROK_PRED_PRIHLASENIM}
-    Type Text       ${SEL_EMAIL_FIELD}              ${email}
+    Type Text       ${SEL_EMAIL_FIELD}             ${email}
     Type Text       ${SEL_PASSWORD_FIELD}          ${heslo}
     Click           ${SEL_ACCEPT_COKIES}
     Get Text        ${SEL_LOGIN_BUTTON}             ==              ${overenilogin}
