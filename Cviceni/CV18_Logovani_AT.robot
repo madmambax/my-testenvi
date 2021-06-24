@@ -18,6 +18,7 @@ Library  DebugLibrary     # knihova pro ladění, pokud chcete ledit test stač�
 ${url}		    http://testovani.kitner.cz/
 ${app}          /regkurz/formsave.php
 
+
 #${json}      {"targetid":"","kurz":"2","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}
 
 *** Test Cases ***
@@ -56,6 +57,17 @@ Ukazka logovani
   Log                Log na úrovní INFO     INFO
   Log                Log na úrovní DEBUG    DEBUG
   Log                Log na úrovní TRACE    TRACE
+
+
+  @{list1} =      Create List    first    second    third
+  Log             ${list1}[1]
+#  Log             @{list1}  #nefunguje
+  Log Many  @{list1}
+
+  &{Dict} =	    Create Dictionary	key=value	foo=bar
+  Log Many        &{Dict}         #zalogování celeho slovníku (Dictionary)
+  Log Many        ${Dict.key}     #zalogování kokrétní hodnoty ze slovníku (Dictionary)
+
 
 
 API Comunicaication

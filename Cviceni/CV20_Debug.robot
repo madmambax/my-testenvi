@@ -17,7 +17,7 @@ Suite Teardown  Uklid_sada
 Test Setup      Pred_testem
 Test Teardown   Uklid_po_testu
 
-Test Timeout    ${TIMEOUT_ROBOT_KW}      # Timeout pro všechny KS z RobotFW
+#Test Timeout    ${TIMEOUT_ROBOT_KW}      # pro debug knihovnu je vhodné vypnout
 
 *** Variables ***
 
@@ -25,32 +25,33 @@ Test Timeout    ${TIMEOUT_ROBOT_KW}      # Timeout pro všechny KS z RobotFW
 
 
 *** Test Cases ***
-#Login spatny email
-#    Login           chyba                       ${USER1_PASSWORD}                       ${ERROR_TEXT_FillCorrectEmail}
-#
+Login spatny email
+    Login           chyba                       ${USER1_PASSWORD}                       ${ERROR_TEXT_FillCorrectEmail}
+    Debug
+
 #Login spatne heslo
 #    Login           ${USER1_NAME}               bad                                     ${ERROR_TEXT_IncorrectEmailOrPwd}
 #
 #Login vse OK
 #    Login           ${USER1_NAME}               ${USER1_PASSWORD}                    ${USER1_SHORT}
 #    [Teardown]      Logout         #provede se i když test zfailuje
-#
 
-Test Objednavky
-    Debug
-    ${kusu} =	        Set Variable	         5
-    Login               ${USER1_NAME}            ${USER1_PASSWORD}                   ${USER1_SHORT}
+
+#Test Objednavky
+##    Debug
+#    ${kusu} =	        Set Variable	         5
+#    Login               ${USER1_NAME}            ${USER1_PASSWORD}                   ${USER1_SHORT}
 #    Debug
-    Pridat do kosiku    banán                    ${kusu}
-    Click               ${SEL_CartContent}
-    Take Screenshot
-    Take Screenshot
-    Odebrat z kose      ${kusu}
-    Take Screenshot
-    Take Screenshot
-    [Teardown]          Logout         #provede se i když test zfailuje
-    Take Screenshot
-    Take Screenshot
+#    Pridat do kosiku    banán                    ${kusu}
+#    Click               ${SEL_CartContent}
+#    Take Screenshot
+#    Take Screenshot
+#    Odebrat z kose      ${kusu}
+#    Take Screenshot
+#    Take Screenshot
+#    [Teardown]          Logout         #provede se i když test zfailuje
+#    Take Screenshot
+#    Take Screenshot
 
 
 
@@ -139,9 +140,9 @@ Pred_testem
 
 
 Pred_sadou
-    Set Browser Timeout                 ${TIMEOUT_BROWSER}         #20s je vhodné pro rohlik.cz
+#    Set Browser Timeout                 ${TIMEOUT_BROWSER}         #20s je vhodné pro rohlik.cz
 
-#    Open Browser        ${URL}                                     headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
+    Open Browser        ${URL}                                     headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
 #    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
     New Page                    ${URL}
 
