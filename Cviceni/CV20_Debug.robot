@@ -60,13 +60,6 @@ Test Objednavky
 Login
     [Arguments]                ${Email}                            ${Heslo}                                ${Text}
 
-    #Timeouty pro Browser library
-    ${b_timeput} =             Set Browser Timeout                 20                 #20s je vhodné pro rohlik.cz
-
-#    Open Browser        ${URL}                                    headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
-#    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
-#    New Page                    ${URL}
-
 #    Get Element
     Get Title                   contains                            ${TEXT_MainTitle}
 
