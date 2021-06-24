@@ -35,8 +35,8 @@ Login Page
     [Arguments]         ${username}         ${password}
     New Page            ${url_login}
     Get Title           contains            ${TXT_web_title}
-    Type Text           ${input_username}   ${username}
-    Type Text           ${input_password}   ${password}
+    Type Text           ${SEL_input_username}   ${username}
+    Type Text           ${SEL_input_password}   ${password}
     Click               ${button_submit}
 
 
