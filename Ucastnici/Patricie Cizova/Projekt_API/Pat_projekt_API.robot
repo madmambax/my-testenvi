@@ -9,7 +9,7 @@ Detaily studentů
 *** Settings ***
 Library     Browser
 Library     RequestsLibrary
-Library     Collection
+Library     Collections
 Library     JSONLibrary
 
 Resource        Pat_Projekt_API_Configuration.robot
@@ -65,11 +65,13 @@ Get_request_string_ID_NOK
 Get_data_from_request
     Create Session      Student_Details_ID      ${URL}
     ${Get_Resp}=        Get on Session          Student_Details_ID      ${API}/327564
-    ${json_response}=   set variable            ${Get_Resp.json()}
-    @{first_name_data}=     Get Value From Json     ${json_response}        $.first_name
+    ${json_response}=   set variable            ${Get_Resp.json()}  # tohle převede json na dictionary
+    Log to console      ${json_response}  # tady se můžeš podívat jak vypadá v logu
+
+    ${first_name_data}=  Set Variable   ${json_response}[data][first_name]
+
     Log to console      ${first_name_data}
-    ${f_name}=          Get From List           ${first_name_data}          0
-    Should Be Equal     ${f_name}               Gillian
+    Should Be Equal     ${first_name_data}               Gillian
 
 
 Add_new_student
