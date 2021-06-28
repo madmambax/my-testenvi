@@ -2,17 +2,17 @@
 Documentation   Testing website rohlik.cz
 Library         SeleniumLibrary
 
+Test Setup      ${URL}
+Test Teardown   Close Browser
 
 *** Variables ***
 ${URL}              http://rohlik.cz
-
-
 
 *** Test Cases ***
 
 Login and logout with valid data
 
-    Open Browser                        ${URL}                                                                                                       chrome
+
     Click Element                       id=headerLogin
     ${AllLinks}=                        Get All Links
     Log                                 ${AllLinks}
@@ -30,7 +30,7 @@ Login and logout with valid data
 
 Login with invalid username
 
-    Open Browser                        ${URL}                                                                                                        Chrome
+
     Click Element                       id=headerLogin
     ${AllLinks}=                        Get All Links
     Log                                 ${AllLinks}
@@ -43,7 +43,7 @@ Login with invalid username
 
 Login with invalid password
 
-    Open Browser                        ${URL}                                                                                                        Chrome
+
     Click Element                       id=headerLogin
     ${AllLinks}=                        Get All Links
     Log                                 ${AllLinks}
@@ -58,10 +58,6 @@ Login with invalid password
 
 
 *** Keywords ***
-
-
-
-
 
 
 

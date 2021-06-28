@@ -3,9 +3,6 @@ Documentation   Testing website rohlik.cz
 Library         SeleniumLibrary
 Resource        TestovaciData.robot
 
-Test Setup      Open Browser    ${URL}
-Test Teardown   Close Browser
-
 *** Variables ***
 
 
@@ -15,24 +12,26 @@ Test Teardown   Close Browser
 
 Login and logout with valid data
 
+    #Open Browser                        ${URL}                                  Chrome
+    #Click Element                       id=headerLogin
+    #${AllLinks}=                        Get All Links
+    #Log                                 ${AllLinks}
+    #Input Text                          ${SEL_LoginValidEmail}                 ${USER1_NAME}
+    #Input Text                          ${SEL_LoginValidPwd}                   ${USER1_PWD}
+    #Press Keys                          ${SEL_BtnSignIn}                       [Return]
+    #${AllLinks}=                        Get All Links
+    #Log                                 ${AllLinks}
+    #Press Keys                          ${SEL_TTBtn}                           [Return]
+    #${AllLinks}=                        Get All Links
+    #Log                                 ${AllLinks}
+    #Press Keys                          ${SEL_UserBoxLogoutBtn}                [Return]
+    #Close Browser
 
-    Click Element                       id=headerLogin
-    ${AllLinks}=                        Get All Links
-    Log                                 ${AllLinks}
-    Input Text                          ${SEL_LoginValidEmail}                 ${USER1_NAME}
-    Input Text                          ${SEL_LoginValidPwd}                   ${USER1_PWD}
-    Press Keys                          ${SEL_BtnSignIn}                       [Return]
-    ${AllLinks}=                        Get All Links
-    Log                                 ${AllLinks}
-    Press Keys                          ${SEL_TTBtn}                           [Return]
-    ${AllLinks}=                        Get All Links
-    Log                                 ${AllLinks}
-    Press Keys                          ${SEL_UserBoxLogoutBtn}                [Return]
 
 
 Login with invalid username
 
-
+    #Open Browser                        ${URL}                                  Chrome
     Click Element                       ${SEL_HeaderLogin}
     ${AllLinks}=                        Get All Links
     Log                                 ${AllLinks}
@@ -40,12 +39,12 @@ Login with invalid username
     Input Text                          ${SEL_LoginValidPwd}                    ${USER1_PWD}
     Press Keys                          ${SEL_BtnSignIn}                        [Return]
     Element Text Should Be              emailError                              ${ERROR_TEXT_FillCorrectEmail}
-
+    #Close Browser
 
 
 Login with invalid password
 
-
+    #Open Browser                        ${URL}                                  Chrome
     Click Element                       ${SEL_HeaderLogin}
     ${AllLinks}=                        Get All Links
     Log                                 ${AllLinks}
@@ -55,8 +54,7 @@ Login with invalid password
     ${AllLinks}=                        Get All Links
     Log                                 ${AllLinks}
     Element Text Should Be              emailError                              ${ERROR_TEXT_IncorrectEmailOrPwd}
-
-
+    #Close Browser
 
 
 *** Keywords ***
@@ -64,6 +62,7 @@ Login with invalid password
 Login
     [Arguments]                         ${USERNAME}                           ${PASSWORD}               ${ERROR_TEXT}
 
+    Open Browser                        ${URL}
     Click Element                       ${SEL_HeaderLogin}
     ${AllLinks}=                        Get All Links
     Log                                 ${AllLinks}
@@ -77,6 +76,6 @@ Login
 
 
 
-Login and logout with valid data
+
 
 

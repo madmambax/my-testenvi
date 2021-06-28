@@ -56,3 +56,8 @@ API Comunicaication
   ${resp} =    Post on Session    apilogin  ${app}    data=${json_utf8}  headers=${header}       expected_status=Anything
 
   Status Should Be    ${error_resp}
+
+
+ @{list1} =      Create List    first    second    third
+
+  Log Many            @{list}
