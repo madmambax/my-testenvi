@@ -133,7 +133,7 @@ Pred_testem
 Pred_sadou
     ${b_timeput} =             Set Browser Timeout                 20                 #20s je vhodné pro rohlik.cz
     Log                        ${b_timeput}
-#    Open Browser        ${URL}                                     headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
+    Open Browser        ${URL}                                     headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
 #    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
     New Page                    ${URL}
 
