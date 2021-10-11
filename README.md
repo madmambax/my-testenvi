@@ -1,3 +1,3 @@
 # Kurz Jak automatizovat testy (verzovací systém)
 
-Zde buou uloženy vaše zdrojové kód a domácí úkoly
+Zde budou uloženy vaše zdrojové kódy a domácí úkoly
