@@ -20,5 +20,4 @@ Negativní test první
   Log To Console        ${instalovano}
 
 
-
 *** Keywords ***
