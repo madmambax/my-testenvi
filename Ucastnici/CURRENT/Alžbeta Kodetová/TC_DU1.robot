@@ -5,7 +5,8 @@ Library  OperatingSystem
 
 *** Test Cases ***
 Pozitivní test první
-  ${instalovnano}       run                 pip list
+  ${instalovano}       run                 pip list
+  Log                   ${instalovano}
   Log To Console        ${instalovano}
 
 *** Keywords ***
