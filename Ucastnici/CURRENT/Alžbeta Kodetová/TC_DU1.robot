@@ -1,4 +1,5 @@
 *** Settings ***
+Library  OperatingSystem
 
 *** Variables ***
 
