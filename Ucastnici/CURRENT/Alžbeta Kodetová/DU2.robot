@@ -23,13 +23,20 @@ Druhy test negativni
     Should Not Contain  ${knihovny_pip}  price
 
 Treti test pozitivni
-    ${c} =              Evaluate        ${A} + ${B}
+    ${c} =              Soucet
     Log Many            ${A}    ${B}    ${c}
     Log To Console      ${\n}Jakou má hodnot proměnná \${c}: ${c}
     Should Be True      ${c} == 15
 
 Čtvrtý test negativní
-    ${c} =              Evaluate        ${A} + ${B}
+    ${c} =              Soucet
     ${is string}        Evaluate        isinstance(${c},str)
     Log To Console      ${\n}Je výsledek typu řetězec? ${is string}
+
+*** Keywords ***
+ Soucet
+   [Documentation]  Součet globální proměnné A a B
+   [Arguments]      ${A}        ${B}
+   ${x} =           Evaluate        ${A} + ${B}
+   [Return]         ${x}
 
