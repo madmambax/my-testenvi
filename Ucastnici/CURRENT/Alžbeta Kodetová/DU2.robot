@@ -1,6 +1,10 @@
 *** Settings ***
 Library     OperatingSystem
 
+*** Variables ***
+    ${A} =              10
+    ${B} =              5
+
 
 *** Test Cases ***
 
@@ -19,15 +23,13 @@ Druhy test negativni
     Should Not Contain  ${knihovny_pip}  price
 
 Treti test pozitivni
-    ${a} =              Set Variable    10
-    ${b} =              Set Variable    5
-    ${c} =              Evaluate        ${a} + ${b}
+    ${c} =              Evaluate        ${A} + ${B}
+    Log Many            ${A}    ${B}    ${c}
     Log To Console      ${\n}Jakou má hodnot proměnná \${c}: ${c}
     Should Be True      ${c} == 15
 
 Čtvrtý test negativní
-    ${a} =              Set Variable    10
-    ${b} =              Set Variable    5
-    ${c} =              Evaluate        ${a} + ${b}
+    ${c} =              Evaluate        ${A} + ${B}
     ${is string}        Evaluate        isinstance(${c},str)
     Log To Console      ${\n}Je výsledek typu řetězec? ${is string}
+
