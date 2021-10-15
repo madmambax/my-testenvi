@@ -26,7 +26,7 @@ Druhy test negativni
 Treti test pozitivni
     ${c} =              Soucet  ${A}    ${B}
     Log Many            ${A}    ${B}    ${c}
-    Log To Console      ${\n}Jakou má hodnot proměnná \${c}: ${c}
+    Log To Console      ${\n}Proměnná \${A} a \${B}: ${A} a ${B} ${\n}A jejch součet, tedy proměnná \${c}: ${c}
     Should Be True      ${c} == 15
 
 Čtvrtý test negativní
