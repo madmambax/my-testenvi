@@ -2,8 +2,9 @@
 Library     OperatingSystem
 
 *** Variables ***
-    ${A} =              10
-    ${B} =              5
+
+${A}=             10
+${B}=             5
 
 
 *** Test Cases ***
@@ -23,20 +24,20 @@ Druhy test negativni
     Should Not Contain  ${knihovny_pip}  price
 
 Treti test pozitivni
-    ${c} =              Soucet
+    ${c} =              Soucet  ${A}    ${B}
     Log Many            ${A}    ${B}    ${c}
     Log To Console      ${\n}Jakou má hodnot proměnná \${c}: ${c}
     Should Be True      ${c} == 15
 
 Čtvrtý test negativní
-    ${c} =              Soucet
+    ${c} =              Soucet  ${A}    ${B}
     ${is string}        Evaluate        isinstance(${c},str)
     Log To Console      ${\n}Je výsledek typu řetězec? ${is string}
 
 *** Keywords ***
  Soucet
    [Documentation]  Součet globální proměnné A a B
-   [Arguments]      ${A}        ${B}
-   ${x} =           Evaluate        ${A} + ${B}
+   [Arguments]      ${z}        ${y}
+   ${x} =           Evaluate        ${y} + ${z}
    [Return]         ${x}
 
