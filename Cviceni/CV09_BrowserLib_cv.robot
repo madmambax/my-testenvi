@@ -28,7 +28,23 @@ Prihlaseni success
 *** Keywords ***
 
 Login
-    [Arguments]     ${plogin}      ${pheslo}     ${pnastane}
-    log             ${plogin}
+    [Arguments]     ${pemail}      ${pheslo}     ${pikona}
+    log             ${pemail}
     log             ${pheslo}
     log             ${pnastane}
+
+    #otevřít prohlížeč
+
+    #otevřít stránku rohlik.cz
+
+    #ověřit že se stránka otevřela
+
+    #kliknout na login
+
+    #zadat email ${pemail} do místa pro zadání emailu
+
+    #zadat heslo ${pheslo} do místa pro zadání hesla
+
+    #klinout na tlačítko "Přihlasit se"
+
+    #ověřit že jsem přihlášený data-test=header-user-icon musí obsahovat to co je v ${pikona}
