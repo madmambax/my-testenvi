@@ -28,7 +28,8 @@ Prihlaseni success
 *** Keywords ***
 
 Login
-    [Arguments]     ${pemail}      ${pheslo}     ${pikona}
+    [Arguments]     ${pemail}      ${pheslo}     ${pnastane}
+
     log             ${pemail}
     log             ${pheslo}
     log             ${pnastane}
@@ -39,7 +40,7 @@ Login
 
     #ověřit že se stránka otevřela
 
-    #kliknout na login
+    #kliknout na Přihlásit
 
     #zadat email ${pemail} do místa pro zadání emailu
 
@@ -47,4 +48,4 @@ Login
 
     #klinout na tlačítko "Přihlasit se"
 
-    #ověřit že jsem přihlášený data-test=header-user-icon musí obsahovat to co je v ${pikona}
+    #ověřit že jsem přihlášený data-test=header-user-icon musí obsahovat to co je v ${pnastane}
