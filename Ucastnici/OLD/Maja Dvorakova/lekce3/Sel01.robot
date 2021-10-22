@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation   Automatizace rohlik.cz s BrowserLibrary
-Library Browser
+Library     Browser
 
 *** Variables ***
 
