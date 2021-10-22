@@ -4,7 +4,13 @@ Library  Browser
 
 *** Test Cases ***
 Starting a browser with a page
+    Set Browser Timeout    20
     New Browser    chromium    headless=false
     New Context    viewport={'width': 1920, 'height': 1080}
-    New Page       https://marketsquare.github.io/robotframework-browser/Browser.html
-    Get Title      ==    Browser
+    New Page       https://www.rohlik.cz/
+    Get Title      *=    Rohlik.cz
+
+    Click          text="Přihlásit"
+    Sleep          1
+
+*** Keywords ***
