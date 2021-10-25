@@ -19,11 +19,11 @@ Login
     log                 ${pheslo}
     log                 ${pnastane}
 
-    New Browser         chromium                 headless=false
+    New Browser         chromium                           headless=false
     New Page            https://www.alza.cz/
-    Get Title           contains  	             Alza.cz
+    Get Title           contains  	                       Alza.cz
     Click               id=lblLogin
-    Type Text           id=userName              ${pemail}
-    Type Text           id=password              ${pheslo}
+    Type Text           id=userName                        ${pemail}
+    Type Text           id=password                        ${pheslo}
     Click               id=btnLogin
-    Get Text            id=lblUser          ==   ${pnastane}
+    Get Text            xpath=//*[@id="lblUser"]     ==    ${pnastane}
