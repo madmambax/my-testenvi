@@ -42,8 +42,10 @@ Login
 
     Click          css=#modal-theLoginForm > button
 
+
 #   Get Text       css=body > header > nav > ul.menu__session > li:nth-child(1) > div > a:nth-child(2)     ==      ${result}
-#   Get Text       css=body > header > nav > ul.menu__session > li:nth-child(1) > div > a:nth-child(1)     ==      ${result}
+    sleep    5
+    Get Text       css=body > header > nav > ul.menu__session > li:nth-child(1) > div > a:nth-child(1)     ==      ${result}
 #   Get Text       text="MŮJ ÚČET"      ==          ${result}
 
 Logout
