@@ -7,7 +7,7 @@ ${URL}      https://www.rohlik.cz
 
 *** Test Cases ***
 
-Prihlaseni bad
+Prihlaseni success a odhlaseni
     Login               tomanova.nada@post.cz            qRmuCPfuDnkK94X        JT
 
 
