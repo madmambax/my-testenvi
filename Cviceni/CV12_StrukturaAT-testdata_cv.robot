@@ -42,12 +42,9 @@ Test Objednavky
     Pridat do kosiku    Losos                       ${kusu}
     Click               id=cartContent
     Take Screenshot
-    Take Screenshot
     Odebrat z kose      ${kusu}
     Take Screenshot
-    Take Screenshot
     Logout
-    Take Screenshot
     Take Screenshot
 
 
