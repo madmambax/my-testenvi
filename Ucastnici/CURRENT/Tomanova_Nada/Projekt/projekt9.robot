@@ -2,6 +2,7 @@
 Library     Browser
 #propojeni na soubor s promennymi
 Resource    test_data.robot
+
 Test Setup  New Browser         ${browser}                    headless=false
 
 *** Test Cases ***
@@ -24,8 +25,15 @@ Prihlaseni a napoj
     Sleep               3
     #ve zvetsenem okne klikne na "do kosiku"
     Click               xpath=//*[@id="productDetail"]/div[1]/div[3]/div[3]/div/div/button
-
+    #zavre vybrane okno "X"
+    Click               xpath=//*[@id="modalOverlay"]/div/div/div[2]/div
     Sleep               3
+    #odebere napoj z kosiku "-"
+    Click               xpath=//*[@id="product_1351609"]/div[2]/div/button[1]
+    [Teardown]          Logout
+    Sleep               3
+
+
 
 *** Keywords ***
 
