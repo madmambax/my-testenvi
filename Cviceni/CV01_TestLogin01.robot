@@ -54,8 +54,7 @@ Login
     ${resp} =    Post on Session    apilogin    login_app/userauth.php  data=${json_string}  headers=${header}
     Log	Responce: @{resp}
     Should Be Equal As Strings	${resp.status_code}     200
-    Dictionary Should Contain Key	${resp.json()}      response
-    Dictionary Should Contain Value	${resp.json()}      ${responce_code}
+    Dictionary Should Contain Item	${resp.json()}      response    ${responce_code}
 
 
 
