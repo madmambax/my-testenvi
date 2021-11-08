@@ -14,7 +14,7 @@ Prihlaseni bad heslo
     Login               radek.tester@seznam.cz              dasdas                      Přihlásit
 
 Prihlaseni success
-    Login               radek.tester@seznam.cz              tajneheslotajneheslo        JT
+    Login               radek.tester@seznam.cz              tajneheslotajneheslo
 
 *** Keywords ***
 
