@@ -9,8 +9,8 @@ pip install robotframework-requests
 
 *** Settings ***
 Library	 RequestsLibrary
-Library	 Collections
-Library  String
+Library  String             # potřebujeme pro klíčové slovo: Encode String To Bytes
+#Library	 Collections
 
 
 *** Variables ***
