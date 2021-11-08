@@ -49,15 +49,3 @@ API test - TestLogin
   Should Be Equal As Strings        {'response': '200', 'reason': 'correct', 'agent': []}  ${resp.json()}  #celý JSON
   Dictionary Should Contain Key	    ${resp.json()}      response          # klíč
   Dictionary Should Contain Item    ${resp.json()}      response    200   #klíč s konkrétní hodnotou
-
-
-#  ${x} =    Set Variable     ${resp.json()}
-#  Log To Console  DICT:${x}
-##  &{a} =      Create Dictionary    ${resp.json()}
-#  Log Dictionary  ${resp.json()}
-#  Log Dictionary  ${x}
-#  Log To Console  ${x.response}
-#
-#  &{d} =      Create Dictionary     prvni=hodnota   druhy=hodnota
-#  Log To Console  DICT:${d}
-#  Log To Console  ${d.prvni}
