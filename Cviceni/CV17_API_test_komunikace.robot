@@ -22,7 +22,7 @@ ${app}          /regkurz/formsave.php
 *** Test Cases ***
 
 bonus test
-    GET     https://www.google.com
+    GET     https://www.google.comX
     Status Should Be    200
 
 registrace ok
