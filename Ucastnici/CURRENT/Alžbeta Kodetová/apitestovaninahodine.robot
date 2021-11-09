@@ -11,7 +11,7 @@ ${app}    regkurz/formsave.php
 
 Prvni API test - registrace na kurz
     # vytoření JSON zprávy
-    ${json}=  catenate  {"targetid":"","kurz":"1","name":"Jan","surname":"Tester","email":"jan.tester@data.cz","phone":"777123132","person":"fyz","address":"Udolni 21, Brno","ico":"27232433","count":"1","comment":"nic","souhlas":true}
+    ${json}=  catenate  {"targetid":"","kurz":"2","name":"Havel","surname":"Tester","email":"jan.tester@data.cz","phone":"777123132","person":"fyz","address":"Udolni 21, Brno","ico":"27232433","count":"1","comment":"nic","souhlas":true}
 
     # vytoření hlavičky (header) zprávy
     &{header}=   Create Dictionary   Content-Type=application/json
