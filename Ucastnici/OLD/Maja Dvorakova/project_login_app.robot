@@ -12,9 +12,9 @@ adresa api je http://testovani.kitner.cz/login_app/userauth.php
 
 
 *** Settings ***
-Library	Collections
-Library	RequestsLibrary
-Library SeleniumLibrary
+Library	    Collections
+Library	    RequestsLibrary
+Library     SeleniumLibrary
 
 
 

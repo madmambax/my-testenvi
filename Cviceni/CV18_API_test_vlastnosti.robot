@@ -54,9 +54,9 @@ Registrace na kurz
     Log	                Responce: @{resp}
 
     #vyhodnocení odpovědi a návratové hodnoty
-    Should Be Equal As Strings	${resp.status_code}     200
-    Dictionary Should Contain Key	${resp.json()}      response
-    Dictionary Should Contain Value	${resp.json()}      ${responce_code}
+    Should Be Equal As Strings	    ${resp.status_code}     200
+    Dictionary Should Contain Item	${resp.json()}          response    ${responce_code}
+
 
 
 
