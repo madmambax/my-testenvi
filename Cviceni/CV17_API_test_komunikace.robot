@@ -21,10 +21,6 @@ ${app}          /regkurz/formsave.php
 
 *** Test Cases ***
 
-bonus test
-    GET     https://www.google.comX
-    Status Should Be    200
-
 registrace ok
     API Comunicaication   {"targetid":"","kurz":"2","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}  200
 
@@ -59,7 +55,7 @@ API Comunicaication
   CreateSession       apilogin            ${url}
 
   # odeslání zprávy a uložení odpovědi do ${resp}
-  ${resp} =    Post on Session    apilogin  ${app}    data=${json_utf8}  headers=${header}       expected_status=Anything
+  ${resp}=   Post on Session   apilogin  ${app}   data=${json_utf8}   headers=${header}   expected_status=Anything
 
   Status Should Be    ${error_resp}
 
