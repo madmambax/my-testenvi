@@ -27,8 +27,11 @@ registrace ok
 registrace chyba
     API Comunicaication   {"targetid":"","kurz":"","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}   500
 
+#registrace chybny telefon (moc dlouhy)
+#přidat test
 
-
+#chybny format JSON (bez kurzu)
+#přidat test
 
 *** Keywords ***
 
