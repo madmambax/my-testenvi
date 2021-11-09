@@ -47,5 +47,5 @@ API test - TestLogin
   Status Should Be                  200                           # status code na request (dotaz)
   Should Be Equal As Strings        200  ${resp.status_code}      # status code na request (dotaz) - verze 2
   Should Be Equal As Strings        {'response': '200', 'reason': 'correct', 'agent': []}  ${resp.json()}  #celý JSON
-  Dictionary Should Contain Key	    ${resp.json()}      response          # klíč
-  Dictionary Should Contain Item    ${resp.json()}      response    200   #klíč s konkrétní hodnotou
+  Dictionary Should Contain Key	    ${resp.json()}      response          # klíč v JSONu
+  Dictionary Should Contain Item    ${resp.json()}      response    200   #klíč s konkrétní hodnotou  v JSONu
