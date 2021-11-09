@@ -2,14 +2,9 @@
 ${USER_NAME}               julinka808@gmail.com
 ${USER_PASSWORD}           zkouska123
 
-#Strings
-${TEXT_MainTitle}                   Online supermarket Rohlik.cz
-${TEXT_EmptyCart}                   Vysypat košík
-
 #Error strings
 ${ERROR_TEXT_FillCorrectEmail}      Zadejte platný email
 ${ERROR_TEXT_IncorrectEmailOrPwd}   Zadal(a) jste nesprávný e-mail nebo heslo.
-${ERROR_TEXT_EmptyCart}             Košík funguje i jako nákupní seznam
 
 #Login
 ${SEL_HeaderLoginErrorTxt}  xpath=//div[@class='u-mr--8']
@@ -28,7 +23,6 @@ ${SEL_BtnSearchGlobal}      text=Hledat
 ${SEL_BtnAdd}               data-test=btnAdd
 ${SEL_BtnPlus}              data-test=btnPlus
 ${SEL_BtnMinus}             data-test=btnMinus
-${SEL_produkt}              data-product-id=1311671
 
 #Cart
 ${SEL_Cart}                 id=cart
