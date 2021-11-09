@@ -26,6 +26,11 @@ Prvni API test - registrace na kurz
 
    Status Should Be  200   # vyhodnocení
 
+    Log To Console  ${resp}
+    Log To Console  ${resp.status_code}
+    Log To Console  ${resp.reason}
+    Log To Console  ${resp.json()}
+
    #VYHODNOCENÍ: status code na request (dotaz) - verze 2
    Should Be Equal As Strings        200  ${resp.status_code}
    #VYHODNOCENÍ: celý JSON
