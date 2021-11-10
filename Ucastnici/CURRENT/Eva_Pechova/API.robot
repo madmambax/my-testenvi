@@ -10,7 +10,7 @@ ${app}    regkurz/formsave.php
 Prvni API test - registrace na kurz
 
     ${json}=  catenate  {"targetid":"","kurz":"1","name":"Jan","surname":"Tester","email":"jan.tester@data.cz","phone":"777123132","person":"fyz","address":"Udolni 21, Brno","ico":"27232433","count":"1","comment":"nic","souhlas":true}
-    ${json}=  catenate  {"targetid":"","kurz":"1","name":"Jan","surname":"Tester","email":"0","phone":"777123132","person":"fyz","address":"Udolni 21, Brno","ico":"27232433","count":"1","comment":"nic"
+    ${json}=  catenate  {"targetid":"","kurz":"1","name":"Radim","surname":"Kalina","email":"radim.kalina@gamil.com","phone":"777582132","person":"fyz","address":"Belehradska", Praha","ico":"27285233","count":"1","comment":"nic","souhlas":true}
     &{header}=   Create Dictionary   Content-Type=application/json
 
     # vytvoření spojení (session)
