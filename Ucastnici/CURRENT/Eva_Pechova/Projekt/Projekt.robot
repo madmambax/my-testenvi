@@ -30,12 +30,12 @@ Test2
 Test3
 
     Start Case
-    Login                ${USER_NAME}                 ${USER_PASSWORD}
+    Login                ${USER_NAME}                 ${USER_PASSWORD}          EP
     Logout
 
 Test Objednavky
     ${kusu} =	        Set Variable	              5
-    Login               ${USER_NAME}                  ${USER_PASSWORD}
+    Login               ${USER_NAME}                  ${USER_PASSWORD}          EP
     Pridat do kosiku    Losos                         ${kusu}
     Click               ${SEL_CartContent}
     Odebrat z kose      ${kusu}
@@ -47,7 +47,7 @@ Start Case
     New Page            ${URL}
 
 Login
-    [Arguments]        ${USER_NAME}                    ${USER_PASSWORD}
+    [Arguments]        ${USER_NAME}                    ${USER_PASSWORD}             ${text}
 
     Set Browser Timeout     30
 
@@ -55,7 +55,7 @@ Login
     type text           ${SEL_LoginFormEmail}           ${USER_NAME}
     type text           ${SEL_LoginFormPwd}             ${USER_PASSWORD}
     click               ${SEL_BtnSignIn}
-    Get Text            ${SEL_HeaderLoginErrorTxt}
+    Get Text            ${SEL_HeaderLoginErrorTxt}      contains                     ${text}
 
 Pridat do kosiku
     [Arguments]         ${Zbozi}                        ${Kusu}
