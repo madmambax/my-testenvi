@@ -119,7 +119,7 @@ Odebrat z kose
 #    Debug
 
     # Dynamický timeout
-    # je třeba vědět co je synchronyzační bod. Na co čeakt. Co se stane když se z košíku odebere X položek?
+    # je třeba vědět co je synchronyzační bod. Na co čekat. Co se stane když se z košíku odebere X položek?
     # v případě košíku to je aktuální počet zboží v košíku
 
     ${CartContentText}=     Get Text                ${SEL_CartContent}
