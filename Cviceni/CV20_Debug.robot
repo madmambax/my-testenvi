@@ -108,31 +108,8 @@ Odebrat z kose
     Click                   ${SEL_BtnMinus}             clickCount=${Kusu}      delay=100ms
     Take Screenshot
 
-    # nějakou dobu trvá než se zboží přidá do košíku, možnosti
-
-    #Statický timeout
-#    Sleep                   3 s
-#    Take Screenshot
-
-
-    #jak na ladění, místo kde chcete aby se váš kód zastavil označíte KS Debug
 #    Debug
 
-    # Dynamický timeout
-    # je třeba vědět co je synchronyzační bod. Na co čekat. Co se stane když se z košíku odebere X položek?
-    # v případě košíku to je aktuální počet zboží v košíku
-
-    ${CartContentText}=     Get Text                ${SEL_CartContent}
-    Log                     ${CartContentText}
-
-    FOR    ${i}    IN RANGE    100
-           sleep                   ${TIME_BETWEEN_CHECKS}
-           ${CartContentText}=     Get Text         ${SEL_CartContent}
-           Exit For Loop If         '${ERROR_TEXT_EmptyCart}' in '''${CartContentText}'''
-
-           Log                     ${CartContentText}
-           Log                     ${i}
-    END
 
 
 Pred_testem
