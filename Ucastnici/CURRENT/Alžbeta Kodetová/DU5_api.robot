@@ -1,6 +1,7 @@
 *** Settings ***
 Library  RequestsLibrary
 Library  String             # potřebujeme pro klíčové slovo: Encode String To Bytes
+Library  Collections
 
 *** Variables ***
 ${url}    http://testovani.kitner.cz/
@@ -31,7 +32,7 @@ Pozitivní test čislo kurzu je 1, 2, nebo 3
     API Comunicaication     3  Igor  Lament  jak@se.mas  123456789  fyz  Udolni 212, Praha  27232433  20  nic  true  200
 
 Negativní test na jméno účastníka
-    API Comunicaication     1  12    89*9%"  jak@se.mas  123456789  fyz  Udolni 212, Praha  27232433  20  nic  true  200
+    API Comunicaication     1  12    89*9%"  jak@se.mas  123456789  fyz  Udolni 212, Praha  27232433  20  nic  true  400
 
 Negativní test na email účastníka
     API Comunicaication     1  Igor  Lament  Jak se máš?  123456789  fyz  Udolni 212, Praha  27232433  20  nic  true  200
@@ -73,7 +74,7 @@ API Comunicaication
   ${resp}=   Post on Session   apilogin  ${app}   data=${json_utf8}   headers=${header}   expected_status=Anything
 
 #  Status Should Be    ${error_resp}
-  Should Be Equal As Strings	    ${resp.status_code}     200
+  Should Be Equal As Strings	    ${resp.status_code}     ${responce_code}
   Dictionary Should Contain Item	${resp.json()}          response    ${responce_code}
 
 
