@@ -27,7 +27,7 @@ Test Teardown   Uklid_po_testu
 *** Test Cases ***
 Login spatny email
     Login           chyba                       ${USER1_PASSWORD}                       ${ERROR_TEXT_FillCorrectEmail}
-    Debug
+
 
 #Login spatne heslo
 #    Login           ${USER1_NAME}               bad                                     ${ERROR_TEXT_IncorrectEmailOrPwd}
@@ -108,7 +108,7 @@ Odebrat z kose
     Click                   ${SEL_BtnMinus}             clickCount=${Kusu}      delay=100ms
     Take Screenshot
 
-#    Debug
+    Debug
 
 
 
