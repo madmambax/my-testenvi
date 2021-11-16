@@ -41,7 +41,7 @@ Negativní test na telefonní číslo účastníka
     API Comunicaication     1  Igor  Lament  jak@se.mas  tel. číslo  fyz  Udolni 212, Praha  27232433  20  nic  true  200
 
 Pozitivní test na prav osobu
-# v dokumentaci není, jak má vypadat označneí právnícké osoby, doýšlím si, že "prav"
+# v dokumentaci není, jak má vypadat označení právnícké osoby, domýšlím si, že "prav"
     API Comunicaication     1  Igor  Lament  jak@se.mas  123456789  prav  27232433  20  nic  true  200
 
 Negativní test na fyz/prav osobu
@@ -55,10 +55,10 @@ Negativní test na adresu, když jde o prav osobu
 *** Keywords ***
 
 API Comunicaication
-    [Arguments]       ${course}  ${name}  ${surname}  ${email}  ${phone}  ${person}  ${address}  ${souhlas}  ${responce_code}
+    [Arguments]       ${course}  ${name}  ${surname}  ${email}  ${phone}  ${person}  ${address}  ${ico}  ${count}  ${comment}  ${souhlas}  ${responce_code}
 
   # vytvoření těla (body) zprávy
-  ${json}=     Catenate      {"targetid":"","kurz":"${course}","name":"${name}","surname":"${surname}","email":"${email}","phone":"${phone}","person":"${person}","address":"${address}","ico":"1","count":"1","comment":null,"souhlas":${souhlas}}
+  ${json}=     Catenate      {"targetid":"","kurz":"${course}","name":"${name}","surname":"${surname}","email":"${email}","phone":"${phone}","person":"${person}","address":"${address}","ico":"${ico}","count":"${count}","comment":${comment},"souhlas":${souhlas}}
 
   #převedení do UTF-8
   ${json_utf8} =     Encode String To Bytes     ${json}     UTF-8          #vyžaduje knihovnu String, takhle zapnout češtinu - na 2 místech
