@@ -25,33 +25,16 @@ Test Teardown   Uklid_po_testu
 
 
 *** Test Cases ***
-Login spatny email
-    Login           chyba                       ${USER1_PASSWORD}                       ${ERROR_TEXT_FillCorrectEmail}
 
 
-#Login spatne heslo
-#    Login           ${USER1_NAME}               bad                                     ${ERROR_TEXT_IncorrectEmailOrPwd}
-#
-#Login vse OK
-#    Login           ${USER1_NAME}               ${USER1_PASSWORD}                    ${USER1_SHORT}
-#    [Teardown]      Logout         #provede se i když test zfailuje
-
-
-#Test Objednavky
-##    Debug
-#    ${kusu} =	        Set Variable	         5
-#    Login               ${USER1_NAME}            ${USER1_PASSWORD}                   ${USER1_SHORT}
-#    Debug
-#    Pridat do kosiku    banán                    ${kusu}
-#    Click               ${SEL_CartContent}
-#    Take Screenshot
-#    Take Screenshot
-#    Odebrat z kose      ${kusu}
-#    Take Screenshot
-#    Take Screenshot
-#    [Teardown]          Logout         #provede se i když test zfailuje
-#    Take Screenshot
-#    Take Screenshot
+Test Objednavky
+    ${kusu} =	        Set Variable	         5
+    Login               ${USER1_NAME}            ${USER1_PASSWORD}                   ${USER1_SHORT}
+    Debug
+    Pridat do kosiku    banán                    ${kusu}
+    Click               ${SEL_CartContent}
+    Odebrat z kose      ${kusu}
+    [Teardown]          Logout         #provede se i když test zfailuje
 
 
 
