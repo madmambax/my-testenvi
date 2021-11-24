@@ -13,7 +13,7 @@ Registrace na kurz (vsechno spravne)
     Registrace na kurz   2  Jan  Novak  jan.novak@abc.cz  777123123  fyz  Udolni 21, Brno  false  200
 
 Registrace na kurz (bez uvedeni kurzu)
-    Registrace na kurz    Jan  Novak  jan.novak@abc.cz   +420777123123  fyz  Udolni 21, Brno  false  200
+    Registrace na kurz  ${null}  Jan  Novak  jan.novak@abc.cz   +420777123123  fyz  Udolni 21, Brno  false  200
 
 Registrace na kurz (s neexistujicim kurzem)
     Registrace na kurz    5     Jan  Novak  jan.novak@abc.cz   +420777123123  fyz  Udolni 21, Brno  false  200
