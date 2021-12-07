@@ -16,5 +16,34 @@ Druhy test negativni
     log             ${res}
     Should Contain  ${res}  This command is not supported by the help utility.
 
+Třetí test pozitivní
+    ${output}       Run     Dir
+    Log             ${output}
+    Should Contain  ${output}   report
+
+Čtvrtý test pozitivní
+    ${output}       Get File  text.txt
+    log             ${output}
+    Should Contain  ${output}   ahoj
+
+Pátý text negativní
+    ${output}       Get File  text.txt
+    Log             ${output}
+    Should not Contain  ${output}   čau
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
