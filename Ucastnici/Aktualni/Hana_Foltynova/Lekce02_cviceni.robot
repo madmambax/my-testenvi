@@ -6,7 +6,6 @@ Library	    Collections
 *** Variables ***
 #1. způsob zápisu
 ${URL}     https://www.kosik.cz/
-${NAME}      Daniel
 
 #2. způsob zápisu
 ${URL2} =  https://www.kosik.cz/
