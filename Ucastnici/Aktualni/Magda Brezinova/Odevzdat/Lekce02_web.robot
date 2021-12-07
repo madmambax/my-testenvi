@@ -52,3 +52,4 @@ Logout
     [Arguments]         ${validation}
     Click               //span[text()="${validation}"]
     Click               //div[text()="Odhlásit se"]
+    Get Title           contains                            Vítejte
