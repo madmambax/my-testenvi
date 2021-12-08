@@ -15,8 +15,8 @@ Moje první klíčové slovo
         Log To Console  ${OUTPUT}               @{NazevSouboru}
 
 Práce s txt
-        ${output} =     Get File                @{NazevSouboru}
-        Log             ${output}
+    ${output} =     Get file    @{NazevSouboru}
+    Log             ${output}
 
 
 *** Test Cases ***
@@ -54,6 +54,9 @@ Klíčové slovo
 Ověření obsahu
     Práce S Txt
     Should Contain  ${output}   Ahoj
+
+
+
 
 
 
