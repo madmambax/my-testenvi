@@ -15,7 +15,7 @@ Moje první klíčové slovo
         Log To Console  ${OUTPUT}               @{NazevSouboru}
 
 Práce s txt
-        ${output}       Get File                @{NazevSouboru}
+        ${output} =     Get File                @{NazevSouboru}
         Log             ${output}
 
 
