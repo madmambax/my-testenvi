@@ -27,9 +27,9 @@ Spusť příkaz
     ${output} =                 run                 ${Prikaz}
     FOR    ${KontrolniHodnota}    IN   @{KontrolniHodnoty}
         Log    ${KontrolniHodnota}
-    Log To Console              Kontrola - výstup obsahuje text: ${KontrolniHodnota}
-    Should Contain              ${output}           ${KontrolniHodnota}
-    Log                         Výstup: ${output}
+        Log To Console              Kontrola - výstup obsahuje text: ${KontrolniHodnota}
+        Should Contain              ${output}           ${KontrolniHodnota}
+        Log                         Výstup: ${output}
     END
    # Log To Console              Kontrola - výstup obsahuje text: ${KontrolniHodnota}
    # Should Contain              ${output}           ${KontrolniHodnota}
