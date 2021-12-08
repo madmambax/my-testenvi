@@ -14,6 +14,10 @@ Moje první klíčové slovo
         ${output}       Get File                @{NazevSouboru}
         Log To Console  ${OUTPUT}               @{NazevSouboru}
 
+Práce s txt
+        ${output}       Get File                @{NazevSouboru}
+        Log             ${output}
+
 
 *** Test Cases ***
 
@@ -44,8 +48,20 @@ Pátý text negativní
     Log             ${output}
     Should not Contain  ${output}   čau
 
-Klíčové Slovo
+Klíčové slovo
     Moje První Klíčové Slovo
+
+Ověření obsahu
+    Práce S Txt
+    Should Contain  ${output}   Ahoj
+
+
+
+
+
+
+
+
 
 
 
