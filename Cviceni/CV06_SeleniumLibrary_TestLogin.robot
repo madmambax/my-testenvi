@@ -14,7 +14,7 @@ Library           SeleniumLibrary
 *** Variables ***
 ${LOGIN URL}      http://testovani.kitner.cz/login_app/
 ${BROWSER}        Chrome
-${SEL_DRIVER}     C:\Users\radek\AppData\Local\Programs\Python\Python37-32\Scripts\   # nepoužívá se, ale webdriver je nahraný v cestě
+${SEL_DRIVER}     C:\Users\radek\AppData\Local\Programs\Python\Python37-32\Scripts\   # nepoužívá se, webdriver je nahraný v cestě
 
 *** Test Cases ***
 Valid Login
