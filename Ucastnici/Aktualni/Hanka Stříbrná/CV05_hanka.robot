@@ -20,6 +20,7 @@ Násobení
 Dělení
         ${result}            Calculate  20   15  /
         Log To Console      ${result}
+        Should Contain      ${result}   1
 
 
 
@@ -27,5 +28,5 @@ Dělení
 
 Calculate
     [Arguments]    ${numberA}      ${numberB}       ${akce}
-    ${res}=        Evaluate         ${numberA}${akce}${numberB}
+    ${res}=        Evaluate        ${numberA}${akce}${numberB}
     [return]       ${res}
