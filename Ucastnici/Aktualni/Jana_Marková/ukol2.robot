@@ -1,6 +1,7 @@
 *** Settings ***
 Library     OperatingSystem
 
+
 *** Variables ***
 ${VypisAdresare}		        dir
 ${VypisAdresareNeex}		    dir x
