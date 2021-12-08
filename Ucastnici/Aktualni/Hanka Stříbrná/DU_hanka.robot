@@ -1,5 +1,18 @@
 *** Settings ***
 Library     OperatingSystem
+Library     OperatingSystem
+
+Library     OperatingSystem
+
+
+*** Variables ***
+@{NazevSouboru}     text.txt
+
+*** Keywords ***
+Moje první klíčové slovo
+        Create File     @{NazevSouboru}        Ahoj, toto je pokus o vytvoření souboru
+        ${output}       Get File                @{NazevSouboru}
+        Log To Console  ${OUTPUT}               @{NazevSouboru}
 
 
 *** Test Cases ***
@@ -9,7 +22,6 @@ Prvni test pozitivní
     ${res} =        run     help
     log             ${res}
     Should Contain  ${res}  For more information on a specific command, type HELP command-name
-
 
 Druhy test negativni
     ${res} =        run     help ahoj
@@ -22,14 +34,21 @@ Třetí test pozitivní
     Should Contain  ${output}   report
 
 Čtvrtý test pozitivní
-    ${output}       Get File  text.txt
+    Create File     text.txt        Ahoj, toto je pokus o vytvoření souboru
+    ${output}       Get File    text.txt
     log             ${output}
-    Should Contain  ${output}   ahoj
+    Should Contain  ${output}   Ahoj
 
 Pátý text negativní
-    ${output}       Get File  text.txt
+    ${output}       Get File  @{NazevSouboru}
     Log             ${output}
     Should not Contain  ${output}   čau
+
+Klíčové Slovo
+    Moje První Klíčové Slovo
+
+
+
 
 
 
