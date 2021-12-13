@@ -11,12 +11,12 @@ Library     OperatingSystem
 *** Keywords ***
 Moje první klíčové slovo
         Create File     @{NazevSouboru}        Ahoj, toto je pokus o vytvoření souboru
-        ${output}       Get File                @{NazevSouboru}
+        ${output} =     Get File                @{NazevSouboru}
         Log To Console  ${OUTPUT}               @{NazevSouboru}
 
 Práce s txt
-        ${output}       Get File                @{NazevSouboru}
-        Log             ${output}
+    ${output} =     Get file    @{NazevSouboru}
+    Log             ${output}
 
 
 *** Test Cases ***
@@ -33,18 +33,18 @@ Druhy test negativni
     Should Contain  ${res}  This command is not supported by the help utility.
 
 Třetí test pozitivní
-    ${output}       Run     Dir
+    ${output} =      Run        Dir
     Log             ${output}
     Should Contain  ${output}   report
 
 Čtvrtý test pozitivní
     Create File     text.txt        Ahoj, toto je pokus o vytvoření souboru
-    ${output}       Get File    text.txt
+    ${output} =     Get File        text.txt
     log             ${output}
-    Should Contain  ${output}   Ahoj
+    Should Contain  ${output}       Ahoj
 
 Pátý text negativní
-    ${output}       Get File  @{NazevSouboru}
+    ${output} =     Get File  @{NazevSouboru}
     Log             ${output}
     Should not Contain  ${output}   čau
 
@@ -54,6 +54,9 @@ Klíčové slovo
 Ověření obsahu
     Práce S Txt
     Should Contain  ${output}   Ahoj
+
+
+
 
 
 
