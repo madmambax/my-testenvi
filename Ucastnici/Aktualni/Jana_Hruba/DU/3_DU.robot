@@ -1,6 +1,7 @@
 *** Settings ***
 Library  Browser
 
+
 *** Test Cases ***
 Prihlasenie a odhlasenie sa z uctu na rohlik.cz
     #otvorenie prehliadaca a stranky rohlik.cz
@@ -18,6 +19,13 @@ Prihlasenie a odhlasenie sa z uctu na rohlik.cz
 
     # overenie, ci som prihlasena
     Get Text        data-test=header-user-icon      ==      JT
+
+    #odhlasenie z uctu
+    Click           data-test=header-user-icon
+    Click           data-test=user-box-logout-button
+
+    #overenie, ze ma odhlasilo z uctu
+    Get Text        data-test=header-user-icon      ==      Přihlásit
 
 
 
