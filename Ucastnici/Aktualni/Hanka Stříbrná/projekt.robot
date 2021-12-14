@@ -9,13 +9,19 @@ Library  Browser
 Správné heslo
 
     Login           stribrna.hana@gmail.com             zkusebniheslo       HS
+    Take Screenshot
 
 Špatné heslo
 
     Login           spatnyemail                         spatneheslo         Přihlásit
+    Take Screenshot
 
 Odlášení
     Login           stribrna.hana@gmail.com             zkusebniheslo       HS
+    Click           data-test=header-user-icon
+    Click           data-test=user-box-logout-button
+    Get Text        data-test=header-user-icon      ==      Přihlásit
+    Take Screenshot
 
 
 
