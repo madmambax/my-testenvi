@@ -13,8 +13,7 @@ Prvni test pozitivní
     log file                    test.txt
     should contain              ${res}          1. Test vytvoření souboru
 
-První test negativní
+Druhý test negativní
     remove file             test.txt
     file should not exist   test.txt
-
 
