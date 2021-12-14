@@ -2,14 +2,23 @@
 Library  Browser
 
 *** Test Cases ***
-Prihlasenie sa na stranku rohlik.cz
+Prihlasenie a odhlasenie sa z uctu na rohlik.cz
+    #otvorenie prehliadaca a stranky rohlik.cz
     New Browser     chromium    headless=false
     New Page        https://www.rohlik.cz/
+
+    #overenie otvorenia stranky
+    Get Title       contains                                Rohlik.cz
+
+    #prihlasit sa pomocou prihlasovacich udajov
     Click           data-test=header-user-icon
     Type Text       data-test=user-login-form-email         jana.hruba@solitea.cz
     Type Text       data-test=user-login-form-password      AutomatickeTesty
     Click           data-test=btnSignIn
-    Take Screenshot
+
+    # overenie, ci som prihlasena
+    Get Text        data-test=header-user-icon      ==      JT
+
 
 
 
