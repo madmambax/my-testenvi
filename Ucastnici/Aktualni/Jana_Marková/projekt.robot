@@ -2,6 +2,7 @@
 *** Settings ***
 Library     Browser
 
+
 *** Variables ***
 
 ${browser}		    chromium
