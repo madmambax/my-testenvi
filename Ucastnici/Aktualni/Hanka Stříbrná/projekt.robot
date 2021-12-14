@@ -1,20 +1,41 @@
 *** Settings ***
 Library  Browser
 
+
+
+
 *** Test Cases ***
-Starting a browser with a page
+
+Správné heslo
+
+    Login           stribrna.hana@gmail.com             zkusebniheslo       HS
+
+Špatné heslo
+
+    Login           spatnyemail                         spatneheslo         Přihlásit
+
+Odlášení
+    Login           stribrna.hana@gmail.com             zkusebniheslo       HS
+
+
+
+
+*** Keywords ***
+
+Login
+    [Arguments]     ${můjemail}      ${mojeheslo}     ${odezva}
+
+    log             ${můjemail}
+    log             ${mojeheslo}
+    log             ${odezva}
+
     New Browser    chromium    headless=true
     New Context    viewport={'width': 1920, 'height': 1080}
     New Page       https://www.rohlik.cz/
-
-#    Click          id=headerLogin
+    Get Title       Contains    Rohlik.cz
     Click           "Přihlásit"
-
-#   Click          data-test=header-user-icon
-    Type Text       data-test=user-login-form-email     stribrna.hana@gmail.com
-    Type Text       id=password                         zkusebniheslo
-    Click           "Přihlásit se"
-    Take Screenshot
-    
-
+    Type Text       data-test=user-login-form-email     ${můjemail}
+    Type Text       id=password                         ${mojeheslo}
+    Click           data-test=btnSignIn
+    Get Text        data-test=header-user-icon      ==      ${odezva}
 
