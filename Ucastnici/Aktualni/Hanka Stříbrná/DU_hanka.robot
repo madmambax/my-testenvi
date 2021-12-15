@@ -1,8 +1,5 @@
 *** Settings ***
 Library     OperatingSystem
-Library     OperatingSystem
-
-Library     OperatingSystem
 
 
 *** Variables ***
@@ -15,8 +12,8 @@ Moje první klíčové slovo
         Log To Console  ${OUTPUT}               @{NazevSouboru}
 
 Práce s txt
-    ${output} =     Get file    @{NazevSouboru}
-    Log             ${output}
+        ${output} =     Get file    @{NazevSouboru}
+        Log             ${output}
 
 
 *** Test Cases ***

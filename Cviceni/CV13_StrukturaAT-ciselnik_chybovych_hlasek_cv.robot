@@ -6,7 +6,7 @@
 *** Settings ***
 Documentation   CV: Testovaci data - pripravit ciselnik chybovych hlasek
 Library         Browser
-Library         DebugLibrary     # knihova pro ladění, pokud chcete ledit test stačí to přislušéno místa dat KS: Debug
+#Library         DebugLibrary     # knihova pro ladění, pokud chcete ledit test stačí to přislušéno místa dat KS: Debug
 
 Resource        Data_and_Config/TestData.robot
 
@@ -62,6 +62,7 @@ Login
 
 #    Open Browser        ${URL}                                    headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
 #    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
+    ${old_mode} =       Set Strict Mode             False        # Does not fail if selector points to one or more elements
     New Page            ${URL}
 
 
