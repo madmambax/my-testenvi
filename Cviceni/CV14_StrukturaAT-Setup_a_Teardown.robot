@@ -6,7 +6,7 @@
 *** Settings ***
 Documentation   CV: akce pred testem a po skonceni testu
 Library         Browser
-Library         DebugLibrary     # knihova pro ladění, pokud chcete ledit test stačí to přislušéno místa dat KS: Debug
+#Library         DebugLibrary     # knihova pro ladění, pokud chcete ledit test stačí to přislušéno místa dat KS: Debug
 
 Resource        Data_and_Config/TestData.robot
 Resource        Data_and_Config/Configuration.robot
