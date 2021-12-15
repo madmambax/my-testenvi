@@ -6,7 +6,7 @@
 *** Settings ***
 Documentation   CV: Testovaci data
 Library         Browser
-Library         DebugLibrary     # knihova pro ladění, pokud chcete ledit test stačí to přislušéno místa dat KS: Debug
+#Library         DebugLibrary     # knihova pro ladění, pokud chcete ledit test stačí to přislušéno místa dat KS: Debug
 
 
 
@@ -58,6 +58,7 @@ Login
      Set Browser Timeout        20                                  #20s je vhodné pro rohlik.cz
 #    Open Browser               ${URL}                               headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
 #    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
+    ${old_mode} =       Set Strict Mode             False        # Does not fail if selector points to one or more elements
     New Page            ${URL}
 
 
@@ -76,6 +77,7 @@ Login
 
 Pridat do kosiku
     [Arguments]         ${Zbozi}                    ${Kusu}
+
     Type Text           id=searchGlobal             ${Zbozi}
     #1x
     Sleep               1                           # čeká 1 sekundu
