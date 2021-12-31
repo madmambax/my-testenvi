@@ -1,28 +1,45 @@
 *** Settings ***
-Library  Browser
+Library     Browser
+Resource    Data_and_Config/TestData.robot
 
+Library     Browser
+Library     Data_and_Config/TestData.robot
+Library     log.html
+Library     OperatingSystem
 
+Suite Setup     pred_sadou
+Test Setup      pred_testem
+Test Teardown   po_testu
+#Suite Teardown  po_sade
+
+*** Variables ***
+${URL}         https://rohlik.cz
 
 
 *** Test Cases ***
 
 Správné heslo
 
-    Login           stribrna.hana@gmail.com             zkusebniheslo       HS
+    Login           ${USER1_NAME}              ${USER1_PASSWORD}            ${USER1_SHORT}
     Take Screenshot
 
 Špatné heslo
 
-    Login           spatnyemail                         spatneheslo         Přihlásit
+   Login            ${USER1_NAME}               spatneheslo                  ${ERROR_TEXT_IncorrectEmailOrPwd}
+   Take Screenshot
+
+Špatný email
+
+    Login           spatnyemail@gmail.com       ${USER1_PASSWORD}            ${ERROR_TEXT_IncorrectEmailOrPwd}
     Take Screenshot
+
 
 Odlášení
-    Login           stribrna.hana@gmail.com             zkusebniheslo       HS
-    Click           data-test=header-user-icon
-    Click           data-test=user-box-logout-button
-    Get Text        data-test=header-user-icon      ==      Přihlásit
+    Login           ${USER1_NAME}               ${USER1_PASSWORD}            ${USER1_SHORT}
+    Click           ${SEL_HeaderUser}
+    Click           ${SEL_UserBoxLogoutBtn}
+    Get Text        ${SEL_HeaderLogin}           contains                   Přihlásit
     Take Screenshot
-
 
 
 
@@ -35,13 +52,27 @@ Login
     log             ${mojeheslo}
     log             ${odezva}
 
-    New Browser    chromium    headless=true
-    New Context    viewport={'width': 1920, 'height': 1080}
-    New Page       https://www.rohlik.cz/
-    Get Title       Contains    Rohlik.cz
+    Get Title       Contains                            ${TEXT_MainTitle}
     Click           "Přihlásit"
-    Type Text       data-test=user-login-form-email     ${můjemail}
-    Type Text       id=password                         ${mojeheslo}
-    Click           data-test=btnSignIn
-    Get Text        data-test=header-user-icon      ==      ${odezva}
+    Type Text       ${SEL_LoginFormEmail}                ${můjemail}
+    Type Text       ${SEL_LoginFormPwd}                  ${mojeheslo}
+    Click           ${SEL_BtnSignIn}
+    Get Text        ${SEL_HeaderLoginErrorTxt}            contains              ${odezva}
 
+
+pred_sadou
+    ${b_timeout}=    Set Browser Timeout     ${timeout_browser}
+    Log              ${b_timeout}
+
+pred_testem
+    New Browser      chromium    headless=false
+    New Page         ${URL}
+
+po_testu
+    Close Browser
+
+#po_sade
+#    ${output} =     Get file    log.html
+#    Log             ${output}
+#    New Browser     chromium    headless=false
+#    New Page        ${output}
