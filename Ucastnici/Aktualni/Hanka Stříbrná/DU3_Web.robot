@@ -1,6 +1,4 @@
 *** Settings ***
-Library     Browser
-Resource    Data_and_Config/TestData.robot
 
 Library     Browser
 Library     Data_and_Config/TestData.robot
