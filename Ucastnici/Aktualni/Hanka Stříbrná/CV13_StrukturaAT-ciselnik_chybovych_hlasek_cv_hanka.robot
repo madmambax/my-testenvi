@@ -4,15 +4,15 @@
 
 
 *** Settings ***
-Documentation   CV: akce pred testem a po skonceni testu
+Documentation   CV: Testovaci data - pripravit ciselnik chybovych hlasek
 Library         Browser
 #Library         DebugLibrary     # knihova pro ladění, pokud chcete ledit test stačí to přislušéno místa dat KS: Debug
 
 Resource        Data_and_Config/TestData.robot
-Resource        Data_and_Config/Configuration.robot
-
+Resource            Data_and_Config/TestData.robot
 
 *** Variables ***
+${URL}              https://rohlik.cz
 
 
 
@@ -29,7 +29,7 @@ Login spatne heslo
     Login           ${USER1_NAME}               bad                                     ${ERROR_TEXT_IncorrectEmailOrPwd}
 
     # je nutné zavřít prihlašovací form
-    Click           ${SEL_HeaderLogo}
+    Click                       ${SEL_HeaderLogo}
 
 
 
@@ -39,9 +39,9 @@ Login vse OK
 
 
 Test Objednavky
-    ${kusu} =	        Set Variable	         5
-    Login               ${USER1_NAME}            ${USER1_PASSWORD}                   ${USER1_SHORT}
-    Pridat do kosiku    Losos                    ${kusu}
+    ${kusu} =	        Set Variable	            5
+    Login               ${USER1_NAME}               ${USER1_PASSWORD}                    ${USER1_SHORT}
+    Pridat do kosiku    Losos                       ${kusu}
     Click               ${SEL_CartContent}
     Take Screenshot
     Take Screenshot
@@ -58,61 +58,58 @@ Test Objednavky
 *** Keywords ***
 
 Login
-    [Arguments]                ${Email}                            ${Heslo}                                ${Text}
-    ${b_timeput} =             Set Browser Timeout                 20                 #20s je vhodné pro rohlik.cz
+    [Arguments]                 ${Email}                            ${Heslo}                                ${Text}
+    Set Browser Timeout         20                                  #20s je vhodné pro rohlik.cz
 
 #    Open Browser        ${URL}                                    headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
 #    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
-    New Page                    ${URL}
+    ${old_mode} =       Set Strict Mode             False        # Does not fail if selector points to one or more elements
+    New Page            ${URL}
+
 
 #    Get Element
-    Get Title                   contains                            ${TEXT_MainTitle}
+    Get Title                   contains                            Online supermarket Rohlik.cz
 
-    Click                       ${SEL_HeaderLogin}
-    Type Text                   ${SEL_LoginFormEmail}               ${Email}
-    Type Text                   ${SEL_LoginFormPwd}                 ${Heslo}
+    Click                       id=headerLogin
+    Type Text                   data-test=user-login-form-email     ${Email}
+    Type Text                   data-test=user-login-form-password  ${Heslo}
 #    Debug
-    Click                       ${SEL_BtnSignIn}
+    Click                       data-test=btnSignIn
 
-    Get Text                    ${SEL_HeaderLoginErrorTxt}           contains                                ${Text}
+    Get Text                    xpath=//div[@class='u-mr--8']       contains                                ${Text}
 
 
 
 Pridat do kosiku
     [Arguments]         ${Zbozi}                    ${Kusu}
-    Type Text           ${SEL_SearchGlobal}         ${Zbozi}
+    Type Text           id=searchGlobal             ${Zbozi}
     #1x
     Sleep               1
-    Click               ${SEL_BtnSearchGlobal}      # tlačítko Hledat
+    Click               text=Hledat                 # ???
     Sleep               1                           # čeká 1 sekundu
-    Click               ${SEL_BtnAdd}               # způsobuje někdy zmizení uživatele, scrol donwn, důvod někdy klikne na zboží níže
+    Click               data-test=btnAdd            # způsobuje někdy zmizení uživatele, scrol donwn, důvod někdy klikne na zboží níže
     Sleep               1
     # Kusu - 1
     ${Pocet}            Evaluate                    ${Kusu} - 1
-    Click               ${SEL_BtnPlus}              clickCount=${Pocet}
-    ${cart_text}=       Get Text                    ${SEL_Cart}
-    Log                 ${cart_text}
-    Get Text            ${SEL_Cart}                 matches                             (?i)${Zbozi}    # (?i)  znamená že se bere case insensitive
+    Click               data-test=btnPlus           clickCount=${Pocet}
+    Get Text            id=cart                     matches                             (?i)${Zbozi}    # (?i)  znamená že se bere case insensitive
     Take Screenshot
 
 
 Logout
-#    Hover               xpath=//div[@class='u-mr--8']
-    Click               ${SEL_HeaderLoginErrorTxt}
-    Click               ${SEL_UserBoxLogoutBtn}
-#    Log                 ${OUTPUT_DIR}
+    Click               xpath=//div[@class='u-mr--8']
+    Click               data-test=user-box-logout-button
 
 
 Odebrat z kose
     [Arguments]                 ${Kusu}
 
     Take Screenshot
-    Click               ${SEL_BtnMinus}             clickCount=${Kusu}
+    Click               data-test=btnMinus           clickCount=${Kusu}
     Take Screenshot
     Sleep               3                                                       #statické čekání
     Take Screenshot
-    Go to               ${URL}
+    Go to                https://www.rohlik.cz/
     Take Screenshot
-
 
 

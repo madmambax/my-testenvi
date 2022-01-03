@@ -1,14 +1,13 @@
 *** Settings ***
 
 Library     Browser
-Library     Data_and_Config/TestData.robot
-Library     log.html
+Resource    TestData.robot
 Library     OperatingSystem
 
 Suite Setup     pred_sadou
 Test Setup      pred_testem
 Test Teardown   po_testu
-#Suite Teardown  po_sade
+Suite Teardown  po_sade
 
 *** Variables ***
 ${URL}         https://rohlik.cz
@@ -69,8 +68,9 @@ pred_testem
 po_testu
     Close Browser
 
-#po_sade
+po_sade
 #    ${output} =     Get file    log.html
 #    Log             ${output}
 #    New Browser     chromium    headless=false
 #    New Page        ${output}
+    Log To Console    Všechno dobře dopadlo (-;
