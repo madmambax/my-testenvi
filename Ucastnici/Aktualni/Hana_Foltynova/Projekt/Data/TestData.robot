@@ -1,5 +1,4 @@
 *** Variables ***
-${URL} =  https://www.rohlik.cz/ 
 @{randomPassw}=    Create List    srhdgnkjmhgjgegrnsfmldhygnkfm    nesmyslnehesločísldvje    nesmyslneheslo    shdgfjghfjghjhg    fghfjghjghkgjkhive   wčžeřýržátýízáoiuo
 
 #textaky
