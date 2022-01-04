@@ -6,14 +6,18 @@ Library	    String
 Resource    Data/TestData.robot
 Resource    Config/TestConfig.robot
 
+Suite Setup     Pred_sadou
+Suite Teardown  Uklid_po_sade
+Test Setup      Pred_testem
+Test Teardown   Uklid_po_testu
+#Test Timeout    ${TIMEOUT_ROBOT_KW}      # Timeout pro všechny KS z RobotFW
+
 
 *** Test Cases ***
-Ukázka práce s \${URL}
-    Log to console  ${\n}Testujeme ${URL}!!
 Spravne vsechny udaje přihlášení (popup)
       ${File}=    Get File  ${PATH_login_psw}
       @{psw}=    Split to lines  ${File} 
-      Log   @{psw}     #just debug
+      #Log   @{psw}     #just debug
       Login (popup)   ${USER_login_correct}                   @{psw}                        ${LOGIN_user_letter}       ${LOGIN_user_letter}
 Spravny mail, spatne heslo (popup)
       Login (popup)   ${USER_login_correct}                   ${randomPassw}[0]             Přihlásit                  ${LOGIN_hlaska_1}   
@@ -47,8 +51,8 @@ Spatny mail, spatne heslo (popup)
 *** Keywords ***
 Login (popup)
     [Arguments]         ${Arg_email}              ${Arg_heslo}               ${Arg_validationLogin}       ${Arg_validationHlaska}
-    Open Browser        ${URL}                              headless=true    
-    New Page            ${URL}
+    # Open Browser        ${URL}                              headless=true    
+    # New Page            ${URL}
     Get Title           contains                            ${title_homePage}
     Click               ${SEL_IdHeaderLogin}
     Type Text           ${SEL_LoginFormMail}     ${Arg_email} 
@@ -63,8 +67,8 @@ Login (popup)
 
 Login (Prihlaseni pres registracni btn)
     [Arguments]         ${Arg_email}               ${Arg_heslo}               ${Arg_validationLogin}       ${Arg_validationHlaska}
-    Open Browser        ${URL}                              headless=false    
-    New Page            ${URL}
+    # Open Browser        ${URL}                              headless=false    
+    # New Page            ${URL}
     Get Title           contains                            ${title_homePage}
     Click               ${SEL_IdHeaderLogin}
     Click               ${SEL_registrace}
@@ -79,3 +83,27 @@ Login (Prihlaseni pres registracni btn)
     Take Screenshot
 
 
+
+Pred_sadou
+    Log to console  ${\n}Testujeme ${URL}!!
+    Log             ${\n}Testujeme ${URL}!!
+    ${b_timeput} =             Set Browser Timeout                 ${TIMEOUT_BROWSER}                 #20s je vhodné pro rohlik.cz
+    Log                        ${b_timeput}
+
+
+Pred_testem
+    Open Browser        ${URL}                                     headless=${HEADLESS_BROWSER}    #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
+    # je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
+    New Page                    ${URL}
+
+
+
+
+Uklid_po_testu
+    Log to console   ${\n}Uklid na konci každho testu.  #just debug
+    Log              ${\n}Uklid na konci každho testu.  #just debug
+    Close Browser
+
+
+Uklid_po_sade
+    Close Browser
