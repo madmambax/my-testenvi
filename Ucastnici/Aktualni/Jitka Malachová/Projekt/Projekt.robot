@@ -55,11 +55,10 @@ Logout
 
 
 Pred_sadou
-    ${b_timeput} =             Set Browser Timeout                 200                 #200s je to fakt pomalé
-    Log                        ${b_timeput}
-    open Browser          ${URL}                   headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
-#    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
-#    New Page                    ${URL}
+     ${b_timeput} =             Set Browser Timeout                 200                 #200s je to lenoch
+     Log                        ${b_timeput}
+
 
 Pred_testem
-      Go to               ${URL}   #jdi na hlavní stránku
+       New Browser       chromium       headless=false
+       New Page          ${URL}
