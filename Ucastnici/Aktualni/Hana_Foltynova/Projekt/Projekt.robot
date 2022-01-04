@@ -87,17 +87,14 @@ Login (Prihlaseni pres registracni btn)
 Pred_sadou
     Log to console  ${\n}Testujeme ${URL}!!
     Log             ${\n}Testujeme ${URL}!!
-    ${b_timeput} =             Set Browser Timeout                 ${TIMEOUT_BROWSER}                 #20s je vhodné pro rohlik.cz
-    Log                        ${b_timeput}
 
 
 Pred_testem
+    ${b_timeput} =             Set Browser Timeout                 ${TIMEOUT_BROWSER}                 #20s je vhodné pro rohlik.cz
+    Log                        ${b_timeput}
     Open Browser        ${URL}                                     headless=${HEADLESS_BROWSER}    #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
     # je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
     New Page                    ${URL}
-
-
-
 
 Uklid_po_testu
     Log to console   ${\n}Uklid na konci každho testu.  #just debug
