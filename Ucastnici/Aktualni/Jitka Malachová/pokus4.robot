@@ -10,7 +10,8 @@ ${URL}      https://www.drmax.cz/
 
 Prihlaseni ok
     Login               jitka.malachova@gmail.com              HesloHeslo123456        Jitka Malachová
-
+Odhlášení
+    Logout
 
 *** Keywords ***
 
@@ -29,7 +30,7 @@ Login
     get title       contains    Dr. Max
     #kliknout na Přihlásit
     click           id=header-login-link
-    Set Browser Timeout                 100
+    Set Browser Timeout                 200
 #    zadat email ${pemail} do místa pro zadání emailu
     type text       id=username    ${pemail}
     set browser timeout                 100
@@ -41,3 +42,9 @@ Login
     set browser timeout                 100
     #ověřit že jsem přihlášený data-test=header-user-icon musí obsahovat to co je v ${pnastane}
    get text        data-test-id=header-login-link-logged-in  ==  ${pnastane}
+   set browser timeout                  200
+
+Logout
+
+    Click          data-test-id=header-login-link-logged-in
+    Click          data-test-id=header-login-popover-logout-link
