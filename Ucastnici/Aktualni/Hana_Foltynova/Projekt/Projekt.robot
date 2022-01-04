@@ -2,7 +2,8 @@
 Library     OperatingSystem
 Library	    Collections
 Library	    Browser
-Resource    Data_and_Config/TestData.robot
+Resource    Data/TestData.robot
+Resource    Config/TestConfig.robot
 
 *** Variables ***
 
