@@ -1,5 +1,5 @@
 *** Variables ***
-${URL} =  https://www.kosik.cz/
+${URL} =  https://www.rohlik.cz/ 
 
 ${TIME_BETWEEN_CLICKS}  100ms
 ${TIME_BETWEEN_CHECKS}  200ms
