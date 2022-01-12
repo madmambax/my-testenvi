@@ -4,6 +4,9 @@ Tento příklad potřebuje robotframework-requests balíček
 instalace:
 pip install robotframework-requests
 
+CVIČENÍ 2: vytvořte další testy, 1 pozitivní a 1 negativní test
+
+
 """
 
 

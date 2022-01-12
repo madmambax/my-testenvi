@@ -4,6 +4,9 @@ Tento příklad potřebuje robotframework-requests balíček
 instalace:
 pip install robotframework-requests
 
+CVIČENÍ 3: Vytvořte testy pro klíčové slovo registrace na kurz
+
+
 """
 
 
@@ -29,8 +32,6 @@ Registrace na kurz háčky a čárky
 
 
 *** Keywords ***
-
-
 
 
 

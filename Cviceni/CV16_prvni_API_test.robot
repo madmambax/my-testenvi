@@ -14,19 +14,19 @@ Library  RequestsLibrary
 
 
 #Prvni API test - registrace na kurz
-#    # vytoření JSON zprávy
-#
-#
-#    # vytoření hlavičky (header) zprávy
-#
-#
-#    # vytvoření spojení (session)
-#
-#
-#    # odeslání zprávy a uložení odpovědi do ${resp}
-#
-#
-#    # vyhodnocení
+    # vytoření JSON zprávy
+
+
+    # vytoření hlavičky (header) zprávy
+
+
+    # vytvoření spojení (session)
+
+
+    # odeslání zprávy a uložení odpovědi do ${resp}
+
+
+    # vyhodnocení
 
 
 
