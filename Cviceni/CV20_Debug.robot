@@ -1,6 +1,7 @@
 # požadavky:
 #   pip install robotframework-browser
 #   rfbrowser init
+#   pip install robotframework-debuglibrary
 
 
 *** Settings ***

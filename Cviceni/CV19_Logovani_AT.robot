@@ -2,7 +2,8 @@
 
 Tento příklad potřebuje robotframework-requests balíček
 instalace:
-pip install robotframework-requests
+  pip install robotframework-debuglibrary
+  pip install robotframework-requests
 
 """
 
