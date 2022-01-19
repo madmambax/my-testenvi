@@ -6,7 +6,7 @@ Library     OperatingSystem
 
 
 Prvni test pozitivní
-    ${res} =        run     help copy directory
+    ${res} =        run     help
     log             ${res}
     Should Contain  ${res}  For more information on a specific command, type HELP command-name
 
