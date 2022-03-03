@@ -32,6 +32,7 @@ Login
     Open Browser        ${URL}                              headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
     New Page            ${URL}
     Get Title           contains                            Rohlik
+    Click               id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
     Click               id=headerLogin
     Type Text           data-test=user-login-form-email     ${email}
     Type Text           data-test=user-login-form-password  ${heslo}
