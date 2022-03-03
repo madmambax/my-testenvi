@@ -10,6 +10,8 @@ Library  DebugLibrary
 
 Resource        Data/TestData.robot
 Resource        Data/Cars.robot
+Resource        Data/Parties.robot
+Resource        Data/Urls.robot
 Resource        Data/Values.robot
 Resource        Configuration/Configuration.robot
 Resource        KeyWords/Login.resource
@@ -35,6 +37,7 @@ Prihlaseni a odhlaseni success
     Otevřu kalkulačku   Autopojištění
     Je aktivní krok     Konfigurace
     Zadám kalkulaci vozidla     K2_osobni_provozovatel_volkswagen_passat
+    Zadám pojistníka            k1_fo_1975_Lysa_nad_labem
 #    log to console       \nOriginal JSON:\n${json_string_cars}
 #    log to console       \nOriginal JSON:\n${json_cars}
 #    Logout              ${USER}
