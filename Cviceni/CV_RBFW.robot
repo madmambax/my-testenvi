@@ -16,6 +16,8 @@ Library     OperatingSystem
 
 Název testu
 # Každy krok testu se zapisuje do "tabulky" která se odděluje pomocí tabelátorů nebo alespoň 2 mezer
+# Příklad
+#<tabulátor>log<tabulátor>${res}
     ${res} =        run     help
     log             ${res}
     Should Contain  ${res}  For more information on a specific command, type HELP command-name
