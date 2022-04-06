@@ -5,6 +5,7 @@ Library     OperatingSystem
 *** Test Cases ***
 
 
+
 Prvni test pozitivní
     ${res} =        run     help
     log             ${res}
