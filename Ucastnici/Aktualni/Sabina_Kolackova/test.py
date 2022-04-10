@@ -14,8 +14,12 @@ Druhý test pozitivní
     log             ${res}
     Should Contain  ${res}  Display the thousand separator in file sizes.
 
-
 Třetí test negativni
     ${res} =        run     help ahoj
     log             ${res}
     Should Contain  ${res}  This command is not supported by the help utility.
+
+Čtvrtý test negativní
+    ${res} =        run     help12
+    log             ${res}
+    Should Contain  ${res}  is not recognized as an internal or external command,
