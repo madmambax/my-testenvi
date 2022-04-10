@@ -20,6 +20,6 @@ Třetí test negativni
     Should Contain  ${res}  This command is not supported by the help utility.
 
 Čtvrtý test negativní
-    ${res} =        run     help12
+    ${res} =        run     help123
     log             ${res}
     Should Contain  ${res}  is not recognized as an internal or external command,
