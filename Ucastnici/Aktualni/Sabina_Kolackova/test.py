@@ -9,8 +9,13 @@ Prvni test pozitivní
     log             ${res}
     Should Contain  ${res}  For more information on a specific command, type HELP command-name
 
+Druhý test pozitivní
+    ${res} =        run     help dir
+    log             ${res}
+    Should Contain  ${res}  Display the thousand separator in file sizes.
 
-Druhy test negativni
+
+Třetí test negativni
     ${res} =        run     help ahoj
     log             ${res}
     Should Contain  ${res}  This command is not supported by the help utility.
