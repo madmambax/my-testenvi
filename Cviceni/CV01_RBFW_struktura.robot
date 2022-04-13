@@ -1,4 +1,4 @@
-# Prace s RobotFrameworkem
+# Práce s RobotFrameworkem
 
 *** Settings ***
 Library     OperatingSystem
@@ -7,9 +7,10 @@ Library     OperatingSystem
 # Sekce se označují pomocí 3 hvězdiček názvu a opět 3 hvězdičky jako
 # Příklady:
 #           *** Settings ***
-#           *** Test Cases ***
 #           *** Variables ***
+#           *** Test Cases ***
 #           *** Keywords ***
+#           *** Comments ***
 
 
 *** Variables ***
@@ -36,3 +37,8 @@ Nápověda pro příkaz CD (help cd)
 
 *** Keywords ***
 #použijeme později, slouží k definování vlastních klíčových slov
+
+
+
+*** Comments ***
+#sekce obsahující komentáře a tedy část kterou Robot Framework ignoruje

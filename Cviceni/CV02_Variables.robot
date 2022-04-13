@@ -17,7 +17,11 @@ ${NAME}      Daniel
 #2. způsob zápisu
 ${GREET2} =  Hello
 
+#vytvoření seznamu
+@{list} =	jablko  hruška  banán  citron  pomeranč
 
+#vytvoření slovníku
+&{dictionary} = 	login=franta	heslo=tajne
 
 *** Test Cases ***
 Ukázka práce s konstatny
@@ -50,6 +54,7 @@ Ukázka práce s čísely
 Ukázka práce s proměnnu typu List
     @{list1} =      Create List    first    second    third
     Log to console  ${list1}[1]
+    Log to Console  ${list}[2]
 
     ${list2} =      Evaluate    ['a', 'b', 'c']
 
@@ -65,9 +70,9 @@ Ukázka práce s proměnnu typu Dictionary
     &{Dict} =	    Create Dictionary	key=value	foo=bar
     Log Many        &{Dict}         #zalogování celeho slovníku (Dictionary)
     Log Many        ${Dict.key}     #zalogování kokrétní hodnoty ze slovníku (Dictionary)
-    # hodí se na ředávání parametrů klíčovým slovům
-    # configuraci
-
+    # hodí se na předávání parametrů klíčovým slovům a configuraci
+    Log Many        &{dictionary}
+    Log To Console  ${dictionary.login}
     #Příklad: TestLogin a KS Login - JSON se ukládá do dictionary
 
 
