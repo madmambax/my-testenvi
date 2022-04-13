@@ -14,7 +14,7 @@ Documentation     Cvičení: práce s promennými
 *** Test Cases ***
 
 #Vypište všechny položky seznamu do logu
-Test pro vypsani položek seznamu do logu
+Test pro vypsani všech položek seznamu do logu
     # sem je třeba doplnit příkazy
 
 
