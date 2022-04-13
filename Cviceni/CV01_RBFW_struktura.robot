@@ -1,4 +1,4 @@
-# Prace s RobotFrameworkem
+# Práce s RobotFrameworkem
 
 *** Settings ***
 Library     OperatingSystem
@@ -10,6 +10,7 @@ Library     OperatingSystem
 #           *** Test Cases ***
 #           *** Variables ***
 #           *** Keywords ***
+#           *** Comments ***
 
 
 *** Variables ***
@@ -36,3 +37,8 @@ Nápověda pro příkaz CD (help cd)
 
 *** Keywords ***
 #použijeme později, slouží k definování vlastních klíčových slov
+
+
+
+*** Comments ***
+#sekce obsahující komentáře a tedy část kterou Robot Framework ignoruje
