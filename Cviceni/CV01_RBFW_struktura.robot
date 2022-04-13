@@ -12,6 +12,9 @@ Library     OperatingSystem
 #           *** Keywords ***
 
 
+*** Variables ***
+${NAZEV_PROMENNE}   Hodnota
+
 *** Test Cases ***
 
 Název testu
@@ -19,11 +22,12 @@ Název testu
 # Příklad
 #<tabulátor>log<tabulátor>${res}
     ${res} =        run     help
-    log             ${res}
+    Log             ${res}
     Should Contain  ${res}  For more information on a specific command, type HELP command-name
 
 
 Nápověda pro příkaz CD (help cd)
+    Log To Console             ${NAZEV_PROMENNE}
     ${res} =        run     help cd
-    log             ${res}
+    Log             ${res}
     Should Contain  ${res}  Specifies that you want to change to the parent directory
