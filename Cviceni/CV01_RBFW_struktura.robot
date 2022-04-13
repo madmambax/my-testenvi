@@ -31,3 +31,8 @@ Nápověda pro příkaz CD (help cd)
     ${res} =        run     help cd
     Log             ${res}
     Should Contain  ${res}  Specifies that you want to change to the parent directory
+
+
+
+*** Keywords ***
+#použijeme později, slouží k definování vlastních klíčových slov
