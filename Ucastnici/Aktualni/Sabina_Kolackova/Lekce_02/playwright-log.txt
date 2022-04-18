@@ -1,0 +1,33 @@
+{"level":30,"time":"2022-04-18T14:50:48.585Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"Listening on 51567"}
+{"level":30,"time":"2022-04-18T14:50:48.664Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-04-18T14:50:48.665Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-04-18T14:50:48.667Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-04-18T14:50:48.668Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-04-18T14:50:48.670Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2022-04-18T14:50:49.736Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"End of node method newBrowser"}
+{"level":30,"time":"2022-04-18T14:50:49.763Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"Start of node method newPage"}
+{"level":30,"time":"2022-04-18T14:50:49.763Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2022-04-18T14:50:49.781Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"Changed active context"}
+{"level":30,"time":"2022-04-18T14:50:49.959Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"Video path: undefined"}
+{"level":30,"time":"2022-04-18T14:50:49.959Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"Changed active page"}
+{"level":30,"time":"2022-04-18T14:50:50.426Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"End of node method newPage"}
+{"level":30,"time":"2022-04-18T14:50:50.430Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-04-18T14:50:50.434Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-04-18T14:50:50.437Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"Changed active context"}
+{"level":30,"time":"2022-04-18T14:50:50.438Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"Changing current active page"}
+{"level":30,"time":"2022-04-18T14:50:50.438Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"Changed active page"}
+{"level":30,"time":"2022-04-18T14:50:50.445Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-04-18T14:50:50.448Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-04-18T14:50:50.452Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2022-04-18T14:50:50.453Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2022-04-18T14:50:50.456Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2022-04-18T14:50:50.456Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2022-04-18T14:50:50.461Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"Changed active context"}
+{"level":30,"time":"2022-04-18T14:50:50.461Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"Changing current active page"}
+{"level":30,"time":"2022-04-18T14:50:50.461Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"Changed active page"}
+{"level":30,"time":"2022-04-18T14:50:50.464Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"Start of node method closeContext"}
+{"level":30,"time":"2022-04-18T14:50:50.506Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"End of node method closeContext"}
+{"level":30,"time":"2022-04-18T14:50:50.510Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-04-18T14:50:50.511Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-04-18T14:50:50.552Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2022-04-18T14:50:50.694Z","pid":16756,"hostname":"DESKTOP-ML49M44","msg":"End of node method closeAllBrowsers"}
