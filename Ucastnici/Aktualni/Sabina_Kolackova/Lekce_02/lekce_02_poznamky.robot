@@ -7,11 +7,11 @@ ${nadpis2} =    Ahoj
 *** Test Cases ***
 
 Ukazka kličové slovo
-    Log asdf
+    Log     asdf
     Moje prvni
     KS S Paramentrem    sgdfhdh
     Log     vypocet
-    ${r}    Vypocet  2      3
+    ${r}    Vypocet     2 3
 Test na promene
     ${nadpis3}   Set Variable    Dobrý den
     ${x}    Set Variable    2
@@ -23,7 +23,7 @@ Test na promene
     ${v}    Evaluate    ${y} + ${x}
     Should Be Equal As Integers   ${v}        6
 
-    Log To Console  ${v}                #vypíše v knzoli rovnou výsledek
+    Log To Console  ${v}                #vypíše v konzoli rovnou výsledek
 
     @{list}     Create List     1   4   8    10      #vytvoření listu
     Log To Console      ${list}[1]
