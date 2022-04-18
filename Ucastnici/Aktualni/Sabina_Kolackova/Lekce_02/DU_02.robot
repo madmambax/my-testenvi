@@ -3,7 +3,6 @@ Library     OperatingSystem
 
 *** Variables ***
 
-${URL}      http://testovani.kitner.cz/login_app/
 ${Info1}    For more information on a specific command, type HELP command-name
 ${Info2}    Display the thousand separator in file sizes.
 ${Info3}    This command is not supported by the help utility.
@@ -31,5 +30,12 @@ Třetí test negativni
     log             ${res}
     Should Contain  ${res}  ${Info4}
 
-Test na URL
-    Log             Adresa testované aplikace je ${URL}
+Test klíče
+    ${vysledek}     Vypocet  15   9  -
+    Log To Console  ${vysledek}
+*** Keywords ***
+
+Vypocet
+   [Arguments]     ${number1}   ${number2}  ${znamenko}
+   ${vysledek}     Evaluate        ${number1}${znamenko}${number2}
+   [return]        ${vysledek}
