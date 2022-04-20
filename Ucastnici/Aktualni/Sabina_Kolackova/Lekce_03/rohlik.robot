@@ -21,9 +21,10 @@ Starting a browser with a page
     Type Text      data-test=user-login-form-password       tajneheslotajneheslo
     Click          data-test=btnSignIn
     Click          id=headerUser
+
     ${Text}         Get Text                                 data-test=my-account-button
     Log To Console      ${Text}
-
+    ${Text}        ==   Můj účet   # přijít na to jak porovnat proměnou
 
 #    Type Text       id=searchGlobal     Ahoj
 #    ${Text}=        Get Text        data-test=header-user-icon
