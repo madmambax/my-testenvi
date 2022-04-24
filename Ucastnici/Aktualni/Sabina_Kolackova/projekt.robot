@@ -8,7 +8,7 @@ ${URL}      https://www.rohlik.cz/vitejte#_=_
 *** Test Cases ***
 
 * Test Cases *
-Starting a browser with a page
+Pozitivní přihlášení
     New Browser    chromium    headless=false
 #    New Context    viewport={'width': 1920, 'height': 1080}
     New Page       ${URL}
@@ -17,17 +17,22 @@ Starting a browser with a page
     Click          id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
     Sleep          2
     Click          id=headerLogin
-    Take Screenshot
-    Type Text      data-test=user-login-form-email          radek.tester@seznam.cz
-    Type Text      data-test=user-login-form-password       tajneheslotajneheslo
-    Click          data-test=btnSignIn
+    Login          radek.tester@seznam.cz       tajneheslotajneheslo
+    Sleep          5
     Click          id=headerUser
 
-    ${Text}         Get Text                                 data-test=my-account-button
-    Log To Console      ${Text}
-    ${Text}        ==   Můj účet   # přijít na to jak porovnat proměnou
+#    Get Title      data-test=my-account-button      ==      Můj účet
+#    Get Text       ==       Můj účet
+#    ${Text}        Get Text        data-test=my-account-button
+#    Log To Console      ${Text}
+#
+#    ${Text}        ==             Můj účet   # přijít na to jak porovnat proměnou
 
 
 *** Keywords ***
 
 Login
+    [Arguments]     ${username}     ${password}
+    Type Text       data-test=user-login-form-email  ${username}
+    Type Text       data-test=user-login-form-password      ${password}
+    Click           data-test=btnSignIn
