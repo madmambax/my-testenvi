@@ -21,13 +21,9 @@ Pozitivní přihlášení
     Sleep          5
     Click          id=headerUser
 
-#    Get Title      data-test=my-account-button      ==      Můj účet
-#    Get Text       ==       Můj účet
-#    ${Text}        Get Text        data-test=my-account-button
-#    Log To Console      ${Text}
-#
-#    ${Text}        ==             Můj účet   # přijít na to jak porovnat proměnou
-
+   ${Text}=        Get Text       data-test=my-account-button
+   Log To Console      ${Text}      # jen pro kontrolu
+   Should Be Equal     ${Text}    Můj účet
 
 *** Keywords ***
 
