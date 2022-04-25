@@ -61,12 +61,14 @@ Login
     [Arguments]                ${Email}                            ${Heslo}                                ${Text}
     ${b_timeput} =             Set Browser Timeout                 20                 #20s je vhodné pro rohlik.cz
 
-#    Open Browser        ${URL}                                    headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
+    Open Browser        ${URL}                                    headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
 #    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
     New Page                    ${URL}
 
 #    Get Element
     Get Title                   contains                            ${TEXT_MainTitle}
+    Click                       id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
+    sleep                       1
 
     Click                       ${SEL_HeaderLogin}
     Type Text                   ${SEL_LoginFormEmail}               ${Email}
@@ -80,6 +82,7 @@ Login
 
 Pridat do kosiku
     [Arguments]         ${Zbozi}                    ${Kusu}
+    Set Strict Mode     False
     Type Text           ${SEL_SearchGlobal}         ${Zbozi}
     #1x
     Sleep               1

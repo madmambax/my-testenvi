@@ -17,12 +17,12 @@ ${URL}          https://rohlik.cz
 
 
 *** Test Cases ***
-Login spatny email
-    Login           chyba                       tajneheslotajneheslo                    Zadejte platný email
-
-
-Login spatne heslo
-    Login           radek.tester@seznam.cz      bad                                     Zadal(a) jste nesprávný e-mail nebo heslo.
+#Login spatny email
+#    Login           chyba                       tajneheslotajneheslo                    Zadejte platný email
+#
+#
+#Login spatne heslo
+#    Login           radek.tester@seznam.cz      bad                                     Zadal(a) jste nesprávný e-mail nebo heslo.
 
 
 Login vse OK
@@ -51,12 +51,13 @@ Test Objednavky
 
 Login
     [Arguments]                 ${Email}                            ${Heslo}                                ${Text}
-#    Open Browser                ${URL}                              headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
+    Open Browser                ${URL}                              headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
 #    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
     New Page                    ${URL}
 #    Get Element
     Get Title                  contains                             Online supermarket Rohlik.cz
-
+    Click               id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
+    sleep                1
     Click                       id=headerLogin
     Type Text                   data-test=user-login-form-email     ${Email}
     Type Text                   data-test=user-login-form-password  ${Heslo}
@@ -69,9 +70,12 @@ Login
 
 Pridat do kosiku
     [Arguments]         ${Zbozi}                    ${Kusu}
+    Set Strict Mode     False
+
     Type Text           id=searchGlobal             ${Zbozi}
     #1x
     Click               text=Hledat
+#    Click               data-test=product-1
     Click               text=Do košíku
     # Kusu - 1
     ${Pocet}            Evaluate                    ${Kusu} - 1

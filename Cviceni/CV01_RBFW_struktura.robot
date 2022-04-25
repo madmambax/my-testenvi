@@ -7,8 +7,8 @@ Library     OperatingSystem
 # Sekce se označují pomocí 3 hvězdiček názvu a opět 3 hvězdičky jako
 # Příklady:
 #           *** Settings ***
-#           *** Test Cases ***
 #           *** Variables ***
+#           *** Test Cases ***
 #           *** Keywords ***
 #           *** Comments ***
 
