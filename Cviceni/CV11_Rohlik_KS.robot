@@ -41,8 +41,9 @@ Login
 # Místo:
 #    Click               id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
 #    sleep               1
-# Vytvoříme KS Cookie s 1 parametrem, viz níže
+# Vytvoříme KS
     Cookie  AcceptAll
+
 
     Click               id=headerLogin
 
@@ -56,12 +57,13 @@ Login
 
 
 
+
 Cookie
     [Arguments]         ${type}
     IF  "${type}" == "AcceptAll"
-        Click               ???doplnit identifikátor???
+        Click               id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
     ELSE
-        Click               ???doplnit identifikátor???
+        Click               id="CybotCookiebotDialogBodyButtonDecline"
     END
 
     sleep                1      #workaround: Probliknutí cele stránky po kliknutí na tlačítko
