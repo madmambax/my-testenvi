@@ -56,11 +56,11 @@ Login
 #        Click               id=headerLogin
 #    END
 
-    Type Text           data-test=user-login-form-email     ${email}
-    Type Text           data-test=user-login-form-password  ${heslo}
+    Type Text           data-test=user-login-form-email             ${email}
+    Type Text           data-test=user-login-form-password          ${heslo}
     Click               data-test=btnSignIn
-    Get Text            data-test=header-user-icon          ==                          ${validation}
-    ${log}=             Get Text                            data-test=header-user-icon
+    Get Text            data-test=header-user-icon          ==      ${validation}
+    ${log}=   Get Text  data-test=header-user-icon
     Log                 ${log}
     Take Screenshot
 
