@@ -7,8 +7,6 @@ ${URL}      https://www.rohlik.cz/vitejte#_=_
 
 *** Test Cases ***
 
-* Test Cases *
-
 Pozitivní přihlášení
     Open URL
     Login               radek.tester@seznam.cz                  tajneheslotajneheslo
