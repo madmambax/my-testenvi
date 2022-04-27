@@ -17,14 +17,6 @@ ${URL}      https://www.rohlik.cz/
 
 *** Test Cases ***
 
-#Prihlaseni bad login
-#    Login               dsadsad@sdas.cz                     dasdas                      Přihlásit
-
-
-#Prihlaseni bad heslo
-#    Login               radek.tester@seznam.cz              dasdas                      Přihlásit
-
-
 Uspesne prihlaseni
     Login               radek.tester@seznam.cz              tajneheslotajneheslo        JT
     Logout
@@ -40,11 +32,6 @@ Pridani zbozi do kosiku
     Sleep               1
     Logout
 
-
-
-NEuspesne prihlaseni
-    Login               radek.tester@seznam.cz              tajneXheslotajneheslo        Přihlásit
-    Logout
 
 *** Keywords ***
 
