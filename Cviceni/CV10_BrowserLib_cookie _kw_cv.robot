@@ -38,11 +38,12 @@ Login
 
     Get Title           contains                            Rohlik
 
-# Místo:
+### Místo:
 #    Click               id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
 #    sleep               1
 # Vytvoříme KS Cookie s 1 parametrem, viz níže
-    Cookie  ???doplnit parametr klíčového slova???
+    Cookie              ???doplnit parametr klíčového slova???
+###
 
     Click               id=headerLogin
 

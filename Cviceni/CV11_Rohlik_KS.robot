@@ -48,7 +48,7 @@ Login
 
     Get Title           contains                            Rohlik
 
-    Cookie  AcceptAll
+    Cookie              AcceptAll
 
 
     Click               id=headerLogin
