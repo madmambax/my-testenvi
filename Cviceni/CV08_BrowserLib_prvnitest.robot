@@ -12,7 +12,7 @@ Starting a browser with a page
    New Page       https://www.rohlik.cz
    Get Title      ==    Online supermarket Rohlik.cz — nejrychlejší doručení ve městě
 
-
+#   Type Text    id=searchGlobal     Ahoj
 
 
 
