@@ -24,19 +24,27 @@ ${URL}      https://www.rohlik.cz/
 #Prihlaseni bad heslo
 #    Login               radek.tester@seznam.cz              dasdas                      Přihlásit
 
-Prihlaseni success
-    Login               radek.tester@seznam.cz              tajneheslotajneheslo        JT
 
+Uspesne prihlaseni
+    Login               radek.tester@seznam.cz              tajneheslotajneheslo        JT
+    Logout
+
+
+Pridani zbozi do kosiku
+    Login               radek.tester@seznam.cz              tajneheslotajneheslo        JT
     Type Text           id=searchGlobal             banán
     Sleep               1                           # čeká 1 sekundu
     Click               text=Hledat                 # ???
     Sleep               1                           # čeká 1 sekundu
     Click               css=[data-test=btnAdd] >> nth=1            # způsobuje někdy zmizení uživatele, scrol donwn, důvod někdy klikne na zboží níže
     Sleep               1
-
-    Sleep               1
     Logout
 
+
+
+NEuspesne prihlaseni
+    Login               radek.tester@seznam.cz              tajneXheslotajneheslo        Přihlásit
+    Logout
 
 *** Keywords ***
 
@@ -67,20 +75,14 @@ Login
 Cookie
     [Arguments]         ${type}
     IF  "${type}" == "AcceptAll"
-        Click               id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
+        Click           id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
     ELSE
-        Click               id="CybotCookiebotDialogBodyButtonDecline"
+        Click           id="CybotCookiebotDialogBodyButtonDecline"
     END
 
-    sleep                1      #workaround: Probliknutí cele stránky po kliknutí na tlačítko
+    sleep               1      #workaround: Probliknutí cele stránky po kliknutí na tlačítko
 
 
-# Vytvořte KS pro Odlášení, tak aby fungoval vždy
+# Vytvořte KS pro Odlášení, tak aby fungoval vždy (Pro oba testy)
 Logout
 
-#    Hover               xpath=//div[@class='u-mr--8']
-    Go to               ${URL}
-#    Click               id=headerLogin     vs      Click               xpath=//div[@class='u-mr--8']
-    Click               xpath=//div[@class='u-mr--8']
-    Click               data-test=user-box-logout-button
-##    Log                 ${OUTPUT_DIR}
