@@ -70,3 +70,4 @@ Cookie
 # Vytvořte KS pro Odlášení, tak aby fungoval vždy (Pro oba testy)
 Logout
 
+# zde je nutné doplnit KS
