@@ -42,7 +42,7 @@ Login
 #    Click               id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
 #    sleep               1
 # Vytvoříme KS Cookie s 1 parametrem, viz níže
-    Cookie  AcceptAll
+    Cookie  ???doplnit parametr klíčového slova???
 
     Click               id=headerLogin
 
