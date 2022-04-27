@@ -7,9 +7,6 @@
 Documentation   Automatizace rohlik.cz s BrowserLibrary
 Library  Browser
 
-#RK
-Library         DebugLibrary     # knihova pro ladění, pokud chcete ledit test stačí to přislušéno místa dat KS: Debug
-#RK
 
 *** Variables ***
 ${URL}      https://www.rohlik.cz/
