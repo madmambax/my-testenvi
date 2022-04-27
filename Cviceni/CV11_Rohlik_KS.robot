@@ -27,6 +27,16 @@ ${URL}      https://www.rohlik.cz/
 Prihlaseni success
     Login               radek.tester@seznam.cz              tajneheslotajneheslo        JT
 
+    Type Text           id=searchGlobal             banán
+    Sleep               1                           # čeká 1 sekundu
+    Click               text=Hledat                 # ???
+    Sleep               1                           # čeká 1 sekundu
+    Click               css=[data-test=btnAdd] >> nth=1            # způsobuje někdy zmizení uživatele, scrol donwn, důvod někdy klikne na zboží níže
+    Sleep               1
+
+    Sleep               1
+    Logout
+
 
 *** Keywords ***
 
@@ -38,10 +48,6 @@ Login
 
     Get Title           contains                            Rohlik
 
-# Místo:
-#    Click               id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
-#    sleep               1
-# Vytvoříme KS
     Cookie  AcceptAll
 
 
@@ -67,3 +73,14 @@ Cookie
     END
 
     sleep                1      #workaround: Probliknutí cele stránky po kliknutí na tlačítko
+
+
+# Vytvořte KS pro Odlášení, tak aby fungoval vždy
+Logout
+
+#    Hover               xpath=//div[@class='u-mr--8']
+    Go to               ${URL}
+#    Click               id=headerLogin     vs      Click               xpath=//div[@class='u-mr--8']
+    Click               xpath=//div[@class='u-mr--8']
+    Click               data-test=user-box-logout-button
+##    Log                 ${OUTPUT_DIR}
