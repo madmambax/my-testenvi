@@ -13,6 +13,7 @@ Pozitivní přihlášení
     Click               id=headerUser
     ${Text}=            Get Text                                data-test=my-account-button
     Should Be Equal     ${Text}                                 Můj účet
+    Logout
 
 Negativní přihlášení- špatné heslo
     Open URL
@@ -23,8 +24,6 @@ Negativní přihlášení- heslo z velkých písmen
     Open URL
     Login               radek.tester@seznam.cz                  TAJNEHESLOTAJNEHESLO
     Overeni Ne-prihlaseni
-
-
 
 Odhlášení
     Open URL
@@ -37,6 +36,12 @@ Přidání zboží do košíku
     Pridat Do Kosiku    banán
     Logout
 
+Odebrání zboží z košíku
+    Open URL
+    Login               radek.tester@seznam.cz                  tajneheslotajneheslo
+    Pridat Do Kosiku    mouka
+    Odebrani Z Kosiku
+    Logout
 
 *** Keywords ***
 
@@ -85,5 +90,10 @@ Pridat do kosiku
     Click               css=[data-test=btnAdd] >> nth=1
     Click               data-test=headerPrice
     Click               id=cart
-    ${cart_text}=       Get Text                    xpath=//*[@id="product_1349775"]/div[1]/a
-    Log To Console                ${cart_text}
+
+Odebrani z kosiku
+    Click              data-test=headerPrice
+    Click              css=.sc-14bk3kj-0 >> [data-test="btnMinus"]
+    ${Text3}           Get Text                     id=cartReviewMainTitle
+    Sleep              5
+    Should Be Equal    ${Text3}                      Přehled objednávky Vysypat košík
