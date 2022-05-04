@@ -26,7 +26,7 @@ Login vse OK
 Test Objednavky
     ${kusu} =	        Set Variable	            5
     Login               radek.tester@seznam.cz      tajneheslotajneheslo                JT
-    Pridat do kosiku    Losos                       1353945                             ${kusu}
+    Pridat do kosiku    mléko                       1320669                             ${kusu}
     Click               id=cartContent
     Take Screenshot
     Odebrat z kosiku      ${kusu}
