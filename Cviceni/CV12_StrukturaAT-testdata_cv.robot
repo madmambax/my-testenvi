@@ -94,7 +94,7 @@ Odebrat z kosiku
     Take Screenshot
     Sleep               3                                                       #statické čekání
     Take Screenshot
-    Go to                https://www.rohlik.cz/
+    Go to               ${URL}
     Take Screenshot
 
 Cookie

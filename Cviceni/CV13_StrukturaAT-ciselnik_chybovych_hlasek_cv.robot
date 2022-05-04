@@ -102,12 +102,12 @@ Odebrat z kosiku
 
     Take Screenshot
     ${old_mode} =       Set Strict Mode             False        # Does not fail if selector points to one or more elements
-    Click               data-test=btnMinus           clickCount=${Kusu}
+    Click               data-test=btnMinus          clickCount=${Kusu}
     Set Strict Mode     ${old_mode}
     Take Screenshot
     Sleep               3                                                       #statické čekání
     Take Screenshot
-    Go to                https://www.rohlik.cz/
+    Go to               ${URL}
     Take Screenshot
 
 Cookie
