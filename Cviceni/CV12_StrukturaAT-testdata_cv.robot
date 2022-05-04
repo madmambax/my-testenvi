@@ -88,11 +88,11 @@ Odebrat z kosiku
     [Arguments]                 ${Kusu}
 
     Take Screenshot
-    ${old_mode} =       Set Strict Mode             False        # Does not fail if selector points to one or more elements
+    ${old_mode} =       Set Strict Mode             False                       # zapamatovat původní nastavení
     Click               data-test=btnMinus           clickCount=${Kusu}
     Set Strict Mode     ${old_mode}
     Take Screenshot
-    Sleep               3                                                       #statické čekání
+    Sleep               3                                                       # statické čekání
     Take Screenshot
     Go to               ${URL}
     Take Screenshot
