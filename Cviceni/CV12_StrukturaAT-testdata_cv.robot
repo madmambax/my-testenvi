@@ -16,22 +16,12 @@ ${URL}              https://rohlik.cz
 Login spatny email
     Login           chyba                       tajneheslotajneheslo                    Zadejte platný email
 
-    # je nutné zavřít prihlašovací form
-    Click           id=logo
-
-
 Login spatne heslo
     Login           radek.tester@seznam.cz      bad                                     Zadal(a) jste nesprávný e-mail nebo heslo.
-
-    # je nutné zavřít prihlašovací form
-    Click                       id=logo
-
-
 
 Login vse OK
     Login           radek.tester@seznam.cz      tajneheslotajneheslo                    JT
     Logout
-
 
 Test Objednavky
     ${kusu} =	        Set Variable	            5
