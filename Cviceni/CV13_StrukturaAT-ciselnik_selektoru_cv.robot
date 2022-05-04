@@ -18,14 +18,14 @@ ${URL}              https://rohlik.cz
 
 *** Test Cases ***
 Login spatny email
-    Login           chyba                       ${USER1_PASSWORD}                       Zadejte platný email
+    Login           chyba                       ${USER1_PASSWORD}                       ${ERROR_TEXT_FillCorrectEmail}
 
     # je nutné zavřít prihlašovací form
     Click           id=logo
 
 
 Login spatne heslo
-    Login           ${USER1_NAME}               bad                                     Zadal(a) jste nesprávný e-mail nebo heslo.
+    Login           ${USER1_NAME}               bad                                     ${ERROR_TEXT_IncorrectEmailOrPwd}
 
     # je nutné zavřít prihlašovací form
     Click                       id=logo
@@ -37,7 +37,7 @@ Login vse OK
 Test Objednavky
     ${kusu} =	        Set Variable	            5
     Login               ${USER1_NAME}               ${USER1_PASSWORD}                ${USER1_SHORT}
-    Pridat do kosiku    mléko                       1320669                          ${kusu}
+    Pridat do kosiku    ${ZBOZI01_NAME}             ${ZBOZI01_ID}                    ${kusu}
     Click               id=cartContent
     Take Screenshot
     Take Screenshot
@@ -115,7 +115,7 @@ Cookie
     IF  "${type}" == "AcceptAll"
         Click           id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
     ELSE
-        Click           id="CybotCookiebotDialogBodyButtonDecline"
+        Click           id=CybotCookiebotDialogBodyButtonDecline
     END
 
     sleep               1      #workaround: Probliknutí cele stránky po kliknutí na tlačítko

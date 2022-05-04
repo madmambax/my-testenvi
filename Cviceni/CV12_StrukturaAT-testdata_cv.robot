@@ -102,7 +102,7 @@ Cookie
     IF  "${type}" == "AcceptAll"
         Click           id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
     ELSE
-        Click           id="CybotCookiebotDialogBodyButtonDecline"
+        Click           id=CybotCookiebotDialogBodyButtonDecline
     END
 
     sleep               1      #workaround: Probliknutí cele stránky po kliknutí na tlačítko

@@ -3,11 +3,14 @@
 #
 
 *** Variables ***
+#uživatel
 ${USER1_NAME}               radek.tester@seznam.cz
 ${USER1_PASSWORD}           tajneheslotajneheslo
 ${USER1_SHORT}              JT
 
-
+#zboží
+${ZBOZI01_NAME}             mléko
+${ZBOZI01_ID}               1320669
 
 #Strings
 ${TEXT_MainTitle}                   Online supermarket Rohlik.cz
@@ -36,8 +39,11 @@ ${SEL_BtnAdd}               data-test=btnAdd
 ${SEL_BtnPlus}              data-test=btnPlus
 ${SEL_BtnMinus}             data-test=btnMinus
 
-
 #Cart
 ${SEL_Cart}                 id=cart
 ${SEL_CartContent}          id=cartContent
 ${SEL_CartReview}           id=cartReviewMainTitle
+
+#Cookie
+${SEL_Cookie_AllowAll}      id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
+${SEL_Cookie_Decline}       id=CybotCookiebotDialogBodyButtonDecline
