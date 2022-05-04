@@ -66,7 +66,7 @@ Login
     Click                       id=headerLogin
     Type Text                   data-test=user-login-form-email     ${Email}
     Type Text                   data-test=user-login-form-password  ${Heslo}
-#    Debug
+
     Click                       data-test=btnSignIn
 
     Get Text                    xpath=//div[@class='u-mr--8']       contains                                ${Text}

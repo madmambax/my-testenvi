@@ -40,11 +40,11 @@ Login vse OK
 Test Objednavky
     ${kusu} =	        Set Variable	         5
     Login               ${USER1_NAME}            ${USER1_PASSWORD}                   ${USER1_SHORT}
-    Pridat do kosiku    Losos                    ${kusu}
+    Pridat do kosiku    ${ZBOZI01_NAME}          ${ZBOZI01_ID}                       ${kusu}
     Click               ${SEL_CartContent}
     Take Screenshot
     Take Screenshot
-    Odebrat z kose      ${kusu}
+    Odebrat z kosiku    ${kusu}
     Take Screenshot
     Take Screenshot
     Logout
@@ -57,64 +57,73 @@ Test Objednavky
 *** Keywords ***
 
 Login
-    [Arguments]                ${Email}                            ${Heslo}                                ${Text}
-    ${b_timeput} =             Set Browser Timeout                 20                 #20s je vhodné pro rohlik.cz
+    [Arguments]                 ${Email}                            ${Heslo}                                ${Text}
 
-    Open Browser        ${URL}                                    headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
-#    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
+    Set Browser Timeout         20                                  #20s je vhodné pro rohlik.cz
+    Open Browser                ${URL}                              headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
+
     New Page                    ${URL}
 
-#    Get Element
     Get Title                   contains                            ${TEXT_MainTitle}
-    Click                       id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
-    sleep                       1
+    Cookie                      AcceptAll
 
     Click                       ${SEL_HeaderLogin}
     Type Text                   ${SEL_LoginFormEmail}               ${Email}
     Type Text                   ${SEL_LoginFormPwd}                 ${Heslo}
-#    Debug
+
     Click                       ${SEL_BtnSignIn}
 
     Get Text                    ${SEL_HeaderLoginErrorTxt}           contains                                ${Text}
 
 
+Logout
+    Click               ${SEL_HeaderLoginErrorTxt}
+    Click               ${SEL_UserBoxLogoutBtn}
+
 
 Pridat do kosiku
-    [Arguments]         ${Zbozi}                    ${Kusu}
-    Set Strict Mode     False
+    [Arguments]         ${Zbozi}                    ${produkt_id}        ${Kusu}
     Type Text           ${SEL_SearchGlobal}         ${Zbozi}
-    #1x
-    Sleep               1
+    Sleep               1                           # statický timeout
     Click               ${SEL_BtnSearchGlobal}      # tlačítko Hledat
-    Sleep               1                           # čeká 1 sekundu
-    Click               ${SEL_BtnAdd}               # způsobuje někdy zmizení uživatele, scrol donwn, důvod někdy klikne na zboží níže
+    Sleep               5                           # statický timeout
+
+    Click               css=[data-product-id="${produkt_id}"][data-test="btnAdd"]            # způsobuje někdy zmizení uživatele, scrol donwn, důvod někdy klikne na zboží níže
     Sleep               1
     # Kusu - 1
     ${Pocet}            Evaluate                    ${Kusu} - 1
-    Click               ${SEL_BtnPlus}              clickCount=${Pocet}
+    Click               css=.sc-oad7xy-0 [data-product-id="${produkt_id}"][data-test="btnPlus"]           clickCount=${Pocet}
+
+    #ověří že je zboží v košíku
     ${cart_text}=       Get Text                    ${SEL_Cart}
     Log                 ${cart_text}
     Get Text            ${SEL_Cart}                 matches                             (?i)${Zbozi}    # (?i)  znamená že se bere case insensitive
     Take Screenshot
 
 
-Logout
-#    Hover               xpath=//div[@class='u-mr--8']
-    Click               ${SEL_HeaderLoginErrorTxt}
-    Click               ${SEL_UserBoxLogoutBtn}
-#    Log                 ${OUTPUT_DIR}
-
-
-Odebrat z kose
+Odebrat z kosiku
     [Arguments]                 ${Kusu}
 
     Take Screenshot
-    Click               ${SEL_BtnMinus}             clickCount=${Kusu}
+    ${old_mode} =       Set Strict Mode             False        # Does not fail if selector points to one or more elements
+    Click               data-test=btnMinus          clickCount=${Kusu}
+    Set Strict Mode     ${old_mode}
     Take Screenshot
     Sleep               3                                                       #statické čekání
     Take Screenshot
     Go to               ${URL}
     Take Screenshot
+
+Cookie
+    [Arguments]         ${type}
+    IF  "${type}" == "AcceptAll"
+        Click           ${SEL_Cookie_AllowAll}
+    ELSE
+        Click           ${SEL_Cookie_Decline}
+    END
+
+    sleep               1      #workaround: Probliknutí cele stránky po kliknutí na tlačítko
+
 
 
 

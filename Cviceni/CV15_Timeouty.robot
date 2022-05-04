@@ -38,11 +38,11 @@ Login vse OK
 Test Objednavky
     ${kusu} =	        Set Variable	         5
     Login               ${USER1_NAME}            ${USER1_PASSWORD}                   ${USER1_SHORT}
-    Pridat do kosiku    banán                    ${kusu}
+    Pridat do kosiku    ${ZBOZI01_NAME}          ${ZBOZI01_ID}                       ${kusu}
     Click               ${SEL_CartContent}
     Take Screenshot
     Take Screenshot
-    Odebrat z kose      ${kusu}
+    Odebrat z kosiku    ${kusu}
     Take Screenshot
     Take Screenshot
     [Teardown]          Logout         #provede se i když test zfailuje

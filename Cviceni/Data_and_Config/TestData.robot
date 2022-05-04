@@ -35,9 +35,9 @@ ${SEL_SearchGlobal}         id=searchGlobal
 ${SEL_BtnSearchGlobal}      text=Hledat
 
 #Goods
-${SEL_BtnAdd}               data-test=btnAdd
+${SEL_BtnAdd}               data-test=btnAdd     #css=[data-product-id="${produkt_id}"][data-test="btnAdd"]
 ${SEL_BtnPlus}              data-test=btnPlus
-${SEL_BtnMinus}             data-test=btnMinus
+${SEL_BtnMinus}             data-test=btnMinus  #css=.sc-oad7xy-0 [data-product-id="${produkt_id}"][data-test="btnPlus"]
 
 #Cart
 ${SEL_Cart}                 id=cart
