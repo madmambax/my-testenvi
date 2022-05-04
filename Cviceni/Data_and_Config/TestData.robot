@@ -35,9 +35,16 @@ ${SEL_SearchGlobal}         id=searchGlobal
 ${SEL_BtnSearchGlobal}      text=Hledat
 
 #Goods
-${SEL_BtnAdd}               data-test=btnAdd     #css=[data-product-id="${produkt_id}"][data-test="btnAdd"]
+${SEL_BtnAdd}               data-test=btnAdd
 ${SEL_BtnPlus}              data-test=btnPlus
-${SEL_BtnMinus}             data-test=btnMinus  #css=.sc-oad7xy-0 [data-product-id="${produkt_id}"][data-test="btnPlus"]
+#Tohle nebude fungovat, je nutné dělat selektror po částech
+#${SEL_BtnAddId}             css=[data-product-id="${produkt_id}"][data-test="btnAdd"]
+#${SEL_BtnPlusId}            css=.sc-oad7xy-0 [data-product-id="${produkt_id}"][data-test="btnPlus"]
+#Je třeba použít
+${SEL_ProductID}            data-product-id
+${SEL_CssForAdding}         .sc-oad7xy-0
+
+${SEL_BtnMinus}             data-test=btnMinus
 
 #Cart
 ${SEL_Cart}                 id=cart

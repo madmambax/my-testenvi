@@ -88,11 +88,11 @@ Pridat do kosiku
     Click               ${SEL_BtnSearchGlobal}      # tlačítko Hledat
     Sleep               5                           # statický timeout
 
-    Click               css=[data-product-id="${produkt_id}"][data-test="btnAdd"]            # způsobuje někdy zmizení uživatele, scrol donwn, důvod někdy klikne na zboží níže
+    Click               css=[${SEL_ProductID}="${produkt_id}"][${SEL_BtnAdd}]
     Sleep               1
     # Kusu - 1
     ${Pocet}            Evaluate                    ${Kusu} - 1
-    Click               css=.sc-oad7xy-0 [data-product-id="${produkt_id}"][data-test="btnPlus"]           clickCount=${Pocet}
+    Click               css=${SEL_CssForAdding} [${SEL_ProductID}="${produkt_id}"][${SEL_BtnPlus}]           clickCount=${Pocet}
 
     #ověří že je zboží v košíku
     ${cart_text}=       Get Text                    ${SEL_Cart}
@@ -106,7 +106,7 @@ Odebrat z kosiku
 
     Take Screenshot
     ${old_mode} =       Set Strict Mode             False        # Does not fail if selector points to one or more elements
-    Click               data-test=btnMinus          clickCount=${Kusu}
+    Click               ${SEL_BtnMinus}             clickCount=${Kusu}
     Set Strict Mode     ${old_mode}
     Take Screenshot
     Sleep               3                                                       #statické čekání
