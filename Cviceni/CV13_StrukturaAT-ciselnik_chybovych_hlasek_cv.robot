@@ -6,7 +6,7 @@
 *** Settings ***
 Documentation   CV: Testovaci data - pripravit ciselnik chybovych hlasek
 Library         Browser
-#Library         DebugLibrary     # knihova pro ladění, pokud chcete ledit test stačí to přislušéno místa dat KS: Debug
+
 
 Resource        Data_and_Config/TestData.robot
 

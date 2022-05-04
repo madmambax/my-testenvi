@@ -73,10 +73,8 @@ Login
 
 
 Logout
-#    Hover               xpath=//div[@class='u-mr--8']
     Click               xpath=//div[@class='u-mr--8']
     Click               data-test=user-box-logout-button
-#    Log                 ${OUTPUT_DIR}
 
 
 Pridat do kosiku
@@ -97,10 +95,6 @@ Pridat do kosiku
     Log                 ${cart_text}
     Get Text            id=cart                     matches                             (?i)${Zbozi}    # (?i)  znamená že se bere case insensitive
     Take Screenshot
-
-
-
-
 
 
 Odebrat z kosiku
