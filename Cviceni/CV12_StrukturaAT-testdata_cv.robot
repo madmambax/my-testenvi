@@ -4,11 +4,8 @@
 
 
 *** Settings ***
-Documentation   CV: Testovaci data
+Documentation   CV: Testovaci data - zaměňte uživatelské data za proměné ze souboru Cviceni/Data_and_Config/TestData.robot
 Library         Browser
-#Library         DebugLibrary     # knihova pro ladění, pokud chcete ledit test stačí to přislušéno místa dat KS: Debug
-
-
 
 
 *** Variables ***
