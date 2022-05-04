@@ -10,6 +10,7 @@ Library  Browser
 
 Starting a browser with a page
    New Browser    chromium    headless=false
+#    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
    New Page       https://www.rohlik.cz
    Get Title      ==    Online supermarket Rohlik.cz — nejrychlejší doručení ve městě
 
