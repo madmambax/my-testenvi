@@ -58,47 +58,46 @@ Login
     [Arguments]                ${Email}                            ${Heslo}                                ${Text}
 
     Get Title                   contains                            ${TEXT_MainTitle}
-
+    Cookie                      AcceptAll
     Click                       ${SEL_HeaderLogin}
     Type Text                   ${SEL_LoginFormEmail}               ${Email}
     Type Text                   ${SEL_LoginFormPwd}                 ${Heslo}
-
     Click                       ${SEL_BtnSignIn}
-
     Get Text                    ${SEL_HeaderLoginErrorTxt}           contains                                ${Text}
 
-
+Logout
+    Go to               ${URL}
+    Click               ${SEL_HeaderLoginErrorTxt}
+    Click               ${SEL_UserBoxLogoutBtn}
 
 Pridat do kosiku
-    [Arguments]         ${Zbozi}                    ${Kusu}
+    [Arguments]         ${Zbozi}                    ${produkt_id}        ${Kusu}
     Type Text           ${SEL_SearchGlobal}         ${Zbozi}
-    #1x
+    Sleep               1                           # statický timeout
     Click               ${SEL_BtnSearchGlobal}      # tlačítko Hledat
-    Click               ${SEL_BtnAdd}               delay=${TIME_BETWEEN_CLICKS}     # způsobuje někdy zmizení uživatele, scrol donwn, důvod někdy klikne na zboží níže
+    Sleep               5                           # statický timeout
+
+    Click               css=[${SEL_ProductID}="${produkt_id}"][${SEL_BtnAdd}]
+    Sleep               1
     # Kusu - 1
     ${Pocet}            Evaluate                    ${Kusu} - 1
-    Click               ${SEL_BtnPlus}              clickCount=${Pocet}
-    Sleep               1                           #Statický timeout -  čeká na aktualizaci košíku
+    Click               css=${SEL_CssForAdding} [${SEL_ProductID}="${produkt_id}"][${SEL_BtnPlus}]           clickCount=${Pocet}
+
+    #ověří že je zboží v košíku
     ${cart_text}=       Get Text                    ${SEL_Cart}
     Log                 ${cart_text}
     Get Text            ${SEL_Cart}                 matches                             (?i)${Zbozi}    # (?i)  znamená že se bere case insensitive
     Take Screenshot
 
 
-Logout
-#    Hover               xpath=//div[@class='u-mr--8']
-    Go to               ${URL}
-    Click               ${SEL_HeaderLoginErrorTxt}
-    Click               ${SEL_UserBoxLogoutBtn}
-#    Log                 ${OUTPUT_DIR}
-
-
-Odebrat z kose
+Odebrat z kosiku
     [Arguments]                 ${Kusu}
 
     #přidat ověření že košík obsahuje ${Kusu} kusů
     Take Screenshot
 
+
+    ${old_mode} =       Set Strict Mode             False                       # zapamatovat původní nastavení
 
     Click                   ${SEL_BtnMinus}             clickCount=${Kusu}      delay=100ms
     Take Screenshot
@@ -125,17 +124,26 @@ Odebrat z kose
            Log                     ${i}
     END
 
+    Set Strict Mode     ${old_mode}
+
 
 Pred_testem
-    Go to               ${URL}   #jdi na hlavní stránku
+    ${b_timeput} =             Set Browser Timeout                 ${TIMEOUT_BROWSER}                 #20s je vhodné pro rohlik.cz
+    Log                        Původní hodnota timeout ${b_timeput}
+    Open Browser               ${URL}                              headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
+#    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
+    New Page                   ${URL}
+
+
+#    Go to               ${URL}   #jdi na hlavní stránku
 
 
 Pred_sadou
     ${b_timeput} =             Set Browser Timeout                 ${TIMEOUT_BROWSER}                 #20s je vhodné pro rohlik.cz
-    Log                        ${b_timeput}
-    Open Browser        ${URL}                                     headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
+    Log                        Původní hodnota timeout ${b_timeput}
+    Open Browser               ${URL}                              headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
 #    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
-    New Page                    ${URL}
+    New Page                   ${URL}
 
 
 Uklid_po_testu
@@ -162,3 +170,14 @@ Uklid_sada
     Go to                   ${URL}
     Logout
     Close Browser
+
+
+Cookie
+    [Arguments]         ${type}
+    IF  "${type}" == "AcceptAll"
+        Click           ${SEL_Cookie_AllowAll}
+    ELSE
+        Click           ${SEL_Cookie_Decline}
+    END
+
+    sleep               1      #workaround: Probliknutí cele stránky po kliknutí na tlačítko
