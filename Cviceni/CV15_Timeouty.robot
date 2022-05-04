@@ -58,7 +58,7 @@ Login
     [Arguments]                ${Email}                            ${Heslo}                                ${Text}
 
     Get Title                   contains                            ${TEXT_MainTitle}
-    Cookie                      AcceptAll
+
     Click                       ${SEL_HeaderLogin}
     Type Text                   ${SEL_LoginFormEmail}               ${Email}
     Type Text                   ${SEL_LoginFormPwd}                 ${Heslo}
@@ -128,14 +128,7 @@ Odebrat z kosiku
 
 
 Pred_testem
-    ${b_timeput} =             Set Browser Timeout                 ${TIMEOUT_BROWSER}                 #20s je vhodné pro rohlik.cz
-    Log                        Původní hodnota timeout ${b_timeput}
-    Open Browser               ${URL}                              headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
-#    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
-    New Page                   ${URL}
-
-
-#    Go to               ${URL}   #jdi na hlavní stránku
+    Go to               ${URL}   #jdi na hlavní stránku
 
 
 Pred_sadou
@@ -144,6 +137,8 @@ Pred_sadou
     Open Browser               ${URL}                              headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
 #    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
     New Page                   ${URL}
+
+    Cookie                      AcceptAll
 
 
 Uklid_po_testu
