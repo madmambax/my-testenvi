@@ -36,7 +36,7 @@ Chybné číslo kurzu
 
 
 
-Prvni API test - registrace na kurz (OLD WAY)
+Prvni API test - registrace na kurz (Post On Session)
    # vytoření JSON zprávy
    ${json}=  catenate  {"targetid":"","kurz":"1","name":"Jan","surname":"Tester","email":"jan.tester@data.cz","phone":"777123132","person":"fyz","address":"Udolni 21, Brno","ico":"27232433","count":"1","comment":"nic","souhlas":true}
 
