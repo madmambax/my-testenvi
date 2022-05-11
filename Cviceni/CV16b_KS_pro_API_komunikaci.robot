@@ -36,6 +36,43 @@ Chybné číslo kurzu
 
 
 
+API Comunicaication
+    [Arguments]       ${json}     ${error_resp}
+
+    #převedení do UTF-8
+    ${json_utf8} =      Encode String To Bytes     ${json}     UTF-8          #vyžaduje knihovnu String
+
+    #POST dotaz
+    ${resp} =           POST  ${urlapp}  data=${json_utf8}  expected_status=${error_resp}
+
+    #uloži odpověď na dotaz do logu
+    Log                 ${resp.json()}
+
+    #ověřit výsledek
+    Status Should Be    ${error_resp}
+    #nebo
+    log to console  ${response.json()}[response]
+
+
+
+#Prvni API test - registrace na kurz
+    # vytoření JSON zprávy
+
+
+    # vytoření hlavičky (header) zprávy
+
+
+    # vytvoření spojení (session)
+
+
+    # odeslání zprávy a uložení odpovědi do ${resp}
+
+
+    # vyhodnocení
+
+
+
+
 
 
 
