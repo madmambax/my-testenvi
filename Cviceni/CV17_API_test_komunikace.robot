@@ -37,10 +37,10 @@ registrace bez volby kurzu
 #registrace chybny telefon (moc dlouhy)
 #přidat test
 
-#chybny email (tohleneniemail.cz)
+#registrace chybny email (tohleneniemail.cz)
 #přidat test
 
-#chybny format JSON (bez klíče a hodnoty kurzu, tedy  "kurz":"2")
+#registrace chybny format JSON (bez klíče a hodnoty kurzu, tedy  "kurz":"2")
 #přidat test
 
 
