@@ -31,11 +31,18 @@ registrace ok
 registrace bez volby kurzu
     API Comunicaication   {"targetid":"","kurz":"","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}   500
 
-registrace chybny telefon (moc dlouhy)
+#registrace volby telefonu (prázdný)
 #přidat test
-    API Comunicaication   {"targetid":"","kurz":"2","name":"Jan","surname":"Novakščěšíů","email":"jan.novak@abc.cz","phone":"","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}  500
-#chybny format JSON (bez kurzu)
+
+#registrace chybny telefon (moc dlouhy)
 #přidat test
+
+#chybny email (tohleneniemail.cz)
+#přidat test
+
+#chybny format JSON (bez klíče a hodnoty kurzu, tedy  "kurz":"2")
+#přidat test
+
 
 *** Keywords ***
 
