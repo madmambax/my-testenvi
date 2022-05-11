@@ -42,12 +42,12 @@ registrace bez volby kurzu
 API Comunicaication
     [Arguments]       ${json}     ${error_resp}
 
-   #převedení do UTF-8
-   ${json_utf8} =     Encode String To Bytes     ${json}     UTF-8          #vyžaduje knihovnu String
+    #převedení do UTF-8
+    ${json_utf8} =     Encode String To Bytes     ${json}     UTF-8          #vyžaduje knihovnu String
 
-  ${resp} =           POST  ${urlapp}  data=${json_utf8}  expected_status=${error_resp}
+    ${resp} =           POST  ${urlapp}  data=${json_utf8}  expected_status=${error_resp}
 
-  Status Should Be    ${error_resp}
+    Status Should Be    ${error_resp}
 
 
 API Comunicaication Post on Session
