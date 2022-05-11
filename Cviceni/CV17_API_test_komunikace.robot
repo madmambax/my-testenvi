@@ -43,6 +43,10 @@ registrace bez volby kurzu
 #registrace chybny format JSON (bez klíče a hodnoty kurzu, tedy  "kurz":"2")
 #přidat test
 
+#BONUS: registrace chybny format JSON (vymyslet jinou chybu JSON dat)
+#přidat test
+
+
 
 *** Keywords ***
 
