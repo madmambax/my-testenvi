@@ -37,12 +37,3 @@ API Comunicaication
     Status Should Be    ${error_resp}
     #nebo
     Should Be Equal As Strings   ${error_resp}   ${resp.json()}[response]
-
-
-
-#API Comunicaication
-    # vytoření JSON zprávy
-
-    # odeslání zprávy a uložení odpovědi do ${resp}  (POST dotaz)
-
-    # vyhodnocení
