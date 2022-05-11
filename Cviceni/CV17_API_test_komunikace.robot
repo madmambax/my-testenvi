@@ -26,9 +26,9 @@ ${urlapp}       ${url}${app}
 *** Test Cases ***
 
 registrace ok
-    API Comunicaication   {"targetid":"","kurz":"2","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}  200
+    API Comunicaication   {"targetid":"","kurz":"2","name":"Jan","surname":"Novakščěšíů","email":"jan.novak@abc.cz","phone":"608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}  200
 
-registrace chyba
+registrace bez volby kurzu
     API Comunicaication   {"targetid":"","kurz":"","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}   500
 
 #registrace chybny telefon (moc dlouhy)
@@ -40,6 +40,17 @@ registrace chyba
 *** Keywords ***
 
 API Comunicaication
+    [Arguments]       ${json}     ${error_resp}
+
+   #převedení do UTF-8
+   ${json_utf8} =     Encode String To Bytes     ${json}     UTF-8          #vyžaduje knihovnu String
+
+  ${resp} =           POST  ${urlapp}  data=${json_utf8}  expected_status=${error_resp}
+
+  Status Should Be    ${error_resp}
+
+
+API Comunicaication Post on Session
     [Arguments]       ${json}     ${error_resp}
 
    #převedení do UTF-8
