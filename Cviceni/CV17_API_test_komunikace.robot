@@ -19,6 +19,7 @@ Library  String             # potřebujeme pro klíčové slovo: Encode String T
 *** Variables ***
 ${url}		    http://testovani.kitner.cz/
 ${app}          /regkurz/formsave.php
+${urlapp}       ${url}${app}
 
 #${json}      {"targetid":"","kurz":"2","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}
 
