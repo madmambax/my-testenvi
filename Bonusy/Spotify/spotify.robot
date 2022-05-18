@@ -1,3 +1,6 @@
+#
+# Dokumentace ke SPOTIFY API: https://developer.spotify.com/documentation/web-api/
+#
 
 *** Settings ***
 Library	    Collections
