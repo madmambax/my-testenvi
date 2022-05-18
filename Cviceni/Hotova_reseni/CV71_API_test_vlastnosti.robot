@@ -54,8 +54,10 @@ Registrace na kurz
     ${resp} =           POST  ${urlapp}   data=${json_utf8}  headers=${header}  expected_status=Anything
     Log	                Responce: @{resp}
 
-    #vyhodnocení odpovědi a návratové hodnoty
+    #vyhodnocení status kódu
     Should Be Equal As Strings	    ${resp.status_code}     ${responce_code}
+
+    #vyhodnocení JSONu klíč response
     Dictionary Should Contain Item	${resp.json()}          response    ${responce_code}
 
 
