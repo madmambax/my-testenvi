@@ -55,6 +55,8 @@ Registrace na kurz
     Log	                Responce: @{resp}
 
     #vyhodnocení status kódu
+    Status should be     200
+    #nebo
     Should Be Equal As Strings	    ${resp.status_code}     ${responce_code}
 
     #vyhodnocení JSONu klíč response

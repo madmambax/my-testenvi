@@ -38,31 +38,6 @@ Registrace na kurz negativni test
 *** Keywords ***
 
 
-
-Registrace na kurz CV
-    [Arguments]    #??? DOPLNIT ???#
-
-    # vytvoření těla (body) zprávy
-    ${json}=     Catenate      #??? DOPLNIT ???#
-
-    #převedení do UTF-8
-    ${json_utf8} =     Encode String To Bytes     ${json}     UTF-8      #vyžaduje knihovnu String
-
-    #vytoření hlavičky (header) zprávy
-    &{header}=          Create Dictionary   Content-Type=application/json
-
-    #vytvoření spojení (session)
-    CreateSession       apilogin            ${url}
-
-    # odeslání zprávy a uložení odpovědi do ${resp}
-    ${resp} =           Post on Session     apilogin    /regkurz/formsave.php  data=${json_utf8}  headers=${header}
-    Log	                Responce: @{resp}
-
-    #vyhodnocení odpovědi a návratové hodnoty
-    Should Be Equal As Strings	    ${resp.status_code}     200
-    Dictionary Should Contain Item	${resp.json()}          response    ${responce_code}
-
-
 Registrace na kurz
     [Arguments]    #??? DOPLNIT ???#
 
