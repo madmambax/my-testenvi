@@ -82,7 +82,7 @@ Registrace na kurz
     #vyhodnocení status kódu
     #??? DOPLNIT ???#
 
-    #vyhodnocení JSONu klíč response
+    #vyhodnocení JSONu stačí jen vyhodnotit klíč response a jeho hodnotu
     #??? DOPLNIT ???#
 
 
