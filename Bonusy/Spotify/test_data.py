@@ -41,9 +41,5 @@ ARTIST_SEARCH_URL = "https://api.spotify.com/v1/artists/"
 
 TMT_ACCOUNT = ["https://TMT018.testrail.io/",  "radek.tester@seznam.cz",  "TestovaniSW"]
 
-imap_host = "imap.seznam.cz"
-imap_user = "test.schranka@email.cz"
-imap_pass = "Q-cVxMAmMZsJ5g9V"
-MAX_TIME = 5  # Maximum time in minutes to check for new e-mails
 
 SUBJECTS = {"password_change": '=?UTF-8?B?Wm3Em25hIGhlc2xhIHByb2LEm2hsYSDDunNwxJvFoW7Emw==?='}
