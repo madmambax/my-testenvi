@@ -15,7 +15,7 @@ CVIČENÍ: Vytvořte klíčové slovo pro testy registrace na kurz z pohledu fun
 Library	        Collections
 Library	        RequestsLibrary
 Library         String
-Resource        Data_and_Config/TestData.robot
+#Resource        Data_and_Config/TestData.robot
 
 
 *** Variables ***
@@ -26,8 +26,11 @@ ${urlapp}           ${url}${app}
 
 *** Test Cases ***
 
-Registrace na kurz
+Registrace na kurz fyzicka osoba
     Registrace na kurz  2  Jan787878  Novak  jan.novak@abc.cz  777123123  fyz  Udolni 21, Brno  false  200
+
+Registrace na kurz pravnicka osoba
+    Registrace na kurz  2  Jan787878  Novak  jan.novak@abc.cz  777123123  pra  27232433  false  200
 
 Registrace na kurz háčky a čárky
     Registrace na kurz  2  Janěščřžýáíéů  Novakěščřžýáíéů  jan.novak@abc.cz  777123123  fyz  Udolniěščřžýáíéů, Brno  false  200
@@ -40,10 +43,10 @@ Registrace na kurz háčky a čárky
 
 
 Registrace na kurz
-    [Arguments]    ${course}  ${name}  ${surname}  ${email}  ${phone}  ${person}  ${address}  ${souhlas}  ${responce_code}
+    [Arguments]    ${course}  ${name}  ${surname}  ${email}  ${phone}  ${person}  ${address_ico}  ${souhlas}  ${responce_code}
 
     # vytvoření těla (body) zprávy
-    ${json}=     Catenate      {"targetid":"","kurz":"${course}","name":"${name}","surname":"${surname}","email":"${email}","phone":"${phone}","person":"${person}","address":"${address}","ico":"1","count":"1","comment":null,"souhlas":${souhlas}}
+    ${json}=     Catenate      {"targetid":"","kurz":"${course}","name":"${name}","surname":"${surname}","email":"${email}","phone":"${phone}","person":"${person}","address":"${address_ico}","ico":"${address_ico}","count":"1","comment":null,"souhlas":${souhlas}}
 
     #převedení do UTF-8
     ${json_utf8} =     Encode String To Bytes     ${json}     UTF-8      #vyžaduje knihovnu String
