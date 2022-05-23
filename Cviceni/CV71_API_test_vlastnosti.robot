@@ -26,14 +26,14 @@ ${urlapp}           ${url}${app}
 
 *** Test Cases ***
 
-Registrace na kurz
-    Registrace na kurz  2  Jan787878  Novak  jan.novak@abc.cz  777123123  fyz  Udolni 21, Brno  false  200
+Registrace na kurz fyzicka osoba
+    Registrace na kurz  2  Jan787878  Novak  jan.novak@abc.cz  777123123  fyz  Udolni 21, Brno  1  komentar  false  200
+
+Registrace na kurz pravnicka osoba
+    Registrace na kurz  2  Jan787878  Novak  jan.novak@abc.cz  777123123  pra  27232433  1  dekuji  false  200
 
 Registrace na kurz háčky a čárky
-    Registrace na kurz  2  Janěščřžýáíéů  Novakěščřžýáíéů  jan.novak@abc.cz  777123123  fyz  Udolniěščřžýáíéů, Brno  false  200
-
-Registrace na kurz negativni test
-    Registrace na kurz  2  Janěščřžýáíéů  Novakěščřžýáíéů  chybna_emailova_adresa  777123123  fyz  Udolniěščřžýáíéů, Brno  false  500
+    Registrace na kurz  2  Janěščřžýáíéů  Novakěščřžýáíéů  jan.novak@abc.cz  777123123  fyz  Udolniěščřžýáíéů, Brno  1  nic  false  200
 
 *** Keywords ***
 
