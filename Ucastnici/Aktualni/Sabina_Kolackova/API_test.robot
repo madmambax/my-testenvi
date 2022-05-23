@@ -3,7 +3,7 @@
 Library	        Collections
 Library	        RequestsLibrary
 Library         String
-Resource        Data_and_Config/TestData.robot
+Resource        TestData.robot
 
 
 *** Variables ***
@@ -15,13 +15,16 @@ ${urlapp}           ${url}${app}
 *** Test Cases ***
 
 Registrace na kurz
-    Registrace na kurz  2  Jan787878  Novak  jan.novak@abc.cz  777123123  fyz  Udolni 21, Brno  false  200
+    Registrace na kurz  2  Jan787878  Novak  jan.novak@abc.cz  777123123  fyz  Udolni 21, Brno  true  200
+
+Registrace na kurz- kurz 1
+    Registrace na kurz  1  Jan787878  Novak  jan.novak@abc.cz  777123123  fyz  Udolni 21, Brno  true  200
 
 Registrace na kurz háčky a čárky
     Registrace na kurz  2  Janěščřžýáíéů  Novakěščřžýáíéů  jan.novak@abc.cz  777123123  fyz  Udolniěščřžýáíéů, Brno  false  200
 
 Registrace na kurz negativni test
-    Registrace na kurz  2  Janěščřžýáíéů  Novakěščřžýáíéů  chybna_emailova_adresa  777123123  fyz  Udolniěščřžýáíéů, Brno  false  500
+    Registrace na kurz  2  Jan  Novak    chybna_emailova_adresa  777123123  fyz  Udolni, Brno  false  500
 
 Registrace na kurz negativni test-spatny telefon
     Registrace na kurz  2  Jan  Novak  neco@neco.cz  111222333444  fyz  Udolni, Brno  false  500
@@ -31,6 +34,9 @@ Registrace na kurz- slovenska predvolba
 
 Registrace na kurz- spatny email
     Registrace na kurz  2  Jan787878  Novak  @.  777123123  fyz  Udolni 21, Brno  false  500
+
+Registrace na kurz - dlouhé jméno
+    Registrace na kurz  2  JanAaaaaaaaaaAAAAAAAAAAbbbbbbbbbbBBBBBBBBBBccccccccccCCCCCCCCCCddddddddddDDDDDDDDDDeeeeeeeeeeEEEEEEEEEEAaaaaaaaaaAAAAAAAAAAbbbbbbbbbbBBBBBBBBBBccccccccccCCCCCCCCCCddddddddddDDDDDDDDDDeeeeeeeeeeEEEEEEEEEE    Novak  jan.novak@abc.cz  777123123  fyz  Udolni 21, Brno  true  200
 
 *** Keywords ***
 
