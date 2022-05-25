@@ -6,6 +6,7 @@
 *** Settings ***
 Documentation   CV: akce pred testem a po skonceni testu
 Library         Browser
+Library         DebugLibrary     # knihova pro ladění, pokud chcete ledit test stačí to přislušéno místa dat KS: Debug
 
 Resource        Data_and_Config/TestData.robot
 Resource        Data_and_Config/Configuration.robot
@@ -16,7 +17,7 @@ Suite Teardown  Uklid_sada
 Test Setup      Pred_testem
 Test Teardown   Uklid_po_testu
 
-Test Timeout    25      # Timeout pro všechny KS z RobotFW
+Test Timeout    ${TIMEOUT_ROBOT_KW}      # Timeout pro všechny KS z RobotFW
 
 *** Variables ***
 
@@ -72,6 +73,7 @@ Logout
 
 Pridat do kosiku
     [Arguments]         ${Zbozi}                    ${produkt_id}        ${Kusu}
+#    debug
     Type Text           ${SEL_SearchGlobal}         ${Zbozi}
     Sleep               1                           # statický timeout
     Click               ${SEL_BtnSearchGlobal}      # tlačítko Hledat
