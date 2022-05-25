@@ -61,9 +61,13 @@ Login
 Pridat do kosiku
     [Arguments]         ${Zbozi}                    ${Kusu}
     Type Text           ${SEL_SearchGlobal}         ${Zbozi}
+    Sleep               1                           # statický timeout
     #1x
     Click               ${SEL_BtnSearchGlobal}      # tlačítko Hledat
+#    Sleep               5                           # statický timeout
+
     Click               ${SEL_BtnAdd}               delay=${TIME_BETWEEN_CLICKS}     # způsobuje někdy zmizení uživatele, scrol donwn, důvod někdy klikne na zboží níže
+
     # Kusu - 1
     ${Pocet}            Evaluate                    ${Kusu} - 1
     Click               ${SEL_BtnPlus}              clickCount=${Pocet}
@@ -92,7 +96,7 @@ Odebrat z kose
     Click                   ${SEL_BtnMinus}             clickCount=${Kusu}      delay=100ms
     Take Screenshot
 
-    Debug
+#    Debug
 
 
 
@@ -106,6 +110,8 @@ Pred_sadou
     Open Browser        ${URL}                                     headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
 #    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
     New Page                    ${URL}
+    Cookie                      AcceptAll
+    ${old_mode} =               Set Strict Mode             False
 
 
 Uklid_po_testu
@@ -132,3 +138,14 @@ Uklid_sada
     Go to                   ${URL}
     Logout
     Close Browser
+
+
+Cookie
+    [Arguments]         ${type}
+    IF  "${type}" == "AcceptAll"
+        Click           ${SEL_Cookie_AllowAll}
+    ELSE
+        Click           ${SEL_Cookie_Decline}
+    END
+
+    sleep               1      #workaround: Probliknutí cele stránky po kliknutí na tlačítko
