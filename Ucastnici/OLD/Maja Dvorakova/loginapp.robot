@@ -44,7 +44,7 @@ Login uspech
     ${data}=   Login_V2   novak       tajnenovak
     Dictionary Should Contain Value     ${data}      200
 
-    Login neuspech
+Login neuspech
     [Documentation]  	Neuspesne prihlaseni se spatnym heslem s navratovym kodem po akci
     ${data}=   Login_V2   novak       @
     Dictionary Should Contain Value     ${data}      403
