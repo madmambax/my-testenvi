@@ -44,7 +44,7 @@ ${SEL_BtnPlus}              data-test=btnPlus
 #${SEL_BtnPlusId}            css=.sc-oad7xy-0 [data-product-id="${produkt_id}"][data-test="btnPlus"]
 #Je třeba použít
 ${SEL_ProductID}            data-product-id
-${SEL_CssForAdding}         .sc-oad7xy-0
+${SEL_CssForAdding}         .amountCounterWrap
 
 ${SEL_BtnMinus}             data-test=btnMinus
 
