@@ -25,6 +25,7 @@ Starting a browser with a page
 
 
 ### CSS selektory ###
+#identifikace sekce pro Přihlášení
 
    #co nefunguje
     #   ${text} =     Get Text    css=\#headerLogin
@@ -35,12 +36,12 @@ Starting a browser with a page
 
 
    #Co JEDE
-   ${text} =     Get Text    css=.sc-18g3ccf-3.iIgRWM               #výběr pomocí 2 class, nesmí nezi nima být mezera
+#   ${text} =     Get Text    css=.sc-18g3ccf-3.iIgRWM               #výběr pomocí 2 class, nesmí nezi nima být mezera
+   ${text} =     Get Text    css=.sc-9c1ebddd-0.hTQIar               #výběr pomocí 2 class, nesmí nezi nima být mezera
    ${text} =     Get Text    css=\#headerLogin
    ${text} =     Get Text    css=[data-gtm-section="user-login"]    #výběr pomocí CSS atributu
-   ${text} =     Get Text    css=[class="sc-18g3ccf-3 iIgRWM"]      #výběr pomocí 2 class formou css atributu
-   ${text} =     Get Text    css=\#header >> [class="sc-18g3ccf-3 iIgRWM"]   #kobinace 2 CSS selektorů
-   ${text} =     Get Text    css=\#header >> [class="sc-hlaif7-1 hBMDTj"] >> [class="sc-18g3ccf-3 iIgRWM"]
+   ${text} =     Get Text    css=[class="sc-9c1ebddd-0 hTQIar"]      #výběr pomocí 2 class formou css atributu
+#opravit#   ${text} =     Get Text    css=\#header >> [class="sc-hlaif7-1 hBMDTj"] >> [class="sc-18g3ccf-3 iIgRWM"]
    ${text} =     Get Text    css=[data-test=header-user-icon]
    log to console       ${text}
 
