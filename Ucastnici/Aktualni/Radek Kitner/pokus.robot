@@ -1,10 +1,11 @@
 *** Test Cases ***
 
 Prvni test
-    Log  Ahoj 123
+    log  Ahoj
 
-
-
+    Should Be Equal   ahoj              ahoj
+    Should Contain    ahoj dobrý den    ahoj
+    Should Be True    10 < 100
 
 
 
