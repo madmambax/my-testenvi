@@ -44,11 +44,9 @@ Test Objednavky
     Take Screenshot
     Take Screenshot
     Odebrat z kosiku    ${kusu}
-    Take Screenshot
-    Take Screenshot
+#    Take Screenshot
     [Teardown]          Logout         #provede se i když test zfailuje
-    Take Screenshot
-    Take Screenshot
+#    Take Screenshot
 
 
 

@@ -11,6 +11,7 @@ ${urlapp}   ${url}${app}
 
 *** Test Cases ***
 
+Prvni API test
       ${response}=      GET  https://www.google.com
       Log to Console    ${response}
 

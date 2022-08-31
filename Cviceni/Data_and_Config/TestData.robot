@@ -25,8 +25,10 @@ ${ERROR_TEXT_EmptyCart}             Košík funguje i jako nákupní seznam
 ${SEL_HeaderLoginErrorTxt}  xpath=//div[@class='u-mr--8']
 ${SEL_HeaderLogin}          id=headerLogin
 ${SEL_UserBoxLogoutBtn}     data-test=user-box-logout-button
-${SEL_LoginFormEmail}       data-test=user-login-form-email
-${SEL_LoginFormPwd}         data-test=user-login-form-password
+#${SEL_LoginFormEmail}       data-test=user-login-form-email
+#${SEL_LoginFormPwd}         data-test=user-login-form-password
+${SEL_LoginFormEmail}       id=email
+${SEL_LoginFormPwd}         id=password
 ${SEL_BtnSignIn}            data-test=btnSignIn
 
 #SELEKTORY pro Header
