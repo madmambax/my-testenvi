@@ -7,7 +7,7 @@ Library     OperatingSystem
 Prvni test pozitivní
     ${res} =        run     help dir
     log             ${res}
-    Should Contain  ${res}  For more information on a specific command, type HELP command-name
+    Should Contain  ${res}  Displays a list of files and subdirectories in a directory.
 
 
 Druhy test negativni

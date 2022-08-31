@@ -1,7 +1,7 @@
 *** Test Cases ***
 
 Prvni test
-    Log  Ahoj
+    Log  Ahoj 123
 
 
 
