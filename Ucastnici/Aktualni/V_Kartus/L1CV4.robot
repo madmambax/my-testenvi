@@ -1,18 +1,18 @@
 *** Settings ***
 Library     OperatingSystem
+Library     OperatingSystem
 
 *** Test Cases ***
 
 prvni test
-    ${result} =     run             dir C:
+    ${result} =     run             dir neznamy_adresar
     log             ${result}
-    Should Contain  ${result}       02/09/2022  17:53               745 pokus.robot
-
+    Should Contain  ${result}       Directory of C:\
 
 druhy test
-    ${result} =     run             dir C:
+    ${result} =     run             dir neznamy_adresar
     log             ${result}
-    Should Contain  ${result}       vojtechkartus
+    Should Contain  ${result}       File Not Found
 
 
 
