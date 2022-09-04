@@ -3,7 +3,10 @@
 Prvni test
     Log  Ahoj
 
+*** druhy test ***
 
+druhy test
+    help  dir
 
 
 
