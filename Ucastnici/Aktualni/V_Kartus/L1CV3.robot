@@ -1,15 +1,18 @@
+*** Settings ***
+Library     OperatingSystem
+
 *** Test Cases ***
 
-Prvni test
-    Log  Ahoj 123
+prvni test
+    ${result} =     run             dir C:
+    log             ${result}
+    Should Contain  ${result}       02/09/2022  17:53               745 pokus.robot
 
 
-
-
-
-
-
-
+druhy test
+    ${result} =     run             dir C:
+    log             ${result}
+    Should Contain  ${result}       vojtechkartus
 
 
 
