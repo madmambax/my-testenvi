@@ -1,18 +1,18 @@
+*** Settings ***
+Library     OperatingSystem
+Library     OperatingSystem
+
 *** Test Cases ***
 
-Prvni test
-    Log  Ahoj
-
-*** druhy test ***
+prvni test
+    ${result} =     run             dir neznamy_adresar
+    log             ${result}
+    Should Contain  ${result}       Directory of C:\
 
 druhy test
-    help  dir
-
-
-
-
-
-
+    ${result} =     run             dir neznamy_adresar
+    log             ${result}
+    Should Contain  ${result}       File Not Found
 
 
 
