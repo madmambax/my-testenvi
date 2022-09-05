@@ -2,7 +2,7 @@
 Library   OperatingSystem
 
 *** Test Cases ***
-#Prvni pozitivni test
+#Pozitivni testy
 
 První
     ${result}         run           dir C:\Programy
