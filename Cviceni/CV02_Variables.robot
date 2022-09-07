@@ -17,10 +17,10 @@ ${NAME}      Daniel
 #2. způsob zápisu
 ${GREET2} =  Hello
 
-#vytvoření seznamu
+#vytvoření seznamu v sekci Variables
 @{list} =	jablko  hruška  banán  citron  pomeranč
 
-#vytvoření slovníku
+#vytvoření slovníku v sekci Variables
 &{dictionary} = 	login=franta	heslo=tajne
 
 *** Test Cases ***
