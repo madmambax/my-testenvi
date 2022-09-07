@@ -10,7 +10,7 @@ Prvni test negativní
     Should Contain  ${res}  File Not Found
 
 Druhy test negativní
-    ${res} =        run     help set
+    ${res} =        run     help tes
     Log             ${res}
-    Should Contain  ${res}  Specifies the environment-variable name.
+    Should Contain  ${res}  Try "tes /?".
 
