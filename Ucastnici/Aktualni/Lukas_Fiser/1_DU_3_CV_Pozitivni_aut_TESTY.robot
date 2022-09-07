@@ -5,9 +5,9 @@ Library     OperatingSystem
 *** Test Cases ***
 
 Prvni test pozitivní
-    ${res} =        run     dir c:\Windows
+    ${res} =        run     echo
     log             ${res}
-    Should Contain  ${res}  notepad.exe
+    Should Contain  ${res}  ECHO is on.
 
 Druhy test pozitivni
     ${res} =        run     ipconfig
