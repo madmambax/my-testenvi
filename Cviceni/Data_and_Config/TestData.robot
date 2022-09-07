@@ -15,6 +15,7 @@ ${ZBOZI01_ID}               1320669
 #Strings
 ${TEXT_MainTitle}                   Online supermarket Rohlik.cz
 ${TEXT_EmptyCart}                   Vysypat košík
+${TEXT_Prihlasit}                   Přihlásit
 
 #Error strings
 ${ERROR_TEXT_FillCorrectEmail}      Zadejte platný email
