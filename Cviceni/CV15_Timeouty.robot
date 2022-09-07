@@ -17,7 +17,7 @@ Suite Teardown  Uklid_sada
 Test Setup      Pred_testem
 Test Teardown   Uklid_po_testu
 
-Test Timeout    ${TIMEOUT_ROBOT_KW}      # Timeout pro všechny KS z RobotFW
+Test Timeout    ${TC_TIMEOUT_ROBOT_KW}      # Timeout pro všechny KS z RobotFW
 
 *** Variables ***
 
@@ -42,11 +42,10 @@ Test Objednavky
     Pridat do kosiku    ${ZBOZI01_NAME}          ${ZBOZI01_ID}                       ${kusu}
     Click               ${SEL_CartContent}
     Take Screenshot
-    Take Screenshot
     Odebrat z kosiku    ${kusu}
-#    Take Screenshot
+    Take Screenshot
     [Teardown]          Logout         #provede se i když test zfailuje
-#    Take Screenshot
+    Take Screenshot
 
 
 
@@ -68,6 +67,8 @@ Logout
     Go to               ${URL}
     Click               ${SEL_HeaderLoginErrorTxt}
     Click               ${SEL_UserBoxLogoutBtn}
+    # ověřit, že došlo k odhlášení
+    Get Text            ${SEL_HeaderLoginErrorTxt}          contains                                ${TEXT_Prihlasit}
 
 Pridat do kosiku
     [Arguments]         ${Zbozi}                    ${produkt_id}        ${Kusu}
