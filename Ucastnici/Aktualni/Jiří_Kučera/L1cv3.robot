@@ -7,7 +7,7 @@ Library   OperatingSystem
 První
     ${result} =        run          dir C:\
     Log               ${result}
-    Should Contain    ${result}     Volume Serial Number is DA5E-249C
+    Should Contain    ${result}     Volume in drive C
 
 Druhý
     ${result} =        run          pip list
