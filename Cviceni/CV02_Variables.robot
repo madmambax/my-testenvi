@@ -113,3 +113,21 @@ Test sítě nezávislý na OS
     #Vyhodnocení testu
     Should Contain      ${output}           Ethernet
 
+Datove konverze
+    ${cele_cislo} =        Set Variable    10
+    ${desetine_cislo} =    Set Variable    3.1415
+    ${retezec} =           Set Variable    Ahoj
+    Should Be Equal As Integers	    10	    ${cele_cislo}
+#ERROR    Should Be Equal As Integers	3.1415	${desetine_cislo}
+    Should Be Equal As Numbers 	    3.1415	${desetine_cislo}
+#ERROR    Should Be Equal As Integers	Ahoj	${retezec}
+    Should Be Equal As Strings      Ahoj        ${retezec}
+
+    ${retezec} =           Set Variable    3.1415
+    ${cislo} =             Convert To Number       ${retezec}
+    Should Be Equal As Numbers 	    3.1415	    ${cislo}
+
+#  Podobně se dá konvertovat na Integer nebo řetězec
+#         Convert To Integer
+#         Convert To String
+
