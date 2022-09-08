@@ -22,11 +22,11 @@ Open Browser To Login Page
 
 Input Username
 [Arguments]     ${username}
-Input Text  username_field  ${USERNAME}
+Input Text  username_field      ${USERNAME}
 
 Input Username
 [Arguments]     ${password}
-Input Text  password_field  ${PASSWORD}
+Input Text  password_field      ${PASSWORD}
 
 Submit Credentials
     Click Button    Login_button
