@@ -31,4 +31,4 @@ Test pro oveření že 0 položka seznamu obsahuje Chrome
     #použijte například  Should Contain
     @{seznam} =     Create List        chrome   brave   explorer
     Log To Console    ${seznam}
-    Should Contain      ${seznam}     chrome
+    Should Contain      ${seznam}[0]      chrome
