@@ -21,7 +21,7 @@ Treti test
     ${p} =      Evaluate    20
     ${v} =      Evaluate    10 * 2
     ${v_p} =    Evaluate  ${v} + ${p}
-    log to console    ${v_p}
+    log to console  výsledek: ${v_p}
 
 #seznam, @ /pozice polozek = [0,1,2]
 Ctvrty test
@@ -37,5 +37,14 @@ Paty test
     Log many        &{slovnik}
     Log             ${slovnik}
 
+#ukazku *** Keywords ***
+#Sesty test
+#   Ukazka KS   praha  brno  ostrava
 
+*** Keywords ***
+    [Arguments]      ${parametr1}   ${parametr2}  ${parametr3}
+    @{seznam} =      Create List    ${parametr1}   ${parametr2}   ${parametr3}
+    Log Many                  @{seznam}
+    Log                       ${seznam}
+    Log to Console            ${seznam}[1]
 
