@@ -29,12 +29,6 @@ druhy test
 
 
 
-
-
-
-
-
-
 #    Should Be Equal   ahoj              ahoj
 #    Should Contain    ahoj dobrý den    ahoj
 #    Should Be True    ${x}  < 100
