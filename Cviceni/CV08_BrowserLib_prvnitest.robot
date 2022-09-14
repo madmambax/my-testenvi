@@ -1,7 +1,3 @@
-*** Settings ***
-Library  Browser
-
-*** Test Cases ***
 
 *** Settings ***
 Library  Browser
