@@ -14,6 +14,9 @@ Starting a browser with a page
 
 #   Type Text    id=searchGlobal     Ahoj
 
+#   ${selector} =    Record Selector   tlačítko
+#   Click  ${selector}
+
 
 
 

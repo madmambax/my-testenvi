@@ -56,9 +56,11 @@ Ukazka logovani
 
 
   @{list1} =      Create List    first    second    third
-
+# jak zalogovat seznam
 
   &{Dict} =	    Create Dictionary	key=value	foo=bar
+  Log Many      &{Dict}
+# jak zalogovat slovník
 
 
 
