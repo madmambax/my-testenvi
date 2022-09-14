@@ -3,11 +3,6 @@ Library  Browser
 
 *** Test Cases ***
 
-*** Settings ***
-Library  Browser
-
-*** Test Cases ***
-
 Starting a browser with a page
    New Browser    chromium    headless=false
 #    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
@@ -16,6 +11,7 @@ Starting a browser with a page
 
    # odklikne cookies
    Click       id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
+   Click       text=Povolit všechny
    sleep       2        # nutné z důvodu chyby na rohlik.cz
 
 
@@ -47,8 +43,8 @@ Starting a browser with a page
 
    #Co JEDE
 #   ${text} =     Get Text    css=.sc-18g3ccf-3.iIgRWM               #výběr pomocí 2 class, nesmí mezi něma být mezera
-   ${text} =     Get Text    css=.sc-9c1ebddd-3.ixcgdp               #výběr pomocí 2 class, nesmí mezi něma být mezera
    ${text} =     Get Text    css=\#headerLogin
+   ${text} =     Get Text    css=.sc-9c1ebddd-3.ixcgdp               #výběr pomocí 2 class, nesmí mezi něma být mezera
    ${text} =     Get Text    css=[data-gtm-section="user-login"]    #výběr pomocí CSS atributu
    ${text} =     Get Text    css=[class="sc-9c1ebddd-3 ixcgdp"]      #výběr pomocí 2 class formou css atributu
 #opravit#   ${text} =     Get Text    css=\#header >> [class="sc-hlaif7-1 hBMDTj"] >> [class="sc-18g3ccf-3 iIgRWM"]
