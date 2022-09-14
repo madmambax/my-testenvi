@@ -14,6 +14,9 @@ Starting a browser with a page
 
 #   Type Text    id=searchGlobal     Ahoj
 
+#    Click   xpath=//*[@id="searchForm"]/button
+#    sleep   5
+
 #   ${selector} =    Record Selector   tlačítko
 #   Click  ${selector}
 
