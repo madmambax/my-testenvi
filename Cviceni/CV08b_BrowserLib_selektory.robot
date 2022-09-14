@@ -11,7 +11,7 @@ Starting a browser with a page
 
    # odklikne cookies
    Click       id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
-   Click       text=Povolit všechny
+#   Click       text=Povolit všechny
    sleep       2        # nutné z důvodu chyby na rohlik.cz
 
 
