@@ -1,4 +1,3 @@
-
 *** Settings ***
 Library  Browser
 
@@ -41,9 +40,9 @@ Prihlaseni bad heslo
     Click               id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
     Click               id=headerLogin
 #Vyplni spravne udaje do 'Vas e-mail'
-    Fill Text           id=email                         radek.tester@seznam.cz
+    Fill Text           id=email                          radek.tester@seznam.cz
 #Vyplni sptane udaje do 'Vase heslo'
-    Fill Text           id=password                      dasdas
+    Fill Text           id=password                     dasdas
     Sleep               1
     Take Screenshot
 #Zkusi se prihlasit
@@ -63,9 +62,9 @@ Prihlaseni success
     Click               id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
     Click               id=headerLogin
 #Vyplni spravne udaje do 'Vas e-mail'
-    Fill Text           id=email                         radek.tester@seznam.cz
+    Fill Text           xpath=//*[@id="email"]                         radek.tester@seznam.cz
 #Vyplni spravne udaje do 'Vase heslo'
-    Fill Text           id=password                      tajneheslotajneheslo
+    Fill Text           xpath=//*[@id="password"]                      tajneheslotajneheslo
     Sleep               1
     Take Screenshot
 #Zkusi se prihlasit
