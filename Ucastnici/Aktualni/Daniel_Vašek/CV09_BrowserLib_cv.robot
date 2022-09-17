@@ -9,6 +9,50 @@ ${URL}      https://www.rohlik.cz/vitejte
 
 *** Test Cases ***
 
+Prihlaseni bad heslo
+    Login          radek.tester@seznam.cz              dasdas                      Přihlásit
+    New Browser    chromium    headless=false
+    New Context    viewport={'width': 1720, 'height': 980}
+    New Page       ${URL}
+    Get Title      ==   Online supermarket Rohlik.cz — nejrychlejší doručení ve městě
+    Click          id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
+    sleep          2
+    Click          data-test=IconUserLogin
+    sleep          2
+    Click          id=email
+    Type Text      id=email
+    sleep          2
+    Click          id=password
+    Type Text      id=password
+    sleep          2
+    Click          text="Přihlásit se"
+    sleep          2
+    Get text       data-test=header-user-icon
+    Take Screenshot
+    sleep          2
+
+Prihlaseni bad login
+    Login          dsadsad@sdas.cz                     dasdas                      Přihlásit
+    New Browser    chromium    headless=false
+    New Context    viewport={'width': 1720, 'height': 980}
+    New Page       ${URL}
+    Get Title      ==   Online supermarket Rohlik.cz — nejrychlejší doručení ve městě
+    Click          id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
+    sleep          2
+    Click          data-test=IconUserLogin
+    sleep          2
+    Click          id=email
+    Type Text      id=email
+    sleep          2
+    Click          id=password
+    Type Text      id=password
+    sleep          2
+    Click          text="Přihlásit se"
+    sleep          2
+    Get text       data-test=header-user-icon
+    Take Screenshot
+    sleep          2
+
 Prihlaseni success
     Login          radek.tester@seznam.cz       tajneheslotajneheslo        JT
     New Browser    chromium    headless=false
@@ -38,41 +82,6 @@ Login
     log                           ${pemail}
     log                           ${pheslo}
     log                           ${pnastane}
-
-#Prihlaseni bad heslo
-    #New Browser    chromium    headless=false
-    #New Context    viewport={'width': 1920, 'height': 1080}
-    #New Page       ${URL}
-    #Get Title      ==   Online supermarket Rohlik.cz — nejrychlejší doručení ve městě
-    #Click          data-test=IconUserLogin
-    #sleep          10
-    #Click          id=header
-    #sleep          10
-    #Click          id=pageFullWidth
-    #sleep          10
-    #Login          radek.tester@seznam.cz              dasdas                      Přihlásit
-    #Click          text="Přihlásit se"
-    #Take Screenshot
-    #sleep           5
-
-#Prihlaseni bad login
-    #New Browser    chromium    headless=false
-    #New Context    viewport={'width': 1920, 'height': 1080}
-    #New Page       ${URL}
-    #Get Title      ==   Online supermarket Rohlik.cz — nejrychlejší doručení ve městě
-    #Click          data-test=IconUserLogin
-    #sleep          10
-    #Click          id=header
-    #sleep          10
-    #Click          id=pageFullWidth
-    #sleep          10
-    #Login          dsadsad@sdas.cz                     dasdas                      Přihlásit
-    #Click          text="Přihlásit se"
-    #Take Screenshot
-    #sleep           5
-
-
-
 
     #otevřít prohlížeč
 
