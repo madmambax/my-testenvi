@@ -24,6 +24,7 @@ Prihlaseni success
 
 *** Keywords ***
 
+# Cílem úkolu je doplnit toto klíčové slovo tak aby všechny testy prošly
 Login
     [Arguments]     ${pemail}      ${pheslo}     ${pnastane}
 

@@ -11,10 +11,15 @@ ${URL}      https://www.rohlik.cz/vitejte
 
 Prihlaseni bad heslo
     Login          radek.tester@seznam.cz              dasdas                      Přihlásit
+
+
 Prihlaseni bad login
     Login          dsadsad@sdas.cz                     dasdas                      Přihlásit
+
+
 Prihlaseni success
     Login          radek.tester@seznam.cz       tajneheslotajneheslo        JT
+
 
 *** Keywords ***
 
@@ -44,14 +49,15 @@ Login
     Click          data-test=IconUserLogin
     sleep          2
 
+
     #zadat email ${pemail} do místa pro zadání emailu
     Click          id=email
-    Type Text      ${pemail}
+    Type Text      id=email
     sleep          2
 
     #zadat heslo ${pheslo} do místa pro zadání hesla
     Click          id=password
-    Type Text      ${pheslo}
+    Type Text      id=password
     sleep          2
 
 
@@ -63,3 +69,7 @@ Login
     Get text       data-test=header-user-icon
     Take Screenshot
     sleep          2
+
+
+
+
