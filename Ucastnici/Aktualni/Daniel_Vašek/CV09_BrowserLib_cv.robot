@@ -11,71 +11,14 @@ ${URL}      https://www.rohlik.cz/vitejte
 
 Prihlaseni bad heslo
     Login          radek.tester@seznam.cz              dasdas                      Přihlásit
-    New Browser    chromium    headless=false
-    New Context    viewport={'width': 1720, 'height': 980}
-    New Page       ${URL}
-    Get Title      ==   Online supermarket Rohlik.cz — nejrychlejší doručení ve městě
-    Click          id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
-    sleep          2
-    Click          data-test=IconUserLogin
-    sleep          2
-    Click          id=email
-    Type Text      id=email
-    sleep          2
-    Click          id=password
-    Type Text      id=password
-    sleep          2
-    Click          text="Přihlásit se"
-    sleep          2
-    Get text       data-test=header-user-icon
-    Take Screenshot
-    sleep          2
-
 Prihlaseni bad login
     Login          dsadsad@sdas.cz                     dasdas                      Přihlásit
-    New Browser    chromium    headless=false
-    New Context    viewport={'width': 1720, 'height': 980}
-    New Page       ${URL}
-    Get Title      ==   Online supermarket Rohlik.cz — nejrychlejší doručení ve městě
-    Click          id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
-    sleep          2
-    Click          data-test=IconUserLogin
-    sleep          2
-    Click          id=email
-    Type Text      id=email
-    sleep          2
-    Click          id=password
-    Type Text      id=password
-    sleep          2
-    Click          text="Přihlásit se"
-    sleep          2
-    Get text       data-test=header-user-icon
-    Take Screenshot
-    sleep          2
-
 Prihlaseni success
     Login          radek.tester@seznam.cz       tajneheslotajneheslo        JT
-    New Browser    chromium    headless=false
-    New Context    viewport={'width': 1720, 'height': 980}
-    New Page       ${URL}
-    Get Title      ==   Online supermarket Rohlik.cz — nejrychlejší doručení ve městě
-    Click          id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
-    sleep          2
-    Click          data-test=IconUserLogin
-    sleep          2
-    Click          id=email
-    Type Text      id=email
-    sleep          2
-    Click          id=password
-    Type Text      id=password
-    sleep          2
-    Click          text="Přihlásit se"
-    sleep          2
-    Get text       data-test=header-user-icon
-    Take Screenshot
-    sleep          2
 
 *** Keywords ***
+
+# Cílem úkolu je doplnit toto klíčové slovo tak aby všechny testy prošly
 Login
     [Arguments]                   ${pemail}     ${pheslo}       ${pnastane}
     @{seznam} =     Create list   ${pemail}     ${pheslo}       ${pnastane}
@@ -84,17 +27,39 @@ Login
     log                           ${pnastane}
 
     #otevřít prohlížeč
+    New Browser    chromium    headless=false
+    New Context    viewport={'width': 1720, 'height': 980}
 
     #otevřít stránku rohlik.cz
+    New Page       ${URL}
 
     #ověřit že se stránka otevřela
+    Get Title      ==   Online supermarket Rohlik.cz — nejrychlejší doručení ve městě
+
+    #cookie
+    Click          id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
+    sleep          2
 
     #kliknout na Přihlásit
+    Click          data-test=IconUserLogin
+    sleep          2
 
     #zadat email ${pemail} do místa pro zadání emailu
+    Click          id=email
+    Type Text      ${pemail}
+    sleep          2
 
     #zadat heslo ${pheslo} do místa pro zadání hesla
+    Click          id=password
+    Type Text      ${pheslo}
+    sleep          2
+
 
     #klinout na tlačítko "Přihlasit se"
+    Click          text="Přihlásit se"
+    sleep          2
 
     #ověřit že jsem přihlášený data-test=header-user-icon musí obsahovat to co je v ${pnastane}
+    Get text       data-test=header-user-icon
+    Take Screenshot
+    sleep          2

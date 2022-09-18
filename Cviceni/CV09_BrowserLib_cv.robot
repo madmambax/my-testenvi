@@ -16,11 +16,8 @@ ${URL}      https://www.rohlik.cz/
 
 Prihlaseni bad login
     Login               dsadsad@sdas.cz                     dasdas                      Přihlásit
-
-
 Prihlaseni bad heslo
     Login               radek.tester@seznam.cz              dasdas                      Přihlásit
-
 Prihlaseni success
     Login               radek.tester@seznam.cz              tajneheslotajneheslo        JT
 
