@@ -52,12 +52,12 @@ Login
 
     #zadat email ${pemail} do místa pro zadání emailu
     Click          id=email
-    Type Text      id=email
+    Type Text      ${pemail}
     sleep          2
 
     #zadat heslo ${pheslo} do místa pro zadání hesla
     Click          id=password
-    Type Text      id=password
+    Type Text      ${pheslo}
     sleep          2
 
 
