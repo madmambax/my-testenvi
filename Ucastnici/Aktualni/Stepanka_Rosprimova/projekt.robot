@@ -11,9 +11,9 @@ Prihlaseni chybny login
 Prihlaseni chybne heslo
     Login               stepanka.rosprimova                 Vorman1234                  Přihlásit se
 
-Prihlaseni uspesne
+Prihlaseni uspesne a odhlaseni
     Login               stepanka.rosprimova                 Vorman1793                  Štěpánka Rosprimová
-#    + doplnit Logout
+    Logout              Štěpánka Rosprimová
 
 *** Keywords ***
 Login
@@ -37,49 +37,24 @@ Login
     Sleep              3
     Get Text           css=#cms-auth > div:nth-child(1) > a    ==    ${buttonText}
 
-Starting a browser with a page
-    New Browser    chromium    headless=false
-    New Page       ${webUrl}
-    Get Title      ==    ČJF | Jezdecký Informační Systém
-#   Click          id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
-    Sleep          5
-    Click          text="Přihlásit se"
-    Click          id=cms-auth
-    Click          css=#cms-auth
-    Click          xpath=//*[@id="cms-auth"]
-#   Click          data-login=cms-auth
-    Sleep          5
+Logout
+    [Arguments]        ${buttonText}
+    [Documentation]    Odhlaseni uzivatele z JIS
 
-    Type Text      text=”Uživatelské jméno”             ${login}
-    Type Text      text=”Heslo”                         ${password}
+    Log                ${buttonText}
 
-    Type Text      id=id_username                       ${login}
-    Type Text      id=id_password                       ${password}
+    Get Text           css=#cms-auth > div:nth-child(1) > a    ==    ${buttonText}
+    Click              xpath=//*[@id="cms-auth"]
+    Sleep              3
+    Click              id=logout-button
+    Sleep              3
+    Get Text           css=#cms-auth > div:nth-child(1) > a    ==    Přihlásit se
+    Take Screenshot    screenshot
 
-    Type Text      css=#id_username                     ${login}
-    Type Text      css=#id_password                     ${password}
-
-    Type Text      xpath=//*[@id="id_username"]         ${login}
-    Type Text      xpath=//*[@id="id_password"]         ${password}
-
-    Type Text      data-username=cms-username           ${login}
-    Type Text      data-password=cms-password           ${password}
-
-    Sleep          5
-
-    Click          text="Přihlásit se"
-    Click          id=login-button
-    Click          css=#login-button
-    Click          xpath=//*[@id="login-button"]
-#   Click          data-login-button=cms-auth-button
-
-    Get Text       css=#cms-auth > div:nth-child(1) > a    ==    ${buttonText}
-
-#Open Browser
-#New Page
-#Type Text
-#Click
-#Take Screenshot
-#Type Text
-#Get Title
-#Get Text
+#Open Browser       - otevření prohlížeče
+#New Page           - otevření nové stránky
+#Type Text          - vložení hodnoty (na požadované pole)
+#Click              - klik (na požadované tlačítko)
+#Take Screenshot    - vytvoření screenu
+#Get Title          - získá titulek webu (lze jej porovnat s požadovaným)
+#Get Text           - získá obsah daného pole (lze jej porovnat s požadovaným)
