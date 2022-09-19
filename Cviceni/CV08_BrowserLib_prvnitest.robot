@@ -1,7 +1,3 @@
-*** Settings ***
-Library  Browser
-
-*** Test Cases ***
 
 *** Settings ***
 Library  Browser
@@ -13,6 +9,9 @@ Starting a browser with a page
    Get Title      ==    Online supermarket Rohlik.cz — nejrychlejší doručení ve městě
 
 #   Type Text    id=searchGlobal     Ahoj
+
+#    Click   xpath=//*[@id="searchForm"]/button
+#    sleep   5
 
 #   ${selector} =    Record Selector   tlačítko
 #   Click  ${selector}
