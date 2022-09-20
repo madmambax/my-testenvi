@@ -3,19 +3,17 @@ Library  Browser
 
 *** Variables ***
 ${URL}      https://www.mypillow.cz/
-#${pemail}   dvasek1
-#${pheslo}   Kalendar66.
 
 #robot .\Pillow.robot
 
 *** Test Cases ***
 
 Prihlaseni správný login a heslo
-  Login          dvasek1                    Kalendar66.                      Přihlásit
+  Login          XXXXXX                    XXXXXXXX.                      Přihlásit
 Prihlaseni špatný login
-  Login          dvasek111                  Kalendar66.                      Přihlásit
+  Login          vaseh11111                tvoje44444.                      Přihlásit
 Prihlaseni špatný heslo
-  Login          dvasek1                    Kalendar664444.                  Přihlásit
+  Login          vaseh1                    adarr664444.                  Přihlásit
 
 *** Keywords ***
 Login
