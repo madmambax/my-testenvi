@@ -4,7 +4,6 @@
 
 *** Settings ***
 Library  Browser
-Library    Browser
 
 *** Variables ***
 ${URL}      https://www.rohlik.cz/
@@ -58,11 +57,11 @@ Starting a browser with a page
     Sleep          3
     Click          data-test=btnSignIn
     Get Text       data-test=header-user-icon
-    #otevřít prohlížeč :)
-    #otevřít stránku rohlik.cz :)
-    #ověřit že se stránka otevřela :)
-    #kliknout na Přihlásit :)
+    #otevřít prohlížeč
+    #otevřít stránku rohlik.cz
+    #ověřit že se stránka otevřela
+    #kliknout na Přihlásit
     #zadat email ${pemail} do místa pro zadání emailu
     #zadat heslo ${pheslo} do místa pro zadání hesla
-    #klinout na tlačítko "Přihlasit se" :)
-    #ověřit že jsem přihlášený data-test=header-user-icon musí obsahovat to co je v ${pnastane} :)
+    #klinout na tlačítko "Přihlasit se"
+    #ověřit že jsem přihlášený data-test=header-user-icon musí obsahovat to co je v ${pnastane}

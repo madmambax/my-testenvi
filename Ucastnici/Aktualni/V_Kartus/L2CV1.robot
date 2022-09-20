@@ -18,8 +18,6 @@ prvni poz test
 #cv2 log
     log             adresar: ${result1} musí obsahovat: ${prvni_test_variable}
 
-
-
 druhy poz test
     ${result} =     run             ${result1}
     log             ${result}
