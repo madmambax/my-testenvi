@@ -1,6 +1,5 @@
 *** Settings ***
 Library     OperatingSystem
-Library     OperatingSystem
 
 *** Test Cases ***
 
