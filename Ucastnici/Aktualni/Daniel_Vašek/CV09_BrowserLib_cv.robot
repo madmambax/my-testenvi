@@ -11,12 +11,8 @@ ${URL}      https://www.rohlik.cz/vitejte
 
 Prihlaseni bad heslo
     Login          radek.tester@seznam.cz              dasdas                      Přihlásit
-
-
 Prihlaseni bad login
     Login          dsadsad@sdas.cz                     dasdas                      Přihlásit
-
-
 Prihlaseni success
     Login          radek.tester@seznam.cz       tajneheslotajneheslo        JT
 
@@ -26,7 +22,6 @@ Prihlaseni success
 # Cílem úkolu je doplnit toto klíčové slovo tak aby všechny testy prošly
 Login
     [Arguments]                   ${pemail}     ${pheslo}       ${pnastane}
-    @{seznam} =     Create list   ${pemail}     ${pheslo}       ${pnastane}
     log                           ${pemail}
     log                           ${pheslo}
     log                           ${pnastane}
@@ -52,12 +47,12 @@ Login
 
     #zadat email ${pemail} do místa pro zadání emailu
     Click          id=email
-    Type Text      ${pemail}
+    Type Text      id=email  ${pemail}
     sleep          2
 
     #zadat heslo ${pheslo} do místa pro zadání hesla
     Click          id=password
-    Type Text      ${pheslo}
+    Type Text      id=password  ${pheslo}
     sleep          2
 
 
