@@ -35,6 +35,8 @@ Starting a browser with a page
    #Co JEDE
 #   ${text} =     Get Text    css=.sc-18g3ccf-3.iIgRWM               #výběr pomocí 2 class, nesmí mezi něma být mezera
    ${text} =     Get Text    css=\#headerLogin
+   ${text} =     Get Text    css=#headerLogin                        # v nové verzi Browser lib již není třeba backpacovat hastag
+   ${text} =     Get Text    css=span#headerLogin                    # výběr pomocí typu elementu (span) a id (headerLogin)
    ${text} =     Get Text    css=.sc-9c1ebddd-3.ixcgdp               #výběr pomocí 2 class, nesmí mezi něma být mezera
    ${text} =     Get Text    css=[data-gtm-section="user-login"]    #výběr pomocí CSS atributu
    ${text} =     Get Text    css=[class="sc-9c1ebddd-3 ixcgdp"]      #výběr pomocí 2 class formou css atributu
