@@ -50,8 +50,8 @@ Login
 
     Click               id=headerLogin
 
-    Type Text           data-test=user-login-form-email             ${email}
-    Type Text           data-test=user-login-form-password          ${heslo}
+    Type Text           id=email                                    ${email}
+    Type Text           id=password                                 ${heslo}
     Click               data-test=btnSignIn
     Get Text            data-test=header-user-icon          ==      ${validation}
     ${log}=   Get Text  data-test=header-user-icon
