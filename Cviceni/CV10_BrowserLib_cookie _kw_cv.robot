@@ -8,32 +8,35 @@ Documentation   Automatizace rohlik.cz s BrowserLibrary
 Library  Browser
 
 
-*** Variables ***
-${URL}      https://www.rohlik.cz/
-
-
 *** Test Cases ***
 
-#Prihlaseni bad login
-#    Login               dsadsad@sdas.cz                     dasdas                      Přihlásit
 
+#Priklad vyberu pomoci atributu, elementu a id
+#    Otevri stranku  https://www.google.cz
+#    Click           css=button#L2AGLb                        #Přijmou prohlášení
+#    Type Text       css=[aria-label="Najít"]   Testování     # selektor pomocí atributu
+#    Click           css=input.gNO89b >> nth=1                # selektor pomoci elementu a id
+#    sleep           3
+
+
+Prihlaseni bad login
+    Otevri stranku      https://www.rohlik.cz
+    Login               dsadsad@sdas.cz                     dasdas                      Přihlásit
 
 #Prihlaseni bad heslo
+#    Otevri stranku      https://www.rohlik.cz
 #    Login               radek.tester@seznam.cz              dasdas                      Přihlásit
 
-Prihlaseni success
-    Login               radek.tester@seznam.cz              tajneheslotajneheslo        JT
+#Prihlaseni success
+#    Otevri stranku      https://www.rohlik.cz
+#    Login               radek.tester@seznam.cz              tajneheslotajneheslo        JT
 
 
 *** Keywords ***
-
-Login
-    [Arguments]         ${email}                            ${heslo}                    ${validation}
-
+Otevri stranku
+    [Arguments]         ${URL}
     Open Browser        ${URL}                              headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
     New Page            ${URL}
-
-    Get Title           contains                            Rohlik
 
 ### Místo:
 #    Click               id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
@@ -41,6 +44,9 @@ Login
 # Vytvoříme KS Cookie s 1 parametrem, viz níže, parametr určuje zda chceme vše povolit nebo odmítnout
     Cookie              ???doplnit parametr klíčového slova???
 ###
+
+Login
+    [Arguments]         ${email}                            ${heslo}                    ${validation}
 
     Click               id=headerLogin
 
