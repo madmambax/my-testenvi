@@ -11,17 +11,17 @@ Library  Browser
 *** Test Cases ***
 
 
-#Priklad vyberu pomoci atributu, elementu a id
-#    Otevri stranku  https://www.google.cz
-#    Click           css=button#L2AGLb                        #Přijmou prohlášení
-#    Type Text       css=[aria-label="Najít"]   Testování     # selektor pomocí atributu
-#    Click           css=input.gNO89b >> nth=1                # selektor pomoci elementu a id
-#    sleep           3
+Priklad vyberu pomoci atributu, elementu a id
+    Otevri stranku  https://www.google.cz
+    Click           css=button#L2AGLb                        #Přijmou prohlášení
+    Type Text       css=[aria-label="Najít"]   Testování     # selektor pomocí atributu
+    Click           css=input.gNO89b >> nth=1                # selektor pomoci elementu a id
+    sleep           3
 
 
-Prihlaseni bad login
-    Otevri stranku      https://www.rohlik.cz
-    Login               dsadsad@sdas.cz                     dasdas                      Přihlásit
+#Prihlaseni bad login
+#    Otevri stranku      https://www.rohlik.cz
+#    Login               dsadsad@sdas.cz                     dasdas                      Přihlásit
 
 #Prihlaseni bad heslo
 #    Otevri stranku      https://www.rohlik.cz
