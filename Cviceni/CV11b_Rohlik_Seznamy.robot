@@ -94,6 +94,8 @@ Pridat do kosiku varianta produkt id
 
 
     # použít původní verzi a rozšířit ji o
+    Type Text   id=searchGlobal    ${Zbozi}
+    Click       text="Hledat"
 
     # kliknutí na tlačítko "Do košíku" pro konkrétní produkt
     #Click               css=kde se jako selektor použije ${produkt_id} a také data-test="btnAdd"
@@ -104,7 +106,7 @@ Pridat do kosiku varianta produkt id
 
     # přidání zbylého počtu kusů pomocí vícenásobného kliknutí na tlačítko plus u konkrétního produktu
     #Click               css=kde se jako selektor použije nadřezená třída + ${produkt_id} + také data-test="btnPlus"   Je třeba přidat parametr:   clickCount=${Pocet}
-    Click                css=[data-product-id="1320669"]
+    Click                css=[data-product-id="${produkt_id}"][data-test="btnPlus"]  clickCount=${Pocet}
 
 
 
