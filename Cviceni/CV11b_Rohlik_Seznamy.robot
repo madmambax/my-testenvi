@@ -15,9 +15,9 @@ ${URL}      https://www.rohlik.cz/
 
 Pridani zbozi do kosiku
     Login               radek.tester@seznam.cz              tajneheslotajneheslo        JT
-    Pridat Do Kosiku                        banán
+#    Pridat Do Kosiku                        banán
 #    Pridat do kosiku varianta pocet         banán  5
-#    Pridat do kosiku varianta produkt id    banán  1349777  5
+    Pridat do kosiku varianta produkt id    banán  1349777  5
     Logout
 
 
@@ -97,12 +97,14 @@ Pridat do kosiku varianta produkt id
 
     # kliknutí na tlačítko "Do košíku" pro konkrétní produkt
     #Click               css=kde se jako selektor použije ${produkt_id} a také data-test="btnAdd"
+    Click                css=[data-product-id="${produkt_id}"][data-test="btnAdd"]
 
     #odečtení 1 kusu, protože 1 zboží jsme již přidali
     ${Pocet}            Evaluate                    ${Kusu} - 1
 
     # přidání zbylého počtu kusů pomocí vícenásobného kliknutí na tlačítko plus u konkrétního produktu
     #Click               css=kde se jako selektor použije nadřezená třída + ${produkt_id} + také data-test="btnPlus"   Je třeba přidat parametr:   clickCount=${Pocet}
+    Click                css=[data-product-id="1320669"]
 
 
 
