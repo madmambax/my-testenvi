@@ -38,7 +38,7 @@ Login
 ### Místo:
 #    Click               id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
 #    sleep               1
-# Vytvoříme KS Cookie s 1 parametrem, viz níže
+# Vytvoříme KS Cookie s 1 parametrem, viz níže, parametr určuje zda chceme vše povolit nebo odmítnout
     Cookie              ???doplnit parametr klíčového slova???
 ###
 
@@ -57,8 +57,10 @@ Login
 Cookie
     [Arguments]         ${type}
     IF  "${type}" == "AcceptAll"
+        # klinout na "Vše povolit"
         Click               ???doplnit identifikátor???
     ELSE
+        # klinout na "Odmítnout"
         Click               ???doplnit identifikátor???
     END
 
