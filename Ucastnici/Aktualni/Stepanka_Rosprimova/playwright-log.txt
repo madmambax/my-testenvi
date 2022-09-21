@@ -1,152 +1,101 @@
-{"level":30,"time":"2022-09-20T08:27:24.272Z","pid":10028,"hostname":"SEKRETARKA","msg":"Listening on 59241"}
-{"level":30,"time":"2022-09-20T08:27:24.805Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2022-09-20T08:27:24.807Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2022-09-20T08:27:24.813Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2022-09-20T08:27:24.814Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2022-09-20T08:27:24.824Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2022-09-20T08:27:25.364Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method newBrowser"}
-{"level":30,"time":"2022-09-20T08:27:25.370Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method newPage"}
-{"level":30,"time":"2022-09-20T08:27:25.371Z","pid":10028,"hostname":"SEKRETARKA","msg":"currentBrowser: [object Object]"}
-{"level":30,"time":"2022-09-20T08:27:25.392Z","pid":10028,"hostname":"SEKRETARKA","msg":"Changed active context"}
-{"level":30,"time":"2022-09-20T08:27:25.635Z","pid":10028,"hostname":"SEKRETARKA","msg":"Video path: undefined"}
-{"level":30,"time":"2022-09-20T08:27:25.635Z","pid":10028,"hostname":"SEKRETARKA","msg":"Changed active page"}
-{"level":30,"time":"2022-09-20T08:27:29.179Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method newPage"}
-{"level":30,"time":"2022-09-20T08:27:32.209Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method click"}
-{"level":30,"time":"2022-09-20T08:27:32.210Z","pid":10028,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with id=cms-auth in page."}
-{"level":30,"time":"2022-09-20T08:27:32.335Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method click"}
-{"level":30,"time":"2022-09-20T08:27:35.350Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method typeText"}
-{"level":30,"time":"2022-09-20T08:27:35.351Z","pid":10028,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with css=input#id_username in page."}
-{"level":30,"time":"2022-09-20T08:27:35.474Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method typeText"}
-{"level":30,"time":"2022-09-20T08:27:35.479Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method typeText"}
-{"level":30,"time":"2022-09-20T08:27:35.480Z","pid":10028,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with css=input#id_password in page."}
-{"level":30,"time":"2022-09-20T08:27:35.561Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method typeText"}
-{"level":30,"time":"2022-09-20T08:27:38.574Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method click"}
-{"level":30,"time":"2022-09-20T08:27:38.574Z","pid":10028,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with id=login-button in page."}
-{"level":30,"time":"2022-09-20T08:27:38.663Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method click"}
-{"level":30,"time":"2022-09-20T08:27:41.678Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method getText"}
-{"level":30,"time":"2022-09-20T08:27:41.678Z","pid":10028,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with css=#cms-auth > div:nth-child(1) > a in page."}
-{"level":30,"time":"2022-09-20T08:27:41.736Z","pid":10028,"hostname":"SEKRETARKA","msg":"Retrieved text for element css=#cms-auth > div:nth-child(1) > a containing Přihlásit se"}
-{"level":30,"time":"2022-09-20T08:27:41.742Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method getText"}
-{"level":30,"time":"2022-09-20T08:27:41.746Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2022-09-20T08:27:41.750Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2022-09-20T08:27:41.755Z","pid":10028,"hostname":"SEKRETARKA","msg":"Changed active context"}
-{"level":30,"time":"2022-09-20T08:27:41.755Z","pid":10028,"hostname":"SEKRETARKA","msg":"Changing current active page"}
-{"level":30,"time":"2022-09-20T08:27:41.755Z","pid":10028,"hostname":"SEKRETARKA","msg":"Changed active page"}
-{"level":30,"time":"2022-09-20T08:27:41.763Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2022-09-20T08:27:41.766Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2022-09-20T08:27:41.769Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method switchBrowser"}
-{"level":30,"time":"2022-09-20T08:27:41.769Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method switchBrowser"}
-{"level":30,"time":"2022-09-20T08:27:41.772Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method switchBrowser"}
-{"level":30,"time":"2022-09-20T08:27:41.773Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method switchBrowser"}
-{"level":30,"time":"2022-09-20T08:27:41.778Z","pid":10028,"hostname":"SEKRETARKA","msg":"Changed active context"}
-{"level":30,"time":"2022-09-20T08:27:41.778Z","pid":10028,"hostname":"SEKRETARKA","msg":"Changing current active page"}
-{"level":30,"time":"2022-09-20T08:27:41.778Z","pid":10028,"hostname":"SEKRETARKA","msg":"Changed active page"}
-{"level":30,"time":"2022-09-20T08:27:41.784Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method closeContext"}
-{"level":30,"time":"2022-09-20T08:27:41.794Z","pid":10028,"hostname":"SEKRETARKA","msg":"Removed page=a72e3763-2944-4c4d-856d-da92eaac913b from context=3241007d-f091-42f7-90b4-523d40f56ebb page stack"}
-{"level":30,"time":"2022-09-20T08:27:41.842Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method closeContext"}
-{"level":30,"time":"2022-09-20T08:27:41.853Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2022-09-20T08:27:41.853Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2022-09-20T08:27:41.859Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2022-09-20T08:27:42.325Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method newBrowser"}
-{"level":30,"time":"2022-09-20T08:27:42.332Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method newPage"}
-{"level":30,"time":"2022-09-20T08:27:42.332Z","pid":10028,"hostname":"SEKRETARKA","msg":"currentBrowser: [object Object]"}
-{"level":30,"time":"2022-09-20T08:27:42.363Z","pid":10028,"hostname":"SEKRETARKA","msg":"Changed active context"}
-{"level":30,"time":"2022-09-20T08:27:42.550Z","pid":10028,"hostname":"SEKRETARKA","msg":"Video path: undefined"}
-{"level":30,"time":"2022-09-20T08:27:42.550Z","pid":10028,"hostname":"SEKRETARKA","msg":"Changed active page"}
-{"level":30,"time":"2022-09-20T08:27:46.221Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method newPage"}
-{"level":30,"time":"2022-09-20T08:27:49.241Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method click"}
-{"level":30,"time":"2022-09-20T08:27:49.241Z","pid":10028,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with id=cms-auth in page."}
-{"level":30,"time":"2022-09-20T08:27:49.348Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method click"}
-{"level":30,"time":"2022-09-20T08:27:52.373Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method typeText"}
-{"level":30,"time":"2022-09-20T08:27:52.373Z","pid":10028,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with css=input#id_username in page."}
-{"level":30,"time":"2022-09-20T08:27:52.509Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method typeText"}
-{"level":30,"time":"2022-09-20T08:27:52.513Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method typeText"}
-{"level":30,"time":"2022-09-20T08:27:52.514Z","pid":10028,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with css=input#id_password in page."}
-{"level":30,"time":"2022-09-20T08:27:52.618Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method typeText"}
-{"level":30,"time":"2022-09-20T08:27:55.632Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method click"}
-{"level":30,"time":"2022-09-20T08:27:55.632Z","pid":10028,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with id=login-button in page."}
-{"level":30,"time":"2022-09-20T08:27:55.714Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method click"}
-{"level":30,"time":"2022-09-20T08:27:58.719Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method getText"}
-{"level":30,"time":"2022-09-20T08:27:58.719Z","pid":10028,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with css=#cms-auth > div:nth-child(1) > a in page."}
-{"level":30,"time":"2022-09-20T08:27:58.751Z","pid":10028,"hostname":"SEKRETARKA","msg":"Retrieved text for element css=#cms-auth > div:nth-child(1) > a containing Přihlásit se"}
-{"level":30,"time":"2022-09-20T08:27:58.751Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method getText"}
-{"level":30,"time":"2022-09-20T08:27:58.755Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2022-09-20T08:27:58.758Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2022-09-20T08:27:58.761Z","pid":10028,"hostname":"SEKRETARKA","msg":"Changed active context"}
-{"level":30,"time":"2022-09-20T08:27:58.761Z","pid":10028,"hostname":"SEKRETARKA","msg":"Changing current active page"}
-{"level":30,"time":"2022-09-20T08:27:58.761Z","pid":10028,"hostname":"SEKRETARKA","msg":"Changed active page"}
-{"level":30,"time":"2022-09-20T08:27:58.769Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2022-09-20T08:27:58.773Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2022-09-20T08:27:58.775Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method switchBrowser"}
-{"level":30,"time":"2022-09-20T08:27:58.775Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method switchBrowser"}
-{"level":30,"time":"2022-09-20T08:27:58.778Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method switchBrowser"}
-{"level":30,"time":"2022-09-20T08:27:58.778Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method switchBrowser"}
-{"level":30,"time":"2022-09-20T08:27:58.786Z","pid":10028,"hostname":"SEKRETARKA","msg":"Changed active context"}
-{"level":30,"time":"2022-09-20T08:27:58.787Z","pid":10028,"hostname":"SEKRETARKA","msg":"Changing current active page"}
-{"level":30,"time":"2022-09-20T08:27:58.787Z","pid":10028,"hostname":"SEKRETARKA","msg":"Changed active page"}
-{"level":30,"time":"2022-09-20T08:27:58.790Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method closeContext"}
-{"level":30,"time":"2022-09-20T08:27:58.796Z","pid":10028,"hostname":"SEKRETARKA","msg":"Removed page=95183b6e-62b9-4dbc-a265-4e415fa595bb from context=ab876f15-1496-4a49-9b6e-8f0ae64f3c76 page stack"}
-{"level":30,"time":"2022-09-20T08:27:58.847Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method closeContext"}
-{"level":30,"time":"2022-09-20T08:27:58.858Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2022-09-20T08:27:58.858Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2022-09-20T08:27:58.868Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2022-09-20T08:27:59.640Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method newBrowser"}
-{"level":30,"time":"2022-09-20T08:27:59.645Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method newPage"}
-{"level":30,"time":"2022-09-20T08:27:59.646Z","pid":10028,"hostname":"SEKRETARKA","msg":"currentBrowser: [object Object]"}
-{"level":30,"time":"2022-09-20T08:27:59.664Z","pid":10028,"hostname":"SEKRETARKA","msg":"Changed active context"}
-{"level":30,"time":"2022-09-20T08:27:59.964Z","pid":10028,"hostname":"SEKRETARKA","msg":"Video path: undefined"}
-{"level":30,"time":"2022-09-20T08:27:59.964Z","pid":10028,"hostname":"SEKRETARKA","msg":"Changed active page"}
-{"level":30,"time":"2022-09-20T08:28:03.643Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method newPage"}
-{"level":30,"time":"2022-09-20T08:28:06.689Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method click"}
-{"level":30,"time":"2022-09-20T08:28:06.689Z","pid":10028,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with id=cms-auth in page."}
-{"level":30,"time":"2022-09-20T08:28:06.773Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method click"}
-{"level":30,"time":"2022-09-20T08:28:09.780Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method typeText"}
-{"level":30,"time":"2022-09-20T08:28:09.781Z","pid":10028,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with css=input#id_username in page."}
-{"level":30,"time":"2022-09-20T08:28:09.877Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method typeText"}
-{"level":30,"time":"2022-09-20T08:28:09.879Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method typeText"}
-{"level":30,"time":"2022-09-20T08:28:09.880Z","pid":10028,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with css=input#id_password in page."}
-{"level":30,"time":"2022-09-20T08:28:09.963Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method typeText"}
-{"level":30,"time":"2022-09-20T08:28:12.976Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method click"}
-{"level":30,"time":"2022-09-20T08:28:12.976Z","pid":10028,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with id=login-button in page."}
-{"level":30,"time":"2022-09-20T08:28:13.052Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method click"}
-{"level":30,"time":"2022-09-20T08:28:16.064Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method getText"}
-{"level":30,"time":"2022-09-20T08:28:16.064Z","pid":10028,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with css=#cms-auth > div:nth-child(1) > a in page."}
-{"level":30,"time":"2022-09-20T08:28:16.106Z","pid":10028,"hostname":"SEKRETARKA","msg":"Retrieved text for element css=#cms-auth > div:nth-child(1) > a containing Štěpánka Rosprimová"}
-{"level":30,"time":"2022-09-20T08:28:16.106Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method getText"}
-{"level":30,"time":"2022-09-20T08:28:16.113Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method getText"}
-{"level":30,"time":"2022-09-20T08:28:16.113Z","pid":10028,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with css=#cms-auth > div:nth-child(1) > a in page."}
-{"level":30,"time":"2022-09-20T08:28:16.140Z","pid":10028,"hostname":"SEKRETARKA","msg":"Retrieved text for element css=#cms-auth > div:nth-child(1) > a containing Štěpánka Rosprimová"}
-{"level":30,"time":"2022-09-20T08:28:16.141Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method getText"}
-{"level":30,"time":"2022-09-20T08:28:16.144Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method click"}
-{"level":30,"time":"2022-09-20T08:28:16.144Z","pid":10028,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with xpath=//*[@id=\"cms-auth\"] in page."}
-{"level":30,"time":"2022-09-20T08:28:16.214Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method click"}
-{"level":30,"time":"2022-09-20T08:28:19.234Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method click"}
-{"level":30,"time":"2022-09-20T08:28:19.235Z","pid":10028,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with id=logout-button in page."}
-{"level":30,"time":"2022-09-20T08:28:20.919Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method click"}
-{"level":30,"time":"2022-09-20T08:28:23.921Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method getText"}
-{"level":30,"time":"2022-09-20T08:28:23.921Z","pid":10028,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with css=#cms-auth > div:nth-child(1) > a in page."}
-{"level":30,"time":"2022-09-20T08:28:23.959Z","pid":10028,"hostname":"SEKRETARKA","msg":"Retrieved text for element css=#cms-auth > div:nth-child(1) > a containing Přihlásit se"}
-{"level":30,"time":"2022-09-20T08:28:23.959Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method getText"}
-{"level":30,"time":"2022-09-20T08:28:23.963Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method takeScreenshot"}
-{"level":30,"time":"2022-09-20T08:28:24.389Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method takeScreenshot"}
-{"level":30,"time":"2022-09-20T08:28:24.392Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2022-09-20T08:28:24.394Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2022-09-20T08:28:24.396Z","pid":10028,"hostname":"SEKRETARKA","msg":"Changed active context"}
-{"level":30,"time":"2022-09-20T08:28:24.396Z","pid":10028,"hostname":"SEKRETARKA","msg":"Changing current active page"}
-{"level":30,"time":"2022-09-20T08:28:24.396Z","pid":10028,"hostname":"SEKRETARKA","msg":"Changed active page"}
-{"level":30,"time":"2022-09-20T08:28:24.402Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2022-09-20T08:28:24.414Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2022-09-20T08:28:24.419Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method switchBrowser"}
-{"level":30,"time":"2022-09-20T08:28:24.419Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method switchBrowser"}
-{"level":30,"time":"2022-09-20T08:28:24.421Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method switchBrowser"}
-{"level":30,"time":"2022-09-20T08:28:24.421Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method switchBrowser"}
-{"level":30,"time":"2022-09-20T08:28:24.425Z","pid":10028,"hostname":"SEKRETARKA","msg":"Changed active context"}
-{"level":30,"time":"2022-09-20T08:28:24.425Z","pid":10028,"hostname":"SEKRETARKA","msg":"Changing current active page"}
-{"level":30,"time":"2022-09-20T08:28:24.425Z","pid":10028,"hostname":"SEKRETARKA","msg":"Changed active page"}
-{"level":30,"time":"2022-09-20T08:28:24.428Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method closeContext"}
-{"level":30,"time":"2022-09-20T08:28:24.436Z","pid":10028,"hostname":"SEKRETARKA","msg":"Removed page=52b248d9-bed0-4477-8b33-5c39ea046004 from context=1d188945-1f1b-4a27-bf14-50e7ece7f2d3 page stack"}
-{"level":30,"time":"2022-09-20T08:28:24.490Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method closeContext"}
-{"level":30,"time":"2022-09-20T08:28:24.496Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2022-09-20T08:28:24.497Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2022-09-20T08:28:24.611Z","pid":10028,"hostname":"SEKRETARKA","msg":"Start of node method closeAllBrowsers"}
-{"level":30,"time":"2022-09-20T08:28:25.736Z","pid":10028,"hostname":"SEKRETARKA","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2022-09-21T21:04:35.878Z","pid":17864,"hostname":"SEKRETARKA","msg":"Listening on 57066"}
+{"level":30,"time":"2022-09-21T21:04:36.001Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-09-21T21:04:36.002Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-09-21T21:04:36.005Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-09-21T21:04:36.006Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-09-21T21:04:36.014Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2022-09-21T21:04:36.409Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method newBrowser"}
+{"level":30,"time":"2022-09-21T21:04:36.414Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method newContext"}
+{"level":30,"time":"2022-09-21T21:04:36.415Z","pid":17864,"hostname":"SEKRETARKA","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2022-09-21T21:04:36.415Z","pid":17864,"hostname":"SEKRETARKA","msg":"Trace file: "}
+{"level":30,"time":"2022-09-21T21:04:36.435Z","pid":17864,"hostname":"SEKRETARKA","msg":"Changed active context"}
+{"level":30,"time":"2022-09-21T21:04:36.435Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method newContext"}
+{"level":30,"time":"2022-09-21T21:04:36.440Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method newPage"}
+{"level":30,"time":"2022-09-21T21:04:36.440Z","pid":17864,"hostname":"SEKRETARKA","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2022-09-21T21:04:36.638Z","pid":17864,"hostname":"SEKRETARKA","msg":"Video path: undefined"}
+{"level":30,"time":"2022-09-21T21:04:36.638Z","pid":17864,"hostname":"SEKRETARKA","msg":"Changed active page"}
+{"level":30,"time":"2022-09-21T21:04:38.014Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method newPage"}
+{"level":30,"time":"2022-09-21T21:04:38.034Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method click"}
+{"level":30,"time":"2022-09-21T21:04:38.034Z","pid":17864,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll in page."}
+{"level":30,"time":"2022-09-21T21:04:38.807Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method click"}
+{"level":30,"time":"2022-09-21T21:04:39.817Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method click"}
+{"level":30,"time":"2022-09-21T21:04:39.818Z","pid":17864,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with id=headerLogin in page."}
+{"level":30,"time":"2022-09-21T21:04:39.932Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method click"}
+{"level":30,"time":"2022-09-21T21:04:39.938Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method typeText"}
+{"level":30,"time":"2022-09-21T21:04:39.939Z","pid":17864,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with id=email in page."}
+{"level":30,"time":"2022-09-21T21:04:40.244Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method typeText"}
+{"level":30,"time":"2022-09-21T21:04:40.246Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method typeText"}
+{"level":30,"time":"2022-09-21T21:04:40.246Z","pid":17864,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with id=password in page."}
+{"level":30,"time":"2022-09-21T21:04:40.495Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method typeText"}
+{"level":30,"time":"2022-09-21T21:04:40.497Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method click"}
+{"level":30,"time":"2022-09-21T21:04:40.497Z","pid":17864,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with data-test=btnSignIn in page."}
+{"level":30,"time":"2022-09-21T21:04:40.602Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method click"}
+{"level":30,"time":"2022-09-21T21:04:40.606Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-21T21:04:40.606Z","pid":17864,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with data-test=header-user-icon in page."}
+{"level":30,"time":"2022-09-21T21:04:40.640Z","pid":17864,"hostname":"SEKRETARKA","msg":"Retrieved text for element data-test=header-user-icon containing Přihlásit"}
+{"level":30,"time":"2022-09-21T21:04:40.640Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-21T21:04:40.660Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-21T21:04:40.661Z","pid":17864,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with data-test=header-user-icon in page."}
+{"level":30,"time":"2022-09-21T21:04:40.676Z","pid":17864,"hostname":"SEKRETARKA","msg":"Retrieved text for element data-test=header-user-icon containing Přihlásit"}
+{"level":30,"time":"2022-09-21T21:04:40.677Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-21T21:04:40.692Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-21T21:04:40.692Z","pid":17864,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with data-test=header-user-icon in page."}
+{"level":30,"time":"2022-09-21T21:04:40.712Z","pid":17864,"hostname":"SEKRETARKA","msg":"Retrieved text for element data-test=header-user-icon containing Přihlásit"}
+{"level":30,"time":"2022-09-21T21:04:40.712Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-21T21:04:40.739Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-21T21:04:40.739Z","pid":17864,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with data-test=header-user-icon in page."}
+{"level":30,"time":"2022-09-21T21:04:40.770Z","pid":17864,"hostname":"SEKRETARKA","msg":"Retrieved text for element data-test=header-user-icon containing Přihlásit"}
+{"level":30,"time":"2022-09-21T21:04:40.770Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-21T21:04:40.786Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-21T21:04:40.786Z","pid":17864,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with data-test=header-user-icon in page."}
+{"level":30,"time":"2022-09-21T21:04:40.812Z","pid":17864,"hostname":"SEKRETARKA","msg":"Retrieved text for element data-test=header-user-icon containing Přihlásit"}
+{"level":30,"time":"2022-09-21T21:04:40.812Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-21T21:04:40.832Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-21T21:04:40.832Z","pid":17864,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with data-test=header-user-icon in page."}
+{"level":30,"time":"2022-09-21T21:04:41.182Z","pid":17864,"hostname":"SEKRETARKA","msg":"Retrieved text for element data-test=header-user-icon containing JT"}
+{"level":30,"time":"2022-09-21T21:04:41.182Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-21T21:04:41.188Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method getText"}
+{"level":30,"time":"2022-09-21T21:04:41.188Z","pid":17864,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with data-test=header-user-icon in page."}
+{"level":30,"time":"2022-09-21T21:04:41.391Z","pid":17864,"hostname":"SEKRETARKA","msg":"Retrieved text for element data-test=header-user-icon containing JT"}
+{"level":30,"time":"2022-09-21T21:04:41.392Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method getText"}
+{"level":30,"time":"2022-09-21T21:04:41.404Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2022-09-21T21:04:41.855Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2022-09-21T21:04:41.862Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method typeText"}
+{"level":30,"time":"2022-09-21T21:04:41.863Z","pid":17864,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with id=searchGlobal in page."}
+{"level":30,"time":"2022-09-21T21:04:45.137Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method typeText"}
+{"level":30,"time":"2022-09-21T21:04:45.142Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method click"}
+{"level":30,"time":"2022-09-21T21:04:45.142Z","pid":17864,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with text=\"Hledat\" in page."}
+{"level":30,"time":"2022-09-21T21:04:45.350Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method click"}
+{"level":30,"time":"2022-09-21T21:04:45.353Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method click"}
+{"level":30,"time":"2022-09-21T21:04:45.353Z","pid":17864,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with css=[data-product-id=\"1349785\"][data-test=\"btnAdd\"] in page."}
+{"level":30,"time":"2022-09-21T21:04:48.564Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method click"}
+{"level":30,"time":"2022-09-21T21:04:48.569Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method click"}
+{"level":30,"time":"2022-09-21T21:04:48.569Z","pid":17864,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with css=[data-test=\"btnPlus\"][data-product-id=\"1349785\"] >> nth=1 in page."}
+{"level":30,"time":"2022-09-21T21:04:49.356Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method click"}
+{"level":30,"time":"2022-09-21T21:04:49.363Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method click"}
+{"level":30,"time":"2022-09-21T21:04:49.363Z","pid":17864,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with xpath=//div[@class='u-mr--8'] in page."}
+{"level":30,"time":"2022-09-21T21:04:49.568Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method click"}
+{"level":30,"time":"2022-09-21T21:04:49.570Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method click"}
+{"level":30,"time":"2022-09-21T21:04:49.570Z","pid":17864,"hostname":"SEKRETARKA","msg":"Strict mode is enabled, find Locator with data-test=user-box-logout-button in page."}
+{"level":30,"time":"2022-09-21T21:04:50.234Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method click"}
+{"level":30,"time":"2022-09-21T21:04:50.237Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-09-21T21:04:50.241Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-09-21T21:04:50.243Z","pid":17864,"hostname":"SEKRETARKA","msg":"Changed active context"}
+{"level":30,"time":"2022-09-21T21:04:50.243Z","pid":17864,"hostname":"SEKRETARKA","msg":"Changing current active page"}
+{"level":30,"time":"2022-09-21T21:04:50.243Z","pid":17864,"hostname":"SEKRETARKA","msg":"Changed active page"}
+{"level":30,"time":"2022-09-21T21:04:50.248Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-09-21T21:04:50.257Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-09-21T21:04:50.260Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2022-09-21T21:04:50.260Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2022-09-21T21:04:50.262Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2022-09-21T21:04:50.263Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2022-09-21T21:04:50.267Z","pid":17864,"hostname":"SEKRETARKA","msg":"Changed active context"}
+{"level":30,"time":"2022-09-21T21:04:50.268Z","pid":17864,"hostname":"SEKRETARKA","msg":"Changing current active page"}
+{"level":30,"time":"2022-09-21T21:04:50.268Z","pid":17864,"hostname":"SEKRETARKA","msg":"Changed active page"}
+{"level":30,"time":"2022-09-21T21:04:50.270Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method closeContext"}
+{"level":30,"time":"2022-09-21T21:04:50.303Z","pid":17864,"hostname":"SEKRETARKA","msg":"Removed page=eea69b84-8ca1-4484-8cea-508b576eba1d from context=b6ebcdb3-1722-45ae-88b0-3b8d905e22f0 page stack"}
+{"level":30,"time":"2022-09-21T21:04:50.342Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method closeContext"}
+{"level":30,"time":"2022-09-21T21:04:50.346Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-09-21T21:04:50.346Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-09-21T21:04:50.387Z","pid":17864,"hostname":"SEKRETARKA","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2022-09-21T21:04:50.632Z","pid":17864,"hostname":"SEKRETARKA","msg":"End of node method closeAllBrowsers"}
