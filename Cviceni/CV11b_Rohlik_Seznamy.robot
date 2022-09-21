@@ -15,9 +15,9 @@ ${URL}      https://www.rohlik.cz/
 
 Pridani zbozi do kosiku
     Login               radek.tester@seznam.cz              tajneheslotajneheslo        JT
-#    Pridat Do Kosiku                        banán
+    Pridat Do Kosiku                        banán
 #    Pridat do kosiku varianta pocet         banán  5
-    Pridat do kosiku varianta produkt id    banán  1349777  5
+#    Pridat do kosiku varianta produkt id    banán  1349777  5
     Logout
 
 
@@ -36,8 +36,8 @@ Login
 
     Click               id=headerLogin
 
-    Type Text           data-test=user-login-form-email             ${email}
-    Type Text           data-test=user-login-form-password          ${heslo}
+    Type Text           id=email             ${email}
+    Type Text           id=password          ${heslo}
     Click               data-test=btnSignIn
     Get Text            data-test=header-user-icon          ==      ${validation}
     ${log}=   Get Text  data-test=header-user-icon
@@ -64,15 +64,18 @@ Logout
 Pridat do kosiku
     [Arguments]         ${Zbozi}
 
+#    ${old_mode} =      Set Strict Mode    False
     #zde DOPLNIT ks pro napsání textu, který je v ${Zbozi} do vyhledávání
-
+    Type Text   id=searchGlobal    ${Zbozi}
     Sleep               1                           #Statický timeout
 
     #zde DOPLNIT ks pro kliknutí na hledat, selektor bude text "Hledat"
+    Click       text="Hledat"
 
     Sleep               1                           #Statický timeout
 
     #zde DOPLNIT ks pro kliknout talčítko "Do košíku"
+    Click       data-test=btnAdd >> nth=1
 
     #ověří že je zboží v košíku
     ${cart_text}=       Get Text                    id=cart
