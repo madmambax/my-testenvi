@@ -10,9 +10,9 @@ ${URL}      https://www.rohlik.cz/vitejte
 *** Test Cases ***
 
 Prihlaseni bad heslo
-    Login          radek.tester@seznam.cz              dasdas                      Přihlásit
+    Login          radek.tester@seznam.cz              dasdas                      Zadal(a) jste nesprávný e-mail nebo heslo.
 Prihlaseni bad login
-    Login          dsadsad@sdas.cz                     dasdas                      Přihlásit
+    Login          dsadsad@sdas.cz                     dasdas                      Zadal(a) jste nesprávný e-mail nebo heslo.
 Prihlaseni success
     Login          radek.tester@seznam.cz       tajneheslotajneheslo        JT
 
@@ -61,7 +61,7 @@ Login
     sleep          2
 
     #ověřit že jsem přihlášený data-test=header-user-icon musí obsahovat to co je v ${pnastane}
-    Get text       data-test=header-user-icon
+    Get text       data-test=header-user-icon   ${pnastane}
     Take Screenshot
     sleep          2
 
