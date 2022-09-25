@@ -35,14 +35,12 @@ Login
     #ověřit že se stránka otevřela
     Get Title      ==   Online supermarket Rohlik.cz — nejrychlejší doručení ve městě
 
-    #cookie
-    Click          id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
-    sleep          2
+    #Cooke (nastavení jejich akceptování)
+    Cookie          AcceptAll
 
     #kliknout na Přihlásit
     Click          data-test=IconUserLogin
     sleep          2
-
 
     #zadat email ${pemail} do místa pro zadání emailu
     Click          id=email
@@ -64,6 +62,14 @@ Login
     Take Screenshot
     sleep          2
 
+Cookie
+    [Arguments]         ${type}
+    IF  "${type}" == "AcceptAll"
+        Click           id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
+    ELSE
+        Click           id="CybotCookiebotDialogBodyButtonDecline"
+    END
 
+    sleep               2   #workaround: Probliknutí cele stránky po kliknutí na tlačítko
 
 
