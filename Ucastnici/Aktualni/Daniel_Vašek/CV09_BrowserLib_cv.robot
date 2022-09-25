@@ -58,7 +58,7 @@ Login
     sleep          2
 
     #ověřit že jsem přihlášený data-test=header-user-icon musí obsahovat to co je v ${pnastane}
-    Get text       data-test=header-user-icon   ${pnastane}
+    Get text       data-test=header-user-icon
     Take Screenshot
     sleep          2
 
