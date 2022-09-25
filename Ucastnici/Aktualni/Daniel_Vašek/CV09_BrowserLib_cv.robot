@@ -14,7 +14,7 @@ Prihlaseni bad login
     Login          dsadsad@sdas.cz                     dasdas                      Zadal(a) jste nesprávný e-mail nebo heslo.
 Prihlaseni success
     Login          radek.tester@seznam.cz       tajneheslotajneheslo               JT
-
+    Logout
 
 *** Keywords ***
 
@@ -58,7 +58,7 @@ Login
     sleep          2
 
     #ověřit že jsem přihlášený data-test=header-user-icon musí obsahovat to co je v ${pnastane}
-    Get text       data-test=header-user-icon   ${pnastane}
+    Get text       data-test=header-user-icon    ${pnastane}
     Take Screenshot
     sleep          2
 
@@ -72,4 +72,8 @@ Cookie
 
     sleep               2   #workaround: Probliknutí cele stránky po kliknutí na tlačítko
 
-
+Logout
+        Go to           ${URL}
+        Click           xpath=//div[@class='u-mr--8']
+        Click           data-test=user-box-logout-button
+        Take Screenshot
