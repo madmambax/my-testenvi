@@ -68,6 +68,7 @@ Pridani do kosiku
      ${Pocet}           Evaluate                    ${mnozstvi} - 1
      Click              css=[data-product-id="${IDproduktu}"][data-test="btnPlus"]  clickCount=${Pocet}
      Go To              ${URL2}
+     Sleep              5
      Take Screenshot
 
 
