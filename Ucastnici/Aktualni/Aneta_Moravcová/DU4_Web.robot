@@ -76,5 +76,5 @@ Odebrani z kosiku
 
     Go To      ${URL2}
     Click      css=[data-product-id="${IDproduktu}"][data-test="btnMinus"]   clickCount=${mnozstvi}
-    Sleep
+    Sleep      5
     Take Screenshot
