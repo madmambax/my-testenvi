@@ -18,7 +18,8 @@ Pridani zbozi do kosiku
     #Pridat do Kosiku                        banán
     #Pridat do kosiku varianta pocet         banán  5
     Pridat do kosiku varianta produkt id    banán   1349777   5
-    Odebrání z kosiku
+    Odebrání několik ks
+    Odebrání z kosiku komplet
     Logout
 
 
@@ -106,7 +107,16 @@ Pridat do kosiku varianta produkt id
     Sleep   1
     Take Screenshot
 
-Odebrání z kosiku
+Odebrání několik ks
+    Click       css=[class="sc-f269a4e2-0 sc-54b62df6-0 fopvWD keHQgT"]
+    Sleep  1
+    Click       css=[class="sc-f269a4e2-0 sc-54b62df6-0 fopvWD keHQgT"]
+    Take Screenshot
+
+Odebrání z kosiku komplet
     Click               css=[class="sc-54fde564-4 dEfkOv"]
     Sleep  1
     Take Screenshot
+
+#id=1349777
+
