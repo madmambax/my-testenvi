@@ -18,7 +18,7 @@ Pridani zbozi do kosiku
     #Pridat do Kosiku                        banán
     #Pridat do kosiku varianta pocet         banán  5
     Pridat do kosiku varianta produkt id    banán   1349777   5
-    Odebrání z kosiku varianta produkt id   banán   1349777   -5
+   #Odebrání z kosiku varianta produkt id   banán   1349777   -5
     Logout
 
 
@@ -28,7 +28,7 @@ Login
     [Arguments]         ${email}                            ${heslo}                    ${validation}
 
     Open Browser        ${URL}                              headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
-    #New Page            ${URL}
+    New Page            ${URL}
 
     Get Title           contains                            Rohlik
 
@@ -59,7 +59,7 @@ Logout
    Go to               ${URL}
    Click               xpath=//div[@class='u-mr--8']
    Click               data-test=user-box-logout-button
-
+   Take Screenshot
 
 Pridat do kosiku
     [Arguments]         ${Zbozi}
@@ -103,7 +103,7 @@ Pridat do kosiku varianta produkt id
     # přidání zbylého počtu kusů pomocí vícenásobného kliknutí na tlačítko plus u konkrétního produktu
     #Click               css=kde se jako selektor použije nadřezená třída + ${produkt_id} + také data-test="btnPlus"   Je třeba přidat parametr:   clickCount=${Pocet}
     Click                css=[data-product-id="${produkt_id}"][data-test="btnPlus"]  clickCount=${Pocet}
-    sleep                1
+    Sleep   1
     Take Screenshot
 
 Odebrání z kosiku varianta produkt id

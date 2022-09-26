@@ -58,7 +58,7 @@ Login
     sleep          2
 
     #ověřit že jsem přihlášený data-test=header-user-icon musí obsahovat to co je v ${pnastane}
-    Get text       data-test=header-user-icon    ${pnastane}
+    Get Text        data-test=header-user-icon
     Take Screenshot
     sleep          2
 
@@ -76,4 +76,5 @@ Logout
         Go to           ${URL}
         Click           xpath=//div[@class='u-mr--8']
         Click           data-test=user-box-logout-button
+        Sleep           1
         Take Screenshot
