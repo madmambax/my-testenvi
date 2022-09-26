@@ -18,7 +18,7 @@ Pridani zbozi do kosiku
     #Pridat do Kosiku                        banán
     #Pridat do kosiku varianta pocet         banán  5
     Pridat do kosiku varianta produkt id    banán   1349777   5
-   #Odebrání z kosiku varianta produkt id   banán   1349777   -5
+    Odebrání z kosiku
     Logout
 
 
@@ -106,14 +106,7 @@ Pridat do kosiku varianta produkt id
     Sleep   1
     Take Screenshot
 
-Odebrání z kosiku varianta produkt id
-
-    [Arguments]         ${produkt_id}     ${Kusu}
-
-    Click               css=[data-product-id="${produkt_id}"][data-test="btnAdd"]
-    ${Pocet}            Evaluate                    ${Kusu}  -1
-    Click               css=[data-product-id="${produkt_id}"][data-test="btnPlus"]  clickCount=${Pocet}
-    sleep               1
+Odebrání z kosiku
+    Click               css=[class="sc-54fde564-4 dEfkOv"]
+    Sleep  1
     Take Screenshot
-
-

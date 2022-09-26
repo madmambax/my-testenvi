@@ -54,7 +54,7 @@ Login
 
 
     #klinout na tlačítko "Přihlasit se"
-    Click          data-test=btnSignIn
+    Click          data-test=btnSignIn   ${pnastane}
     sleep          2
 
     #ověřit že jsem přihlášený data-test=header-user-icon musí obsahovat to co je v ${pnastane}
@@ -76,5 +76,4 @@ Logout
         Go to           ${URL}
         Click           xpath=//div[@class='u-mr--8']
         Click           data-test=user-box-logout-button
-        Sleep           1
         Take Screenshot
