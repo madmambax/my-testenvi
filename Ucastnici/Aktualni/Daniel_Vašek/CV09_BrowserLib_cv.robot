@@ -8,14 +8,13 @@ ${URL}      https://www.rohlik.cz/vitejte
 #robot CV09_BrowserLib_cv.robot
 
 *** Test Cases ***
-
 Prihlaseni bad heslo
-    Login          radek.tester@seznam.cz              dasdas                      Přihlásit
+    Login          radek.tester@seznam.cz              dasdas                      Zadal(a) jste nesprávný e-mail nebo heslo.
 Prihlaseni bad login
-    Login          dsadsad@sdas.cz                     dasdas                      Přihlásit
+    Login          dsadsad@sdas.cz                     dasdas                      Zadal(a) jste nesprávný e-mail nebo heslo.
 Prihlaseni success
-    Login          radek.tester@seznam.cz       tajneheslotajneheslo        JT
-
+    Login          radek.tester@seznam.cz       tajneheslotajneheslo               JT
+    Logout
 
 *** Keywords ***
 
@@ -36,14 +35,12 @@ Login
     #ověřit že se stránka otevřela
     Get Title      ==   Online supermarket Rohlik.cz — nejrychlejší doručení ve městě
 
-    #cookie
-    Click          id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
-    sleep          2
+    #Cooke (nastavení jejich akceptování)
+    Cookie          AcceptAll
 
     #kliknout na Přihlásit
     Click          data-test=IconUserLogin
     sleep          2
-
 
     #zadat email ${pemail} do místa pro zadání emailu
     Click          id=email
@@ -57,14 +54,26 @@ Login
 
 
     #klinout na tlačítko "Přihlasit se"
-    Click          text="Přihlásit se"
+    Click          data-test=btnSignIn   ${pnastane}
     sleep          2
 
     #ověřit že jsem přihlášený data-test=header-user-icon musí obsahovat to co je v ${pnastane}
-    Get text       data-test=header-user-icon
+    Get Text        data-test=header-user-icon
     Take Screenshot
     sleep          2
 
+Cookie
+    [Arguments]         ${type}
+    IF  "${type}" == "AcceptAll"
+        Click           id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
+    ELSE
+        Click           id="CybotCookiebotDialogBodyButtonDecline"
+    END
 
+    sleep               2   #workaround: Probliknutí cele stránky po kliknutí na tlačítko
 
-
+Logout
+        Go to           ${URL}
+        Click           xpath=//div[@class='u-mr--8']
+        Click           data-test=user-box-logout-button
+        Take Screenshot
