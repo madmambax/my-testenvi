@@ -64,8 +64,8 @@ Login
     Cookie                      AcceptAll
 
     Click                       id=headerLogin
-    Type Text                   data-test=user-login-form-email     ${Email}
-    Type Text                   data-test=user-login-form-password  ${Heslo}
+    Type Text                   id=email                            ${Email}
+    Type Text                   id=password                         ${Heslo}
 
     Click                       data-test=btnSignIn
 
@@ -88,7 +88,8 @@ Pridat do kosiku
     Sleep               1
     # Kusu - 1
     ${Pocet}            Evaluate                    ${Kusu} - 1
-    Click               css=.sc-oad7xy-0 [data-product-id="${produkt_id}"][data-test="btnPlus"]           clickCount=${Pocet}
+#    Click               css=.sc-oad7xy-0 [data-product-id="${produkt_id}"][data-test="btnPlus"]           clickCount=${Pocet}
+    Click               css=.amountCounterWrap [data-product-id="${produkt_id}"][data-test="btnPlus"]      clickCount=${Pocet}
 
     #ověří že je zboží v košíku
     ${cart_text}=       Get Text                    id=cart
