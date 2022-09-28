@@ -109,7 +109,7 @@ Odebrat z kosiku
 #    Sleep                   3 s
 #    Take Screenshot
 
-    # Dynamický timeout
+    # Dynamický timeout - čeka dokud není košík prázdný
     # je třeba vědět co je synchronyzační bod. Na co čeakt. Co se stane když se z košíku odebere X položek?
     # v případě košíku to je aktuální počet zboží v košíku
 
