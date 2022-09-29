@@ -1,7 +1,8 @@
 *** Comments ***
+https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#standard-libraries
 
 *** Settings ***
-Library    BuiltIn
+Library    BuiltIn  # It is taken into use automatically and thus its keywords are always available.
 Library    Collections
 Library    DateTime
 Library    Dialogs
