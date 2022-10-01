@@ -1,0 +1,11 @@
+{"level":30,"time":"2022-10-01T12:31:02.829Z","pid":21964,"hostname":"DESKTOP-AP70DE5","msg":"Listening on 51725"}
+{"level":30,"time":"2022-10-01T12:31:02.911Z","pid":21964,"hostname":"DESKTOP-AP70DE5","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-10-01T12:31:02.912Z","pid":21964,"hostname":"DESKTOP-AP70DE5","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-10-01T12:31:02.916Z","pid":21964,"hostname":"DESKTOP-AP70DE5","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-10-01T12:31:02.916Z","pid":21964,"hostname":"DESKTOP-AP70DE5","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-10-01T12:31:02.921Z","pid":21964,"hostname":"DESKTOP-AP70DE5","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-10-01T12:31:02.921Z","pid":21964,"hostname":"DESKTOP-AP70DE5","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-10-01T12:31:02.925Z","pid":21964,"hostname":"DESKTOP-AP70DE5","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2022-10-01T12:31:02.925Z","pid":21964,"hostname":"DESKTOP-AP70DE5","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2022-10-01T12:31:02.949Z","pid":21964,"hostname":"DESKTOP-AP70DE5","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2022-10-01T12:31:02.949Z","pid":21964,"hostname":"DESKTOP-AP70DE5","msg":"End of node method closeAllBrowsers"}
