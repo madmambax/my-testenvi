@@ -18,8 +18,9 @@ Pridani zbozi do kosiku
     #Pridat do Kosiku                        banán
     #Pridat do kosiku varianta pocet         banán  5
     Pridat do kosiku varianta produkt id    banán   1349777   5
-    Odebrání několik ks
-    Odebrání z kosiku komplet
+    #Odebrání několik ks
+    #Odebrání z kosiku komplet
+    Odebrání několik ks lepší
     Logout
 
 
@@ -30,13 +31,9 @@ Login
 
     Open Browser        ${URL}                              headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
     New Page            ${URL}
-
     Get Title           contains                            Rohlik
-
     Cookie              AcceptAll
-
     Click               id=headerLogin
-
     Type Text           id=email             ${email}
     Type Text           id=password          ${heslo}
     Click               data-test=btnSignIn
@@ -114,7 +111,14 @@ Odebrání několik ks
     Take Screenshot
 
 Odebrání z kosiku komplet
-    Click               css=[class="sc-54fde564-4 dEfkOv"]
+    Click       css=[class="sc-54fde564-4 dEfkOv"]
+    Sleep  1
+    Take Screenshot
+
+
+Odebrání několik ks lepší
+    [Arguments]         ${Kusu}
+    Click               css=[class="sc-f269a4e2-0 sc-54b62df6-0 fopvWD keHQgT"]             clickCount=${Kusu}    delay=100ms
     Sleep  1
     Take Screenshot
 

@@ -1,11 +1,12 @@
+
 *** Settings ***
+
 Library  Browser
+Resource        Data_and_Config/TestData.robot
+Resource        Data_and_Config/Configuration.robot
 
 *** Variables ***
-${URL}      https://www.rohlik.cz/vitejte
-#${pemail}   radek.tester@seznam.cz
-#${pheslo}   tajneheslotajneheslo
-#robot CV09_BrowserLib_cv.robot
+${URL}      ${URL}
 
 *** Test Cases ***
 Prihlaseni bad heslo
@@ -54,7 +55,7 @@ Login
 
 
     #klinout na tlačítko "Přihlasit se"
-    Click          data-test=btnSignIn   ${pnastane}
+    Click          data-test=btnSignIn
     sleep          2
 
     #ověřit že jsem přihlášený data-test=header-user-icon musí obsahovat to co je v ${pnastane}
