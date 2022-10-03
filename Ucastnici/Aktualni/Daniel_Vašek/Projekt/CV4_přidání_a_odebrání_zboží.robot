@@ -11,7 +11,6 @@ Resource        Configuration.robot
 
 *** Variables ***
 
-
 *** Test Cases ***
 
 Pridani zbozi do kosiku
@@ -20,7 +19,7 @@ Pridani zbozi do kosiku
     #Pridat do kosiku varianta pocet        ${ZBOZI01_NAME}  5
     Pridat do kosiku varianta produkt id    ${ZBOZI01_NAME}  ${ZBOZI01_ID}   5
     #Odebrání několik ks
-    Odebrání několik ks lepší  3
+    Odebrání několik ks lepší   3
     Odebrání z kosiku komplet
     Logout
 
@@ -115,15 +114,17 @@ Odebrání několik ks
 
 
 Odebrání několik ks lepší
-    [Arguments]         ${Kusu}
-    Click               ${SEL_BtnMinus}             clickCount=${Kusu}    delay=100ms
+
+    [Arguments]  ${Kusu}
+    Click       ${SEL_BtnMinus}             clickCount=${Kusu}    delay=100ms
     Sleep   ${TIME_BETWEEN_CLICKS1}
     Take Screenshot
 
 Odebrání z kosiku komplet
     Click       ${SEL_Odebrani_kompletni}
-    Sleep   ${TIME_BETWEEN_CLICKS1}
+    Sleep       ${TIME_BETWEEN_CLICKS1}
     Take Screenshot
+
 
 #id=1349777
 

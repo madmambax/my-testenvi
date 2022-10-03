@@ -5,7 +5,7 @@
 *** Variables ***
 #uživatel
 ${USER1_NAME}               vasek.daniel@seznam.cz
-${USER1_PASSWORD}           Kalendar66.vruiho33.
+${USER1_PASSWORD}           Abrakadabra123456..
 ${USER1_SHORT}              DV
 
 #zboží
@@ -63,4 +63,3 @@ ${SEL_Cookie_Decline}       id=CybotCookiebotDialogBodyButtonDecline
 
 ${SEL_BtnMinus}              data-test=btnMinus
 ${SEL_Odebrani_kompletni}    aria-label^="Odstranit z košíku"
-
