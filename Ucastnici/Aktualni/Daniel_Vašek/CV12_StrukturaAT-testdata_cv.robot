@@ -6,7 +6,7 @@
 *** Settings ***
 Documentation   CV: Testovaci data - zaměňte uživatelské data za proměné ze souboru Cviceni/Data_and_Config/TestData.robot
 Library         Browser
-
+Resource        TestData.robot
 
 *** Variables ***
 ${URL}              https://rohlik.cz
@@ -14,19 +14,19 @@ ${URL}              https://rohlik.cz
 
 *** Test Cases ***
 Login spatny email
-    Login           chyba                       tajneheslotajneheslo                    Zadejte platný email
+    Login           chyba                       ${USER1_PASSWORD}                    ${ERROR_TEXT_FillCorrectEmail}
 
 Login spatne heslo
-    Login           radek.tester@seznam.cz      bad                                     Zadal(a) jste nesprávný e-mail nebo heslo.
+    Login           ${USER1_NAME}               bad                                  ${ERROR_TEXT_IncorrectEmailOrPwd}
 
 Login vse OK
-    Login           radek.tester@seznam.cz      tajneheslotajneheslo                    ${USER1_SHORT}
+    Login           ${USER1_NAME}               ${USER1_PASSWORD}                    ${USER1_SHORT}
     Logout
 
 Test Objednavky
     ${kusu} =	        Set Variable	            5
-    Login               radek.tester@seznam.cz      tajneheslotajneheslo                JT
-    Pridat do kosiku    mléko                       1320669                             ${kusu}
+    Login               ${USER1_NAME}               ${USER1_PASSWORD}                ${USER1_SHORT}
+    Pridat do kosiku    ${ZBOZI01_NAME}             ${ZBOZI01_ID}                    ${kusu}
     Click               id=cartContent
     Take Screenshot
     Odebrat z kosiku      ${kusu}
@@ -47,7 +47,7 @@ Login
 
     New Page                    ${URL}
 
-    Get Title                   contains                            Online supermarket Rohlik.cz
+    Get Title                   contains                            ${TEXT_MainTitle}
     Cookie                      AcceptAll
 
     Click                       id=headerLogin

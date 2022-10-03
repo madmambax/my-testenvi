@@ -15,12 +15,9 @@ ${URL}      https://www.rohlik.cz/
 
 Pridani zbozi do kosiku
     Login               radek.tester@seznam.cz              tajneheslotajneheslo        JT
-    #Pridat do Kosiku                        banán
-    #Pridat do kosiku varianta pocet         banán  5
-    Pridat do kosiku varianta produkt id    banán   1349777   5
-    #Odebrání několik ks
-    #Odebrání z kosiku komplet
-    Odebrání několik ks lepší
+#    Pridat Do Kosiku                        banán
+#    Pridat do kosiku varianta pocet         banán  5
+    Pridat do kosiku varianta produkt id    banán  1349777  5
     Logout
 
 
@@ -31,9 +28,14 @@ Login
 
     Open Browser        ${URL}                              headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
     New Page            ${URL}
+
     Get Title           contains                            Rohlik
+
     Cookie              AcceptAll
+
+
     Click               id=headerLogin
+
     Type Text           id=email             ${email}
     Type Text           id=password          ${heslo}
     Click               data-test=btnSignIn
@@ -69,58 +71,40 @@ Pridat do kosiku
 
     #zde DOPLNIT ks pro kliknutí na hledat, selektor bude text "Hledat"
     Click       text="Hledat"
-    Sleep               5                           #Statický timeout
 
-    #zde DOPLNIT ks pro kliknout talčítko "Do košíku" a kolikátou položku použít v rámci košíku pomocí selektorů
-    Click       css=[data-product-id="1349777"]
+    Sleep               1                           #Statický timeout
 
-
+    #zde DOPLNIT ks pro kliknout talčítko "Do košíku"
+    Click       data-test=btnAdd >> nth=1
 
     #ověří že je zboží v košíku
     ${cart_text}=       Get Text                    id=cart
     Log                 ${cart_text}
+
+    # zde DOPLNIT porovnání zda text z košíku obsahuje zboží
+    # použijte příkaz Get Text a parametr  matches  (?i)${Zbozi}
+    # (?i)  znamená že se bere case insensitive
+
     Take Screenshot
+
+
 
 Pridat do kosiku varianta produkt id
     [Arguments]         ${Zbozi}     ${produkt_id}     ${Kusu}
 
-    # použít původní verzi a rozšířit ji o
-    Type Text   id=searchGlobal    ${Zbozi}
 
-    #zde DOPLNIT ks pro kliknutí na hledat, selektor bude text "Hledat"
-    Click       text="Hledat"
+    # použít původní verzi a rozšířit ji o
 
     # kliknutí na tlačítko "Do košíku" pro konkrétní produkt
     #Click               css=kde se jako selektor použije ${produkt_id} a také data-test="btnAdd"
     Click                css=[data-product-id="${produkt_id}"][data-test="btnAdd"]
-
 
     #odečtení 1 kusu, protože 1 zboží jsme již přidali
     ${Pocet}            Evaluate                    ${Kusu} - 1
 
     # přidání zbylého počtu kusů pomocí vícenásobného kliknutí na tlačítko plus u konkrétního produktu
     #Click               css=kde se jako selektor použije nadřezená třída + ${produkt_id} + také data-test="btnPlus"   Je třeba přidat parametr:   clickCount=${Pocet}
-    Click                css=[data-product-id="${produkt_id}"][data-test="btnPlus"]  clickCount=${Pocet}
-    Sleep   1
-    Take Screenshot
-
-Odebrání několik ks
-    Click       css=[class="sc-f269a4e2-0 sc-54b62df6-0 fopvWD keHQgT"]
-    Sleep  1
-    Click       css=[class="sc-f269a4e2-0 sc-54b62df6-0 fopvWD keHQgT"]
-    Take Screenshot
-
-Odebrání z kosiku komplet
-    Click       css=[class="sc-54fde564-4 dEfkOv"]
-    Sleep  1
-    Take Screenshot
+    Click                css=[data-product-id="1320669"]
 
 
-Odebrání několik ks lepší
-    [Arguments]         ${Kusu}
-    Click               css=[class="sc-f269a4e2-0 sc-54b62df6-0 fopvWD keHQgT"]             clickCount=${Kusu}    delay=100ms
-    Sleep  1
-    Take Screenshot
-
-#id=1349777
 
