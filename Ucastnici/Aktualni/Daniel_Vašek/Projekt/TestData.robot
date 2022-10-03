@@ -4,13 +4,13 @@
 
 *** Variables ***
 #uživatel
-${USER1_NAME}               radek.tester@seznam.cz
-${USER1_PASSWORD}           tajneheslotajneheslo
-${USER1_SHORT}              JT
+${USER1_NAME}               vasek.daniel@seznam.cz
+${USER1_PASSWORD}           Kalendar66.vruiho33.
+${USER1_SHORT}              DV
 
 #zboží
-${ZBOZI01_NAME}             mléko
-${ZBOZI01_ID}               1320669
+${ZBOZI01_NAME}             banán
+${ZBOZI01_ID}               1349777
 
 #Strings
 ${TEXT_MainTitle}                   Online supermarket Rohlik.cz
@@ -36,6 +36,7 @@ ${SEL_BtnSignIn}            data-test=btnSignIn
 ${SEL_HeaderLogo}           id=logo
 ${SEL_SearchGlobal}         id=searchGlobal
 ${SEL_BtnSearchGlobal}      text="Hledat"
+${SEL_HeaderICON}           data-test=header-user-icon
 
 #SELEKTORY pro zboží
 ${SEL_BtnAdd}               data-test=btnAdd
@@ -57,3 +58,9 @@ ${SEL_CartReview}           id=cartReviewMainTitle
 #SELEKTORY pro Cookie
 ${SEL_Cookie_AllowAll}      id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
 ${SEL_Cookie_Decline}       id=CybotCookiebotDialogBodyButtonDecline
+
+#SELEKTORY pro odebrání zboží z košíků (částečně - komplet)
+
+${SEL_Odebrani_castecne}     class=sc-f269a4e2-0 sc-54b62df6-0 fopvWD keHQgT
+${SEL_Odebrani_kompletni}    class=sc-54fde564-4 dEfkOv
+
