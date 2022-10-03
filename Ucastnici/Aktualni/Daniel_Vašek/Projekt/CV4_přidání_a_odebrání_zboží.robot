@@ -116,12 +116,12 @@ Odebrání několik ks
 
 Odebrání několik ks lepší
     [Arguments]         ${Kusu}
-    Click               css=${SEL_Odebrani_castecne}             clickCount=${Kusu}    delay=100ms
+    Click               ${SEL_BtnMinus}             clickCount=${Kusu}    delay=100ms
     Sleep   ${TIME_BETWEEN_CLICKS1}
     Take Screenshot
 
 Odebrání z kosiku komplet
-    Click       css=${SEL_Odebrani_kompletni}
+    Click       ${SEL_Odebrani_kompletni}
     Sleep   ${TIME_BETWEEN_CLICKS1}
     Take Screenshot
 
