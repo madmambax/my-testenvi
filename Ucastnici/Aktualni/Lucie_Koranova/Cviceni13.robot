@@ -7,12 +7,15 @@ ${URL}      https://www.rohlik.cz/
 *** Test Cases ***
 Prihlaseni
     Login       Lucykoranova@gmail.com              Jessie11#        LK
+    Logout
 
 Pridat do kosiku
-    Type Text           id=searchGlobal             Alpro   2
+    Login       Lucykoranova@gmail.com              Jessie11#        LK
+    Type Text           id=searchGlobal             Alpro
     Sleep               1
     Click               text=Hledat
     Sleep               1
+    Logout
 
 Kontrola obsahu kosiku
     ${cart_text}=       Get Text                    id=cart
@@ -30,10 +33,7 @@ Kotrola kosiku
     Get Text            id=cart                     matches                             (?i)${Zbozi}
     Take Screenshot
 
-Logout
-   Go to               ${URL}
-   Click               xpath=//div[@class='u-mr--8']
-   Click               data-test=user-box-logout-button
+
 
 
 
@@ -67,6 +67,11 @@ Login
     Log                 ${log}
     Take Screenshot
 
+
+Logout
+   Go to               ${URL}
+   Click               xpath=//div[@class='u-mr--8']
+   Click               data-test=user-box-logout-button
 
 Cookie
     [Arguments]         ${type}
