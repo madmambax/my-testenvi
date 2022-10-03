@@ -128,6 +128,10 @@ Odebrat z kosiku
     Set Strict Mode     ${old_mode}
 
 
+Odstranit vše z košíku
+     #odstraní 1 zboží kompletně všechny kusy
+     Click          [aria-label^="Odstranit z košíku"]
+
 Pred_testem
     Go to               ${URL}   #jdi na hlavní stránku
 

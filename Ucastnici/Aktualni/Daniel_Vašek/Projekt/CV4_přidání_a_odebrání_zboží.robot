@@ -6,20 +6,19 @@
 *** Settings ***
 Documentation   Automatizace rohlik.cz s BrowserLibrary
 Library         Browser
-Resource        Data_and_Config/TestData.robot
-Resource        Data_and_Config/Configuration.robot
+Resource        TestData.robot
+Resource        Configuration.robot
 
 *** Variables ***
 
-${URL}  https://rohlik.cz
 
 *** Test Cases ***
 
 Pridani zbozi do kosiku
     Login               ${USER1_NAME}              ${USER1_PASSWORD}        ${USER1_SHORT}
-    #Pridat do Kosiku                        banán
-    #Pridat do kosiku varianta pocet         banán  5
-    Pridat do kosiku varianta produkt id    banán   1349777   5
+    #Pridat do Kosiku                       ${ZBOZI01_NAME}
+    #Pridat do kosiku varianta pocet        ${ZBOZI01_NAME}  5
+    Pridat do kosiku varianta produkt id    ${ZBOZI01_NAME}  ${ZBOZI01_ID}   5
     #Odebrání několik ks
     Odebrání několik ks lepší  3
     Odebrání z kosiku komplet
@@ -35,12 +34,12 @@ Login
     New Page            ${URL}
     Get Title           contains                            Rohlik
     Cookie              AcceptAll
-    Click               id=headerLogin
-    Type Text           id=email             ${email}
-    Type Text           id=password          ${heslo}
-    Click               data-test=btnSignIn
-    Get Text            data-test=header-user-icon          ==      ${validation}
-    ${log}=   Get Text  data-test=header-user-icon
+    Click               ${SEL_HeaderLogin}
+    Type Text           ${SEL_LoginFormEmail}             ${email}
+    Type Text           ${SEL_LoginFormPwd}               ${heslo}
+    Click               ${SEL_BtnSignIn}
+    Get Text            ${SEL_HeaderICON}          ==      ${validation}
+    ${log}=   Get Text  ${SEL_HeaderICON}
     Log                 ${log}
     Take Screenshot
 
@@ -48,17 +47,17 @@ Login
 Cookie
     [Arguments]         ${type}
     IF  "${type}" == "AcceptAll"
-        Click           id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
+        Click           ${SEL_Cookie_AllowAll}
     ELSE
-        Click           id="CybotCookiebotDialogBodyButtonDecline"
+        Click           ${SEL_Cookie_Decline}
     END
-    sleep               1      #workaround: Probliknutí cele stránky po kliknutí na tlačítko
+    sleep               ${TIME_BETWEEN_CLICKS1}        #workaround: Probliknutí cele stránky po kliknutí na tlačítko
 
 
 Logout
    Go to               ${URL}
-   Click               xpath=//div[@class='u-mr--8']
-   Click               data-test=user-box-logout-button
+   Click               ${SEL_HeaderLoginErrorTxt}
+   Click               ${SEL_UserBoxLogoutBtn}
    Take Screenshot
 
 Pridat do kosiku
@@ -66,20 +65,18 @@ Pridat do kosiku
 
 #    ${old_mode} =      Set Strict Mode    False
     #zde DOPLNIT ks pro napsání textu, který je v ${Zbozi} do vyhledávání
-    Type Text   id=searchGlobal    ${Zbozi}
-    Sleep               1                           #Statický timeout
+    Type Text   ${SEL_SearchGlobal}     ${Zbozi}
+    Sleep       ${TIME_BETWEEN_CLICKS1}                      #Statický timeout
 
     #zde DOPLNIT ks pro kliknutí na hledat, selektor bude text "Hledat"
-    Click       text="Hledat"
-    Sleep               5                           #Statický timeout
+    Click       ${SEL_BtnSearchGlobal}
+    Sleep       ${TIME_BETWEEN_CLICKS2}                       #Statický timeout
 
     #zde DOPLNIT ks pro kliknout talčítko "Do košíku" a kolikátou položku použít v rámci košíku pomocí selektorů
-    Click       css=[data-product-id="1349777"]
-
-
+    Click       css=[${SEL_ProductID}=${ZBOZI01_ID}]
 
     #ověří že je zboží v košíku
-    ${cart_text}=       Get Text                    id=cart
+    ${cart_text}=       Get Text                    ${SEL_Cart}
     Log                 ${cart_text}
     Take Screenshot
 
@@ -87,14 +84,15 @@ Pridat do kosiku varianta produkt id
     [Arguments]         ${Zbozi}     ${produkt_id}     ${Kusu}
 
     # použít původní verzi a rozšířit ji o
-    Type Text   id=searchGlobal    ${Zbozi}
+    Type Text   ${SEL_SearchGlobal}    ${Zbozi}
+    Sleep       ${TIME_BETWEEN_CLICKS1}
 
     #zde DOPLNIT ks pro kliknutí na hledat, selektor bude text "Hledat"
-    Click       text="Hledat"
+    Click       ${SEL_BtnSearchGlobal}
 
     # kliknutí na tlačítko "Do košíku" pro konkrétní produkt
     #Click               css=kde se jako selektor použije ${produkt_id} a také data-test="btnAdd"
-    Click                css=[data-product-id="${produkt_id}"][data-test="btnAdd"]
+    Click               css=[${SEL_ProductID}="${produkt_id}"][${SEL_BtnAdd}]
 
 
     #odečtení 1 kusu, protože 1 zboží jsme již přidali
@@ -102,26 +100,29 @@ Pridat do kosiku varianta produkt id
 
     # přidání zbylého počtu kusů pomocí vícenásobného kliknutí na tlačítko plus u konkrétního produktu
     #Click               css=kde se jako selektor použije nadřezená třída + ${produkt_id} + také data-test="btnPlus"   Je třeba přidat parametr:   clickCount=${Pocet}
-    Click                css=[data-product-id="${produkt_id}"][data-test="btnPlus"]  clickCount=${Pocet}
-    Sleep   1
+
+    Click               css=${SEL_CssForAdding} [${SEL_ProductID}="${produkt_id}"][${SEL_BtnPlus}]   clickCount=${Pocet}
+    #Click              css=[data-product-id="${produkt_id}"][data-test="btnPlus"]  clickCount=${Pocet}
+
+    Sleep   ${TIME_BETWEEN_CLICKS1}
     Take Screenshot
 
 Odebrání několik ks
     Click       css=[class="sc-f269a4e2-0 sc-54b62df6-0 fopvWD keHQgT"]
-    Sleep  1
+    Sleep  ${TIME_BETWEEN_CLICKS1}
     Click       css=[class="sc-f269a4e2-0 sc-54b62df6-0 fopvWD keHQgT"]
     Take Screenshot
 
 
 Odebrání několik ks lepší
     [Arguments]         ${Kusu}
-    Click               css=[class="sc-f269a4e2-0 sc-54b62df6-0 fopvWD keHQgT"]             clickCount=${Kusu}    delay=100ms
-    Sleep  1
+    Click               ${SEL_BtnMinus}             clickCount=${Kusu}    delay=100ms
+    Sleep   ${TIME_BETWEEN_CLICKS1}
     Take Screenshot
 
 Odebrání z kosiku komplet
-    Click       css=[class="sc-54fde564-4 dEfkOv"]
-    Sleep  1
+    Click       ${SEL_Odebrani_kompletni}
+    Sleep   ${TIME_BETWEEN_CLICKS1}
     Take Screenshot
 
 #id=1349777
