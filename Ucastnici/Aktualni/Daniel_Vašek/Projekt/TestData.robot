@@ -48,7 +48,7 @@ ${SEL_BtnPlus}              data-test=btnPlus
 ${SEL_ProductID}            data-product-id
 ${SEL_CssForAdding}         .amountCounterWrap
 
-${SEL_BtnMinus}             data-test=btnMinus
+
 
 #SELEKTORY pro Košík
 ${SEL_Cart}                 id=cart
@@ -61,6 +61,6 @@ ${SEL_Cookie_Decline}       id=CybotCookiebotDialogBodyButtonDecline
 
 #SELEKTORY pro odebrání zboží z košíků (částečně - komplet)
 
-${SEL_Odebrani_castecne}     class=sc-f269a4e2-0 sc-54b62df6-0 fopvWD keHQgT
-${SEL_Odebrani_kompletni}    class=sc-54fde564-4 dEfkOv
+${SEL_BtnMinus}              data-test=btnMinus
+${SEL_Odebrani_kompletni}    aria-label^="Odstranit z košíku"
 
