@@ -15,6 +15,7 @@ Pridat do kosiku
     Sleep               1
     Click               text=Hledat
     Sleep               1
+    Logout
 
 Kontrola obsahu kosiku
     ${cart_text}=       Get Text                    id=cart
