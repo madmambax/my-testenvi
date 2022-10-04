@@ -4,13 +4,13 @@
 
 *** Variables ***
 #uživatel
-${USER1_NAME}               vasek.daniel@seznam.cz
-${USER1_PASSWORD}           Abrakadabra123456..
-${USER1_SHORT}              DV
+${USER1_NAME}               radek.tester@seznam.cz
+${USER1_PASSWORD}           tajneheslotajneheslo
+${USER1_SHORT}              JT
 
 #zboží
-${ZBOZI01_NAME}             banán
-${ZBOZI01_ID}               1349777
+${ZBOZI01_NAME}             mléko
+${ZBOZI01_ID}               1320669
 
 #Strings
 ${TEXT_MainTitle}                   Online supermarket Rohlik.cz
@@ -35,22 +35,19 @@ ${SEL_BtnSignIn}            data-test=btnSignIn
 #SELEKTORY pro Header
 ${SEL_HeaderLogo}           id=logo
 ${SEL_SearchGlobal}         id=searchGlobal
-${SEL_BtnSearchGlobal}      text="Hledat"
-${SEL_HeaderICON}           data-test=header-user-icon
+${SEL_BtnSearchGlobal}      text=Hledat
 
 #SELEKTORY pro zboží
 ${SEL_BtnAdd}               data-test=btnAdd
 ${SEL_BtnPlus}              data-test=btnPlus
-
 #Tohle nebude fungovat, je nutné dělat selektror po částech
 #${SEL_BtnAddId}             css=[data-product-id="${produkt_id}"][data-test="btnAdd"]
 #${SEL_BtnPlusId}            css=.sc-oad7xy-0 [data-product-id="${produkt_id}"][data-test="btnPlus"]
 #Je třeba použít
-
 ${SEL_ProductID}            data-product-id
 ${SEL_CssForAdding}         .amountCounterWrap
 
-
+${SEL_BtnMinus}             data-test=btnMinus
 
 #SELEKTORY pro Košík
 ${SEL_Cart}                 id=cart
@@ -60,8 +57,3 @@ ${SEL_CartReview}           id=cartReviewMainTitle
 #SELEKTORY pro Cookie
 ${SEL_Cookie_AllowAll}      id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
 ${SEL_Cookie_Decline}       id=CybotCookiebotDialogBodyButtonDecline
-
-#SELEKTORY pro odebrání zboží z košíků (částečně - komplet)
-
-${SEL_BtnMinus}              data-test=btnMinus
-${SEL_Odebrani_kompletni}    aria-label^="Odstranit z košíku"

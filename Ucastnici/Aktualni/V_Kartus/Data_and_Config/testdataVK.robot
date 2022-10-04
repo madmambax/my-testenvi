@@ -3,19 +3,23 @@
 #
 
 *** Variables ***
+
 #uživatel
-${USER1_NAME}               vasek.daniel@seznam.cz
-${USER1_PASSWORD}           Abrakadabra123456..
-${USER1_SHORT}              DV
+${SEL_USER1_NAME}               vojta.kartus@gmail.com
+${SEL_USER1_PASSWORD}           mojeheslonarohlik
+
 
 #zboží
-${ZBOZI01_NAME}             banán
-${ZBOZI01_ID}               1349777
+${SEL_ZBOZI01_NAME}             Banán Chiquita
+${SEL_ZBOZI01_ID}               1349785
+
 
 #Strings
+${TEXT_USER1_GoodLoginOvereni}              VK
+${TEXT_USER1_BadLoginOvereni}               Přihlásit
 ${TEXT_MainTitle}                   Online supermarket Rohlik.cz
 ${TEXT_EmptyCart}                   Vysypat košík
-${TEXT_Prihlasit}                   Přihlásit
+${TEXT_DoporuceneRazeni}            text="Doporučené řazení"
 
 #Error strings
 ${ERROR_TEXT_FillCorrectEmail}      Zadejte platný email
@@ -33,24 +37,23 @@ ${SEL_LoginFormPwd}         id=password
 ${SEL_BtnSignIn}            data-test=btnSignIn
 
 #SELEKTORY pro Header
-${SEL_HeaderLogo}           id=logo
+${SEL_HeaderUserIcon}       data-test=header-user-icon
+${SEL_HeaderDoKosiku}       data-test=cart-redirectToCart
 ${SEL_SearchGlobal}         id=searchGlobal
-${SEL_BtnSearchGlobal}      text="Hledat"
-${SEL_HeaderICON}           data-test=header-user-icon
+${SEL_BtnSearchGlobal}      css=.sc-4b6d3da4-2.eUMBpW  #hledat na global search
 
 #SELEKTORY pro zboží
 ${SEL_BtnAdd}               data-test=btnAdd
 ${SEL_BtnPlus}              data-test=btnPlus
-
 #Tohle nebude fungovat, je nutné dělat selektror po částech
 #${SEL_BtnAddId}             css=[data-product-id="${produkt_id}"][data-test="btnAdd"]
 #${SEL_BtnPlusId}            css=.sc-oad7xy-0 [data-product-id="${produkt_id}"][data-test="btnPlus"]
+#${SEL_BtnMinusId}           css=.sc-oad7xy-0 [data-product-id="${produkt_id}"][data-test="btnMinus"]
 #Je třeba použít
-
 ${SEL_ProductID}            data-product-id
 ${SEL_CssForAdding}         .amountCounterWrap
 
-
+${SEL_BtnMinus}             data-test=btnMinus
 
 #SELEKTORY pro Košík
 ${SEL_Cart}                 id=cart
@@ -60,8 +63,3 @@ ${SEL_CartReview}           id=cartReviewMainTitle
 #SELEKTORY pro Cookie
 ${SEL_Cookie_AllowAll}      id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
 ${SEL_Cookie_Decline}       id=CybotCookiebotDialogBodyButtonDecline
-
-#SELEKTORY pro odebrání zboží z košíků (částečně - komplet)
-
-${SEL_BtnMinus}              data-test=btnMinus
-${SEL_Odebrani_kompletni}    aria-label^="Odstranit z košíku"
