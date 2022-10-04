@@ -1,13 +1,15 @@
 *** Settings ***
 Library  Browser
-Resource    Project/Data_and_Config/TestData.robot
-#Resource    Project/Data_and_Config/Configuration.robot
+Resource    Data_and_Config/TestData.robot
+Resource    Data_and_Config/Configuration.robot
 
 Test Setup          Pred_testem
 Test Teardown       Po_testu_kontrola          Jirka Kucera      (KuciJiri)
 
-#Suite Setup
+Suite Setup         Pred_sadou
 Suite Teardown      Po_sade
+
+Test Timeout        ${TC_TIMEOUT_ROBOT_KW}
 
 
 *** Variables ***
@@ -115,6 +117,7 @@ Remove
 
     [Arguments]      ${btn}     ${krizek}
     Click           ${SEL_CartRemove}                                        #odebrani z kosiku
+    Sleep           500ms
     Should Not Contain       ${btn}            ${krizek}
     Get Text        ${SEL_CartVerification}                                  #overeni prazdeno kosiku
     Go to           ${URL}                                                   #zpet na hlavni stranku
@@ -137,12 +140,19 @@ Po_testu_kontrola
     Log             Overeni logout po kazdem testu
     [Arguments]              ${jmeno}           ${login}
     Should Not Contain       ${jmeno}           ${login}                     #overeni odhlaseni
+    New Page                 ${URL}
 
-#Pred_sadou
+Pred_sadou
+    ${b_timeput} =             Set Browser Timeout                 ${TIMEOUT_BROWSER}
+    Log                        Původní hodnota timeout ${b_timeput}
+    Open Browser
+    New Page                   ${URL}
+    Cookies                    AcceptAll
 
 
 Po_sade
-    Log         Zavre vsechny prohlizece
-    Close Browser       ALL
+    Log                        Zavre vsechny prohlizece
+
+    Close Browser              ALL
 
 
