@@ -4,7 +4,7 @@
 ${WEB_URL}              https://www.jezdectvi.org/
 ${URL_SHOWS}            https://www.jezdectvi.org/zavody
 
-${TIME_BETWEEN_CLICKS}  100ms
+${TIME_BETWEEN_CLICKS}  1000ms
 ${TIME_BETWEEN_CHECKS}  200ms
 
 ${TIMEOUT_BROWSER}      20
