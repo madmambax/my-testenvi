@@ -1,11 +1,17 @@
 *** Settings ***
 Documentation   Automatizace rohlik.cz s BrowserLibrary
-Library  Browser
-Resource    Data_and_Config/testdataVK.robot
-Resource    Data_and_Config/ConfigurationVK.robot
+Library         Browser
+Resource        Data_and_Config/testdataVK.robot
+Resource        Data_and_Config/ConfigurationVK.robot
+
+Test Setup      pred_testy
+Test Teardown   po_testech
+
+Suite Setup     pred_sadou
+Suite Teardown  po_sade
 
 *** Variables ***
-${URL}      https://www.rohlik.cz/
+
 
 *** Test Cases ***
 bad email prihlaseni
@@ -16,7 +22,7 @@ bad heslo prihlaseni
 
 good login prihlaseni
     Login                           ${SEL_USER1_NAME}                       ${SEL_USER1_PASSWORD}               ${TEXT_USER1_GoodLoginOvereni}
-    #vysypat pokud je plny kosik     css=.cartCount      #css=.sc-c57c261e-4.dHRBLh.cartCount         #css=.sc-c57c261e-4.jWscLy.cartCount
+    #vysypat pokud je plny kosik    css=.cartCount                   #css=.sc-c57c261e-4.dHRBLh.cartCount         #css=.sc-c57c261e-4.jWscLy.cartCount
     Pridat do kosiku                ${SEL_ZBOZI01_NAME}                      ${SEL_ZBOZI01_ID}                     8
     Odebrat z kosiku                ${SEL_ZBOZI01_NAME}                      ${SEL_ZBOZI01_ID}                     4
     Logout
@@ -74,14 +80,14 @@ Cookie
 
 
 Pridat do kosiku
-    [Arguments]         ${Zbozi}     ${produkt_id}     ${Kusu}
+    [Arguments]         ${Zbozi_name}     ${Zbozi_id}     ${Kusu}
         #do pole "heldat název" zadá jméno produktu a vyhledá
-    type text           ${SEL_SearchGlobal}     ${Zbozi}
+    type text           ${SEL_SearchGlobal}     ${Zbozi_name}
     Click               ${SEL_BtnSearchGlobal}       #hledat
     sleep               5
     Click               ${TEXT_DoporuceneRazeni}
         #zboží ještě není v košíku tz. vyhledáme zboží podle produk id a přidám 'do košíku'
-    Click               css=[data-product-id="${produkt_id}"][${SEL_BtnAdd}]
+    Click               css=[data-product-id="${Zbozi_id}"][${SEL_BtnAdd}]
     sleep               5
 
     Click               ${SEL_HeaderDoKosiku}      #klik na header
@@ -91,12 +97,12 @@ Pridat do kosiku
     ${Pocet}            Evaluate                    ${Kusu} - 1
         #přidání zbylého počtu kusů pomocí vícenásobného kliknutí na tlačítko plus u konkrétního produktu
         #Click          css=kde se jako selektor použije nadřezená třída + ${produkt_id} + také data-test="btnPlus"   Je třeba přidat parametr:   clickCount=${Pocet}
-    Click               css=[data-product-id="${produkt_id}"][${SEL_BtnPlus}]  clickCount=${Pocet}
+    Click               css=[data-product-id="${Zbozi_id}"][${SEL_BtnPlus}]  clickCount=${Pocet}
     sleep               5
 
 Odebrat z kosiku
-    [Arguments]         ${Zbozi}     ${produkt_id}     ${Kusu}
-    type text           ${SEL_SearchGlobal}     ${Zbozi}
+    [Arguments]         ${Zbozi_name}     ${Zbozi_id}     ${Kusu}
+    type text           ${SEL_SearchGlobal}     ${Zbozi_name}
     Click               ${SEL_BtnSearchGlobal}   #hledat
     sleep               5
     Click               ${TEXT_DoporuceneRazeni}
@@ -104,6 +110,17 @@ Odebrat z kosiku
     Click               ${SEL_HeaderDoKosiku}   #klik na header
     sleep               5
     ${Pocet}            Evaluate                    ${Kusu} - 1
-    Click               css=[data-product-id="${produkt_id}"][${SEL_BtnMinus}]  clickCount=${Pocet}
+    Click               css=[data-product-id="${Zbozi_id}"][${SEL_BtnMinus}]  clickCount=${Pocet}
     sleep               5
 
+pred_testy
+    log  pred testem
+
+po_testech
+    log  po testu
+
+pred_sadou
+    log  pred sadou
+
+po_sade
+    log  po sade
