@@ -41,10 +41,12 @@ ${SEL_HeaderICON}           data-test=header-user-icon
 #SELEKTORY pro zboží
 ${SEL_BtnAdd}               data-test=btnAdd
 ${SEL_BtnPlus}              data-test=btnPlus
+
 #Tohle nebude fungovat, je nutné dělat selektror po částech
 #${SEL_BtnAddId}             css=[data-product-id="${produkt_id}"][data-test="btnAdd"]
 #${SEL_BtnPlusId}            css=.sc-oad7xy-0 [data-product-id="${produkt_id}"][data-test="btnPlus"]
 #Je třeba použít
+
 ${SEL_ProductID}            data-product-id
 ${SEL_CssForAdding}         .amountCounterWrap
 
