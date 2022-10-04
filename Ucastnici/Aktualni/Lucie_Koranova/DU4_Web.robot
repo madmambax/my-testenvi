@@ -11,19 +11,19 @@ ${Cart}      https://www.rohlik.cz/objednavka/prehled-kosiku
 *** Test Cases ***
 
 Login
-     Login          radek.tester@seznam.cz              tajneheslotajneheslo        JT
+     Login              radek.tester@seznam.cz              tajneheslotajneheslo        JT
      Logout
 
 Login wrong
     Login               radek.tester@seznam.cz              dasdas                      Přihlásit
 
 Add item to cart
-     Login          Lucykoranova@gmail.com              Jessie11#        LK
+     Login              radek.tester@seznam.cz              tajneheslotajneheslo        JT
      Add item to cart   alpro          1306143          2
      Logout
 
 Remove item from cart
-     Login          Lucykoranova@gmail.com              Jessie11#        LK
+     Login              radek.tester@seznam.cz              tajneheslotajneheslo        JT
      Remove item from cart   1306143        2
      Logout
 
@@ -31,14 +31,14 @@ Remove item from cart
 *** Keywords ***
 
 Login
-     [Arguments]          ${e-mail}          ${password}          ${initials}
+     [Arguments]          ${username}          ${password}          ${initials}
      New Page             ${Rohlik}
      Get Title            ==  Online supermarket Rohlik.cz — nejrychlejší doručení ve městě
 
      Cookies              AcceptAll
 
      Click                data-test=IconUserLogin
-     Type Text            id=email                        ${e-mail}
+     Type Text            id=email                        ${username}
      Type Text            id=password                     ${password}
      Click                data-test=btnSignIn
      Get Text             data-test=header-user-icon  ==  ${initials}
