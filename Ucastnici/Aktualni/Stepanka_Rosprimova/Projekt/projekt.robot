@@ -1,11 +1,12 @@
 *** Settings ***
-Library     Browser
-Resource    Variables/TestData.robot
-Resource    Variables/Configuration.robot
+Library                 Browser
+Resource                Variables/TestData.robot
+Resource                Variables/Configuration.robot
 Test Setup              Start Page
 Test Teardown           End Page
 Suite Setup             Start Browser
 Suite Teardown          End Browser
+Test Timeout            ${TC_TIMEOUT_ROBOT_KW}
 
 *** Test Cases ***
 Prihlaseni prazdny login
