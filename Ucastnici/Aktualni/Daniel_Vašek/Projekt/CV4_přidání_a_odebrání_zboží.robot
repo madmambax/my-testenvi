@@ -114,8 +114,6 @@ Odebrání z kosiku komplet
     Click       ${SEL_Odebrani_kompletni}
     Sleep       ${TIME_BETWEEN_CLICKS1}
 
-css=[class="sc-54fde564-4 dEfkOv"]
-
 Pred_testy
     Open Browser        ${URL}                              headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
     New Page            ${URL}
