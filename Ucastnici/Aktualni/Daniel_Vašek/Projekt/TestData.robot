@@ -64,4 +64,5 @@ ${SEL_Cookie_Decline}       id=CybotCookiebotDialogBodyButtonDecline
 #SELEKTORY pro odebrání zboží z košíků (částečně - komplet)
 
 ${SEL_BtnMinus}              data-test=btnMinus
-${SEL_Odebrani_kompletni}    aria-label^="Odstranit z košíku"
+${SEL_Odebrani_kompletni}    [aria-label^="Odstranit z košíku"]
+
