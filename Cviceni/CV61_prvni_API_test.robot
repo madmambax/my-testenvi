@@ -51,7 +51,7 @@ Prvni API test
 #      Log to Console      ${response.json()}
 #      Log to Console      ${response.json()}[title]
 #      Log to Console      ${response.json()}[userId]
-#      Log to Console      ${dict.title}
+#      Log To Console      ${response.json()}.id
 #
 #    Should Be Equal As Strings    OK  ${response.reason}
 #

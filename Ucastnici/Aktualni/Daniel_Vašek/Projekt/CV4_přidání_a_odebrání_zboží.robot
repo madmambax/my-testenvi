@@ -16,6 +16,7 @@ Test Teardown   Po_testech
 
 *** Test Cases ***
 
+
 Pridani zbozi do kosiku
     Login                                   ${USER1_NAME}              ${USER1_PASSWORD}        ${USER1_SHORT}
     #Pridat do Kosiku                       ${ZBOZI01_NAME}
