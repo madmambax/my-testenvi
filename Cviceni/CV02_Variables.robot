@@ -73,6 +73,7 @@ Ukázka práce s proměnnu typu Dictionary
     # hodí se na předávání parametrů klíčovým slovům a configuraci
     Log Many        &{dictionary}
     Log To Console  ${dictionary.login}
+    Log to Console  ${dictionary}[login]    #jiný způsob zápisu
     #Příklad: TestLogin a KS Login - JSON se ukládá do dictionary
 
 
