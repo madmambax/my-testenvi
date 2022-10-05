@@ -1,13 +1,20 @@
 *** Settings ***
-Library     Browser
-Resource    Variables/TestData.robot
-Resource    Variables/Configuration.robot
+Library                 Browser
+Resource                Variables/TestData.robot
+Resource                Variables/Configuration.robot
 Test Setup              Start Page
 Test Teardown           End Page
 Suite Setup             Start Browser
 Suite Teardown          End Browser
+Test Timeout            ${TC_TIMEOUT_ROBOT_KW}
 
 *** Test Cases ***
+Prihlaseni prazdny login
+    Login               empty.login                     ${USER_PASSWORD}                   ${TEXT_LOGIN}
+
+Prihlaseni prazdne heslo
+    Login               ${USER_LOGIN}                   empty.password                     ${TEXT_LOGIN}
+
 Prihlaseni chybny login
     Login               bad.login                       ${USER_PASSWORD}                   ${TEXT_LOGIN}
 
@@ -28,10 +35,27 @@ Login
 
     Click              ${SEL_HEADER_BUTTON}                          delay=${TIME_BETWEEN_CLICKS}
 
-    Type Text          ${SEL_LOGIN_USERNAME}                         ${login}
-    Type Text          ${SEL_LOGIN_PASSWORD}                         ${password}
+    IF  "${login}" != "empty.login"
+        Type Text      ${SEL_LOGIN_USERNAME}                         ${login}
+    END
+
+    IF  "${password}" != "empty.password"
+        Type Text      ${SEL_LOGIN_PASSWORD}                         ${password}
+    END
+
     Click              ${SEL_LOGIN_BUTTON}                           delay=${TIME_BETWEEN_CLICKS}
-    Get Text           ${SEL_HEADER_TEXT}    ==    ${headerText}
+
+    IF  "${login}" == "bad.login" or "${password}" == "bad.password"
+        Get Text       ${SEL_ERROR_MESSAGE}     ==      ${ERROR_BAD_MESSAGE}
+    ELSE IF  "${login}" == "empty.login"
+        Get Text       ${SEL_ERROR_MESSAGE}     ==      ${ERROR_EMPTY_MESSAGE}
+        Get Text       ${SEL_ERROR_TITLE}       ==      ${ERROR_EMPTY_LOGIN_TITLE}
+    ELSE IF  "${password}" == "empty.password"
+        Get Text       ${SEL_ERROR_MESSAGE}     ==      ${ERROR_EMPTY_MESSAGE}
+        Get Text       ${SEL_ERROR_TITLE}       ==      ${ERROR_EMPTY_PASSWORD_TITLE}
+    END
+
+    Get Text           ${SEL_HEADER_TEXT}       ==      ${headerText}
 
 Logout
     [Arguments]        ${headerText}
