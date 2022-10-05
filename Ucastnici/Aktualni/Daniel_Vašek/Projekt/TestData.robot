@@ -65,4 +65,3 @@ ${SEL_Cookie_Decline}       id=CybotCookiebotDialogBodyButtonDecline
 
 ${SEL_BtnMinus}              data-test=btnMinus
 ${SEL_Odebrani_kompletni}    [aria-label^="Odstranit z košíku"]
-

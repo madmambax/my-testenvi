@@ -17,7 +17,7 @@ Test Teardown   Po_testech
 *** Test Cases ***
 
 Pridani zbozi do kosiku
-    Login               ${USER1_NAME}              ${USER1_PASSWORD}        ${USER1_SHORT}
+    Login                                   ${USER1_NAME}              ${USER1_PASSWORD}        ${USER1_SHORT}
     #Pridat do Kosiku                       ${ZBOZI01_NAME}
     #Pridat do kosiku varianta pocet        ${ZBOZI01_NAME}  5
     Pridat do kosiku varianta produkt id    ${ZBOZI01_NAME}  ${ZBOZI01_ID}   5
