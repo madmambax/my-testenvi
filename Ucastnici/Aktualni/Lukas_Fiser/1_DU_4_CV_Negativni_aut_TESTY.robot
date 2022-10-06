@@ -6,7 +6,7 @@ Library     OperatingSystem
 
 Prvni test negativní
     ${res} =        run     dir neznamy_adresar
-    log             ${res}
+    log             ${res}  # Znakem dolaru se definuje proměnná.
     Should Contain  ${res}  File Not Found
 
 Druhy test negativní
@@ -14,3 +14,4 @@ Druhy test negativní
     Log             ${res}
     Should Contain  ${res}  Try "tes /?".
 
+# Znak pro komentář

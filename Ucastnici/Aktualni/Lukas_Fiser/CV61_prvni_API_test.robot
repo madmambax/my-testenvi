@@ -40,20 +40,16 @@ Prvni API test
 #Quick Get Request With Parameters Test
 #      ${response}=    GET  https://www.google.com/search  params=query=ciao  expected_status=200
 #
-#Quick Get A JSON Body Test
-#      ${response}=    GET  https://jsonplaceholder.typicode.com/posts/1
-##      Status should be  200
-#      Log to Console      ${response.ok}
-#      Log to Console      ${response.headers}
-#      Log to Console      reason: ${response.reason}
-#      Log to Console      status_code: ${response.status_code}
-#      Log to Console      text: ${response.text}
-#      Log to Console      ${response.json()}
-#      Log to Console      ${response.json()}[title]
-#      Log to Console      ${response.json()}[userId]
-#      Log To Console      ${response.json()}.id
-#
-#    Should Be Equal As Strings    OK  ${response.reason}
+Quick Get A JSON Body Test
+      ${response}=    GET  https://jsonplaceholder.typicode.com/posts/3
+      Status should be  200
+      Log To Console   ${response.ok}
+             Log To Console   ${response.headers}
+             Log To Console   ${response.reason}
+             Log To Console   ${response.text}
+             Log To Console   ${response.json()}
+             Log To Console   ${response.json()}[id]
+             Should Be Equal As Strings    3  ${response.json()}[id]
 #
 ##&{dict} =    userId=1  id=1  title='sunt'  body='quia et suscipit'
 ##{'userId': 1, 'id': 1, 'title': 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit', 'body': 'quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto'}
