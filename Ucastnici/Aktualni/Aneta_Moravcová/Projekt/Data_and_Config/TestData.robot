@@ -4,9 +4,9 @@
 *** Variables ***
 
 # Uživatel
-${USER_NAME}          radek.tester@seznam.cz
+${USER_NAME}          bavemal543@cebaike.com
 ${USER_PASSWORD}      tajneheslotajneheslo
-${USER_SHORT}         JT
+${USER_SHORT}         MS
 
 # Zboží
 ${ZBOZI_NAME}          banán
