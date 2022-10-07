@@ -6,7 +6,7 @@
 #uživatel
 ${USER1_NAME}               bavemal543@cebaike.com
 ${USER1_PASSWORD}           tajneheslotajneheslo
-${USER1_SHORT}              JT
+${USER1_SHORT}              MS
 
 #zboží
 ${ZBOZI01_NAME}             mléko
