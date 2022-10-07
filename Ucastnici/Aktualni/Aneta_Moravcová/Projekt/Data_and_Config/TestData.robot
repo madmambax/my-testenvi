@@ -9,8 +9,11 @@ ${USER_PASSWORD}      tajneheslotajneheslo
 ${USER_SHORT}         MS
 
 # Zboží
-${ZBOZI_NAME}          banán
-${ZBOZI_ID}            1349777
+#${ZBOZI_NAME}          banán
+#${ZBOZI_ID}            1349777
+${ZBOZI_NAME}          mléko
+${ZBOZI_ID}            1320669
+
 
 # Selektory pro přihlášení a odhlášení
 ${SEL_HeaderLoginErrorTxt}          xpath=//div[@class='u-mr--8']

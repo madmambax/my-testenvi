@@ -55,8 +55,12 @@ Odhlaseni
 Pridani zbozi do kosiku
      [Arguments]          ${ZBOZI_NAME}          ${ZBOZI_ID}          ${mnozstvi}
 
-     Type Text          ${SEL_SearchGlobal}          ${ZBOZI_NAME}
-     Click              ${SEL_BtnSearchGlobal}
+     Type Text           ${SEL_SearchGlobal}         ${ZBOZI_NAME}
+     Sleep               1                           # statický timeout
+     Click               ${SEL_BtnSearchGlobal}      # tlačítko Hledat
+#     Sleep               5                           # statický timeout
+     Get text           text="produktů"
+
      Click              css=[data-product-id="${ZBOZI_ID}"][data-test="btnAdd"]
      ${Pocet}           Evaluate                    ${mnozstvi} - 1
      Click              css=[data-product-id="${ZBOZI_ID}"][data-test="btnPlus"]  clickCount=${Pocet}
