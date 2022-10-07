@@ -4,7 +4,7 @@
 
 *** Variables ***
 #uživatel
-${USER1_NAME}               radek.tester@seznam.cz
+${USER1_NAME}               bavemal543@cebaike.com
 ${USER1_PASSWORD}           tajneheslotajneheslo
 ${USER1_SHORT}              JT
 
