@@ -78,7 +78,7 @@ Pridat do kosiku
 
 Pridat do kosiku varianta produkt id
     [Arguments]         ${Zbozi}     ${produkt_id}     ${Kusu}
-
+    #${old_mode} =      Set Strict Mode    False     #zajišťuje ingnorování více stejných selektorlů a klikne prostě na ten první
     # použít původní verzi a rozšířit ji o
     Type Text   ${SEL_SearchGlobal}    ${Zbozi}
     Sleep       ${TIME_BETWEEN_CLICKS1}
@@ -106,7 +106,7 @@ Odebrání několik ks lepší
 
     [Arguments]  ${Kusu}
     ${old_mode} =      Set Strict Mode    False     #zajišťuje ingnorování více stejných selektorlů a klikne prostě na ten první
-    Click       ${SEL_BtnMinus}             clickCount=${Kusu}    delay=100ms
+    Click       ${SEL_BtnMinus}           clickCount=${Kusu}    delay=100ms
     Sleep       ${TIME_BETWEEN_CLICKS1}
 
 

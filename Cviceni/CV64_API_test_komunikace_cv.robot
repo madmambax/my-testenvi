@@ -1,13 +1,13 @@
-"""
+#"""
 
-Tento příklad potřebuje robotframework-requests balíček
-instalace:
-pip install robotframework-requests
+#Tento příklad potřebuje robotframework-requests balíček
+#instalace:
+#pip install robotframework-requests
 
-CVIČENÍ 2: vytvořte další testy, 1 pozitivní a 1 negativní test
+#CVIČENÍ 2: vytvořte další testy, 1 pozitivní a 1 negativní test
 
 
-"""
+#"""
 
 
 *** Settings ***
@@ -31,8 +31,8 @@ registrace ok
 registrace bez volby kurzu
     API Comunication   {"targetid":"","kurz":"","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}   500
 
-#registrace volby telefonu (prázdný)
-#přidat test
+registrace volby telefonu (prázdný)
+    API Comunication   {"targetid":"","kurz":"","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}   500
 
 #registrace chybny telefon (moc dlouhy)
 #přidat test
