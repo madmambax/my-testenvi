@@ -9,12 +9,18 @@ Documentation     Cvičení: práce s promennými
 
 
 *** Variables ***
+
+
 #vytvořte seznam obsahující názvy prohlížečů
 
 *** Test Cases ***
 
 #Vypište všechny položky seznamu do logu
 Test pro vypsani všech položek seznamu do logu
+    @{seznam} =     Create List    Chrome    Firefox   Edge
+    Log Many        @{seznam}
+    Log To Console    ${seznam}[1]
+    Should Contain    ${seznam}[0]  Chrome
     # sem je třeba doplnit příkazy
 
 
@@ -24,6 +30,7 @@ Test pro vypsani jedne polozky ze seznamu
 
 #Vytvořte ověření že položka na pozici 0 v seznamu obsahuje Chrome
 Test pro oveření že 0 položka seznamu obsahuje Chrome
+
     #použijte například  Should Contain
 
 

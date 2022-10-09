@@ -76,7 +76,8 @@ Pridat do kosiku
     Type Text           ${SEL_SearchGlobal}         ${Zbozi}
     Sleep               1                           # statický timeout
     Click               ${SEL_BtnSearchGlobal}      # tlačítko Hledat
-    Sleep               5                           # statický timeout
+#    Sleep               5                           # statický timeout
+    Get text            text="produktů"             #tohle je lepší než statický timeout
 
     Click               css=[${SEL_ProductID}="${produkt_id}"][${SEL_BtnAdd}]
     Sleep               1
