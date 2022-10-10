@@ -1,19 +1,14 @@
-#CVIČENÍ 2: vytvořte další testy, 1 pozitivní a 1 negativní test
-
-
 
 *** Settings ***
 Library	 RequestsLibrary
-Library  String             # potřebujeme pro klíčové slovo: Encode String To Bytes
-#Library	 Collections
+Library  String
+
 
 
 *** Variables ***
 ${url}		    http://testovani.kitner.cz/
 ${app}          /regkurz/formsave.php
 ${urlapp}       ${url}${app}
-
-#${json}      {"targetid":"","kurz":"2","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}
 
 *** Test Cases ***
 
@@ -82,8 +77,7 @@ Vynechan klic a hodnota (phone)
 API Comunication
     [Arguments]       ${json}     ${error_resp}
 
-    #převedení do UTF-8
-    ${json_utf8} =      Encode String To Bytes     ${json}     UTF-8          #vyžaduje knihovnu String
+    ${json_utf8} =      Encode String To Bytes     ${json}     UTF-8
 
     ${resp} =           POST  ${urlapp}  data=${json_utf8}  expected_status=${error_resp}
 
