@@ -1,6 +1,8 @@
 *** Settings ***
 Documentation   Automatizace rohlik.cz s BrowserLibrary
 Library         Browser
+Library         String
+Library         RequestsLibrary
 Resource        Data_and_Config/testdataVK.robot
 Resource        Data_and_Config/ConfigurationVK.robot
 
@@ -11,9 +13,14 @@ Suite Setup     pred_sadou
 Suite Teardown  po_sade
 
 *** Variables ***
+${urlapp}  https://www.rohlik.cz/services/frontend-service/login
 
 
 *** Test Cases ***
+#good login API - 200
+#    API Comunication    {email: "vojta.kartus@gmail.com", password: "mojeheslonarohlik", name: ""}  200
+#    ${resp} =           POST  https://www.rohlik.cz/services/frontend-service/login  data=${json_utf8}  expected_status=${error_resp}
+
 bad email prihlaseni
     Login                           dsadsad@sdas.cz                     ${SEL_USER1_PASSWORD}               ${TEXT_USER1_BadLoginOvereni}
 
@@ -30,6 +37,16 @@ good login prihlaseni
 
 
 *** Keywords ***
+#API Comunication
+#    [Arguments]       ${json}     ${error_resp}
+
+    #převedení do UTF-8
+#    ${json_utf8} =      Encode String To Bytes     ${json}     UTF-8         #kvůli encode string to bytes je třeba knihovna string!!
+#    ${resp} =           POST  ${urlapp}  data=${json}  expected_status=${error_resp}       #kvůli POST je třeba knihovna RequestsLibrary!!
+#    Log                 ${resp.json()}
+#    Status Should Be    ${error_resp}
+
+
 Login
     [Arguments]         ${email}                            ${heslo}                    ${validation}
         #otevri stranku
