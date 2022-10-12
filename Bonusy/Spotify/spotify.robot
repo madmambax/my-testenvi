@@ -3,9 +3,7 @@
 #
 
 *** Settings ***
-Library	    Collections
 Library	    RequestsLibrary
-Library     String
 Library     Lib/base64.py
 Variables   test_data.py
 
