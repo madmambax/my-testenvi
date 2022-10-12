@@ -8,7 +8,9 @@ Library     Lib/base64.py
 Variables   test_data.py
 
 *** Variables ***
-${URL_WITH_ARTIS_ID}    https://api.spotify.com/v1/tracks/2TpxZ7JUBn3uw46aR7qd6V
+${URL}                  https://api.spotify.com/v1/tracks/
+${ARTIST_ID}            2TpxZ7JUBn3uw46aR7qd6V
+${URL_WITH_ARTIST_ID}   ${URL}${ARTIST_ID}
 
 
 *** Test Cases ***
@@ -42,7 +44,7 @@ spotify auth
 
 #použít Access Token
     ${headers}=         Create Dictionary  Authorization=Bearer ${access_token}
-    ${resp} =           GET  ${URL_WITH_ARTIS_ID}  headers=${headers}  expected_status=200
+    ${resp} =           GET  ${URL_WITH_ARTIST_ID}  headers=${headers}  expected_status=200
 
 
 #data o umělci
