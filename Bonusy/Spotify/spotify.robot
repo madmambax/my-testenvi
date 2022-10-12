@@ -14,7 +14,7 @@ ${URL_WITH_ARTIST_ID}   ${URL}${ARTIST_ID}
 
 
 *** Test Cases ***
-spotify auth
+Test s autentizaci pro spotify
 
 #připravit Requests access token
 
