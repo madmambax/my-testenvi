@@ -53,6 +53,7 @@ ${SEL_BtnMinus}             data-test=btnMinus
 ${SEL_Cart}                 id=cart
 ${SEL_CartContent}          id=cartContent
 ${SEL_CartReview}           id=cartReviewMainTitle
+${SEL_RemoveBasket}         [aria-label^="Odstranit z košíku"]
 
 #SELEKTORY pro Cookie
 ${SEL_Cookie_AllowAll}      id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
