@@ -5,7 +5,7 @@ Documentation    Oproti DÚ_1 jsou tu některé konstanty nahrazeny proměnnými
 Test Setup       Setup_DU2
 Library          Browser
 Test Teardown    Teardown_DU2
-# Test Teardown se mi neloguje do log file - nebo ho tam prostě nemůžu najít.
+# Test Teardown se mi neloguje do log file - nebo ho tam prostě nemůžu najít. A funguje vůbec?!
 
 *** Variables ***
 # Zkusit použít v klíč. slovech a test casech proměnný ze seznamů a ze slovníků místo proměnných zapsaných jako skaláry.
