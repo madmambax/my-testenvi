@@ -22,7 +22,7 @@ ${urlapp}       ${url}${app}
 *** Test Cases ***
 
 registrace (fyzická osoba - adresa)
-    API Comunication   {"targetid":"","kurz":"2","name":"Daniel","surname":"Vašeg","email":"dan.vasek123@seznam.cz","phone":"777454333","person":"fyz","address":"Sázavská 5 - Brno1","count":"1","comment":null,"souhlas":true}  200
+    API Comunication   {"targetid":"","kurz":"2","name":"Daniel","surname":"Vašeg","email":"dan.vasek125555@seznam.cz","phone":"777454333","person":"fyz","address":"Sázavská 5 - Brno1","count":"1","comment":null,"souhlas":true}  200
 
 registrace (právnická osoba ICO)
     API Comunication   {"targetid":"","kurz":"2","name":"Jan","surname":"Novak","email":"aaabb.bbbbbb@seznam.cz","phone":"777454111","person":"pra","ico":"25596641","count":"1","comment":null,"souhlas":true}  200
@@ -52,31 +52,22 @@ registrace speciální znaky (mezera v telefonu)
 
 API Comunication
     [Arguments]       ${json}     ${error_resp}
-
     #převedení do UTF-8
     ${json_utf8} =      Encode String To Bytes     ${json}     UTF-8          #vyžaduje knihovnu String
-
     ${resp} =           POST  ${urlapp}  data=${json_utf8}  expected_status=${error_resp}
-
     Log                 ${resp.json()}
-
     Status Should Be    ${error_resp}
 
 
 API Comunicaication Post on Session
     [Arguments]       ${json}     ${error_resp}
-
    #převedení do UTF-8
    ${json_utf8} =     Encode String To Bytes     ${json}     UTF-8          #vyžaduje knihovnu String
-
   #vytoření hlavičky (header) zprávy
   &{header}=          Create Dictionary   Content-Type=application/json     charset=utf-8
-
   #vytvoření spojení (session)
   CreateSession       apilogin            ${url}
-
   # odeslání zprávy a uložení odpovědi do ${resp}
   ${resp}=   Post on Session   apilogin  ${app}   data=${json_utf8}   headers=${header}   expected_status=Anything
-
   Status Should Be    ${error_resp}
 
