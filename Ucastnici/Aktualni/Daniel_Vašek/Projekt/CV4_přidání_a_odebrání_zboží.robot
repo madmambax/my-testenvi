@@ -83,7 +83,7 @@ Pridat do kosiku varianta produkt id
     Type Text   ${SEL_SearchGlobal}    ${Zbozi}
     Sleep       ${TIME_BETWEEN_CLICKS1}
     Click       ${SEL_BtnSearchGlobal}  #zde DOPLNIT ks pro kliknutí na hledat, selektor bude text "Hledat"
-
+    ${old_mode} =      Set Strict Mode    False     #zajišťuje ingnorování více stejných selektorlů a klikne prostě na ten první
     #Click               css=kde se jako selektor použije ${produkt_id} a také data-test="btnAdd"   # kliknutí na tlačítko "Do košíku" pro konkrétní produkt
     Click               css=[${SEL_ProductID}="${produkt_id}"][${SEL_BtnAdd}]
 
