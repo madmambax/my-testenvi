@@ -1,8 +1,8 @@
-*** Comments ***
-
 *** Settings ***
 # Sem je možné mj. připojit nějakou knihovnu RF.
-# Jediná knihovna, která funguje v testech RF a není potřeba ji tady (ani nikde jinde) připojovat je knihovna 'BuiltIn'.
+# Co všechno je možné nastavit v sekcvi 'Setting'? Viz User Guide RBFW>
+
+# Jediná knihovna, která funguje v testech RF a není potřeba ji tady (ani nikde jinde) připojovat, je knihovna 'BuiltIn'.
 Library            OperatingSystem
 Documentation     Zkouska knihovny 'OperatingSystem'
 
@@ -31,3 +31,5 @@ Documentation     Zkouska knihovny 'OperatingSystem'
     ${res} =        run     help dir
     log             ${res}
     Should Contain  ${res}  Zobrazí zásobník adresářů.
+
+*** Comments ***
