@@ -9,7 +9,7 @@ Documentation    Test file obsahuje test casy na automatické přihlášení (a 
 ...              2 testy pozitivní a 2 negativní. Všechny napsány minimalisticky.
 Test Setup       Setup_DU3
 Library          Browser
-Resource         Variables_DU.robot
+Resource         DU_Variables.robot
 Test Teardown    Teardown_DU3
 
 *** Test Cases ***
