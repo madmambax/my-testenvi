@@ -22,17 +22,20 @@ ${url4}         welcome.php
 ${url5}         ${url3}${url4}
 
 # Identifikátory (selektory)
-# @{selector}         ${selector1}  ${selector2}  ${selector3}  ${selector4}  ${selector5}  ${selector6}
-@{selector}          id=inputUsername    id=inputPassword    id=butt     id=logout   id=login_form      text=Login
-# &{selector}              "1"=${selector1}     "2"=${selector2}        "3"=${selector3}     "4"=${selector4}    "5"=${selector5}       "6"=${selector6}
-# &{selector}         "1"="id=inputUsername"  "2"="id=inputPassword"  "3"="id=butt"       "4"="id=logout"        "5"="id=login_form"  "6"="text=Login"
+# @{selector}         ${selector1}  ${selector2}  ${selector3}  ${selector4}  ${selector5}  ${selector6}    ${selector7}    ${selector8}    ${selector9}   ${selector10}
+@{selector}          id=inputUsername    id=inputPassword    id=butt     id=logout   id=login_form      text=Login    text=novak    xpath=/html/body/div/form/div[1]/p[1]/b    css=body > div > form > div:nth-child(1) > p:nth-child(2) > b    text=odhlásit
+# &{selector}              "1"=${selector1}     "2"=${selector2}        "3"=${selector3}     "4"=${selector4}    "5"=${selector5}       "6"=${selector6}   "7"=${selector7}  "8"=${selector8}    "9"=${selector9}    "10"=${selector10}
+# &{selector}         "1"="id=inputUsername"  "2"="id=inputPassword"  "3"="id=butt"       "4"="id=logout"        "5"="id=login_form"  "6"="text=Login"    "7"="text=novak"    "8"="xpath=/html/body/div/form/div[1]/p[1]/b"    "9"="css=body > div > form > div:nth-child(1) > p:nth-child(2) > b"   "10"="text=odhlásit"
 ${selector1}         id=inputUsername
 ${selector2}         id=inputPassword
 ${selector3}         id=butt
 ${selector4}         id=logout
 ${selector5}         id=login_form
 ${selector6}         text=Login
-
+${selector7}         text=novak
+${selector8}         xpath=/html/body/div/form/div[1]/p[1]/b
+${selector9}         css=body > div > form > div:nth-child(1) > p:nth-child(2) > b
+${selector10}        text=odhlásit
 # Loginy
 # @{login}            ${login1}       ${login2}       ${login3}
 @{login}            novak       admin        novakova
