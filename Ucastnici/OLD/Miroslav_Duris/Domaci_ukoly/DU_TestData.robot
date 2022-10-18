@@ -2,7 +2,8 @@
 # Chybové hlášky
 
 # Identifikátory (selektory)
-# ${SEL_názevSelektoru}
+# ${SEL_názevSelektoru}  -  u xpath a css je tov blbost..
+# a míchat to s data-test a text mi taky nepřijde dobrý.
 # @{SEL}                 ${SEL1}                   ${SEL2}                   ${SEL3}          ${SEL4}            ${SEL5}                ${SEL6}             ${SEL7}             ${SEL8}                                          ${SEL9}                                                                ${SEL10}
 @{SEL}                   id=inputUsername          id=inputPassword          id=butt          id=logout          id=login_form          text=Login          text=novak          xpath=/html/body/div/form/div[1]/p[1]/b          css=body > div > form > div:nth-child(1) > p:nth-child(2) > b          text=odhlásit
 # &{SEL}                 "1"=${SEL1}               "2"=${SEL2}               "3"=${SEL3}      "4"=${SEL4}        "5"=${SEL5}            "6"=${SEL6}         "7"=${SEL7}         "8"=${SEL8}                                      "9"=${SEL9}                                                            "10"=${SEL10}
