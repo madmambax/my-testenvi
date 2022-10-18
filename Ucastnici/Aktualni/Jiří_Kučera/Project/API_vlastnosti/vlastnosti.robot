@@ -22,7 +22,7 @@ Registrace na kurz háčky a čárky
 
 Registrace na kurz specialni znaky
         Registrace na kurz  1  Janěščřž#&@ýáíéů  Novakěš#&čřžýáíéů  jan.no@vak@abc.cz  777123123  fyz  Udolniěšč#&řžýáíéů, Brno  1  nic  false  200
-
+#neakceptuje
 Registrace na kurz format email
         Registrace na kurz  2  Jan787878  Novak  jan.novak@abc.com  777123123  pra  27232433  1  dekuji  false  200
 
