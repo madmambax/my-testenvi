@@ -12,6 +12,10 @@ ${json2}      {"targetid":"","kurz":"20","name":"Jan","surname":"Novak","email":
 # Jak upravit proměnnou 'json2' tak, abych po jejím odeslání dostal Response se status kódem 400?
 
 *** Test Cases ***
+0. Prvni_test_api  # Nebo je to API test?
+      ${response} =      GET                https://www.google.com
+      Log to Console     ${\n}${response}
+
 1. Očekávání_určité_chyby
 # Převedení do UTF-8
    ${json_utf8} =     Encode String To Bytes     ${json2}     UTF-8          # Vyžaduje knihovnu String; a proč se tohle vlastně má dělat?
