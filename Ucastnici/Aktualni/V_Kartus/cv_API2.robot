@@ -58,7 +58,7 @@ Registrace na kurz
 
     #vyhodnocení status kódu
     Status Should Be    ${response}
-    Should Be Equal As Strings    200  ${response.json()}[response]
+    Should Be Equal As Strings    200  ${resp.json()}[response]
 
     #vyhodnocení JSONu stačí jen vyhodnotit klíč response a jeho hodnotu
     #??? DOPLNIT ???#
