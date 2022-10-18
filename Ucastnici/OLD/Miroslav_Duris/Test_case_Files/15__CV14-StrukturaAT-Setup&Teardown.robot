@@ -7,10 +7,13 @@ Library         Browser
 Resource        /home/miki/PycharmProjects/jak_automatizovat_testy/Ucastnici/OLD/Miroslav_Duris/Data&Config/TestDataUpdated.robot
 Resource        /home/miki/PycharmProjects/jak_automatizovat_testy/Cviceni/Data_and_Config/Configuration.robot
 Resource        /home/miki/PycharmProjects/jak_automatizovat_testy/Cviceni/Data_and_Config/Selektory-CV13.robot
-#Suite Setup     Pred_celou_test_sadou      Spustí se jednou na začátku test sady.
-#Suite Teardown  Po_cele_test_sade          Spustí se jednou na konci test sady.
-#Test Setup      Pred_kazdym_test_casem     Spustí se jednou na začátku každého test casu.
-#Test Teardown   Po_kazdem_test_casu        Spustí se jednou na konci každého test casu.
+# Suite Setup     Pred_celou_test_sadou      Spustí se jednou na začátku test sady.
+# Suite Teardown  Po_cele_test_sade          Spustí se jednou na konci test sady.
+# Test Setup      Pred_kazdym_test_casem     Spustí se jednou na začátku každého test casu.
+# Test Teardown   Po_kazdem_test_casu        Spustí se jednou na konci každého test casu.       Proběhne i v případě, že testcase nedojde až do konce (failne třeba v půlce).
+## Suite Setup, Suite Teardown, Test Setup i Test Teardown mají 1 povinnej argument (přesně 1 - musí to být nějaké klíč. slovo - library keyword nebo user-defined keyword)
+### Setupy a Teardowny se dají nastavit i u jednotlivých testcasů (a nejenom v sekci Settings pro celou test. sadu).
+### Dají se tak anulovat nebo změnit Setupy a Teardowny nastavený v sekci Settings (ty platí defaultně pro všechny testcasy ve filu).
 
 *** Variables ***
 
