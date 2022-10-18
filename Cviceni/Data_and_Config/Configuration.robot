@@ -1,4 +1,4 @@
-#
+#*** Variables ***
 # Tento soubor obsahuje všechny konfigurační parametry a proměné
 #
 
