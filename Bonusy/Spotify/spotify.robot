@@ -3,20 +3,20 @@
 #
 
 *** Settings ***
-Library	    Collections
 Library	    RequestsLibrary
-Library     String
 Library     Lib/base64.py
 Variables   test_data.py
 
 *** Variables ***
-${URL_WITH_ARTIS_ID}    https://api.spotify.com/v1/tracks/2TpxZ7JUBn3uw46aR7qd6V
+${URL}                  https://api.spotify.com/v1/tracks/
+${ARTIST_ID}            2TpxZ7JUBn3uw46aR7qd6V
+${URL_WITH_ARTIST_ID}   ${URL}${ARTIST_ID}
 
 
 *** Test Cases ***
-spotify auth
+Test s autentizaci pro spotify
 
-#připravit Requests access token
+#1. requests pro získání access token
 
     #base64 encoded client_id:client_secret
     ${base64encoded_client_id_and_secret}=    Evaluate    base64.b64encode('${CLIENT_ID}:${CLIENT_SECRET}'.encode('ascii'))
@@ -42,9 +42,9 @@ spotify auth
     ${access_token}     Set Variable  ${resp.json()}[access_token]
 
 
-#použít Access Token
+#2. request s použím Access Token
     ${headers}=         Create Dictionary  Authorization=Bearer ${access_token}
-    ${resp} =           GET  ${URL_WITH_ARTIS_ID}  headers=${headers}  expected_status=200
+    ${resp} =           GET  ${URL_WITH_ARTIST_ID}  headers=${headers}  expected_status=200
 
 
 #data o umělci
