@@ -13,13 +13,34 @@ ${urlapp}   ${url}${app}
 *** Test Cases ***
 
 Registration OK
-    ${json}=        catenate  {"targetid":"","kurz":"3","name":"Jitka","surname":"Tester","person":"fyz","address":"Udolni 21, Brno","ico":"27232433","email":"jitka.tester@data.cz","phone":"777123132","count":"1","comment":"nic","souhlas":true}
-    ${response}=    POST    http://testovani.kitner.cz/regkurz/formsave.php  data=${json}  expected_status=200
-    log to console  ${response.json()}[response]
+    Registration  1  Jitka  Novakova  jitka.novakova@abc.cz  777123456  fyz  Kladno  3  nic  true  200
 
 Registration with wrong email
-    ${json}=        catenate  {"targetid":"","kurz":"3","name":"Jitka","surname":"Tester","person":"fyz","address":"Udolni 21, Brno","ico":"27232433","email":"jitka.cz","phone":"777123132","count":"1","comment":"nic","souhlas":true}
-    ${response}=    POST    http://testovani.kitner.cz/regkurz/formsave.php  data=${json}  expected_status=500
-    log to console  ${response.json()}[response]
-    log to console  ${response.json()}[reason]
+    Registration    2  Jitka  Novakova  jitka.cz  777123456  fyz  Nova 123, Kladno  3  nic  true  500
 
+*** Keywords ***
+
+
+Registration
+    [Arguments]    ${course}  ${name}  ${surname}  ${email}  ${phone}  ${person}  ${address_ico}  ${count}  ${comment}  ${agree}  ${response_code}
+
+    # vytvoření těla (body) zprávy
+    ${json}=     Catenate      {
+    ...     "targetid":"",
+    ...     "kurz":"${course}",
+    ...     "name":"${name}",
+    ...     "surname":"${surname}",
+    ...     "email":"${email}",
+    ...     "phone":"${phone}",
+    ...     "person":"${person}",
+    ...     "address":"${address_ico}",
+    ...     "ico":"${address_ico}",
+    ...     "count":"${count}",
+    ...     "comment":"${comment}",
+    ...     "souhlas":${agree}}
+
+
+    ${json_utf8} =     Encode String To Bytes     ${json}     UTF-8
+
+    ${resp} =           POST  ${urlapp}   data=${json_utf8}   expected_status=${response_code}
+    Log	                Responce: @{resp}
