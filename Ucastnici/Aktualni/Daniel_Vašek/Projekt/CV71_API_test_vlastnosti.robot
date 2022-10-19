@@ -41,11 +41,10 @@ Registrace na kurz háčky a čárky
 
 
 Registrace na kurz
-    [Arguments]     ${kurz}      ${name}     ${surname}      ${email}     ${phone}     ${person}     ${adress_ico}     ${count}     ${comment}     ${souhlas}       ${200}
-
+    [Arguments]     ${error_resp}   ${kurz}      ${name}     ${surname}      ${email}     ${phone}     ${person}     ${adress_ico}     ${count}     ${comment}     ${souhlas}       ${200}
     # vytvoření těla (body) zprávy
     ${json}=       Catenate    {"targetid":"","kurz":"${kurz}","name":"${name}","surname":"${surname}","email":"${email}","phone":"${phone}","person":"${person}","address":"${adress_ico}","ico":"${adress_ico}","count":"${count}","comment":${comment},"souhlas":${souhlas}}
-
+    ${error_resp}  =  200
     #převedení do UTF-8
     ${json_utf8} =     Encode String To Bytes     ${json}     UTF-8      #vyžaduje knihovnu String
 
