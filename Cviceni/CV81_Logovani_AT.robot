@@ -80,7 +80,7 @@ API Comunicaication
 
   #převedení do UTF-8
   ${json_utf8} =     Encode String To Bytes     ${json}     UTF-8          #vyžaduje knihovnu String
-  Debug
+#  Debug
 
   Log                Převod na UTF-8: ${json_utf8}   level=INFO
   Log                Převod na UTF-8: ${json_utf8}   level=DEBUG   formatter=repr

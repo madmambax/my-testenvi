@@ -147,6 +147,8 @@ Pred_sadou
 #    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
     New Page                    ${URL}
 
+    Cookie                      AcceptAll
+
 
 Uklid_po_testu
     Log         Uklid na konci každho testu.
@@ -172,3 +174,14 @@ Uklid_sada
     Go to                   ${URL}
     Logout
     Close Browser
+
+
+Cookie
+    [Arguments]         ${type}
+    IF  "${type}" == "AcceptAll"
+        Click           ${SEL_Cookie_AllowAll}
+    ELSE
+        Click           ${SEL_Cookie_Decline}
+    END
+
+    sleep               1      #workaround: Probliknutí cele stránky po kliknutí na tlačítko

@@ -28,7 +28,7 @@ Test Teardown   Uklid_po_testu
 *** Test Cases ***
 
 
-Test Objednavky
+Test Objednavky Debug
     ${kusu} =	        Set Variable	         5
     Login               ${USER1_NAME}            ${USER1_PASSWORD}                   ${USER1_SHORT}
     Debug
@@ -61,17 +61,14 @@ Login
 Pridat do kosiku
     [Arguments]         ${Zbozi}                    ${Kusu}
     Type Text           ${SEL_SearchGlobal}         ${Zbozi}
-    Sleep               1                           # statický timeout
     #1x
     Click               ${SEL_BtnSearchGlobal}      # tlačítko Hledat
-#    Sleep               5                           # statický timeout
 
     Click               ${SEL_BtnAdd}               delay=${TIME_BETWEEN_CLICKS}     # způsobuje někdy zmizení uživatele, scrol donwn, důvod někdy klikne na zboží níže
 
     # Kusu - 1
     ${Pocet}            Evaluate                    ${Kusu} - 1
     Click               ${SEL_BtnPlus}              clickCount=${Pocet}
-    Sleep               1                           #Statický timeout -  čeká na aktualizaci košíku
     ${cart_text}=       Get Text                    ${SEL_Cart}
     Log                 ${cart_text}
     Get Text            ${SEL_Cart}                 matches                             (?i)${Zbozi}    # (?i)  znamená že se bere case insensitive
@@ -79,19 +76,15 @@ Pridat do kosiku
 
 
 Logout
-#    Hover               xpath=//div[@class='u-mr--8']
     Go to               ${URL}
     Click               ${SEL_HeaderLoginErrorTxt}
     Click               ${SEL_UserBoxLogoutBtn}
-#    Log                 ${OUTPUT_DIR}
-
 
 Odebrat z kose
     [Arguments]                 ${Kusu}
 
     #přidat ověření že košík obsahuje ${Kusu} kusů
     Take Screenshot
-
 
     Click                   ${SEL_BtnMinus}             clickCount=${Kusu}      delay=100ms
     Take Screenshot
@@ -134,7 +127,6 @@ Uklid_sada
     Run Keyword If          '${TEXT_EmptyCart}' in '''${cart_overview_text}'''       Click               text="${TEXT_EmptyCart}"
     Take Screenshot
 
-    #Logout
     Go to                   ${URL}
     Logout
     Close Browser
@@ -148,4 +140,4 @@ Cookie
         Click           ${SEL_Cookie_Decline}
     END
 
-    sleep               1      #workaround: Probliknutí cele stránky po kliknutí na tlačítko
+#    sleep               1      #workaround: Probliknutí cele stránky po kliknutí na tlačítko
