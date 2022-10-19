@@ -39,18 +39,12 @@ Registrace na kurz háčky a čárky
 
 *** Keywords ***
 
-Registrace na kurz
 
+Registrace na kurz
     [Arguments]     ${kurz}      ${name}     ${surname}      ${email}     ${phone}     ${person}     ${adress_ico}     ${count}     ${comment}     ${souhlas}       ${200}
 
-    Log Many
-    ${json_data}=       Convert Json To String    {"targetid":"","kurz":"${kurz}","name":"${name}","surname":"${surname}","email":"${email}","phone":"${phone}","person":"${person}","address":"${adress_ico}","ico":"${adress_ico}","count":"${count}","comment":${comment},"souhlas":${souhlas}}
-    [return]            ${json_data}
-
-Send API Data
-    [Arguments]         ${json_data}        ${status}
-                        ${json_data}        200
-
+    # vytvoření těla (body) zprávy
+    ${json}=       Catenate    {"targetid":"","kurz":"${kurz}","name":"${name}","surname":"${surname}","email":"${email}","phone":"${phone}","person":"${person}","address":"${adress_ico}","ico":"${adress_ico}","count":"${count}","comment":${comment},"souhlas":${souhlas}}
 
     #převedení do UTF-8
     ${json_utf8} =     Encode String To Bytes     ${json}     UTF-8      #vyžaduje knihovnu String
@@ -58,7 +52,7 @@ Send API Data
     #vytoření hlavičky (header) zprávy
     &{header}=          Create Dictionary   Content-Type=application/json
 
-    # odeslání zprávy a uložení odpovědi do ${res;p}
+    # odeslání zprávy a uložení odpovědi do ${resp}
     ${resp} =           POST  #??? DOPLNIT ???#
     Log	                Responce: @{resp}
 
@@ -67,6 +61,9 @@ Send API Data
 
     #vyhodnocení JSONu stačí jen vyhodnotit klíč response a jeho hodnotu
     #??? DOPLNIT ???#
+
+
+
 
 
 
