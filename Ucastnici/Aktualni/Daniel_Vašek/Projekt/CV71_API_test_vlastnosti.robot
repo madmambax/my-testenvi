@@ -29,7 +29,7 @@ ${urlapp}           ${url}${app}
 *** Test Cases ***
 
 Registrace na kurz fyzicka osoba
-    Registrace na kurz  2  Jan787878  Novak  jan.novak@abc.cz  777123000  fyz  Udolni 21, Praha  1  komentar  false  200
+    Registrace na kurz  2  Jan787878  Novak  jan.novak@abc.cz  777454545  fyz  Udolni 21, Praha  1  komentar  false  200
 
 Registrace na kurz pravnicka osoba
     Registrace na kurz  2  Jan787878  Novak  jan.novak@abc.cz  777111222  pra  27232433  1  dekuji  false  200
@@ -41,10 +41,9 @@ Registrace na kurz háčky a čárky
 
 
 Registrace na kurz
-    [Arguments]     ${error_resp}   ${kurz}      ${name}     ${surname}      ${email}     ${phone}     ${person}     ${adress_ico}     ${count}     ${comment}     ${souhlas}       ${200}
+    [Arguments]       ${kurz}      ${name}     ${surname}      ${email}     ${phone}     ${person}     ${adress_ico}     ${count}     ${comment}     ${souhlas}       ${error_resp}
     # vytvoření těla (body) zprávy
     ${json}=       Catenate    {"targetid":"","kurz":"${kurz}","name":"${name}","surname":"${surname}","email":"${email}","phone":"${phone}","person":"${person}","address":"${adress_ico}","ico":"${adress_ico}","count":"${count}","comment":${comment},"souhlas":${souhlas}}
-    ${error_resp}=  Log  200
     #převedení do UTF-8
     ${json_utf8} =     Encode String To Bytes     ${json}     UTF-8      #vyžaduje knihovnu String
 
