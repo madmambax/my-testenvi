@@ -55,9 +55,9 @@ Registrace na kurz
     # odeslání zprávy a uložení odpovědi do ${resp}
     ${resp} =           POST  ${urlapp}   data=${json_utf8}  headers=${header}  expected_status=Anything
     Log	                Responce: @{resp}
-    Status Should Be    ${error_resp}
+
     #vyhodnocení status kódu
-    #??? DOPLNIT ???#
+    Status Should Be    ${error_resp}
 
     #vyhodnocení JSONu stačí jen vyhodnotit klíč response a jeho hodnotu
     #??? DOPLNIT ???#
