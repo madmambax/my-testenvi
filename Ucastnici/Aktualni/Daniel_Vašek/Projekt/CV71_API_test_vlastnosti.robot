@@ -29,7 +29,7 @@ ${urlapp}           ${url}${app}
 *** Test Cases ***
 
 Registrace na kurz fyzicka osoba
-    Registrace na kurz  2  Jan787878  Novak  jan.novak@abc.cz  777123000  fyz  Udolni 21, Praha  1  komentar  false  200
+    Registrace na kurz  2  Jan787878  Novak  jan.novak@abc.cz  777454545  fyz  Udolni 21, Praha  1  komentar  false  200
 
 Registrace na kurz pravnicka osoba
     Registrace na kurz  2  Jan787878  Novak  jan.novak@abc.cz  777111222  pra  27232433  1  dekuji  false  200
@@ -41,11 +41,9 @@ Registrace na kurz háčky a čárky
 
 
 Registrace na kurz
-    [Arguments]     ${kurz}      ${name}     ${surname}      ${email}     ${phone}     ${person}     ${adress_ico}     ${count}     ${comment}     ${souhlas}       ${200}
-
+    [Arguments]       ${kurz}      ${name}     ${surname}      ${email}     ${phone}     ${person}     ${adress_ico}     ${count}     ${comment}     ${souhlas}       ${error_resp}
     # vytvoření těla (body) zprávy
     ${json}=       Catenate    {"targetid":"","kurz":"${kurz}","name":"${name}","surname":"${surname}","email":"${email}","phone":"${phone}","person":"${person}","address":"${adress_ico}","ico":"${adress_ico}","count":"${count}","comment":${comment},"souhlas":${souhlas}}
-
     #převedení do UTF-8
     ${json_utf8} =     Encode String To Bytes     ${json}     UTF-8      #vyžaduje knihovnu String
 
@@ -55,9 +53,9 @@ Registrace na kurz
     # odeslání zprávy a uložení odpovědi do ${resp}
     ${resp} =           POST  ${urlapp}   data=${json_utf8}  headers=${header}  expected_status=Anything
     Log	                Responce: @{resp}
-    Status Should Be    ${error_resp}
+
     #vyhodnocení status kódu
-    #??? DOPLNIT ???#
+    Status Should Be    ${error_resp}
 
     #vyhodnocení JSONu stačí jen vyhodnotit klíč response a jeho hodnotu
     #??? DOPLNIT ???#
