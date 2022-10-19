@@ -31,7 +31,7 @@ Test Teardown   Uklid_po_testu
 Test Objednavky Debug
     ${kusu} =	        Set Variable	         5
     Login               ${USER1_NAME}            ${USER1_PASSWORD}                   ${USER1_SHORT}
-    Debug !!!
+    Debug
     Pridat do kosiku    banán                    ${kusu}
     Click               ${SEL_CartContent}
     Odebrat z kose      ${kusu}
