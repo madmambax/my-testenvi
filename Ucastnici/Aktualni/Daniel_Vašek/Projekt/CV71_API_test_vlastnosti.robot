@@ -53,7 +53,7 @@ Registrace na kurz
     &{header}=          Create Dictionary   Content-Type=application/json
 
     # odeslání zprávy a uložení odpovědi do ${resp}
-    ${resp} =           POST  #??? DOPLNIT ???#
+    ${resp} =           POST  ${urlapp}   data=${json_utf8}  headers=${header}  expected_status=Anything
     Log	                Responce: @{resp}
 
     #vyhodnocení status kódu
