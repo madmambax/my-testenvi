@@ -26,24 +26,27 @@ ${poz}          PozitivníTest
 ${neg}          NegativníTest
 
 # URLs
-# @{url}          ${url3}  ${url5}
-@{url}           http://testovani.kitner.cz/login_app/       http://testovani.kitner.cz/login_app/welcome.php
-# &{url}          "LoginPage"=${url3}  "assert"=${url5}
-# &{url}          "1"=http://testovani.kitner.cz/login_app/      "2"=http://testovani.kitner.cz/login_app/welcome.php
-${url1}         http://testovani.kitner.cz/
-${url2}         login_app/
-${url3}         ${url1}${url2}
-${url4}         welcome.php
-${url5}         ${url3}${url4}
+# @{url}            ${url3}  ${url5}
+@{url}            http://testovani.kitner.cz/login_app/       http://testovani.kitner.cz/login_app/welcome.php
+# &{url}            "LoginPage"=${url3}  "assert"=${url5}
+# &{url}            "1"=http://testovani.kitner.cz/login_app/      "2"=http://testovani.kitner.cz/login_app/welcome.php
+${url1}           http://testovani.kitner.cz/
+${url2}           login_app/
+${url3}           ${url1}${url2}
+${url4}           welcome.php
+${url5}           ${url3}${url4}
+${API_url} 	      http://testovani.kitner.cz
+${APP_url}        /login_app/userauth.php
+${APP_API_url}    ${API_url}${APP_url}
 
 # Loginy
-# @{login}            ${login1}       ${login2}       ${login3}
-@{login}            novak       admin        novakova
-# &{login}          "1"=${login1}  "2"=${login2}  "3"=${login3}
-# &{login}           "1"=novak  "2"=admin  "3"=novakova
-${login1}         novak
-${login2}         admin
-${login3}         novakova
+# @{login}     ${login1}        ${login2}        ${login3}
+@{login}     novak            admin            novakova
+# &{login}     "1"=${login1}    "2"=${login2}    "3"=${login3}
+# &{login}     "1"=novak        "2"=admin        "3"=novakova
+${login1}    novak
+${login2}    admin
+${login3}    novakova
 
 # Hesla
 # @{password}         ${password1}        ${password2}        ${password3}
@@ -55,10 +58,13 @@ ${password2}        tajneadmin
 ${password3}        tajnyadmin
 
 # Texty
-# @{text}         ${text1}        ${text2}
-# @{text}        odhlásit          Kombinace jmena a hesla nesouhlasi!!!
-# &{text}          "1"=${text1}        "2"=${text2}
-&{text}         "1"=odhlásit      "2"=Kombinace jmena a hesla nesouhlasi!!!
-${text1}        odhlásit
-${text2}        Kombinace jmena a hesla nesouhlasi!!!
+# @{text}    ${text1}        ${text2}                                      ${text3}
+# @{text}    odhlásit        Kombinace jmena a hesla nesouhlasi!!!         correct
+# &{text}    "1"=${text1}    "2"=${text2}                                  "3"=${text3}
+&{text}      "1"=odhlásit    "2"=Kombinace jmena a hesla nesouhlasi!!!     "3"="correct"
+${text1}     odhlásit
+${text2}     Kombinace jmena a hesla nesouhlasi!!!
+${text3}     correct
 
+# Status Codes
+&{status_code}    200=200    300=300    400=400    500=500
