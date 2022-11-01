@@ -31,6 +31,8 @@ ${SEL_UserBoxLogoutBtn}     data-test=user-box-logout-button
 ${SEL_LoginFormEmail}       id=email
 ${SEL_LoginFormPwd}         id=password
 ${SEL_BtnSignIn}            data-test=btnSignIn
+#${SEL_BtnSignIn}            css=[data-test=btnSignIn]
+
 
 #SELEKTORY pro Header
 ${SEL_HeaderLogo}           id=logo
