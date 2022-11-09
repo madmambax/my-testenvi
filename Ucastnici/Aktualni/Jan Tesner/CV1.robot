@@ -1,7 +1,39 @@
+*** Settings ***
+Library           OperatingSystem
+
 *** Test Cases ***
 
 Prvni test
-    Log  Ahoj
+    ${result} =      run            help copy
+    Log             ${result}
+    Should Contain  ${result}       Copies one or more files to another location
+
+Druhy test
+    ${result} =      run            help me
+    Log              ${result}
+    Should Contain   ${result}      This command is not supported by the help utility
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#*** Test Cases ***
+#
+#Prvni test
+#    Log  Ahoj
 
 
 
