@@ -1,3 +1,11 @@
+"""
+Úkoly od Radka:
+1. V názvech testů/testcasů (ale i d.) nepoužívat proměnný - opravit.
+2. Názvy proměnných, klíč. slov ad. mají být popisný - opravit.
+3. Doplnit asserty/kontroly -  zda se uživatel úspěšně přihlásil; a u negativních test casů naopak, že se nepřihlásil.
+4. Chybové hlášky (např. "Kombinace jmena a hesla nesouhlasi!!!") doplnit do souboru DU_TestData.robot
+"""
+
 *** Settings ***
 Documentation
 Library         Browser
@@ -30,7 +38,6 @@ Přihlášení${neg}2
 *** Comments ***
 # Použít 'Wait For Element' místo Sleep.
 # Nevím, jak.
-
 https://github.com/robotframework/HowToWriteGoodTestCases/blob/master/HowToWriteGoodTestCases.rst#avoid-sleeping
 http://robotframework.org/robotframework/latest/libraries/Dialogs.html
 http://robotframework.org/robotframework/latest/libraries/BuiltIn.html#Wait%20Until%20Keyword%20Succeeds

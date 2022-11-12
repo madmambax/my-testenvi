@@ -1,6 +1,11 @@
 """
-Napsat to i pro www.rohlik.cz
-Negativní testy by se tady daly zpracovat i jako data-driven testy.
+Úkoly od Radka:
+1. V názvech testů/testcasů (ale i d.) nepoužívat proměnný - opravit.
+2. Názvy proměnných, klíč. slov ad. mají být popisný - opravit.
+---
+Moje úkoly:
+1. Napsat to i pro www.rohlik.cz
+2. Negativní testy by se tady daly zpracovat i jako data-driven testy - zkusit to.
 """
 
 *** Settings ***
