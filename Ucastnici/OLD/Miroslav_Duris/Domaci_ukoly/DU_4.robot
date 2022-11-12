@@ -30,3 +30,7 @@ Přihlášení${neg}2
 *** Comments ***
 # Použít 'Wait For Element' místo Sleep.
 # Nevím, jak.
+
+https://github.com/robotframework/HowToWriteGoodTestCases/blob/master/HowToWriteGoodTestCases.rst#avoid-sleeping
+http://robotframework.org/robotframework/latest/libraries/Dialogs.html
+http://robotframework.org/robotframework/latest/libraries/BuiltIn.html#Wait%20Until%20Keyword%20Succeeds
