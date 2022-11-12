@@ -2,8 +2,8 @@
 Documentation    Tento test file obsahuje 2 pozitivní a 2 negativní test casy na otestování
 ...              přihlašování do aplikace 'Testovací login' na webu testovani.kitner.cz
 
-Suite Setup       Setup_DU1
-#Test Setup       Setup_DU1
+Suite Setup       Setup
+#Test Setup       Setup
 # Zkusit to udělat i bez vypnutýho Strict Mode.
 Library          Browser
 
@@ -38,7 +38,7 @@ Neúspěšné přihlášení chybné heslo
 
 Login
     [Arguments]        ${jmeno}     ${heslo}     ${prihlasen}
-    New Page           ${url1}${url2}
+
     Type Text          id=inputUsername     ${jmeno}                         # Input 'Jméno'.
     Type Text          id=inputPassword     ${heslo}                         # Input 'Heslo'.
     Click              id=butt                                               # Tlačítko s textem 'Login'.
@@ -54,7 +54,7 @@ Login
 
 
 
-Setup_DU1
+Setup
     Set Strict Mode    False
     New Browser        headless=False
     New Page           ${url1}${url2}

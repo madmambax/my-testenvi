@@ -1,3 +1,9 @@
+"""
+Úkoly od Radka:
+1. V názvech testů/testcasů (ale i d.) nepoužívat proměnný - opravit.
+2. Názvy proměnných, klíč. slov ad. mají být popisný - opravit.
+"""
+
 *** Settings ***
 Documentation    Oproti DÚ_1 jsou tu některé konstanty nahrazeny proměnnými (pro zjednodušení testu),
 ...              přidány výpisy do logu (všech proměnných a načtených hodnot)
@@ -176,4 +182,5 @@ Teardown_DU2
 
     # Log Many    Název 1. test casu: ${Nazev1testCasu}  Název 2. test casu: ${Nazev2testCasu}  Název 3. test casu: ${Nazev3testCasu}  Název 4. test casu: ${Nazev4testCasu}
     # Není vidět v logu.
+
 *** Comments ***
