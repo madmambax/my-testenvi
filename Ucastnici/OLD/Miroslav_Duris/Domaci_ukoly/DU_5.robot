@@ -1,3 +1,9 @@
+"""
+Úkoly od Radka:
+1. V názvech testů/testcasů (ale i d.) nepoužívat proměnný - opravit.
+2. Názvy proměnných, klíč. slov ad. mají být popisný - opravit.
+"""
+
 *** Settings ***
 Documentation    Aplikace na URL ${APP_API_url} slouží pro přihlášení uživatele do aplikace 'TestLogin'.
 Library          RequestsLibrary

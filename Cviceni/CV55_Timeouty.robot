@@ -134,10 +134,17 @@ Pred_testem
 
 
 Pred_sadou
-    ${b_timeput} =             Set Browser Timeout                 ${TIMEOUT_BROWSER}                 #20s je vhodné pro rohlik.cz
-    Log                        Původní hodnota timeout ${b_timeput}
-    Open Browser               ${URL}                              headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
+    ${b_timeput} =     Set Browser Timeout                 ${TIMEOUT_BROWSER}                 #20s je vhodné pro rohlik.cz
+    Log                Původní hodnota timeout ${b_timeput}
+    New Browser        headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
+#    Open Browser       ${URL}                              headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
 #    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
+
+#    Změna typu zařízení
+#    ${device}=    Get Device    iPhone X
+#    New Context    &{device}        # unpacking here with &
+
+    New Context  recordVideo={'dir':'${OUTPUT_DIR}/video', 'size':{'width':1280, 'height':720}}
     New Page                   ${URL}
 
     Cookie                      AcceptAll
