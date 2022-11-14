@@ -16,14 +16,14 @@ Library  OperatingSystem
 
     Should Contain  ${SecondTest}     Displays or sets the date.
 
-1.negativní test
+1.negativni test
     ${FirstTestNeg}=   run     help ls
 
     log     ${FirstTestNeg}
 
     Should Contain  ${FirstTestNeg}     This command is not supported by the help utility.  Try "ls /?".
 
-2.negativní test
+2.negativni test
     ${SecondTestNeg}=   run     help checkout
 
     log     ${SecondTestNeg}
