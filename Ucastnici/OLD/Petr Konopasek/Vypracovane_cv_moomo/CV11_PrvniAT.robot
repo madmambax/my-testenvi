@@ -1,8 +1,9 @@
 *** Test Cases ***
 
 Prvni test
-    Log             Ahoj, já, jsem stroj!!! Chci, aby se mě ovládl.
-    Log To Console    ${\n}${\n}Ahoj, já, jsem stroj!!!${\n}Chci, aby se mě ovládl.${\n}Číslo 5 stále žije${\n}Řekni to mé ruce!!${\n}
+    Log  Ahoj
+
+
 
 
 
