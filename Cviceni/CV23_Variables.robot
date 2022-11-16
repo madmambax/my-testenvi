@@ -72,9 +72,13 @@ Ukázka práce s proměnnu typu Dictionary
     Log Many        ${Dict.key}     #zalogování kokrétní hodnoty ze slovníku (Dictionary)
     # hodí se na předávání parametrů klíčovým slovům a configuraci
     Log Many        &{dictionary}
-    Log To Console  ${dictionary.login}
-    Log to Console  ${dictionary}[login]    #jiný způsob zápisu
+    Log to Console  ${dictionary}[login]    #1. způsob zápisu
+    Log To Console  ${dictionary.login}     #2. způsob zápisu
     #Příklad: TestLogin a KS Login - JSON se ukládá do dictionary
+
+    &{dict} =  Create Dictionary  jablko=10  pomeranc=20.542424
+    Log to Console  ${dict}[pomeranc]    #1. způsob zápisu
+    Log to Console  ${dict.pomeranc}     #2. způsob zápisu
 
 
 Ukázka práce s proměnnu typu Environment
