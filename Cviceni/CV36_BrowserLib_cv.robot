@@ -38,9 +38,12 @@ Login
 
     #ověřit že se stránka otevřela
 
+    #kliknout na povolit cookies
+
     #kliknout na Přihlásit
 
     #zadat email ${pemail} do místa pro zadání emailu
+
 
     #zadat heslo ${pheslo} do místa pro zadání hesla
 
