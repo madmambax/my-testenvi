@@ -55,5 +55,7 @@ Logout
     Click          data-test=header-user-icon
     sleep          2
     Click          data-test=user-box-logout-button
+    sleep          2
     Get Text       data-test=header-user-icon  ==  Přihlásit
+    sleep          2
     Take Screenshot
