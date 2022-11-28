@@ -19,4 +19,4 @@ Prvni test
 Druhý test negativní  #
     ${result} =      run            cls
     Log             ${result}
-    Should Contain  ${result}       NazdarBazar
+    Should Contain  ${result}       Kalimera
