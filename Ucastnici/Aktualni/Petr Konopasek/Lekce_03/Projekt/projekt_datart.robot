@@ -5,7 +5,7 @@
 ○	vytvořte klíčové slovo pro přihlášení můžete použít soubor Cviceni/CV09_BrowserLib_cv.robot
 ○	uložte do gitu do svého adresáře pod názvem projekt.robot
 
-●	Cvičení č.2:
+●	Cvičení č.2:   ( druhý selektor:text= na řádcích 58, 59, 70, 72 )
 ○	v aplikaci použijte min 2 druhy selektorů (možnosti jsou data-text, id, xpath, text... více zde)
 ○	použijte copy -> selector v DEV TOOLS chrome
 
@@ -24,7 +24,7 @@ ${USER_name}        Iris Kadimera
 ${USER_mail_wrong}  Neplatný-format.cz
 ${USER_pass_wrong}  password1234
 
-${USER_error_pass-em}                Špatný e-mail nebo heslo.
+${USER_error_pass-em}           Špatný e-mail nebo heslo.
 
 # SELECTORs Ověření Login
 ${SEL_GetText_IK}               xpath=/html//snippet[@id='snippet--header-user']//span[@class='login-user-name']
@@ -58,15 +58,13 @@ ${SEL_UnLogin}                  xpath=/html//snippet[@id='snippet--header-user']
 ${SEL_UnLogin_text}             text="Odhlásit se"
 ${SEL_UnLog_IrisK}              text=${USER_name}
 
-
-
 # SELECTORs basket - košík
-${SEL_bas_search}		        xpath=//*[@id="main-header"]/div[3]/div/div/form/div/input
+${SEL_bas_search}		xpath=//*[@id="main-header"]/div[3]/div/div/form/div/input
 ${SEL_bas_sea_hledat}           xpath=//*[@id="btnSearch"]/span
 ${SEL_bas_sea_Ip14}             Iphone 14
 ${SEL_bas_add_item_Ip14}        xpath=//*[@id="snippet--searchProductList"]/div/div/div[1]/div/div/div[2]/div[2]/div[2]/div[2]/div[1]/button
 ${SEL_bas_sea_Ss22}             Samsung s22
-${SEL_bas_item_ip14_}		    xpath=//*[@id="snippet--searchProductList"]/div/div/div[1]/div/div/div[2]/div[2]/div[2]/div[2]/div[1]/button/span
+${SEL_bas_item_ip14_}		xpath=//*[@id="snippet--searchProductList"]/div/div/div[1]/div/div/div[2]/div[2]/div[2]/div[2]/div[1]/button/span
 ${SEL_bas_add_item_Ss22}        xpath=//*[@id="snippet--searchProductList"]/div/div/div[1]/div/div/div[2]/div[2]/div[2]/div[2]/div[1]/button/span
 ${SEL_bas_Close_rew}            xpath=//*[@id="modal-snippet--modal"]/div/div/div/div[1]/button
 ${SEL_bas_goto_basket}          text="Do košíku"  #  ●●●	Cvičení č.2:  použit druhý selektor Selektor typu TEXT ●●●
@@ -79,22 +77,20 @@ ${SEL_PopUp_select_b400}	xpath=//*[@id="discount-700-choice"]/h4
 ${SEL_PopUp_sent_b400}		Xpath=//*[@id="welcome-banner"]/div[3]/div[2]/div[2]/div[1]/div[2]/button[2]
 
 
-
-
 *** Test Cases ***
 Prihlaseni OK
     Login           ${USER_mail}            ${USER_pass}            ${USER_name}
 
-
-# ● ● ● Tady to musím poladit a zakomponovat negativní test. ● ● ●
-#       Je tam hover slide login menu...  Tak na tom zkusim zapracovat.
+# ● ● ● ř 84 až 92 Režim OFF  ● ● ●
+#       Tady to musím poladit a zakomponovat negativní test. 
+#       Je tam hover slide un/login menu...  Tak na tom zkusim zapracovat.
 #
 #Login - Email format wrong
 #    Login           ${USER_mail_wrong}      ${USER_pass}            ${USER_name}
 #
 ##Login - password wrong
 #    Login           ${USER_mail}            ${USER_pass_wrong}      ${USER_name}
-
+# ● ● ● ř 84 až 93 Režim OFF  ● ● ●
 
 *** Keywords ***
 Login
@@ -104,7 +100,7 @@ Login
     Log             ${USER_pass}
     Log             ${USER_name}
 
-    #Browser
+#Browser
     New Browser    chromium    headless=false
     New Page       ${URL}
     Get Title      contains    DATART - Opravdový elektrospecialista | DATART
@@ -116,7 +112,7 @@ Login
 
     #Click    ${SEL_cook_souhlas}   # Souhlasím a pokračovat
 #    Click    ${SEL_cook_podr_pokracovat}    # Souhlasím a pokračovat
-    # Podrobné nastavení cookies
+# Podrobné nastavení cookies
     Click    ${SEL_cook_podrobne}           # Souhlasím a pokračovat
     Click    ${SEL_cook_podr_pers}          # Personalizované cookies ON/OFF
     Click    ${SEL_cook_podr_rekl}          # Reklamní cookies ON/OFF
@@ -134,15 +130,14 @@ Login
     Sleep       2
     Take Screenshot
 #Ověření přihlášení
-#ověření přihlášený data-test=header-user-icon musí obsahovat Iris Kadimera
+    #ověření přihlášený data-test=header-user-icon musí obsahovat Iris Kadimera
     Get Text        ${SEL_GetText_IK}  ==  ${USER_name}
     Hover           ${SEL_Hover_UnLogin}
 
-# basket
-# vyhledání  položky
-#Vyhledat Iphone14
-	Hover               ${SEL_bas_search}
-	Type text	        ${SEL_bas_search}           ${SEL_bas_sea_Ip14}  # vloží do hledání text "Iphone 14"
+# basket - vyhledání  položky
+     #Vyhledat Iphone14
+    Hover               ${SEL_bas_search}
+    Type text	        ${SEL_bas_search}           ${SEL_bas_sea_Ip14}  # vloží do hledání text "Iphone 14"
     Click               ${SEL_bas_sea_hledat}
     Sleep               2
 
@@ -183,6 +178,7 @@ Login
     sleep               5
 
 *** Comments ***
-Jeste na tom zapracuji...
-P.
+Jeste na tom zapracuji.
+Sleep mohu  dát také do ${var}, ale zatím jsem je přiznal.
+
 
