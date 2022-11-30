@@ -64,7 +64,7 @@ Cookie
         Click           id="CybotCookiebotDialogBodyButtonDecline"
     END
 
-    sleep               1      #workaround: Probliknutí cele stránky po kliknutí na tlačítko
+#    sleep               1      #workaround: Probliknutí cele stránky po kliknutí na tlačítko
 
 
 # Vytvořte KS pro Odlášení, tak aby fungoval vždy (Pro oba testy)
