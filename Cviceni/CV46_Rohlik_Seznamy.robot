@@ -14,10 +14,13 @@ ${URL}      https://www.rohlik.cz/
 *** Test Cases ***
 
 Pridani zbozi do kosiku
-    Login               bavemal543@cebaike.com              tajneheslotajneheslo        JT
+    Login               bavemal543@cebaike.com              tajneheslotajneheslo        MS
+
+    #zvažte kolik parametrů bude třeba
 #    Pridat Do Kosiku                        banán
 #    Pridat do kosiku varianta pocet         banán  5
     Pridat do kosiku varianta produkt id    banán  1349777  5
+
     Logout
 
 
