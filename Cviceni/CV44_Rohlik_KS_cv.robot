@@ -15,12 +15,12 @@ ${URL}      https://www.rohlik.cz/
 *** Test Cases ***
 
 Uspesne prihlaseni
-    Login               radek.tester@seznam.cz              tajneheslotajneheslo        JT
+    Login               bavemal543@cebaike.com              tajneheslotajneheslo        JT
     Logout
 
 
 Pridani zbozi do kosiku
-    Login               radek.tester@seznam.cz              tajneheslotajneheslo        JT
+    Login               bavemal543@cebaike.com              tajneheslotajneheslo        JT
     Type Text           id=searchGlobal             banán
     Sleep               1                           # čeká 1 sekundu
     Click               text=Hledat                 # ???

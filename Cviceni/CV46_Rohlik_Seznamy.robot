@@ -14,7 +14,7 @@ ${URL}      https://www.rohlik.cz/
 *** Test Cases ***
 
 Pridani zbozi do kosiku
-    Login               radek.tester@seznam.cz              tajneheslotajneheslo        JT
+    Login               bavemal543@cebaike.com              tajneheslotajneheslo        JT
 #    Pridat Do Kosiku                        banán
 #    Pridat do kosiku varianta pocet         banán  5
     Pridat do kosiku varianta produkt id    banán  1349777  5
