@@ -27,3 +27,13 @@ Priklad pouziti podminky nerovnost 2 textu
    IF    "cat" == "dog"
         Log    This line is NOT executed.
    END
+
+
+elese if ukázka
+     IF    1 == 1
+            Log    This line IS executed.
+     ELSE IF    2 == 2
+            Log    This line is NOT executed.
+     ELSE
+            Log    This line is NOT executed.
+     END
