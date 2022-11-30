@@ -71,6 +71,3 @@ Cookie
 Logout
 
 # zde je nutné doplnit KS
-    Go to               ${URL}
-    Click xpath=//div[@class='u-mr--8']
-    Click data-test=user-box-logout-button
