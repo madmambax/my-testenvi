@@ -5,7 +5,7 @@ Library  Browser
 
 *** Test Cases ***
 
-Priklad vyberu pomoci atributu, elementu a id
+Vyhledavani na googlu
     Otevri stranku  https://www.google.cz
 
 ### Místo:
