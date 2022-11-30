@@ -66,16 +66,13 @@ Pridat do kosiku
 
 #    ${old_mode} =      Set Strict Mode    False
     #zde DOPLNIT ks pro napsání textu, který je v ${Zbozi} do vyhledávání
-    Type Text   id=searchGlobal    ${Zbozi}
-    Sleep               1                           #Statický timeout
+
 
     #zde DOPLNIT ks pro kliknutí na hledat, selektor bude text "Hledat"
-    Click       text="Hledat"
 
-    Sleep               1                           #Statický timeout
 
     #zde DOPLNIT ks pro kliknout talčítko "Do košíku"
-    Click       data-test=btnAdd >> nth=1
+
 
     #ověří že je zboží v košíku
     ${cart_text}=       Get Text                    id=cart
@@ -96,15 +93,14 @@ Pridat do kosiku varianta produkt id
     # použít původní verzi a rozšířit ji o
 
     # kliknutí na tlačítko "Do košíku" pro konkrétní produkt
-    #Click               css=kde se jako selektor použije ${produkt_id} a také data-test="btnAdd"
-    Click                css=[data-product-id="${produkt_id}"][data-test="btnAdd"]
+    Click               css=kde se jako selektor použije ${produkt_id} a také data-test="btnAdd"
+
 
     #odečtení 1 kusu, protože 1 zboží jsme již přidali
-    ${Pocet}            Evaluate                    ${Kusu} - 1
 
     # přidání zbylého počtu kusů pomocí vícenásobného kliknutí na tlačítko plus u konkrétního produktu
-    #Click               css=kde se jako selektor použije nadřezená třída + ${produkt_id} + také data-test="btnPlus"   Je třeba přidat parametr:   clickCount=${Pocet}
-    Click                css=[data-product-id="1320669"]
+    Click               css=kde se jako selektor použije nadřezená třída + ${produkt_id} + také data-test="btnPlus"   Je třeba přidat parametr:   clickCount=${Pocet}
+
 
 
 
