@@ -124,7 +124,7 @@ Pridat do kosiku varianta produkt id
     ${ZbylyPocetKusu}           Evaluate                    ${Kusu} - 1
     Sleep                  5
     Click               css=.sc-da00148b-0 hoKRXJ [data-product-id="${produkt_id}"][data-test="btnAdd"]   clickCount=${ZbylyPocetKusu}
-    Sleep               10
+    Sleep               8
 
 
 Hledat
