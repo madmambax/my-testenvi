@@ -60,7 +60,8 @@ Login
     [Arguments]                 ${Email}                            ${Heslo}                                ${Text}
 
     Set Browser Timeout         20                                  #20s je vhodné pro rohlik.cz
-    Open Browser                ${URL}                              headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
+
+    New Browser        headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
 
     New Page                    ${URL}
 
