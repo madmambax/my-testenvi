@@ -12,4 +12,4 @@ ${TIME_BETWEEN_CHECKS}  200ms
 
 
 ${TIMEOUT_BROWSER}      18 s
-${TC_TIMEOUT_ROBOT_KW}     2 minutes
+${TC_TIMEOUT_ROBOT_KW}  2 minutes
