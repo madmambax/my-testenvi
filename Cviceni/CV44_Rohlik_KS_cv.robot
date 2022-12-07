@@ -36,7 +36,7 @@ Pridani zbozi do kosiku
 Login
     [Arguments]         ${email}                            ${heslo}                    ${validation}
 
-    Open Browser        ${URL}                              headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
+    New Browser        headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
     New Page            ${URL}
 
     Get Title           contains                            Rohlik
