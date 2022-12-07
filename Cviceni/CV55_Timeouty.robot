@@ -53,15 +53,15 @@ Test Objednavky
 *** Keywords ***
 
 Login
-    [Arguments]                ${Email}                            ${Heslo}                                ${Text}
+    [Arguments]                ${Email}                         ${Heslo}                ${Text}
 
-    Get Title                   contains                            ${TEXT_MainTitle}
+    Get Title                   contains                        ${TEXT_MainTitle}
 
     Click                       ${SEL_HeaderLogin}
-    Type Text                   ${SEL_LoginFormEmail}               ${Email}
-    Type Text                   ${SEL_LoginFormPwd}                 ${Heslo}
+    Type Text                   ${SEL_LoginFormEmail}           ${Email}
+    Type Text                   ${SEL_LoginFormPwd}             ${Heslo}
     Click                       ${SEL_BtnSignIn}
-    Get Text                    ${SEL_HeaderLoginErrorTxt}           contains                                ${Text}
+    Get Text                    ${SEL_HeaderLoginErrorTxt}      contains                ${Text}
 
 Logout
     Go to               ${URL}
