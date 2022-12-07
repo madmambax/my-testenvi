@@ -18,26 +18,26 @@ ${URL}              https://rohlik.cz
 
 *** Test Cases ***
 Login spatny email
-    Login           chyba                       ${USER1_PASSWORD}                       ${ERROR_TEXT_FillCorrectEmail}
+    Login           chyba                   ${USER1_PASSWORD}       ${ERROR_TEXT_FillCorrectEmail}
 
     # je nutné zavřít prihlašovací form
     Click           id=logo
 
 
 Login spatne heslo
-    Login           ${USER1_NAME}               bad                                     ${ERROR_TEXT_IncorrectEmailOrPwd}
+    Login               ${USER1_NAME}       bad                     ${ERROR_TEXT_IncorrectEmailOrPwd}
 
     # je nutné zavřít prihlašovací form
-    Click                       id=logo
+    Click               id=logo
 
 Login vse OK
-    Login           ${USER1_NAME}               ${USER1_PASSWORD}                    ${USER1_SHORT}
+    Login               ${USER1_NAME}       ${USER1_PASSWORD}       ${USER1_SHORT}
     Logout
 
 Test Objednavky
-    ${kusu} =	        Set Variable	            5
-    Login               ${USER1_NAME}               ${USER1_PASSWORD}                ${USER1_SHORT}
-    Pridat do kosiku    ${ZBOZI01_NAME}             ${ZBOZI01_ID}                    ${kusu}
+    ${kusu} =	        Set Variable	    5
+    Login               ${USER1_NAME}       ${USER1_PASSWORD}        ${USER1_SHORT}
+    Pridat do kosiku    ${ZBOZI01_NAME}     ${ZBOZI01_ID}            ${kusu}
     Click               id=cartContent
     Take Screenshot
     Take Screenshot
