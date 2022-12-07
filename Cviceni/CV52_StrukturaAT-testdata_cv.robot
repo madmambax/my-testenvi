@@ -20,7 +20,7 @@ Login spatne heslo
     Login           radek.tester@seznam.cz      bad                                     Zadal(a) jste nesprávný e-mail nebo heslo.
 
 Login vse OK
-    Login           radek.tester@seznam.cz      tajneheslotajneheslo                    ${USER1_SHORT}
+    Login           radek.tester@seznam.cz      tajneheslotajneheslo                    MS
     Logout
 
 Test Objednavky
