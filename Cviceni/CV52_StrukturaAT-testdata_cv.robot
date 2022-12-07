@@ -17,15 +17,15 @@ Login spatny email
     Login           chyba                       tajneheslotajneheslo                    Zadejte platný email
 
 Login spatne heslo
-    Login           radek.tester@seznam.cz      bad                                     Zadal(a) jste nesprávný e-mail nebo heslo.
+    Login           bavemal543@cebaike.com      bad                                     Zadal(a) jste nesprávný e-mail nebo heslo.
 
 Login vse OK
-    Login           radek.tester@seznam.cz      tajneheslotajneheslo                    MS
+    Login           bavemal543@cebaike.com      tajneheslotajneheslo                    MS
     Logout
 
 Test Objednavky
     ${kusu} =	        Set Variable	            5
-    Login               radek.tester@seznam.cz      tajneheslotajneheslo                JT
+    Login               bavemal543@cebaike.com      tajneheslotajneheslo                MS
     Pridat do kosiku    mléko                       1320669                             ${kusu}
     Click               id=cartContent
     Take Screenshot
