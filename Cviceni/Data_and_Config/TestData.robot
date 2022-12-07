@@ -54,6 +54,7 @@ ${SEL_BtnMinus}             data-test=btnMinus
 
 #SELEKTORY pro Košík
 ${SEL_Cart}                 id=cart
+${SEL_CartItem}             data-test=cart-item
 ${SEL_CartContent}          id=cartContent
 ${SEL_CartReview}           id=cartReviewMainTitle
 ${SEL_RemoveBasket}         [aria-label^="Odstranit z košíku"]
