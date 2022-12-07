@@ -86,9 +86,9 @@ Pridat do kosiku
     Click               css=${SEL_CssForAdding} [${SEL_ProductID}="${produkt_id}"][${SEL_BtnPlus}]           clickCount=${Pocet}
 
     #ověří že je zboží v košíku
-    ${cart_text}=       Get Text                    ${SEL_Cart}
+    ${cart_text}=       Get Text                    ${SEL_CartItem}
     Log                 ${cart_text}
-    Get Text            ${SEL_Cart}                 matches                             (?i)${Zbozi}    # (?i)  znamená že se bere case insensitive
+    Get Text            ${SEL_CartItem}                 matches                             (?i)${Zbozi}    # (?i)  znamená že se bere case insensitive
     Take Screenshot
 
 
