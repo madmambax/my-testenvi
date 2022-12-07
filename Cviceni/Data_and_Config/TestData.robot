@@ -23,7 +23,8 @@ ${ERROR_TEXT_IncorrectEmailOrPwd}   Zadal(a) jste nesprávný e-mail nebo heslo.
 ${ERROR_TEXT_EmptyCart}             Košík funguje i jako nákupní seznam
 
 #SELEKTORY pro Login
-${SEL_HeaderLoginErrorTxt}  xpath=//div[@class='u-mr--8']
+#${SEL_HeaderLoginErrorTxt}  xpath=//div[@class='u-mr--8']  starší selektro
+${SEL_HeaderLoginErrorTxt}  data-test=header-user-icon
 ${SEL_HeaderLogin}          id=headerLogin
 ${SEL_UserBoxLogoutBtn}     data-test=user-box-logout-button
 #${SEL_LoginFormEmail}       data-test=user-login-form-email
