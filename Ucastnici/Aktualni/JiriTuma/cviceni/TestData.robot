@@ -2,6 +2,7 @@
 # Tento soubor obsahuje všechny Testovací Data
 #
 
+
 *** Variables ***
 #uživatel
 ${USER1_NAME}               bavemal543@cebaike.com
