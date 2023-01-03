@@ -71,7 +71,7 @@ Cookie
 Pridat kusy
    [Arguments]         ${produkt_id}     ${Kusu}
    FOR  ${i}  IN RANGE  ${Kusu}
-     ${error} =  Get Element State  ${SEL_ERROR_TOOLTIP}  visible
+     ${error} =  Get Element States  ${SEL_ERROR_TOOLTIP}  then    bool(value & visible)
      IF  not (${error})
         Click               ${SEL_CartAddPiecePrefix}${produkt_id}${SEL_CartAddPiecePostfix}
         Wait For Response    matcher=${URL_api_cart}
@@ -88,12 +88,12 @@ Pridat do kosiku varianta produkt id
 
     FOR    ${i}    IN RANGE    100
            Sleep  ${TIME_BETWEEN_CHECKS}
-           ${visible} =  Get Element State  ${SEL_CartWhisperer}  visible
+           ${visible} =  Get Element States  ${SEL_CartWhisperer}  then    bool(value & visible)
            Exit For Loop If  ${visible}
            Log  ${i}
     END
 
-    ${exist} =  Get Element State  ${SEL_CartWhispererAddPiecePrefix}${produkt_id}${SEL_CartWhispererAddPieceSuffix}  visible
+    ${exist} =  Get Element States  ${SEL_CartWhispererAddPiecePrefix}${produkt_id}${SEL_CartWhispererAddPieceSuffix}  then    bool(value & visible)
     IF  ${exist}
      Click               ${SEL_CartWhispererAddPiecePrefix}${produkt_id}${SEL_CartWhispererAddPieceSuffix}
      ${Kusu} =  Evaluate  ${Kusu} - 1
@@ -107,7 +107,7 @@ Odebrat z kosiku
     [Arguments]         ${produkt_id}     ${Kusu}
     Go to  ${URL_cart}
     Get Title  contains  Přehled
-    ${exist} =  Get Element State  ${SEL_BtnMinusPrefix}${produkt_id}${SEL_CartBtnSufix}  visible
+    ${exist} =  Get Element States  ${SEL_BtnMinusPrefix}${produkt_id}${SEL_CartBtnSufix}  then    bool(value & visible)
     IF  ${exist}
         Click  ${SEL_BtnMinusPrefix}${produkt_id}${SEL_CartBtnSufix}  clickCount=${Kusu}
         Wait For Response    matcher=${URL_api_cart}
@@ -119,7 +119,7 @@ Zjistit pocet kusu
     [Return]    ${return}
     Go to  ${URL_cart}
     Get Title  contains  Přehled
-    ${exist} =  Get Element State  ${SEL_BtnMinusPrefix}${produkt_id}${SEL_CartBtnSufix}  visible
+    ${exist} =  Get Element States  ${SEL_BtnMinusPrefix}${produkt_id}${SEL_CartBtnSufix}  then    bool(value & visible)
     ${return} =  Set Variable    0
     IF  ${exist}
         ${return} =  Get Text     ${SEL_BtnMinusPrefix}${produkt_id}${SEL_CartBtnSufix} ~ input
