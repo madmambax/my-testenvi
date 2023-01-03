@@ -14,8 +14,8 @@ ${USER_BAD_SHORT}              Přihlásit
 
 
 #zboží
-${ZBOZI01_NAME}             banán
-${ZBOZI01_ID}               1349775
+${ZBOZI01_NAME}             Banán Chiquita
+${ZBOZI01_ID}               1349785
 
 #Strings
 ${TEXT_MainTitle}                   Online supermarket Rohlik.cz
