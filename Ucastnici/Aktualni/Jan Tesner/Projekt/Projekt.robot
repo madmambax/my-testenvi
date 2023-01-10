@@ -17,7 +17,8 @@ Library	 Collections
 
 *** Variables ***
 ${url}		    http://testovani.kitner.cz/
-${app}          /regkurz/formsave.php
+#${app}          /regkurz/formsave.php
+${app}          /login_app/userauth.php
 ${urlapp}       ${url}${app}
 
 *** Test Cases ***
@@ -34,32 +35,64 @@ ${urlapp}       ${url}${app}
 #    Odebrat z kosiku    ${ZBOZI01_NAME}     ${ZBOZI01_ID}
 #    [Teardown]          Logout              ${TEXT_Prihlasit}
 
-registrace ok
-    API Comunication   {"targetid":"","kurz":"2","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}  200
+#registrace ok
+#    API Comunication   {"targetid":"","kurz":"2","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}  200
+#
+#registrace bez volby kurzu
+#    API Comunication   {"targetid":"","kurz":"","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}   500
+#
+#registrace volby telefonu (prázdný)
+#    API Comunication   {"targetid":"","kurz":"2","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}   500
+#
+#registrace chybny telefon (moc dlouhy)
+#    API Comunication   {"targetid":"","kurz":"2","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"608123123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}  500
+#
+#registrace chybny email (tohleneniemail.cz)
+#    API Comunication   {"targetid":"","kurz":"2","name":"Jan","surname":"Novak","email":"tohleneniemail.cz","phone":"608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}  500
+#
+#registrace chybny format JSON (bez klíče a hodnoty kurzu, tedy "kurz":"2")
+#    API Comunication   {"targetid":,"kurz":"2","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}  500
+#
+#registrace chybny format JSON (bez souhlasu)
+#    API Comunication   {"targetid":"","kurz":"2","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,:true}  500
+#
+#registrace specialni znaky
+#    API Comunication   {"targetid":"","kurz":"2","name":"J@n","surname":"Novak?","email":"jan.novak@abc.cz","phone":"60812312 3","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}  500
 
-registrace bez volby kurzu
-    API Comunication   {"targetid":"","kurz":"","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}   500
+Test login (validní)
+     Login      admin           tajneadmin      Chrome      200
 
-registrace volby telefonu (prázdný)
-    API Comunication   {"targetid":"","kurz":"2","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}   500
+Test login (prázdné heslo)
+     Login      admin           ${EMPTY}        Chrome      403
 
-registrace chybny telefon (moc dlouhy)
-    API Comunication   {"targetid":"","kurz":"2","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"608123123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}  500
+Test login (prázdný uživatel)
+     Login      ${EMPTY}        tajneadmin      Chrome      403
 
-registrace chybny email (tohleneniemail.cz)
-    API Comunication   {"targetid":"","kurz":"2","name":"Jan","surname":"Novak","email":"tohleneniemail.cz","phone":"608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}  500
+Test login (prázdný useragent)
+     Login      admin           tajneadmin      ${EMPTY}    403
 
-registrace chybny format JSON (bez klíče a hodnoty kurzu, tedy "kurz":"2")
-    API Comunication   {"targetid":,"kurz":"2","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}  500
+Test login (prázdný)
+     Login      ${EMPTY}         ${EMPTY}       ${EMPTY}    403
 
-registrace chybny format JSON (bez souhlasu)
-    API Comunication   {"targetid":"","kurz":"2","name":"Jan","surname":"Novak","email":"jan.novak@abc.cz","phone":"608123123","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,:true}  500
+Test login (nevalidní uživatel)
+     Login      spatnyuzivatel  tajneadmin      Chrome      403
 
-registrace specialni znaky
-    API Comunication   {"targetid":"","kurz":"2","name":"J@n","surname":"Novak?","email":"jan.novak@abc.cz","phone":"60812312 3","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}  500
+Test login (nevalidní heslo)
+     Login      admin           spatneheslo     Chrome      403
 
+Test login (nevalidní useragent)
+     Login      admin           tajneadmin      Anything    403
 
 *** Keywords ***
+
+Login
+    [Arguments]    ${username}    ${password}   ${useragent}     ${responce_code}
+    ${json_string}=     catenate  {"username":"${username}","password":"${password}","useragent":"${useragent}"}
+    &{header}=    Create Dictionary    Content-Type=application/json
+    CreateSession    apilogin    ${url}
+    ${resp} =    Post on Session    apilogin    login_app/userauth.php  data=${json_string}  headers=${header}
+    Log	Responce: @{resp}
+    Dictionary Should Contain Item	${resp.json()}      response    ${responce_code}
 
 #Login
 #    [Arguments]         ${email}            ${heslo}              ${validation}
@@ -127,14 +160,14 @@ registrace specialni znaky
 #Po_sade_testu
 #    Close Browser
 
-API Comunication
-    [Arguments]       ${json}     ${error_resp}
-
-    #převedení do UTF-8
-    ${json_utf8} =      Encode String To Bytes     ${json}     UTF-8          #vyžaduje knihovnu String
-
-    ${resp} =           POST  ${urlapp}  data=${json_utf8}  expected_status=${error_resp}
-
-    Log                 ${resp.json()}
-
-    Status Should Be    ${error_resp}
+#API Comunication
+#    [Arguments]       ${json}     ${error_resp}
+#
+#    #převedení do UTF-8
+#    ${json_utf8} =      Encode String To Bytes     ${json}     UTF-8          #vyžaduje knihovnu String
+#
+#    ${resp} =           POST  ${urlapp}  data=${json_utf8}  expected_status=${error_resp}
+#
+#    Log                 ${resp.json()}
+#
+#    Status Should Be    ${error_resp}
