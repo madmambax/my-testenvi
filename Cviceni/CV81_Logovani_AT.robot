@@ -63,7 +63,8 @@ Ukazka logovani
 # jak zalogovat slovník
 
 
-
+  Log	Null is \x00
+  Log	Null is \x00   formatter=repr
 
 
 

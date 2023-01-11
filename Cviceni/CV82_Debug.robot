@@ -100,7 +100,7 @@ Pred_testem
 Pred_sadou
 #    Set Browser Timeout                 ${TIMEOUT_BROWSER}         #20s je vhodné pro rohlik.cz
 
-    Open Browser        ${URL}                                     headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
+    New Browser        headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
 #    je možné i jen použít     Open Browser     kde je standartně headless mód vypnutý
     New Page                    ${URL}
     Cookie                      AcceptAll
