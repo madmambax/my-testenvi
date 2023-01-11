@@ -51,7 +51,7 @@ Login
     Get Title                   contains                            Online supermarket Rohlik.cz
     Cookie                      AcceptAll
 
-    Click                       id=headerLogin
+    Click                       data-test=header-user-icon
     Type Text                   id=email                            ${Email}
     Type Text                   id=password                         ${Heslo}
 #    Debug
