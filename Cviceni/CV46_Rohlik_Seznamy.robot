@@ -37,7 +37,7 @@ Login
     Cookie              AcceptAll
 
 
-    Click               id=headerLogin
+    Click               data-test=header-user-icon
 
     Type Text           id=email             ${email}
     Type Text           id=password          ${heslo}
