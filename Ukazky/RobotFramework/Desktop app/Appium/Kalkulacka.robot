@@ -1,3 +1,5 @@
+#pip install --upgrade robotframework-appiumlibrary
+
 *** Settings ***
 Library           AppiumLibrary
 
