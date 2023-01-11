@@ -63,8 +63,8 @@ Starting a browser with a page
 
 
 ### TEXT selektory ###
-   ${text} =     Get Text   text="Přihlásit"
-   ${text} =     Get Text   "Přihlásit"
+   ${text} =     Get Text   text="Účet"
+   ${text} =     Get Text   "Účet"
 
    log to console       ${text}
 
