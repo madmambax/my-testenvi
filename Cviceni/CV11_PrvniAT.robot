@@ -1,7 +1,16 @@
+*** Settings ***
+Library    String
+
+*** Variables ***
+${x}    10
+
 *** Test Cases ***
 
 Prvni test
-    Log             Ahoj
+    Log               Ahoj
+    Should Contain    Ahoj    ho
+    Should Be True    10 > 1
+    
 
 
 
