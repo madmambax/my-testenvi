@@ -1,0 +1,38 @@
+{"level":30,"time":"2023-01-25T16:00:11.660Z","pid":12420,"hostname":"Kristy","msg":"Listening on 50034"}
+{"level":30,"time":"2023-01-25T16:00:12.039Z","pid":12420,"hostname":"Kristy","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-01-25T16:00:12.040Z","pid":12420,"hostname":"Kristy","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-01-25T16:00:12.044Z","pid":12420,"hostname":"Kristy","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-01-25T16:00:12.044Z","pid":12420,"hostname":"Kristy","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-01-25T16:00:12.047Z","pid":12420,"hostname":"Kristy","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-01-25T16:00:13.455Z","pid":12420,"hostname":"Kristy","msg":"End of node method newBrowser"}
+{"level":30,"time":"2023-01-25T16:00:13.473Z","pid":12420,"hostname":"Kristy","msg":"Start of node method newPage"}
+{"level":30,"time":"2023-01-25T16:00:13.473Z","pid":12420,"hostname":"Kristy","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2023-01-25T16:00:13.509Z","pid":12420,"hostname":"Kristy","msg":"Changed active context"}
+{"level":30,"time":"2023-01-25T16:00:14.561Z","pid":12420,"hostname":"Kristy","msg":"Video path: undefined"}
+{"level":30,"time":"2023-01-25T16:00:14.561Z","pid":12420,"hostname":"Kristy","msg":"Changed active page"}
+{"level":30,"time":"2023-01-25T16:00:17.243Z","pid":12420,"hostname":"Kristy","msg":"End of node method newPage"}
+{"level":30,"time":"2023-01-25T16:00:17.262Z","pid":12420,"hostname":"Kristy","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-01-25T16:00:17.269Z","pid":12420,"hostname":"Kristy","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-01-25T16:00:17.275Z","pid":12420,"hostname":"Kristy","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-01-25T16:00:17.281Z","pid":12420,"hostname":"Kristy","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-01-25T16:00:17.284Z","pid":12420,"hostname":"Kristy","msg":"Changed active context"}
+{"level":30,"time":"2023-01-25T16:00:17.284Z","pid":12420,"hostname":"Kristy","msg":"Changing current active page"}
+{"level":30,"time":"2023-01-25T16:00:17.284Z","pid":12420,"hostname":"Kristy","msg":"Changed active page"}
+{"level":30,"time":"2023-01-25T16:00:17.294Z","pid":12420,"hostname":"Kristy","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-01-25T16:00:17.302Z","pid":12420,"hostname":"Kristy","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-01-25T16:00:17.309Z","pid":12420,"hostname":"Kristy","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2023-01-25T16:00:17.311Z","pid":12420,"hostname":"Kristy","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2023-01-25T16:00:17.324Z","pid":12420,"hostname":"Kristy","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2023-01-25T16:00:17.325Z","pid":12420,"hostname":"Kristy","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2023-01-25T16:00:17.335Z","pid":12420,"hostname":"Kristy","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-01-25T16:00:17.342Z","pid":12420,"hostname":"Kristy","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-01-25T16:00:17.344Z","pid":12420,"hostname":"Kristy","msg":"Changed active context"}
+{"level":30,"time":"2023-01-25T16:00:17.344Z","pid":12420,"hostname":"Kristy","msg":"Changing current active page"}
+{"level":30,"time":"2023-01-25T16:00:17.344Z","pid":12420,"hostname":"Kristy","msg":"Changed active page"}
+{"level":30,"time":"2023-01-25T16:00:17.345Z","pid":12420,"hostname":"Kristy","msg":"Start of node method closeContext"}
+{"level":30,"time":"2023-01-25T16:00:17.384Z","pid":12420,"hostname":"Kristy","msg":"Removed page=1a5c41bf-37a2-4ddd-8309-2add343158e9 from context=4c0a5a6a-9413-4940-abf1-4848d58f0c33 page stack"}
+{"level":30,"time":"2023-01-25T16:00:17.486Z","pid":12420,"hostname":"Kristy","msg":"End of node method closeContext"}
+{"level":30,"time":"2023-01-25T16:00:17.500Z","pid":12420,"hostname":"Kristy","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-01-25T16:00:17.501Z","pid":12420,"hostname":"Kristy","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-01-25T16:00:17.576Z","pid":12420,"hostname":"Kristy","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2023-01-25T16:00:17.901Z","pid":12420,"hostname":"Kristy","msg":"End of node method closeAllBrowsers"}
