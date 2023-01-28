@@ -21,4 +21,3 @@ HELP NEEXTISTUJICI
 
 
 kmlkůkl
-kůlklůkůlk
