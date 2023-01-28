@@ -16,3 +16,4 @@ HELP NEEXTISTUJICI
     Should not Contain      ${result}   is not supported
 
 # co se stane, kdyz dam vice commitu na stejnem fileu a pak az poslu do hubu? (commit1)
+# (commit2)
