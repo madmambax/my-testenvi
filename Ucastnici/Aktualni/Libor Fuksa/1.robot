@@ -1,5 +1,5 @@
 *** Settings ***
-Library    String
+#Library    String
 Library    OperatingSystem
 
 *** Test Cases ***
@@ -8,7 +8,12 @@ JE GIT NAINSTALOVAN?
     ${result} =             run         git --version
     Log                     ${result}
     Should Contain          ${result}   git version
-#   Should Contain          ${result}   Switches may be preset in the DIRCMD environment variable.
+
+FUNGUJE PRIKAZ TIME (ZOBRAZENI / EDITACE CASU)
+    ${result} =             run         help time
+#    Log                     ${result}
+    Should Contain          ${result}   Displays or sets the system time.
+
 
 #HELP NEEXTISTUJICI
 #    ${result} =             run         help tohlejespatne
