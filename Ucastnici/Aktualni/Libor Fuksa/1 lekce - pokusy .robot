@@ -14,5 +14,3 @@ HELP NEEXTISTUJICI
     ${result} =             run         help tohlejespatne
     Log                     ${result}
     Should not Contain      ${result}   is not supported
-
-# co se stane, kdyz dam vice commitu na stejnem fileu a pak az poslu do hubu? (commit1)
