@@ -22,4 +22,4 @@ HELP NEEXTISTUJICI
 HELP NEEXTISTUJICI
     ${result} =             run         help tohlejespatne
     Log                     ${result}
-    Should not Contain      ${result}   is not supported
+    Should Contain      ${result}   is not supported
