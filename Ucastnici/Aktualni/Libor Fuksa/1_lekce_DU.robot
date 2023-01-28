@@ -25,5 +25,5 @@ EXISTUJE PRIKAZ "DNES" (ZOBRAZI / EDITUJE AKTUALNI DATUM)
 
 EXISTUJE V AKTUALNIM ADRESARI SOUBOR "NicMneNenapada.txt"
 	    ${result} =             run         dir
-	    should                  ${result}   NicMneNenapada.txt
+	    should Contain          ${result}   NicMneNenapada.txt
 
