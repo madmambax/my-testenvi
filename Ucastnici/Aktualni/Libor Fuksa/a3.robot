@@ -18,8 +18,3 @@ HELP NEEXTISTUJICI
     ${result} =             run         help tohlejespatne
     Log                     ${result}
     Should not Contain      ${result}   is not supported
-
-HELP NEEXTISTUJICI
-    ${result} =             run         help tohlejespatne
-    Log                     ${result}
-    Should Contain      ${result}   is not supported
