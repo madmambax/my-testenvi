@@ -21,3 +21,4 @@ HELP NEEXTISTUJICI
 
 
 kmlkůkl
+druhý commit
