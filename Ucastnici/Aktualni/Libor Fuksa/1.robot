@@ -1,6 +1,6 @@
 *** Settings ***
 Library    String
-#Library    OperatingSystem
+Library    OperatingSystem
 
 *** Test Cases ***
 
