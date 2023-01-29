@@ -1,3 +1,5 @@
+# Domácí úkol - lekce 01
+
 *** Settings ***
 Library     OperatingSystem
 
@@ -17,6 +19,7 @@ Druhý pozitivní automatický test
     log             ${res}
     Should Contain  ${res}  Wireless LAN adapter
 
+
 První negativní automatický test
     ${res} =        run     mkdir
     log             ${res}
@@ -24,6 +27,6 @@ První negativní automatický test
 
 
 Druhý negativní automatický test
-    ${res} =        run     negativnitest.txt
+    ${res} =        run     open negativnitest.txt
     log             ${res}
     Should Contain  ${res}  is not recognized as an internal or external command
