@@ -1,6 +1,9 @@
 *** Settings ***
 Library     OperatingSystem
 
+*** Variables ***
+${NEGPARAM1}  The syntax of the command is incorrect.
+
 *** Test Cases ***
 
 První pozitivní automatický test
@@ -17,7 +20,7 @@ Druhý pozitivní automatický test
 První negativní automatický test
     ${res} =        run     mkdir
     log             ${res}
-    Should Contain  ${res}  The syntax of the command is incorrect.
+    Should Contain  ${res}  ${NEGPARAM1}
 
 
 Druhý negativní automatický test
