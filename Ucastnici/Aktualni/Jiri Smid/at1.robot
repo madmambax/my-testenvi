@@ -4,6 +4,9 @@ Library     OperatingSystem
 
 *** Test Cases ***
 
+Test
+    Log To Console  Ahoj, čau
+
 Prvni test pozitivní
     ${res} =        run     help dir
     log             ${res}
