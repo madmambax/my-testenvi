@@ -4,8 +4,7 @@ Library    String
 Library    OperatingSystem
 
 *** Variables ***
-${x}    10
-${text}    assdasdjksahd
+
 
 *** Test Cases ***
 
