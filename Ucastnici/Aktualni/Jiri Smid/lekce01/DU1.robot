@@ -1,6 +1,7 @@
 # Domácí úkol - lekce 01
 
 *** Settings ***
+Library     String
 Library     OperatingSystem
 
 *** Variables ***
