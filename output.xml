@@ -1,34 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.1 (Python 3.10.0 on darwin)" generated="20211019 16:22:35.177" rpa="false" schemaversion="2">
-<suite id="s1" name="Prvni" source="/Users/mariansopoliga/PycharmProjects/Prvni projekt/prvni.robot">
-<test id="s1-t1" name="Prvni test pozitivní">
-<kw name="Run" library="OperatingSystem">
-<arg>help</arg>
-<doc>Runs the given command in the system and returns the output.</doc>
-<msg timestamp="20211019 16:22:35.228" level="INFO">Running command 'help 2&gt;&amp;1'.</msg>
-<status status="PASS" starttime="20211019 16:22:35.224" endtime="20211019 16:22:35.229"/>
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230201 12:17:42.587" rpa="false" schemaversion="3">
+<suite id="s1" name="Prvnitest" source="C:\Users\vojta\PycharmProjects\jak_automatizovat_testy\prvnitest.robot">
+<test id="s1-t1" name="Starting a browser with a page" line="5">
+<kw name="New Browser" library="Browser">
+<arg>chromium</arg>
+<arg>headless=false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20230201 12:17:43.345" level="INFO">{"browser": "chromium", "headless": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "deprecated_pos_args": [], "tracesDir": "C:\\Users\\vojta\\PycharmProjects\\jak_automatizovat_testy\\browser\\traces\\f542e970-9fbb-45e2-b77f-93d14baaab9f"}</msg>
+<msg timestamp="20230201 12:17:45.243" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"deprecated_pos_args":[],"tracesDir":"C:\\Users\\vojta\\PycharmProjects\\jak_automatizovat_testy\\browser\\traces\\f542e970-9fbb-45e2-b77f-93d14baaab9f"}</msg>
+<status status="PASS" starttime="20230201 12:17:43.345" endtime="20230201 12:17:45.243"/>
 </kw>
-<status status="PASS" starttime="20211019 16:22:35.223" endtime="20211019 16:22:35.230"/>
-</test>
-<test id="s1-t2" name="Prvni test negativní">
-<kw name="Run" library="OperatingSystem">
-<arg>help hello</arg>
-<doc>Runs the given command in the system and returns the output.</doc>
-<msg timestamp="20211019 16:22:35.233" level="INFO">Running command 'help hello 2&gt;&amp;1'.</msg>
-<status status="PASS" starttime="20211019 16:22:35.231" endtime="20211019 16:22:35.234"/>
+<kw name="New Page" library="Browser">
+<arg>https://marketsquare.github.io/robotframework-browser/Browser.html</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20230201 12:17:47.002" level="INFO">Successfully initialized new page object and opened url: https://marketsquare.github.io/robotframework-browser/Browser.html</msg>
+<msg timestamp="20230201 12:17:47.002" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20230201 12:17:45.245" endtime="20230201 12:17:47.002"/>
 </kw>
-<status status="PASS" starttime="20211019 16:22:35.230" endtime="20211019 16:22:35.235"/>
+<kw name="Get Title" library="Browser">
+<arg>==</arg>
+<arg>Browser</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" starttime="20230201 12:17:47.002" endtime="20230201 12:17:47.017"/>
+</kw>
+<status status="PASS" starttime="20230201 12:17:43.345" endtime="20230201 12:17:47.017"/>
 </test>
-<status status="PASS" starttime="20211019 16:22:35.180" endtime="20211019 16:22:35.236"/>
+<status status="PASS" starttime="20230201 12:17:42.593" endtime="20230201 12:17:47.140"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Prvni">Prvni</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Prvnitest">Prvnitest</stat>
 </suite>
 </statistics>
 <errors>

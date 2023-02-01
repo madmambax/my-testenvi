@@ -5,9 +5,9 @@ Library     String
 *** Test Cases ***
 
 Run whoami command
-    ${res} =  run                                whoami
+    ${res} =  run                                whoami blbost
     log                             ${res}
-    Should Not Be Equal As Strings  ${res}       hpzbook
+    Should Contain  ${res}          ERROR: Invalid argument/option - 'blbost'
 
 Run hostname command
     ${res} =  run                                 hostname

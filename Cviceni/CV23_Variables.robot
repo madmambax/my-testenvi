@@ -63,8 +63,6 @@ Ukázka práce s proměnnu typu List
     Log Many        @{list3}[1][key]    # Logs 'x' and 'y'.
     # hodí se např. na ukládání údajů z webu (uložení seznamu prvků)
 
-    #Příklad: Načtení souborů z adresáře
-
 
 Ukázka práce s proměnnu typu Dictionary
     &{Dict} =	    Create Dictionary	key=value	foo=bar
