@@ -14,3 +14,8 @@ Vypsat jednu položku
 
 Je prvni chrom?
     Should Contain    Chrome    ${web browsers}[0]
+
+
+Slovníky - klíč a hodnota
+    &{Dict2} =	    Create Dictionary	auto=10	 motorka=999
+    Log To Console  ${Dict2}[motorka]
