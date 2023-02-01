@@ -20,4 +20,3 @@ Ukazka prace s promenyma
     Log To Console  ${list1}
     Log To Console  ${list1}[0]
     Zpracuj Seznam  @{list1}
-    L
