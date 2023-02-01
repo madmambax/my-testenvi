@@ -16,7 +16,7 @@ Násobení
 
 
 Dělení
-
+#    Should Be Equal As Numbers
 
 
 *** Keywords ***
