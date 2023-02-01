@@ -6,7 +6,7 @@ Documentation     Cvičení na klíčová slova
 *** Test Cases ***
 
 Sčítání
-        ${result}=          Calculate  20  15  +            # use double spaces or tab between arguments
+        ${result}=          Calculate  20  15  +      # pozor je nutné pro oddělení parametrů používat min 2 mezery
         Should Be Equal     ${result}  ${35}
 
 Odečítání
