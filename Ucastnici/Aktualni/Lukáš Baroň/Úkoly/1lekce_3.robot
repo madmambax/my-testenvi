@@ -13,4 +13,4 @@ Pozitivní test č1
 Pozitivní test č.2
     ${pozitiv} =         run          dir c:\\windows
     log                  ${pozitiv}
-    Should Contain       ${pozitiv}    notepad.exe
+    Should Contain       ${pozitiv}   ${file}
