@@ -7,7 +7,7 @@ Library     String
 Run whoami command
     ${res} =  run                                whoami blbost
     log                             ${res}
-    Should Contain  ${res}          ERROR: Invalid argument/option - 'blbost'
+    Should Contain                  ${res}          ERROR: Invalid argument/option - 'blbost'
 
 Run hostname command
     ${res} =  run                                 hostname
