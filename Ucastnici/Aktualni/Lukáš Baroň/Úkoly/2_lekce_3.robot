@@ -3,10 +3,10 @@ Library     OperatingSystem
 
 *** Variables ***
 ${file}             notepad.exe
+${file_negative}    noteprd.exe
 ${output_positive}  Volume Serial Number is 2029-349C
 ${output_negative}  File Not Found
 ${path}             dir c:\\windows
-${file_negative}    noteprd.exe
 ${path_negative}    dir c:\\Windowsek
 
 *** Test Cases ***
