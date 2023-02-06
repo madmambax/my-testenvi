@@ -9,7 +9,7 @@ ${text1}  help cls
 ${POZPARAM1}  Wireless LAN adapter
 ${NEGPARAM1}  The syntax of the command is incorrect.
 ${prikaz}  open negativnitest.txt
-${prikaz_overeni}  is not recognized as an internal or external command
+@{prikaz_overeni}  is not recognized as an internal or external command   wi-fi   lan
 
 *** Test Cases ***
 
@@ -34,7 +34,7 @@ První negativní automatický test
 Druhý negativní automatický test
     ${res} =        Sprint     ${prikaz}
     log             ${res}
-    Should Contain  ${res}  ${prikaz_overeni}
+    Should Contain  ${res}  ${prikaz_overeni}[0]
 
 
 *** Keywords ***
