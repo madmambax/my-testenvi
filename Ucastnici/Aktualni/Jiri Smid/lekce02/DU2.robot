@@ -15,7 +15,7 @@ ${prikaz}  open negativnitest.txt
 
 První pozitivní automatický test
     ${res} =        Sprint     ${text1}
-    log             ${res}
+    log             Information about ${text1}: ${res}
     Should Contain  ${res}  Clears the screen.
 
 
