@@ -40,7 +40,7 @@ Login
 
     #kliknout na povolit cookies
 
-    #kliknout na Přihlásit
+    #kliknout na Účet
 
     #zadat email ${pemail} do místa pro zadání emailu
 
