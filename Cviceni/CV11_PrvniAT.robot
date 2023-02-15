@@ -7,11 +7,45 @@ ${x}    10
 *** Test Cases ***
 
 Prvni test
+
+    #ověření build-in KS
     Log               Ahoj
     Should Contain    Ahoj    ho
     Should Be True    10 > 1
-    
 
+
+
+
+
+
+
+#*** Settings ***
+#Library    String
+#Library    Browser
+#
+#*** Variables ***
+#${x}    10
+#
+#*** Test Cases ***
+#
+#Prvni test
+#
+#    #ověření build-in KS
+#    Log               Ahoj
+#    Should Contain    Ahoj    ho
+#    Should Be True    10 > 1
+#
+#    #ověření KS z jiné knihovny, která je ale součástí RBFW
+#    ${str2} =	Convert To Lower Case	1A2c3D
+#
+#
+##ověření KS z jiné knihovny, která je dodatečně instalovaná
+#Starting a browser with a page
+#   New Browser    chromium    headless=false
+#   New Page       https://www.rohlik.cz
+#   Get Title      ==    Online supermarket Rohlik.cz — nejrychlejší doručení ve městě
+#
+#   Type Text    id=searchGlobal     Ahoj
 
 
 
