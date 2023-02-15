@@ -15,9 +15,9 @@ ${URL}      https://www.rohlik.cz/
 *** Test Cases ***
 
 Prihlaseni bad login
-    Login               dsadsad@sdas.cz                     dasdas                      Přihlásit
+    Login               dsadsad@sdas.cz                     dasdas                      Účet
 Prihlaseni bad heslo
-    Login               radek.tester@seznam.cz              dasdas                      Přihlásit
+    Login               radek.tester@seznam.cz              dasdas                      Účet
 Prihlaseni success
     Login               radek.tester@seznam.cz              tajneheslotajneheslo        JT
 
