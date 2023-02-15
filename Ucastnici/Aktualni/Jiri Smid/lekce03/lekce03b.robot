@@ -35,7 +35,7 @@ Login
     #otevřít prohlížeč
     New Browser    chromium    headless=false
     #otevřít stránku rohlik.cz
-    New Page       https://www.rohlik.cz/vitejte
+    New Page       ${URL}
     #ověřit že se stránka otevřela
     Get Title      contains    Rohlik.cz
     #kliknout na povolit cookies
