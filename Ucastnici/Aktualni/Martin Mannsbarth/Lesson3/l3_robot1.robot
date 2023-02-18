@@ -22,7 +22,6 @@ Starting a browser with a page
     Click          data-test=header-user-icon
     Type Text      id=email    mar.man@post.cz
 
-data-dot="login-badge"
 
 Start browser page google
     New Browser    firefox    headless=false
@@ -44,8 +43,18 @@ Start browser page google
     Get Text       text="${pnastane}"
 
 Start browser page seznam
-    New Browser    firefox    headless=false
+    New Browser    chromium    headless=false
     New Page       https://seznam.cz
     Get Title      contains  Seznam
-    Sleep          10
-    Click         xpath=/div/div/div[1]/div[1]/div/div
+    Click          xpath=//*[@id="www-seznam-cz"]/div[2]//div/div/div[1]/div[1]/ul/li[2]
+    Sleep          5
+
+
+Start browser page czc
+    New Browser    chromium    headless=false
+    New Page       https://czc.cz
+    Get Title      contains  CZC
+    Click          xpath=//*[@id="ccp-popup"]/div/div[2]/button[3]
+    Sleep          5
+    Click          id=login
+    Sleep          5
