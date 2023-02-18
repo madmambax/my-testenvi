@@ -1,3 +1,5 @@
+#DÚ3
+
 *** Settings ***
 Library  Browser
 
@@ -15,7 +17,6 @@ Prihlaseni
 
 *** Keywords ***
 
-# Cílem úkolu je doplnit toto klíčové slovo tak aby všechny testy prošly
 Login
     [Arguments]     ${pemail}      ${pheslo}     ${pnastane}
 
@@ -33,22 +34,23 @@ Login
     Click          id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
     #kliknout na Účet
     Click          ${headerusericon}
-    Sleep          2
+    Sleep          1
     #zadat email ${pemail} do místa pro zadání emailu
     Type Text      id=email    ${pemail}
     #zadat heslo ${pheslo} do místa pro zadání hesla
     Type Text      xpath=//*[@id="password"]    ${pheslo}
-    Sleep          2
+    Sleep          1
     #kliknout na tlačítko "Přihlásit se"
     Click          data-test=btnSignIn
-    Sleep          2
-    #ověřit, že jsem přihlášený, data-test=header-user-icon musí obsahovat to co je v ${pnastane}
+    Sleep          1
+    #ověřit, že jsem přihlášený; data-test=header-user-icon musí obsahovat to co je v ${pnastane}
     Get Text       text="${pnastane}"
-    #kliknout na data-test=header-user-icon, kde se nachází tlačítko pro odhlášení
+    #kliknout na data-test=header-user-icon, kde se nachází tlačítko "Odhlásit se" a ověřit jej
     Click          ${headerusericon}
-    Sleep          2
-    #kliknout na Odhlásit se
+    Get Text       data-test=user-box-logout-button    contains     Odhlásit se
+    Sleep          1
+    #kliknout na "Odhlásit se"
     Click          data-test=user-box-logout-button
-    #ověření, že došlo k odhlášení (např. data-test=header-user-icon obsahuje text Účet)
+    #ověření, že došlo k odhlášení (např. ${headerusericon} obsahuje text Účet)
     Get Text       ${headerusericon}    contains     Účet
 
