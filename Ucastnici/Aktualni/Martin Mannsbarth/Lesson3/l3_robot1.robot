@@ -42,6 +42,7 @@ Start browser page google
     Sleep          5
     Get Text       text="${pnastane}"
 
+# fail cannot select cookies
 Start browser page seznam
     New Browser    chromium    headless=false
     New Page       https://seznam.cz
