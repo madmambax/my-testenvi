@@ -20,6 +20,7 @@ ${LogOut}                 xpath=//*[@id="blue-menu-wrapper"]/ul[2]/li[2]/div/div
 ${NoRobot}                xpath=//*[@id="login-form"]/div[3]/label/span
 
 *** Test Cases ***
+# 3 basic tests
 Test czc bad user
         Login            somebody@gmail.com               Smoula2023!          ${NoUser}
 
