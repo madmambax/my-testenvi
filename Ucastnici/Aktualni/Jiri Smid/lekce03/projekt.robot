@@ -24,33 +24,44 @@ Login
     log             ${pheslo}
     log             ${pnastane}
 
-    #otevřít prohlížeč
+    #otevře prohlížeč
     New Browser    chromium    headless=false
-    #otevřít stránku rohlik.cz
+
+    #otevře stránku https://www.rohlik.cz/
     New Page       ${URL}
-    #ověřit, že se stránka otevřela
+
+    #ověří, že se stránka otevřela
     Get Title      contains    Online supermarket Rohlik.cz
-    #kliknout na povolit cookies
+
+    #klikne na "Povolit všechny" a tím povolí cookies
     Click          id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
-    #kliknout na Účet
+
+    #klikne na "Účet"
     Click          ${headerusericon}
     Sleep          1
-    #zadat email ${pemail} do místa pro zadání emailu
+
+    #zadá email ${pemail} do místa pro zadání emailu
     Type Text      id=email    ${pemail}
-    #zadat heslo ${pheslo} do místa pro zadání hesla
+
+    #zadá heslo ${pheslo} do místa pro zadání hesla
     Type Text      xpath=//*[@id="password"]    ${pheslo}
     Sleep          1
-    #kliknout na tlačítko "Přihlásit se"
+
+    #klikne na tlačítko "Přihlásit se"
     Click          data-test=btnSignIn
     Sleep          1
-    #ověřit, že jsem přihlášený; data-test=header-user-icon musí obsahovat to co je v ${pnastane}
+
+    #ověří, že jsem přihlášený; data-test=header-user-icon musí obsahovat to co je v ${pnastane}
     Get Text       text="${pnastane}"
-    #kliknout na data-test=header-user-icon, kde se nachází tlačítko "Odhlásit se" a ověřit jej
+
+    #klikne na data-test=header-user-icon (JŠ), kde se nachází tlačítko "Odhlásit se" a ověří jej
     Click          ${headerusericon}
     Get Text       data-test=user-box-logout-button    contains     Odhlásit se
     Sleep          1
-    #kliknout na "Odhlásit se"
+
+    #klikne na "Odhlásit se"
     Click          data-test=user-box-logout-button
-    #ověření, že došlo k odhlášení (např. ${headerusericon} obsahuje text Účet)
+
+    #ověří, že došlo k odhlášení (např. ${headerusericon} obsahuje text Účet)
     Get Text       ${headerusericon}    contains     Účet
 
