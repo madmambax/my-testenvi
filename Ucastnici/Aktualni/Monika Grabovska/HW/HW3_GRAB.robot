@@ -9,7 +9,7 @@ ${user}     standard_user
 ${psw}      secret_sauce
 ${outcome}          ADD TO CART
 *** Test Cases ***
-Prihlaseni
+Log in
    Login                     ${user}             ${psw}      ${outcome}
 
 
