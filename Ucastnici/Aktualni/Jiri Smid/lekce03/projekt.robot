@@ -52,7 +52,7 @@ Login
     Sleep          1
 
     #ověří, že jsem přihlášený; data-test=header-user-icon musí obsahovat to co je v ${pnastane}
-    Get Text       text="${pnastane}"
+    Get Text       ${headerusericon}    ==    ${pnastane}    #Get Text   text="${pnastane}"
 
     #klikne na data-test=header-user-icon (JŠ), kde se nachází tlačítko "Odhlásit se" a ověří jej
     Click          ${headerusericon}
@@ -62,6 +62,6 @@ Login
     #klikne na "Odhlásit se"
     Click          data-test=user-box-logout-button
 
-    #ověří, že došlo k odhlášení (např. ${headerusericon} obsahuje text Účet)
+    #ověří, že došlo k odhlášení (např. tím, že ${headerusericon} obsahuje text Účet)
     Get Text       ${headerusericon}    contains     Účet
 
