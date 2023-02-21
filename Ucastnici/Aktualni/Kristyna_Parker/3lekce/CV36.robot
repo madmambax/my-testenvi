@@ -1,4 +1,3 @@
-
 # požadavky
 #   pip install robotframework-browser
 #   rfbrowser init
@@ -33,20 +32,23 @@ Login
     log             ${pnastane}
 
     #otevřít prohlížeč
-
+    New Browser             chromium               headless=false
     #otevřít stránku rohlik.cz
-
+    New Page                ${URL}
     #ověřit že se stránka otevřela
-
+    Get Title      contains    Rohlik.cz
     #kliknout na povolit cookies
-
+    Click       id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
+    Sleep      3
     #kliknout na Účet
-
+    Click      data-test=header-user-icon
     #zadat email ${pemail} do místa pro zadání emailu
-
+    Type Text    id=email       ${pemail}
 
     #zadat heslo ${pheslo} do místa pro zadání hesla
-
-    #klinout na tlačítko "Přihlasit se"
-
+    Type Text    id=password    ${pheslo}
+    #klinout na tlačítko "Účet"
+#    Click       xpath=//*[@id="modalOverlay"]/div/div/div[1]/div/div[1]/form/button
+    Click       data-test=btnSignIn
     #ověřit že jsem přihlášený data-test=header-user-icon musí obsahovat to co je v ${pnastane}
+    Get Text    data-test=header-user-icon      ==        ${pnastane}

@@ -153,8 +153,8 @@ Pred_sadou
 Uklid_po_testu
     Log         Uklid na konci každho testu.
     # je nutné zavřít prihlašovací form a jít na úvodní stránku
-    Click       ${SEL_HeaderLogo}
     Go to       ${URL}
+    Click       ${SEL_HeaderLogo}
 
 
 Uklid_sada

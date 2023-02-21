@@ -33,20 +33,23 @@ Login
     log             ${pnastane}
 
     #otevřít prohlížeč
-
+    New Browser    chromium    headless=false
     #otevřít stránku rohlik.cz
-
+    New Page       ${URL}
     #ověřit že se stránka otevřela
-
+    Get Title      contains    Rohlik.cz
     #kliknout na povolit cookies
-
-    #kliknout na Účet
-
+    Click    id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
+    #kliknout na Přihlásit
+    Click    data-test=header-user-icon
     #zadat email ${pemail} do místa pro zadání emailu
-
-
+    Type Text    id=email    ${pemail}
     #zadat heslo ${pheslo} do místa pro zadání hesla
-
+    Type Text    id=password    ${pheslo}
     #klinout na tlačítko "Přihlasit se"
-
+    Click    data-test=btnSignIn
     #ověřit že jsem přihlášený data-test=header-user-icon musí obsahovat to co je v ${pnastane}
+    Get Text    text="${pnastane}"
+
+
+    #saucedemo.com např. otestovat automaticky
