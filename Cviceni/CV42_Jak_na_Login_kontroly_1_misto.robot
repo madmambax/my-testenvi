@@ -31,34 +31,34 @@ Login - Chybne heslo - Uspesne prihlaseni i varianta kontrola po klicovem slovu
 
 *** Keywords ***
 Login_s_kontrolou
-   [Arguments]         ${Email}         ${Heslo}            ${Text}
+   [Arguments]      ${Email}         ${Heslo}            ${Text}
 
 #   New Browser        headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
-   New Page                    ${URL}
-   Get Title                  contains                         Online supermarket Rohlik.cz
+   New Page         ${URL}
+   Get Title        contains                         Online supermarket Rohlik.cz
 
-   Cookie                      AcceptAll
+   Cookie           AcceptAll
 
-   Click               data-test=header-user-icon
-   Type Text           id=email                        ${Email}
-   Type Text           id=password                     ${Heslo}
-   Click               data-test=btnSignIn
+   Click            data-test=header-user-icon
+   Type Text        id=email                        ${Email}
+   Type Text        id=password                     ${Heslo}
+   Click            data-test=btnSignIn
 
-   Get Text                    xpath=//div[@class='u-mr--8']   contains                                ${Text}
+   Get Text         xpath=//div[@class='u-mr--8']   contains                                ${Text}
 
 
 Login_bez_kontroly
-   [Arguments]                 ${Email}                        ${Heslo}
+   [Arguments]      ${Email}                        ${Heslo}
 
-   New Page                    ${URL}
-   Get Title                  contains                         Online supermarket Rohlik.cz
+   New Page         ${URL}
+   Get Title        contains                         Online supermarket Rohlik.cz
 
-   Cookie                      AcceptAll
+   Cookie           AcceptAll
 
-   Click               data-test=header-user-icon
-   Type Text           id=email                        ${Email}
-   Type Text           id=password                     ${Heslo}
-   Click               data-test=btnSignIn
+   Click            data-test=header-user-icon
+   Type Text        id=email                        ${Email}
+   Type Text        id=password                     ${Heslo}
+   Click            data-test=btnSignIn
 
 Uživatel je přihlášen
     [Arguments]     ${Text}
@@ -72,12 +72,12 @@ Uživatel není přihlášen
 
 
 Cookie
-    [Arguments]         ${type}
+    [Arguments]     ${type}
     IF  "${type}" == "AcceptAll"
-        Click           id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
+        Click       id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
     ELSE
-        Click           id=CybotCookiebotDialogBodyButtonDecline
+        Click       id=CybotCookiebotDialogBodyButtonDecline
     END
 
-    sleep               1      #workaround: Probliknutí cele stránky po kliknutí na tlačítko
+    sleep           1      #workaround: Probliknutí cele stránky po kliknutí na tlačítko
 
