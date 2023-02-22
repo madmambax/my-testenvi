@@ -3,7 +3,7 @@ Library  Browser
 Documentation   Ukazuje jak vytvořit automatické testy pokud NEMÁTE jedno místo (selektor) kde
 ...             kontrolovat jestli je nebo není uživatel přihlášen. Tedy potřebujete se podívat na jedno
 ...             místo pokud je uživatel přihlášen a na jiné pokud přihlášen není
-...             v našem případě to bude selektor data-test=header-user-icon pokud nejsem přihlášen
+...             v našem případě to bude selektor id=headerLogin pokud nejsem přihlášen
 ...             id=headerUser pokud jsem přihlášen
 ...             Všiměnte si, že pokud používat variantu kontrola pomocí dalšího paramteru KS je třeba
 ...             přidat podmínku
@@ -24,7 +24,7 @@ Login - Uspesne prihlaseni i varianta kontrola po klicovem slovu
 
 
 Login - Chybne heslo - varianta kontrola v parametru klicoveho slova
-    Login_s_kontrolou           bavemal543@cebaike.com              chyba        Přihlásit
+    Login_s_kontrolou           bavemal543@cebaike.com              chyba        Účet
 
 Login - Chybne heslo - Uspesne prihlaseni i varianta kontrola po klicovem slovu
     Login_bez_kontroly          bavemal543@cebaike.com              chyba
@@ -49,11 +49,11 @@ Login_s_kontrolou
 #   Potřebuji vědět zda budu kontrolovat zda uživatel je nebo není přihlášen
 #   mohl bych přidat 4. parametr, který by obsahoval ANO nebo NE, pokud má být uživatel
 #   přihlášen. Abych nemusel přidávat 4. paramter, využil jsem 3. Parametr který mi tut informaci
-#   také poskytuje. Pokud uživatel nemá být přihlášen má hodnotu "Přihlásit"
-   IF    "${Text}" == "Přihlásit"
-       Get Text     data-test=header-user-icon         contains            Přihlásit
+#   také poskytuje. Pokud uživatel nemá být přihlášen má hodnotu "Účet"
+   IF    "${Text}" == "Účet"
+       Get Text     data-test=header-user-icon         contains            Účet
    ELSE
-       Get Text     data-test=header-user-icon          contains            ${Text}
+       Get Text     data-test=header-user-icon         contains            ${Text}
    END
 
 
@@ -78,7 +78,7 @@ Uživatel je přihlášen
 
 Uživatel není přihlášen
 
-    Get Text        data-test=header-user-icon      contains        Přihlásit
+    Get Text        data-test=header-user-icon      contains        Účet
 
 
 
