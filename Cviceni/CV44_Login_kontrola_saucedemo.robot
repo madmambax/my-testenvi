@@ -1,3 +1,10 @@
+#  Pridáním negativního testu "Login chybne heslo" nefunguje správně KS Login,
+#  jak jej opravíte aby mohlo být jen jedno KS pro pozitivní i negativní testy?
+#  1. je třeba vymyslet co se bude kontrolovat?
+#  2. je třeba upravit KS Login
+#  3. je třeba upravit volání KS Login podle nového stavu
+
+
 
 *** Settings ***
 Library  Browser
@@ -12,11 +19,8 @@ ${URL}      https://www.saucedemo.com/
 Login
     Login               standard_user               secret_sauce                ADD TO CART
 
-#  Pridáním negativního testu nefunguje správně KS Login, jak jej opravíte aby mohlo být jen
-# jedno KS pro pozitivní i negativní testy?
-
 Login chybne heslo
-    Login               standard_user               chyba                       ???
+    Login               standard_user               chyba
 
 
 *** Keywords ***
@@ -45,6 +49,7 @@ Login
 
     Click           xpath=//*[@id="login-button"]
 
+    # Toto místo je třeba nějak vylepšit
     Get Text        id=add-to-cart-sauce-labs-backpack      ==        ${outcome}
 
     Click           xpath=//*[@id="react-burger-menu-btn"]
