@@ -3,7 +3,7 @@ Library  Browser
 Documentation   Ukazuje jak vytvořit automatické testy pokud máte jedno místo (selektor) kde
 ...             kontrolovat jestli je nebo není uživatel přihlášen. V našem případě je to
 ...             selektor xpath=//div[@class='u-mr--8'] který obsahuje buďto iniciály uživatele (např MS)
-...             nebo text "Přihlásit" pokud se uživatel nepřihlásí
+...             nebo text "Účet" pokud se uživatel nepřihlásí
 
 
 *** Variables ***
@@ -21,7 +21,7 @@ Login - Uspesne prihlaseni i varianta kontrola po klicovem slovu
 
 
 Login - Chybne heslo - varianta kontrola v parametru klicoveho slova
-    Login_s_kontrolou           bavemal543@cebaike.com              chyba        Přihlásit
+    Login_s_kontrolou           bavemal543@cebaike.com              chyba        Účet
 
 Login - Chybne heslo - Uspesne prihlaseni i varianta kontrola po klicovem slovu
     Login_bez_kontroly          bavemal543@cebaike.com              chyba
@@ -67,7 +67,7 @@ Uživatel je přihlášen
 
 Uživatel není přihlášen
 
-    Get Text        xpath=//div[@class='u-mr--8']   contains                                Přihlásit
+    Get Text        xpath=//div[@class='u-mr--8']   contains                                Účet
 
 
 
