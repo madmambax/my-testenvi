@@ -26,20 +26,20 @@ Test Timeout    ${TC_TIMEOUT_ROBOT_KW}      # Timeout pro všechny KS z RobotFW
 
 *** Test Cases ***
 Login spatny email
-    Login           chyba                       ${USER1_PASSWORD}                       ${ERROR_TEXT_FillCorrectEmail}
+    Login           chyba                   ${USER1_PASSWORD}           ${ERROR_TEXT_FillCorrectEmail}
 
 Login spatne heslo
-    Login           ${USER1_NAME}               bad                                     ${ERROR_TEXT_IncorrectEmailOrPwd}
+    Login           ${USER1_NAME}           bad                         ${ERROR_TEXT_IncorrectEmailOrPwd}
 
 Login vse OK
-    Login           ${USER1_NAME}               ${USER1_PASSWORD}                    ${USER1_SHORT}
+    Login           ${USER1_NAME}           ${USER1_PASSWORD}           ${USER1_SHORT}
     [Teardown]      Logout         #provede se i když test zfailuje
 
 
 Test Objednavky
     ${kusu} =	        Set Variable	         5
-    Login               ${USER1_NAME}            ${USER1_PASSWORD}                   ${USER1_SHORT}
-    Pridat do kosiku    ${ZBOZI01_NAME}          ${ZBOZI01_ID}                       ${kusu}
+    Login               ${USER1_NAME}       ${USER1_PASSWORD}           ${USER1_SHORT}
+    Pridat do kosiku    ${ZBOZI01_NAME}     ${ZBOZI01_ID}               ${kusu}
     Click               ${SEL_CartContent}
     Take Screenshot
     Odebrat z kosiku    ${kusu}
@@ -53,15 +53,15 @@ Test Objednavky
 *** Keywords ***
 
 Login
-    [Arguments]                ${Email}                         ${Heslo}                ${Text}
+    [Arguments]         ${Email}                         ${Heslo}                ${Text}
 
-    Get Title                   contains                        ${TEXT_MainTitle}
+    Get Title           contains                        ${TEXT_MainTitle}
 
-    Click                       ${SEL_HeaderLogin}
-    Type Text                   ${SEL_LoginFormEmail}           ${Email}
-    Type Text                   ${SEL_LoginFormPwd}             ${Heslo}
-    Click                       ${SEL_BtnSignIn}
-    Get Text                    ${SEL_HeaderLoginErrorTxt}      contains                ${Text}
+    Click               ${SEL_HeaderLogin}
+    Type Text           ${SEL_LoginFormEmail}           ${Email}
+    Type Text           ${SEL_LoginFormPwd}             ${Heslo}
+    Click               ${SEL_BtnSignIn}
+    Get Text            ${SEL_HeaderLoginErrorTxt}      contains                ${Text}
 
 Logout
     Go to               ${URL}
@@ -93,7 +93,7 @@ Pridat do kosiku
 
 
 Odebrat z kosiku
-    [Arguments]                 ${Kusu}
+    [Arguments]         ${Kusu}
 
     #přidat ověření že košík obsahuje ${Kusu} kusů
     Take Screenshot
@@ -101,7 +101,7 @@ Odebrat z kosiku
 
     ${old_mode} =       Set Strict Mode             False                       # zapamatovat původní nastavení
 
-    Click                   ${SEL_BtnMinus}             clickCount=${Kusu}      delay=100ms
+    Click               ${SEL_BtnMinus}             clickCount=${Kusu}      delay=100ms
     Take Screenshot
 
     # nějakou dobu trvá než se zboží přidá do košíku, možnosti
