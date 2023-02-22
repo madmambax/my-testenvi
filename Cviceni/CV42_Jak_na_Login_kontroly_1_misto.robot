@@ -31,7 +31,7 @@ Login - Chybne heslo - Uspesne prihlaseni i varianta kontrola po klicovem slovu
 
 *** Keywords ***
 Login_s_kontrolou
-   [Arguments]                 ${Email}                        ${Heslo}                                ${Text}
+   [Arguments]         ${Email}         ${Heslo}            ${Text}
 
 #   New Browser        headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
    New Page                    ${URL}
