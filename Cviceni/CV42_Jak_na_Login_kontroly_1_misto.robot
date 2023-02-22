@@ -39,7 +39,7 @@ Login_s_kontrolou
 
    Cookie                      AcceptAll
 
-   Click               id=headerLogin
+   Click               data-test=header-user-icon
    Type Text           id=email                        ${Email}
    Type Text           id=password                     ${Heslo}
    Click               data-test=btnSignIn
@@ -55,7 +55,7 @@ Login_bez_kontroly
 
    Cookie                      AcceptAll
 
-   Click               id=headerLogin
+   Click               data-test=header-user-icon
    Type Text           id=email                        ${Email}
    Type Text           id=password                     ${Heslo}
    Click               data-test=btnSignIn

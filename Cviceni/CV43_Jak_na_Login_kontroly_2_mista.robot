@@ -41,7 +41,7 @@ Login_s_kontrolou
 
    Cookie           AcceptAll
 
-   Click            id=headerLogin
+   Click            data-test=header-user-icon
    Type Text        id=email            ${Email}
    Type Text        id=password         ${Heslo}
    Click            data-test=btnSignIn
@@ -51,9 +51,9 @@ Login_s_kontrolou
 #   přihlášen. Abych nemusel přidávat 4. paramter, využil jsem 3. Parametr který mi tut informaci
 #   také poskytuje. Pokud uživatel nemá být přihlášen má hodnotu "Přihlásit"
    IF    "${Text}" == "Přihlásit"
-       Get Text     id=headerLogin         contains            Přihlásit
+       Get Text     data-test=header-user-icon         contains            Přihlásit
    ELSE
-       Get Text     id=headerUser          contains            ${Text}
+       Get Text     data-test=header-user-icon          contains            ${Text}
    END
 
 
@@ -66,7 +66,7 @@ Login_bez_kontroly
 
    Cookie               AcceptAll
 
-   Click                id=headerLogin
+   Click                data-test=header-user-icon
    Type Text            id=email                        ${Email}
    Type Text            id=password                     ${Heslo}
    Click                data-test=btnSignIn
@@ -78,7 +78,7 @@ Uživatel je přihlášen
 
 Uživatel není přihlášen
 
-    Get Text        id=headerLogin      contains        Přihlásit
+    Get Text        data-test=header-user-icon      contains        Přihlásit
 
 
 
