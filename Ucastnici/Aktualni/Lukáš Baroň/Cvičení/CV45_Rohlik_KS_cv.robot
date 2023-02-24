@@ -26,8 +26,8 @@ Pridani zbozi do kosiku
     Sleep               1                           # čeká 1 sekundu
     Click               text=Hledat                 # ???
     Sleep               1                           # čeká 1 sekundu
-#      Click               css=[data-test=btnAdd] >> nth=1            # způsobuje někdy zmizení uživatele, scrol donwn, důvod někdy klikne na zboží níže
-    Click               css=[data-test=btnAdd]            # způsobuje někdy zmizení uživatele, scrol donwn, důvod někdy klikne na zboží níže
+    Click               css=[data-test=btnAdd] >> nth=1            # způsobuje někdy zmizení uživatele, scrol donwn, důvod někdy klikne na zboží níže
+#    Click               css=[data-test=btnAdd]            # způsobuje někdy zmizení uživatele, scrol donwn, důvod někdy klikne na zboží níže
     Sleep               1
     Logout
 
