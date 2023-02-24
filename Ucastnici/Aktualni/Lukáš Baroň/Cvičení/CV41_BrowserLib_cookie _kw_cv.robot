@@ -12,9 +12,9 @@ Vyhledavani na googlu
 #    Click               css=button#L2AGLb
 #    Vytvoříme KS Cookie s 1 parametrem, viz níže, parametr určuje zda chceme vše povolit nebo odmítnout
 
-#    Cookie              ???doplnit parametr klíčového slova???
+    Cookie  AcceptAll
 
-###
+
 
     Type Text       css=[aria-label="Najít"]   Testování     # selektor pomocí atributu
 
@@ -32,9 +32,9 @@ Cookie
     [Arguments]         ${type}
     IF  "${type}" == "AcceptAll"
         # klinout na "Vše povolit"
-        Click               ???doplnit identifikátor???
+        Click               id=L2AGLb
     ELSE
         # klinout na "Odmítnout"
-        Click               ???doplnit identifikátor???
+        Click               id=W0wltc
 
     END

@@ -7,6 +7,7 @@
 Documentation   Automatizace rohlik.cz s BrowserLibrary
 Library  Browser
 
+Resource    ../../David Karpiel/DÚ-03/projekt.robot
 
 *** Variables ***
 ${URL}      https://www.rohlik.cz/
@@ -15,12 +16,12 @@ ${URL}      https://www.rohlik.cz/
 *** Test Cases ***
 
 Uspesne prihlaseni
-    Login               bavemal543@cebaike.com              tajneheslotajneheslo        MS
+    Login               lukasbaron@seznam.cz              tajneheslotajneheslo        LB
     Logout
 
 
 Pridani zbozi do kosiku
-    Login               bavemal543@cebaike.com              tajneheslotajneheslo        MS
+    Login               lukasbaron@seznam.cz              tajneheslotajneheslo        LB
     Type Text           id=searchGlobal             banán
     Sleep               1                           # čeká 1 sekundu
     Click               text=Hledat                 # ???
@@ -70,5 +71,8 @@ Cookie
 
 # Vytvořte KS pro Odlášení, tak aby fungoval vždy (Pro oba testy)
 Logout
-
+    Go To            ${URL}
+    Click            id=headerUser
+    Click            data-test=user-box-logout-button
+    Sleep            5
 # zde je nutné doplnit KS
