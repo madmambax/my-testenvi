@@ -1,7 +1,3 @@
-# Potřeboval bych poradit selector pro logout, na rozdíl od rohlíku žádný
-# neprošel, navíc funkční jen ve firefox, ostatní browsers -test zkrachuje po zvolení
-# button další po zadání username ne vždy, ale když headless=true
-
 *** Settings ***
 Library  Browser
 
@@ -67,6 +63,6 @@ Login
     Click          ${LoginFormOpen}
     Sleep          2
     # logout from google
- #   Click          xpath=//*[@id="yDmH0d"]/c-wiz/div/div/div/div/div[2]/div[2]/span/a
- #   Sleep          5
+#    Click          css=
+#    Sleep          5
      # verify logout
