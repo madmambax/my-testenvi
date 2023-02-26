@@ -37,7 +37,7 @@ Login
     Click          id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
 
     #klikne na "Účet"
-    Click          ${headerusericon}
+    Click          css=[aria-label=účet]    #${headerusericon}
     Sleep          1
 
     #zadá email ${pemail} do místa pro zadání emailu
