@@ -185,7 +185,7 @@ Clear Basket
     Take Screenshot
 
 # logout from shop and verify logoff
- Logout shop
+Logout shop
     Sleep                              5
     Go To                              ${URL}
     Sleep                              2
