@@ -17,14 +17,17 @@ Pozitivní test: Přihlášení, přidání zboží do košíku, odebrání zbo�
     Přidání zboží do košíku    káva    1385789    7
     Odebrání zboží z košíku
     Odhlášení
+    Log To Console             Úspěšný pozitivní test
 
 Negativní test: Přihlášení se špatným emailem
     Přihlášení                 smm.jjiri@seznam.cz     Testovani864ZdR     Účet
-    Jiné ověření nepřihlášení   #mimo Účet v ${headerusericon}
+    Další ověření nepřihlášení   #mimo Účet v ${headerusericon}
+    Log To Console             Úspěšný negativní test
 
 Negativní test: Přihlášení se špatným heslem
     Přihlášení                 sm.jiri@seznam.cz     TezstovQani864Zd4R     Účet
-    Jiné ověření nepřihlášení   #mimo Účet v ${headerusericon}
+    Další ověření nepřihlášení   #mimo Účet v ${headerusericon}
+    Log To Console             Úspěšný negativní test
 
 
 *** Keywords ***
@@ -50,7 +53,7 @@ Přihlášení
     Get Text            ${headerusericon}     contains     ${user-icon}
     Take Screenshot
 
-Jiné ověření nepřihlášení
+Další ověření nepřihlášení
     Get Text           data-test=notification-content     ==     Zadal(a) jste nesprávný e-mail nebo heslo.
 
 Přidání zboží do košíku
