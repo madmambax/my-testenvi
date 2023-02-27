@@ -1,6 +1,7 @@
 # set test activates robot protection, there is need click on checkbox for repetitive testing,need run negative
 # test seldom, because it can enable captcha protoction against robot, then there is need manual looon and a few times
 # logon with correct credentials
+# test increase items in the basket
 
 # necessary libraries
 *** Settings ***
