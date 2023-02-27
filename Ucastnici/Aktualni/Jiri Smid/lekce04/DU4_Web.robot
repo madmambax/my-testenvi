@@ -49,7 +49,6 @@ Přihlášení
     Click               data-test=btnSignIn
     Get Text            ${headerusericon}     contains     ${user-icon}
     Take Screenshot
-    Sleep               1
 
 Jiné ověření nepřihlášení
     Get Text           data-test=notification-content     ==     Zadal(a) jste nesprávný e-mail nebo heslo.
@@ -60,16 +59,19 @@ Přidání zboží do košíku
     Click               css=[data-product-id="${id_cislo}"][data-test="btnAdd"]
     ${Pocet}            Evaluate    ${mnozstvi} - 1
     Click               css=[data-product-id="${id_cislo}"][data-test="btnPlus"]    clickCount= ${Pocet}
-    Sleep               3
+    Sleep               2
     Go To               ${URL}
+    Click               data-test=cart-header
+    Get Text            id=cartReviewMainTitle     contains     Přehled objednávky
+    Get Text            css=[data-gtm-button="clear-cart"]     contains     Vysypat košík
+    Take Screenshot
     Sleep               1
 
 Odebrání zboží z košíku
-    Click               data-test=cart-header
-    Sleep               3
     Click               css=[data-gtm-button="clear-cart"]
-    Sleep               2
+    Sleep               1
     Get Text            id=cartReviewMainTitle     contains     Košík funguje i jako nákupní seznam
+    Take Screenshot
     Go To               ${URL}
     Get Text            data-test=cart-header     contains     0,00
     Sleep               1
