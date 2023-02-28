@@ -1,6 +1,5 @@
 *** Settings ***
 Library  Browser
-Resource    ../../../OLD/Aneta_Moravcová/DU4_Web.robot
 
 *** Variables ***
 ${Rohlik web}      https://www.rohlik.cz/
