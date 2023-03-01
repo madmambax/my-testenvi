@@ -20,15 +20,8 @@ ${URL}              https://rohlik.cz
 Login spatny email
     Login           chyba                   ${USER1_PASSWORD}       ${ERROR_TEXT_FillCorrectEmail}
 
-    # je nutné zavřít prihlašovací form
-    Click           id=logo
-
-
 Login spatne heslo
     Login               ${USER1_NAME}       bad                     ${ERROR_TEXT_IncorrectEmailOrPwd}
-
-    # je nutné zavřít prihlašovací form
-    Click               id=logo
 
 Login vse OK
     Login               ${USER1_NAME}       ${USER1_PASSWORD}       ${USER1_SHORT}
