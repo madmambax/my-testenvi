@@ -1,8 +1,3 @@
-# požadavky
-#   pip install robotframework-browser
-#   rfbrowser init
-
-
 *** Settings ***
 Documentation   Automatizace rohlik.cz s BrowserLibrary
 Library  Browser
@@ -70,5 +65,10 @@ Cookie
 
 # Vytvořte KS pro Odlášení, tak aby fungoval vždy (Pro oba testy)
 Logout
+          Go To           ${URL}
+          Click           data-test=header-user-icon
+          Click           data-test=user-box-logout-button
+          Sleep           5
+
 
 # zde je nutné doplnit KS

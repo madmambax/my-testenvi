@@ -1,3 +1,19 @@
+#*** Variables ***
+#${zvire}  slon
+#
+#*** Test Cases ***
+#Podminky
+#
+##    #Pozor: hodnoty, které se porovnávájí musí být v uvozovkách nebo leze použít python výrazy
+#    IF  "${zvire}" == "slon"
+#        Log To Console    Je to slon
+#    ELSE
+#        # klinout na "Odmítnout"
+#        Log To Console    Neni to slon
+#    END
+
+--------------
+
 *** Settings ***
 Documentation   Automatizace Google s BrowserLibrary
 Library  Browser
@@ -12,7 +28,7 @@ Vyhledavani na googlu
 #    Click               css=button#L2AGLb
 #    Vytvoříme KS Cookie s 1 parametrem, viz níže, parametr určuje zda chceme vše povolit nebo odmítnout
 
-#    Cookie              ???doplnit parametr klíčového slova???
+#    Cookie              id="L2AGLb"   #???doplnit parametr klíčového slova???
 
 ###
 
@@ -32,9 +48,9 @@ Cookie
     [Arguments]         ${type}
     IF  "${type}" == "AcceptAll"
         # klinout na "Vše povolit"
-        Click               ???doplnit identifikátor???
+        Click               id="L2AGLb"
     ELSE
         # klinout na "Odmítnout"
-        Click               ???doplnit identifikátor???
+        Click               id="W0wltc"
 
     END

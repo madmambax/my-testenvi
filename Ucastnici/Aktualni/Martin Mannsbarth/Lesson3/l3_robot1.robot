@@ -44,10 +44,10 @@ Start browser page google
 
 # fail cannot select cookies
 Start browser page seznam
-    New Browser    chromium    headless=false
+    New Browser    firefox    headless=false
     New Page       https://seznam.cz
     Get Title      contains  Seznam
-    Click          xpath=//*[@id="www-seznam-cz"]/div[2]//div/div/div[1]/div[1]/ul/li[2]
+    Click          css=[data-testid="button-agree"]
     Sleep          5
 
 

@@ -69,13 +69,22 @@ Pridat do kosiku
 
 #    ${old_mode} =      Set Strict Mode    False
     #zde DOPLNIT ks pro napsání textu, který je v ${Zbozi} do vyhledávání
-
+     ${old_mode} =      Set Strict Mode    False
 
     #zde DOPLNIT ks pro kliknutí na hledat, selektor bude text "Hledat"
+    Type Text           id=searchGlobal             ${Zbozi}
+    Sleep               1                           #Statický timeout
+    Click               text="Hledat"               # tlačítko Hledat
+    Sleep               5                           #Statický timeout
 
-
+    Click               css=[data-product-id="${produkt_id}"][data-test="btnAdd"]            # způsobuje někdy zmizení uživatele, scrol donwn, důvod někdy klikne na zboží níže
+    Sleep               1
+    # Kusu - 1
+    ${Pocet}            Evaluate                    ${Kusu} - 1
+#    Click               css=.sc-oad7xy-0 [data-product-id="${produkt_id}"][data-test="btnPlus"]           clickCount=${Pocet}
+    Click               css=.amountCounterWrap [data-product-id="${produkt_id}"][data-test="btnPlus"]           clickCount=${Pocet}
     #zde DOPLNIT ks pro kliknout talčítko "Do košíku"
-
+     Click    selector
 
     #ověří že je zboží v košíku
     ${cart_text}=       Get Text                    id=cart
@@ -84,7 +93,7 @@ Pridat do kosiku
     # zde DOPLNIT porovnání zda text z košíku obsahuje zboží
     # použijte příkaz Get Text a parametr  matches  (?i)${Zbozi}
     # (?i)  znamená že se bere case insensitive
-
+    Get Text    matches   (?i)${Zbozi}
     Take Screenshot
 
 
