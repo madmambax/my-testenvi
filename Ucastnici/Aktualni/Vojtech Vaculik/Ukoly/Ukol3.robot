@@ -33,5 +33,5 @@ Login
 
 *** Test Cases ***
 Přihlášení validnímy údaji
-    Login    ${pemail}    ${pheslo}    $pnastane
+    Login    ${pemail}    ${pheslo}    ${pnastane}
 
