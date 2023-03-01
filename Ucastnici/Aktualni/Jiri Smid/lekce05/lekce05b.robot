@@ -9,10 +9,10 @@ Library         Browser
 
 
 Resource        Data_and_Config_AT/TestData.robot
+Resource        Data_and_Config_AT/Configuration.robot
 
 
 *** Variables ***
-${URL}              https://rohlik.cz
 
 
 
@@ -88,7 +88,7 @@ Pridat do kosiku
     #ověří že je zboží v košíku
     ${cart_text}=       Get Text                    id=cart
     Log                 ${cart_text}
-    Get Text            id=cart                     matches                             (?i)${Zbozi}    # (?i)  znamená že se bere case insensitive
+    Get Text            ${SEL_Cart}                     matches                             (?i)${Zbozi}    # (?i)  znamená že se bere case insensitive
     Take Screenshot
 
 
@@ -97,7 +97,7 @@ Odebrat z kosiku
 
     Take Screenshot
     ${old_mode} =       Set Strict Mode             False        # Does not fail if selector points to one or more elements
-    Click               data-test=btnMinus          clickCount=${Kusu}
+    Click               ${SEL_BtnMinus}          clickCount=${Kusu}
     Set Strict Mode     ${old_mode}
     Take Screenshot
     Sleep               3                                                       #statické čekání
@@ -108,9 +108,9 @@ Odebrat z kosiku
 Cookie
     [Arguments]         ${type}
     IF  "${type}" == "AcceptAll"
-        Click           id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
+        Click           ${SEL_Cookie_AllowAll}
     ELSE
-        Click           id=CybotCookiebotDialogBodyButtonDecline
+        Click           ${SEL_Cookie_Decline}
     END
 
     sleep               1      #workaround: Probliknutí cele stránky po kliknutí na tlačítko
