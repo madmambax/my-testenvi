@@ -4,3 +4,6 @@ output.xml
 log.html
 report.html
 .idea/
+log/
+browser/
+video/
