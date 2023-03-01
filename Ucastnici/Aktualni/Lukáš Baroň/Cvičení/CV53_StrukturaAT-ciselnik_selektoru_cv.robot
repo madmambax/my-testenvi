@@ -8,7 +8,7 @@ Documentation   CV: Testovaci data - pripravit ciselnik chybovych hlasek
 Library         Browser
 
 
-Resource        Ucastnici/Aktualni/Lukáš Baroň/Cvičení/Data_and_Config/TestData.robot
+Resource        /Data_and_Config/TestData.robot
 
 
 *** Variables ***
