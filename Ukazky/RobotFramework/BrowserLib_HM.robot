@@ -2,7 +2,7 @@
 *** Settings ***
 Library  Browser
 Library  DebugLibrary
-Resource    ../../../Ucastnici/Aktualni/David Karpiel/DÚ-03/projekt.robot
+
 
 *** Variables ***
 ${url}      https://www2.hm.com/cs_cz/index.html
