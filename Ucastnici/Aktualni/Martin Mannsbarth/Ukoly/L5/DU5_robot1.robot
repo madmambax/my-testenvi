@@ -14,7 +14,7 @@ Test Teardown   After_Test
 
 *** Variables ***
 
-#variables from resource
+#variables from resource files
 
 
 *** Test Cases ***
