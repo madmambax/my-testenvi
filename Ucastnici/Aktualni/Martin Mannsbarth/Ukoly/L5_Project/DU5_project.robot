@@ -4,9 +4,9 @@ Library  Browser
 Library  String
 
 #resources data and config
-Resource   ../L5/DataConfig/DU5_configrobo.robot
-Resource   ../L5/DataConfig/DU5_TestDataM.robot
-Resource   ../L5/DataConfig/DU5_keywords.robot
+Resource   ../L5_Project/DataConfig/DU5_configrobo.robot
+Resource   ../L5_Project/DataConfig/DU5_TestDataM.robot
+Resource   ../L5_Project/DataConfig/DU5_keywords.robot
 
 
 Test Setup      Before_Test
