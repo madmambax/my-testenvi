@@ -1,11 +1,131 @@
-{"level":30,"time":"2023-03-05T13:28:00.238Z","pid":15704,"hostname":"LAPTOP-U87992UF","msg":"Listening on 58381"}
-{"level":30,"time":"2023-03-05T13:28:00.480Z","pid":15704,"hostname":"LAPTOP-U87992UF","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-03-05T13:28:00.481Z","pid":15704,"hostname":"LAPTOP-U87992UF","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2023-03-05T13:28:00.485Z","pid":15704,"hostname":"LAPTOP-U87992UF","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-03-05T13:28:00.485Z","pid":15704,"hostname":"LAPTOP-U87992UF","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2023-03-05T13:28:00.491Z","pid":15704,"hostname":"LAPTOP-U87992UF","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-03-05T13:28:00.491Z","pid":15704,"hostname":"LAPTOP-U87992UF","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2023-03-05T13:28:00.497Z","pid":15704,"hostname":"LAPTOP-U87992UF","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-03-05T13:28:00.497Z","pid":15704,"hostname":"LAPTOP-U87992UF","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2023-03-05T13:28:02.551Z","pid":15704,"hostname":"LAPTOP-U87992UF","msg":"Start of node method closeAllBrowsers"}
-{"level":30,"time":"2023-03-05T13:28:02.551Z","pid":15704,"hostname":"LAPTOP-U87992UF","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2023-03-05T21:32:17.461Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Listening on 59887"}
+{"level":30,"time":"2023-03-05T21:32:17.594Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:32:17.594Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:32:17.597Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:32:17.598Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:32:17.602Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method goTo"}
+================= Original suppressed error =================
+Error: No page open.
+    at PlaywrightServer.getActivePage (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9715:15)
+    at PlaywrightServer.goTo (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9754:54)
+    at C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-03-05T21:32:17.602Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Error of node method goTo"}
+{"level":30,"time":"2023-03-05T21:32:17.608Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:8069:11)
+    at takeScreenshot (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:8106:3)
+    at PlaywrightServer.takeScreenshot (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9725:34)
+    at C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-03-05T21:32:17.608Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Error of node method  takeScreenshot"}
+{"level":30,"time":"2023-03-05T21:32:17.616Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:32:17.616Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:32:17.619Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:32:17.619Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:32:17.622Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method goTo"}
+================= Original suppressed error =================
+Error: No page open.
+    at PlaywrightServer.getActivePage (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9715:15)
+    at PlaywrightServer.goTo (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9754:54)
+    at C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-03-05T21:32:17.622Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Error of node method goTo"}
+{"level":30,"time":"2023-03-05T21:32:17.625Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:8069:11)
+    at takeScreenshot (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:8106:3)
+    at PlaywrightServer.takeScreenshot (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9725:34)
+    at C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-03-05T21:32:17.625Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Error of node method  takeScreenshot"}
+{"level":30,"time":"2023-03-05T21:32:17.630Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:32:17.630Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:32:17.632Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:32:17.632Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:32:17.636Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method goTo"}
+================= Original suppressed error =================
+Error: No page open.
+    at PlaywrightServer.getActivePage (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9715:15)
+    at PlaywrightServer.goTo (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9754:54)
+    at C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-03-05T21:32:17.636Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Error of node method goTo"}
+{"level":30,"time":"2023-03-05T21:32:17.638Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:8069:11)
+    at takeScreenshot (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:8106:3)
+    at PlaywrightServer.takeScreenshot (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9725:34)
+    at C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-03-05T21:32:17.639Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Error of node method  takeScreenshot"}
+{"level":30,"time":"2023-03-05T21:32:17.643Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:32:17.643Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:32:17.646Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:32:17.646Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:32:17.649Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method goTo"}
+================= Original suppressed error =================
+Error: No page open.
+    at PlaywrightServer.getActivePage (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9715:15)
+    at PlaywrightServer.goTo (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9754:54)
+    at C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-03-05T21:32:17.649Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Error of node method goTo"}
+{"level":30,"time":"2023-03-05T21:32:17.651Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:8069:11)
+    at takeScreenshot (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:8106:3)
+    at PlaywrightServer.takeScreenshot (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9725:34)
+    at C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-03-05T21:32:17.652Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Error of node method  takeScreenshot"}
+{"level":30,"time":"2023-03-05T21:32:17.656Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:32:17.656Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:32:17.659Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:32:17.659Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:32:19.686Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2023-03-05T21:32:19.687Z","pid":5676,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method closeAllBrowsers"}
