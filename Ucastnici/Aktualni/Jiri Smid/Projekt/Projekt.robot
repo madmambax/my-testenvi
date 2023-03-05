@@ -39,12 +39,6 @@ Login
     log             ${pheslo}
     log             ${pnastane}
 
-    #otevře prohlížeč
-    New Browser    chromium    headless=false
-
-    #otevře stránku https://www.rohlik.cz/
-    New Page       ${URL}
-
     #ověří, že se stránka otevřela
     Get Title      contains    ${TEXT_MainTitle}
 
@@ -91,10 +85,14 @@ Check not login 2
     Get Text       ${SEL_ErrorLogin_BadEmailFormat}     contains     ${ErrorText_BadEmailFormat}
 
 
-
-
 Pred_testem
-    Go To     ${URL}
+    #otevře prohlížeč
+    New Browser    chromium    headless=false
+
+    #otevře stránku https://www.rohlik.cz/
+    New Page       ${URL}
+
+
 #Po_testu
 #
 #
