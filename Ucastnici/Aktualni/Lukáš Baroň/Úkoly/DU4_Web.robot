@@ -13,6 +13,7 @@ Přidání zboží do košíku
     Přidání zboží             ${ARTICLE01}       ${ARTICLE01ID}        ${ARTICLE01PCS}
     Odstranění zboží          ${ARTICLE01}       ${ARTICLE01ID}        ${ARTICLE01PCS}
     [Teardown]  Logout
+teset
     Po testu
 
 Negativní testy
@@ -92,14 +93,14 @@ Po testu        #Kontrola vymazání košíku
      New Page                    ${URL_trash}
      ${CartContentText}=     Get Text         ${SEL_EMPTY}
     IF   '${text3}' in '''${CartContentText}'''
-        FOR    ${i}    IN RANGE    50
+        FOR    ${i}    IN RANGE    10
             Sleep    ${TIME_CHECK}
 
             ${CartContentText}=     Get Text         ${SEL_EMPTY}
 
             Log    ${CartContentText}
             Log    ${i}
-            Exit For Loop If  '${text2}' in '''${CartContentText}'''
+        Exit For Loop If  '${text2}' in '''${CartContentText}'''
             Click    ${SEL_REMOVE_TRASH} >> nth=0
         END
 
