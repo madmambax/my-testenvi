@@ -11,9 +11,8 @@ Resource        Data_and_Config\TestData.robot
 Resource        Data_and_Config\Configuration.robot
 
 
+
 *** Variables ***
-
-
 
 
 *** Test Cases ***
@@ -59,9 +58,8 @@ Test Objednavky
 Login
     [Arguments]                 ${Email}                            ${Heslo}                                ${Text}
 
-    Set Browser Timeout         20                                  #20s je vhodné pro rohlik.cz
-
-    New Browser        headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
+    Pred_testem
+    Pred_sadou
 
     New Page                    ${URL}
 
@@ -125,6 +123,15 @@ Cookie
 
     sleep               1      #workaround: Probliknutí cele stránky po kliknutí na tlačítko
 
+Pred_testem
+    Set Browser Timeout         20                                  #20s je vhodné pro rohlik.cz
+
+    New Browser        headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
+
+Po_testu
+Pred_sadou
+    New Page                    ${URL}
+Po_sade
 
 
 
