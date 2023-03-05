@@ -1,67 +1,13 @@
-{"level":30,"time":"2023-03-05T15:21:09.823Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Listening on 59947"}
-{"level":30,"time":"2023-03-05T15:21:10.054Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-03-05T15:21:10.055Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2023-03-05T15:21:10.059Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-03-05T15:21:10.060Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2023-03-05T15:21:10.070Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2023-03-05T15:21:11.347Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method newBrowser"}
-{"level":30,"time":"2023-03-05T15:21:11.352Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method newContext"}
-{"level":30,"time":"2023-03-05T15:21:11.353Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"currentBrowser: [object Object]"}
-{"level":30,"time":"2023-03-05T15:21:11.353Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Trace file: "}
-{"level":30,"time":"2023-03-05T15:21:11.406Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Changed active context"}
-{"level":30,"time":"2023-03-05T15:21:11.406Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method newContext"}
-{"level":30,"time":"2023-03-05T15:21:11.411Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"currentBrowser: [object Object]"}
-{"level":30,"time":"2023-03-05T15:21:11.411Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method newPage"}
-{"level":30,"time":"2023-03-05T15:21:12.217Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Video path: undefined"}
-{"level":30,"time":"2023-03-05T15:21:12.217Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Changed active page"}
-{"level":30,"time":"2023-03-05T15:21:17.123Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method newPage"}
-{"level":30,"time":"2023-03-05T15:21:17.152Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
-{"level":30,"time":"2023-03-05T15:21:17.153Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with data-testid=btnCookiesAccept in page."}
-{"level":30,"time":"2023-03-05T15:21:17.263Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
-{"level":30,"time":"2023-03-05T15:21:18.274Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
-{"level":30,"time":"2023-03-05T15:21:18.274Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with css=[data-testid=signin] in page."}
-{"level":30,"time":"2023-03-05T15:21:18.404Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
-{"level":30,"time":"2023-03-05T15:21:18.411Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method typeText"}
-{"level":30,"time":"2023-03-05T15:21:18.412Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with css=[name=\"email\"] in page."}
-{"level":30,"time":"2023-03-05T15:21:18.627Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method typeText"}
-{"level":30,"time":"2023-03-05T15:21:18.632Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method typeText"}
-{"level":30,"time":"2023-03-05T15:21:18.633Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with css=[name=\"password\"] in page."}
-{"level":30,"time":"2023-03-05T15:21:18.724Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method typeText"}
-{"level":30,"time":"2023-03-05T15:21:18.728Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
-{"level":30,"time":"2023-03-05T15:21:18.728Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with xpath=//*[@id=\"formLoginIncluded\"]/div[3]/div/button in page."}
-{"level":30,"time":"2023-03-05T15:21:19.777Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
-{"level":30,"time":"2023-03-05T15:21:19.792Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method getText"}
-{"level":30,"time":"2023-03-05T15:21:19.792Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with xpath=//*[@id=\"content-wrapper\"]/div[2]/aside/div/div/ul/li[1]/a/strong in page."}
-{"level":30,"time":"2023-03-05T15:21:20.591Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Retrieved text for element xpath=//*[@id=\"content-wrapper\"]/div[2]/aside/div/div/ul/li[1]/a/strong containing Lukáš Baroň"}
-{"level":30,"time":"2023-03-05T15:21:20.592Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method getText"}
-{"level":30,"time":"2023-03-05T15:21:20.600Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method takeScreenshot"}
-{"level":30,"time":"2023-03-05T15:21:20.785Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method takeScreenshot"}
-{"level":30,"time":"2023-03-05T15:21:20.799Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
-{"level":30,"time":"2023-03-05T15:21:20.799Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with data-testid=searchIcon in page."}
-{"level":30,"time":"2023-03-05T15:21:20.905Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
-{"level":30,"time":"2023-03-05T15:21:21.913Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method typeText"}
-{"level":30,"time":"2023-03-05T15:21:21.914Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with data-testid=searchInput in page."}
-{"level":30,"time":"2023-03-05T15:21:21.961Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method typeText"}
-{"level":30,"time":"2023-03-05T15:21:23.971Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
-{"level":30,"time":"2023-03-05T15:21:23.971Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with data-testid=searchBtn in page."}
-{"level":30,"time":"2023-03-05T15:21:24.702Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
-{"level":30,"time":"2023-03-05T15:21:24.710Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
-{"level":30,"time":"2023-03-05T15:21:24.710Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with css=[data-micro-product-id=\"181\"] >> data-testid=addToCart in page."}
-{"level":30,"time":"2023-03-05T15:21:25.420Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
-{"level":30,"time":"2023-03-05T15:21:25.427Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with id=cboxClose in page."}
-{"level":30,"time":"2023-03-05T15:21:25.427Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
-{"level":30,"time":"2023-03-05T15:21:26.077Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
-{"level":30,"time":"2023-03-05T15:21:28.090Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method goTo"}
-{"level":30,"time":"2023-03-05T15:21:28.718Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method goTo"}
-{"level":30,"time":"2023-03-05T15:21:28.722Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
-{"level":30,"time":"2023-03-05T15:21:28.722Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with css=[class=\"remove-item\"] in page."}
-{"level":30,"time":"2023-03-05T15:21:28.807Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
-{"level":30,"time":"2023-03-05T15:21:30.712Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Removed page=39158ca9-50be-4fbf-8ddf-ce1aa832d7de from context=5f4c4744-578a-4692-882c-88cf88fad8b1 page stack"}
-{"level":30,"time":"2023-03-05T15:21:30.836Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method goTo"}
+{"level":30,"time":"2023-03-05T21:50:54.197Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Listening on 54818"}
+{"level":30,"time":"2023-03-05T21:50:54.423Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:50:54.423Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:50:54.428Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:50:54.428Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
-Error: No page open.
-    at PlaywrightServer.getActivePage (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9715:15)
-    at PlaywrightServer.goTo (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9754:54)
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9179:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9710:59)
+    at PlaywrightServer.setTimeout (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9953:69)
     at C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
     at Http2ServerCallStream.safeDeserializeMessage (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
     at ServerHttp2Stream.onEnd (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
@@ -69,13 +15,154 @@ Error: No page open.
     at endReadableNT (node:internal/streams/readable:1359:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 =============================================================
-{"level":30,"time":"2023-03-05T15:21:30.836Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Error of node method goTo"}
-{"level":30,"time":"2023-03-05T15:21:30.842Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2023-03-05T21:50:54.446Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-03-05T21:50:55.839Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method newBrowser"}
+{"level":30,"time":"2023-03-05T21:50:55.847Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method newPage"}
+{"level":30,"time":"2023-03-05T21:50:55.848Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2023-03-05T21:50:55.885Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Changed active context"}
+{"level":30,"time":"2023-03-05T21:50:56.663Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Video path: undefined"}
+{"level":30,"time":"2023-03-05T21:50:56.664Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Changed active page"}
+{"level":30,"time":"2023-03-05T21:50:59.568Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method newPage"}
+{"level":30,"time":"2023-03-05T21:50:59.607Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
+{"level":30,"time":"2023-03-05T21:50:59.608Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with data-testid=btnCookiesAccept in page."}
+{"level":30,"time":"2023-03-05T21:50:59.766Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
+{"level":30,"time":"2023-03-05T21:51:00.783Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
+{"level":30,"time":"2023-03-05T21:51:00.783Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with css=[data-testid=signin] in page."}
+{"level":30,"time":"2023-03-05T21:51:00.898Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
+{"level":30,"time":"2023-03-05T21:51:00.907Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with css=[name=\"email\"] in page."}
+{"level":30,"time":"2023-03-05T21:51:00.907Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method typeText"}
+{"level":30,"time":"2023-03-05T21:51:01.164Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method typeText"}
+{"level":30,"time":"2023-03-05T21:51:01.170Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method typeText"}
+{"level":30,"time":"2023-03-05T21:51:01.170Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with css=[name=\"password\"] in page."}
+{"level":30,"time":"2023-03-05T21:51:01.278Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method typeText"}
+{"level":30,"time":"2023-03-05T21:51:01.283Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
+{"level":30,"time":"2023-03-05T21:51:01.283Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with xpath=//*[@id=\"formLoginIncluded\"]/div[3]/div/button in page."}
+{"level":30,"time":"2023-03-05T21:51:02.063Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
+{"level":30,"time":"2023-03-05T21:51:02.076Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method getText"}
+{"level":30,"time":"2023-03-05T21:51:02.077Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with xpath=//*[@id=\"content-wrapper\"]/div[2]/aside/div/div/ul/li[1]/a/strong in page."}
+{"level":30,"time":"2023-03-05T21:51:02.876Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Retrieved text for element xpath=//*[@id=\"content-wrapper\"]/div[2]/aside/div/div/ul/li[1]/a/strong containing Lukáš Baroň"}
+{"level":30,"time":"2023-03-05T21:51:02.877Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method getText"}
+{"level":30,"time":"2023-03-05T21:51:02.885Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2023-03-05T21:51:03.235Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2023-03-05T21:51:03.263Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
+{"level":30,"time":"2023-03-05T21:51:03.264Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with data-testid=searchIcon in page."}
+{"level":30,"time":"2023-03-05T21:51:03.350Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
+{"level":30,"time":"2023-03-05T21:51:04.361Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method typeText"}
+{"level":30,"time":"2023-03-05T21:51:04.361Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with data-testid=searchInput in page."}
+{"level":30,"time":"2023-03-05T21:51:04.407Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method typeText"}
+{"level":30,"time":"2023-03-05T21:51:06.423Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
+{"level":30,"time":"2023-03-05T21:51:06.424Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with data-testid=searchBtn in page."}
+{"level":30,"time":"2023-03-05T21:51:06.942Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
+{"level":30,"time":"2023-03-05T21:51:06.954Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
+{"level":30,"time":"2023-03-05T21:51:06.954Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with css=[data-micro-product-id=\"181\"] >> data-testid=addToCart in page."}
+{"level":30,"time":"2023-03-05T21:51:07.594Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
+{"level":30,"time":"2023-03-05T21:51:07.600Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with id=cboxClose in page."}
+{"level":30,"time":"2023-03-05T21:51:07.600Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
+{"level":30,"time":"2023-03-05T21:51:08.253Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
+{"level":30,"time":"2023-03-05T21:51:10.267Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method goTo"}
+{"level":30,"time":"2023-03-05T21:51:10.757Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method goTo"}
+{"level":30,"time":"2023-03-05T21:51:10.763Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
+{"level":30,"time":"2023-03-05T21:51:10.763Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with .cart-table [data-micro-sku=\"181\"]>>css=[aria-label=\"Snížit množství\"] in page."}
+{"level":30,"time":"2023-03-05T21:51:10.869Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
+{"level":30,"time":"2023-03-05T21:51:12.886Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-03-05T21:51:14.177Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method newBrowser"}
+{"level":30,"time":"2023-03-05T21:51:14.188Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-03-05T21:51:15.531Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method newBrowser"}
+{"level":30,"time":"2023-03-05T21:51:15.538Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method newPage"}
+{"level":30,"time":"2023-03-05T21:51:15.538Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2023-03-05T21:51:15.572Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Changed active context"}
+{"level":30,"time":"2023-03-05T21:51:16.197Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Video path: undefined"}
+{"level":30,"time":"2023-03-05T21:51:16.198Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Changed active page"}
+{"level":30,"time":"2023-03-05T21:51:19.351Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method newPage"}
+{"level":30,"time":"2023-03-05T21:51:19.373Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
+{"level":30,"time":"2023-03-05T21:51:19.373Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with data-testid=btnCookiesAccept in page."}
+{"level":30,"time":"2023-03-05T21:51:19.477Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
+{"level":30,"time":"2023-03-05T21:51:20.488Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
+{"level":30,"time":"2023-03-05T21:51:20.488Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with css=[data-testid=signin] in page."}
+{"level":30,"time":"2023-03-05T21:51:20.600Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
+{"level":30,"time":"2023-03-05T21:51:20.605Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method typeText"}
+{"level":30,"time":"2023-03-05T21:51:20.605Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with css=[name=\"email\"] in page."}
+{"level":30,"time":"2023-03-05T21:51:20.813Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method typeText"}
+{"level":30,"time":"2023-03-05T21:51:20.817Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method typeText"}
+{"level":30,"time":"2023-03-05T21:51:20.817Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with css=[name=\"password\"] in page."}
+{"level":30,"time":"2023-03-05T21:51:20.924Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method typeText"}
+{"level":30,"time":"2023-03-05T21:51:20.928Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
+{"level":30,"time":"2023-03-05T21:51:20.928Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with xpath=//*[@id=\"formLoginIncluded\"]/div[3]/div/button in page."}
+{"level":30,"time":"2023-03-05T21:51:21.786Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
+{"level":30,"time":"2023-03-05T21:51:21.797Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method getText"}
+{"level":30,"time":"2023-03-05T21:51:21.797Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with xpath=//*[@id=\"content-wrapper\"]/div[2]/aside/div/div/ul/li[1]/a/strong in page."}
+{"level":30,"time":"2023-03-05T21:51:22.583Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Retrieved text for element xpath=//*[@id=\"content-wrapper\"]/div[2]/aside/div/div/ul/li[1]/a/strong containing Lukáš Baroň"}
+{"level":30,"time":"2023-03-05T21:51:22.583Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method getText"}
+{"level":30,"time":"2023-03-05T21:51:22.589Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2023-03-05T21:51:22.753Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2023-03-05T21:51:22.762Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method newPage"}
+{"level":30,"time":"2023-03-05T21:51:22.762Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2023-03-05T21:51:22.861Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Video path: undefined"}
+{"level":30,"time":"2023-03-05T21:51:22.861Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Changed active page"}
+{"level":30,"time":"2023-03-05T21:51:23.589Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method newPage"}
+{"level":30,"time":"2023-03-05T21:51:23.593Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method getText"}
+{"level":30,"time":"2023-03-05T21:51:23.593Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with id=content-wrapper in page."}
+{"level":30,"time":"2023-03-05T21:51:23.639Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Retrieved text for element id=content-wrapper containing Zpět do obchodu\nNákupní košík\nDoprava & platba\nInformace o vás\n\tMÝDLO HEŘMÁNKOVÉ\tSkladem (2 ks)\t\n\t179 Kč / ks\t179 Kč \nOdstranit z košíku\nBonusy\n Objednejte ještě za 1 320 Kč a budete mít dopravu ZDARMA.\nCelkem za zboží:\n179 Kč\nZpět do obchodu\nPOKRAČOVAT\n1"}
+{"level":30,"time":"2023-03-05T21:51:23.639Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method getText"}
+{"level":30,"time":"2023-03-05T21:51:23.861Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method getText"}
+{"level":30,"time":"2023-03-05T21:51:23.861Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with id=content-wrapper in page."}
+{"level":30,"time":"2023-03-05T21:51:23.879Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Retrieved text for element id=content-wrapper containing Zpět do obchodu\nNákupní košík\nDoprava & platba\nInformace o vás\n\tMÝDLO HEŘMÁNKOVÉ\tSkladem (2 ks)\t\n\t179 Kč / ks\t179 Kč \nOdstranit z košíku\nBonusy\n Objednejte ještě za 1 320 Kč a budete mít dopravu ZDARMA.\nCelkem za zboží:\n179 Kč\nZpět do obchodu\nPOKRAČOVAT\n1"}
+{"level":30,"time":"2023-03-05T21:51:23.879Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method getText"}
+{"level":30,"time":"2023-03-05T21:51:23.885Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
+{"level":30,"time":"2023-03-05T21:51:23.885Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with .remove-item >> nth=0 in page."}
+{"level":30,"time":"2023-03-05T21:51:23.952Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
+{"level":30,"time":"2023-03-05T21:51:24.157Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method getText"}
+{"level":30,"time":"2023-03-05T21:51:24.157Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with id=content-wrapper in page."}
+{"level":30,"time":"2023-03-05T21:51:24.177Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Retrieved text for element id=content-wrapper containing Zpět do obchodu\nNákupní košík\nDoprava & platba\nInformace o vás\n\tMÝDLO HEŘMÁNKOVÉ\tSkladem (2 ks)\t\n\t179 Kč / ks\t179 Kč \nOdstranit z košíku\nBonusy\n Objednejte ještě za 1 320 Kč a budete mít dopravu ZDARMA.\nCelkem za zboží:\n179 Kč\nZpět do obchodu\nPOKRAČOVAT\n1"}
+{"level":30,"time":"2023-03-05T21:51:24.177Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method getText"}
+{"level":30,"time":"2023-03-05T21:51:24.185Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
+{"level":30,"time":"2023-03-05T21:51:24.185Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with .remove-item >> nth=0 in page."}
+{"level":30,"time":"2023-03-05T21:51:44.199Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Error of node method  click"}
 ================= Original suppressed error =================
-Error: Tried to take screenshot, but no page was open.
-    at exists (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:8069:11)
-    at takeScreenshot (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:8106:3)
-    at PlaywrightServer.takeScreenshot (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9725:34)
+locator.click: Timeout 20000ms exceeded.
+=========================== logs ===========================
+waiting for locator('.remove-item').first()
+  locator resolved to visible <button type="submit" class="remove-item">…</button>
+attempting click action
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  <div class="overlay spinner">…</div> intercepts pointer events
+retrying click action, attempt #1
+  waiting for element to be visible, enabled and stable
+  element is visible, enabled and stable
+  scrolling into view if needed
+  done scrolling
+  element is not visible
+retrying click action, attempt #2
+  waiting 20ms
+  waiting for element to be visible, enabled and stable
+element was detached from the DOM, retrying
+waiting for locator('.remove-item').first()
+============================================================
+    at internalClick (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:8801:17)
+    at async click (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:8796:3)
+    at async PlaywrightServer.click (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9725:28) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2023-03-05T21:51:44.206Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2023-03-05T21:51:44.379Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2023-03-05T21:51:44.395Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method goTo"}
+{"level":30,"time":"2023-03-05T21:51:45.389Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method goTo"}
+{"level":30,"time":"2023-03-05T21:51:45.394Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with css=[data-testid=\"signout\"] in page."}
+{"level":30,"time":"2023-03-05T21:51:45.394Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
+{"level":30,"time":"2023-03-05T21:51:46.093Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
+{"level":30,"time":"2023-03-05T21:51:46.097Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:51:46.257Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:51:46.261Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:51:46.544Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: No context for id context=12bbaaa6-5244-4e34-b987-fa6c0a743da7. Open contexts: context=85a63574-3205-4a63-87c2-9895527e5809
+    at _switchContext (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9576:11)
+    at switchContext (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9627:9)
+    at PlaywrightServer.switchContext (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9906:30)
     at C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
     at Http2ServerCallStream.safeDeserializeMessage (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
     at ServerHttp2Stream.onEnd (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
@@ -83,4 +170,24 @@ Error: Tried to take screenshot, but no page was open.
     at endReadableNT (node:internal/streams/readable:1359:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 =============================================================
-{"level":30,"time":"2023-03-05T15:21:30.843Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Error of node method  takeScreenshot"}
+{"level":30,"time":"2023-03-05T21:51:46.556Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:51:46.568Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:51:46.571Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T21:51:46.583Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: No context for id context=12bbaaa6-5244-4e34-b987-fa6c0a743da7. Open contexts: context=85a63574-3205-4a63-87c2-9895527e5809
+    at _switchContext (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9576:11)
+    at switchContext (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9627:9)
+    at PlaywrightServer.switchContext (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9906:30)
+    at C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-03-05T21:51:48.693Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2023-03-05T21:51:48.705Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Removed page=4434c731-1318-4721-921f-840bff2f0524 from context=12bbaaa6-5244-4e34-b987-fa6c0a743da7 page stack"}
+{"level":30,"time":"2023-03-05T21:51:49.371Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Removed page=e085a1f5-c1d3-489e-8eda-78e09a71038f from context=85a63574-3205-4a63-87c2-9895527e5809 page stack"}
+{"level":30,"time":"2023-03-05T21:51:49.384Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"Removed page=d0859cf4-d364-4c4a-9c0c-e9dcdb7312ce from context=85a63574-3205-4a63-87c2-9895527e5809 page stack"}
+{"level":30,"time":"2023-03-05T21:51:49.916Z","pid":4544,"hostname":"LAPTOP-U87992UF","msg":"End of node method closeAllBrowsers"}

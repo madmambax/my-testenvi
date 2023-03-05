@@ -1,5 +1,7 @@
 *** Variables ***
-
+${text1}                    Celkem za zboží
+${text2}                    Váš nákupní košík je prázdný
+${text3}                    Bonusy
 ${URL_client}               https://www.vonavazastavka.cz/klient/
 ${URL_trash}                https://www.vonavazastavka.cz/kosik/
 
@@ -23,7 +25,7 @@ ${ARTICLE01ID}              181
 ${ARTICLE01PCS}             1
 
 #PŘIHLÁŠENÍ/ODHLÁŠENÍ
-${SEL_LOGOUT}               css=[class="remove-item"]
+${SEL_LOGOUT}               css=[data-testid="signout"]
 ${SEL_LOGIN}                css=[data-testid=signin]
 ${SEL_EMAIL}                css=[name="email"]
 ${SEL_PASSWORD}             css=[name="password"]
@@ -39,4 +41,8 @@ ${SEL_PROD_ADD}             data-testid=addToCart
 ${SEL_PROD_ID}              css=[data-micro-product-id=
 
 #KOŠÍK
-${REMOVE_TRASH}             css=[class="remove-item"]
+${SEL_REMOVE_TRASH}         .remove-item
+${SEL_REMOVE}               class="removeable"
+${SEL_REMOVE_ITEM}          .cart-table [data-micro-sku="${ARTICLE01ID}"]>>css=[aria-label="Snížit množství"]
+${SEL_DECRASE}              css=[aria-label="Snížit množství"]
+${SEL_EMPTY}                id=content-wrapper
