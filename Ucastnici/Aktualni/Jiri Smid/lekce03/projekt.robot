@@ -6,7 +6,7 @@ Library  Browser
 
 *** Variables ***
 ${URL}              https://www.rohlik.cz/
-${headerusericon}   data-test=header-user-icon
+
 
 
 *** Test Cases ***

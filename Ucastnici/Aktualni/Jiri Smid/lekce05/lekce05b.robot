@@ -11,6 +11,12 @@ Library         Browser
 Resource        Data_and_Config_AT/TestData.robot
 Resource        Data_and_Config_AT/Configuration.robot
 
+Test Setup      Pred_testem
+Test Teardown   Po_testu
+Suite Setup     Pred_sadou
+Suite Teardown  Po_sade
+
+
 
 *** Variables ***
 
@@ -25,7 +31,7 @@ Login spatne heslo
 
 Login vse OK
     Login               ${USER1_NAME}       ${USER1_PASSWORD}       ${USER1_SHORT}
-    Logout
+    [Teardown]          Logout
 
 Test Objednavky
     ${kusu} =	        Set Variable	    5
@@ -38,6 +44,7 @@ Test Objednavky
     Take Screenshot
     Take Screenshot
     Logout
+    [Teardown]   Clean
     Take Screenshot
     Take Screenshot
 
@@ -50,9 +57,6 @@ Login
 
     Set Browser Timeout         20                                  #20s je vhodné pro rohlik.cz
 
-    New Browser        headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
-
-    New Page                    ${URL}
 
     Get Title                   contains                            Online supermarket Rohlik.cz
     Cookie                      AcceptAll
@@ -115,4 +119,15 @@ Cookie
 
     sleep               1      #workaround: Probliknutí cele stránky po kliknutí na tlačítko
 
+ Pred_testem
+     New Browser        headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
 
+    New Page                    ${URL}
+
+ Po_testu
+
+
+ Pred_sadou
+
+
+ Po_sade
