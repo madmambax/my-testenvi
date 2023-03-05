@@ -1,11 +1,86 @@
-{"level":30,"time":"2023-03-05T13:28:00.238Z","pid":15704,"hostname":"LAPTOP-U87992UF","msg":"Listening on 58381"}
-{"level":30,"time":"2023-03-05T13:28:00.480Z","pid":15704,"hostname":"LAPTOP-U87992UF","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-03-05T13:28:00.481Z","pid":15704,"hostname":"LAPTOP-U87992UF","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2023-03-05T13:28:00.485Z","pid":15704,"hostname":"LAPTOP-U87992UF","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-03-05T13:28:00.485Z","pid":15704,"hostname":"LAPTOP-U87992UF","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2023-03-05T13:28:00.491Z","pid":15704,"hostname":"LAPTOP-U87992UF","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-03-05T13:28:00.491Z","pid":15704,"hostname":"LAPTOP-U87992UF","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2023-03-05T13:28:00.497Z","pid":15704,"hostname":"LAPTOP-U87992UF","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-03-05T13:28:00.497Z","pid":15704,"hostname":"LAPTOP-U87992UF","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2023-03-05T13:28:02.551Z","pid":15704,"hostname":"LAPTOP-U87992UF","msg":"Start of node method closeAllBrowsers"}
-{"level":30,"time":"2023-03-05T13:28:02.551Z","pid":15704,"hostname":"LAPTOP-U87992UF","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2023-03-05T15:21:09.823Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Listening on 59947"}
+{"level":30,"time":"2023-03-05T15:21:10.054Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T15:21:10.055Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T15:21:10.059Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T15:21:10.060Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-05T15:21:10.070Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-03-05T15:21:11.347Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method newBrowser"}
+{"level":30,"time":"2023-03-05T15:21:11.352Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method newContext"}
+{"level":30,"time":"2023-03-05T15:21:11.353Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2023-03-05T15:21:11.353Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Trace file: "}
+{"level":30,"time":"2023-03-05T15:21:11.406Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Changed active context"}
+{"level":30,"time":"2023-03-05T15:21:11.406Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method newContext"}
+{"level":30,"time":"2023-03-05T15:21:11.411Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2023-03-05T15:21:11.411Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method newPage"}
+{"level":30,"time":"2023-03-05T15:21:12.217Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Video path: undefined"}
+{"level":30,"time":"2023-03-05T15:21:12.217Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Changed active page"}
+{"level":30,"time":"2023-03-05T15:21:17.123Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method newPage"}
+{"level":30,"time":"2023-03-05T15:21:17.152Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
+{"level":30,"time":"2023-03-05T15:21:17.153Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with data-testid=btnCookiesAccept in page."}
+{"level":30,"time":"2023-03-05T15:21:17.263Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
+{"level":30,"time":"2023-03-05T15:21:18.274Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
+{"level":30,"time":"2023-03-05T15:21:18.274Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with css=[data-testid=signin] in page."}
+{"level":30,"time":"2023-03-05T15:21:18.404Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
+{"level":30,"time":"2023-03-05T15:21:18.411Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method typeText"}
+{"level":30,"time":"2023-03-05T15:21:18.412Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with css=[name=\"email\"] in page."}
+{"level":30,"time":"2023-03-05T15:21:18.627Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method typeText"}
+{"level":30,"time":"2023-03-05T15:21:18.632Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method typeText"}
+{"level":30,"time":"2023-03-05T15:21:18.633Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with css=[name=\"password\"] in page."}
+{"level":30,"time":"2023-03-05T15:21:18.724Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method typeText"}
+{"level":30,"time":"2023-03-05T15:21:18.728Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
+{"level":30,"time":"2023-03-05T15:21:18.728Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with xpath=//*[@id=\"formLoginIncluded\"]/div[3]/div/button in page."}
+{"level":30,"time":"2023-03-05T15:21:19.777Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
+{"level":30,"time":"2023-03-05T15:21:19.792Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method getText"}
+{"level":30,"time":"2023-03-05T15:21:19.792Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with xpath=//*[@id=\"content-wrapper\"]/div[2]/aside/div/div/ul/li[1]/a/strong in page."}
+{"level":30,"time":"2023-03-05T15:21:20.591Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Retrieved text for element xpath=//*[@id=\"content-wrapper\"]/div[2]/aside/div/div/ul/li[1]/a/strong containing Lukáš Baroň"}
+{"level":30,"time":"2023-03-05T15:21:20.592Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method getText"}
+{"level":30,"time":"2023-03-05T15:21:20.600Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2023-03-05T15:21:20.785Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2023-03-05T15:21:20.799Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
+{"level":30,"time":"2023-03-05T15:21:20.799Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with data-testid=searchIcon in page."}
+{"level":30,"time":"2023-03-05T15:21:20.905Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
+{"level":30,"time":"2023-03-05T15:21:21.913Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method typeText"}
+{"level":30,"time":"2023-03-05T15:21:21.914Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with data-testid=searchInput in page."}
+{"level":30,"time":"2023-03-05T15:21:21.961Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method typeText"}
+{"level":30,"time":"2023-03-05T15:21:23.971Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
+{"level":30,"time":"2023-03-05T15:21:23.971Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with data-testid=searchBtn in page."}
+{"level":30,"time":"2023-03-05T15:21:24.702Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
+{"level":30,"time":"2023-03-05T15:21:24.710Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
+{"level":30,"time":"2023-03-05T15:21:24.710Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with css=[data-micro-product-id=\"181\"] >> data-testid=addToCart in page."}
+{"level":30,"time":"2023-03-05T15:21:25.420Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
+{"level":30,"time":"2023-03-05T15:21:25.427Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with id=cboxClose in page."}
+{"level":30,"time":"2023-03-05T15:21:25.427Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
+{"level":30,"time":"2023-03-05T15:21:26.077Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
+{"level":30,"time":"2023-03-05T15:21:28.090Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method goTo"}
+{"level":30,"time":"2023-03-05T15:21:28.718Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method goTo"}
+{"level":30,"time":"2023-03-05T15:21:28.722Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method click"}
+{"level":30,"time":"2023-03-05T15:21:28.722Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Strict mode is enabled, find Locator with css=[class=\"remove-item\"] in page."}
+{"level":30,"time":"2023-03-05T15:21:28.807Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"End of node method click"}
+{"level":30,"time":"2023-03-05T15:21:30.712Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Removed page=39158ca9-50be-4fbf-8ddf-ce1aa832d7de from context=5f4c4744-578a-4692-882c-88cf88fad8b1 page stack"}
+{"level":30,"time":"2023-03-05T15:21:30.836Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method goTo"}
+================= Original suppressed error =================
+Error: No page open.
+    at PlaywrightServer.getActivePage (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9715:15)
+    at PlaywrightServer.goTo (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9754:54)
+    at C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-03-05T15:21:30.836Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Error of node method goTo"}
+{"level":30,"time":"2023-03-05T15:21:30.842Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Start of node method takeScreenshot"}
+================= Original suppressed error =================
+Error: Tried to take screenshot, but no page was open.
+    at exists (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:8069:11)
+    at takeScreenshot (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:8106:3)
+    at PlaywrightServer.takeScreenshot (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\index.js:9725:34)
+    at C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:821:17
+    at Http2ServerCallStream.safeDeserializeMessage (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:395:13)
+    at ServerHttp2Stream.onEnd (C:\Users\lucyb\AppData\Local\Programs\Python\Python310\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-call.js:382:22)
+    at ServerHttp2Stream.emit (node:events:525:35)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2023-03-05T15:21:30.843Z","pid":8220,"hostname":"LAPTOP-U87992UF","msg":"Error of node method  takeScreenshot"}
