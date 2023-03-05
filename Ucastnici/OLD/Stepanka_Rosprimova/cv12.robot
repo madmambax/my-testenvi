@@ -6,7 +6,7 @@
 Documentation   CV: Testovaci data - zaměňte uživatelské data za proměné ze souboru Resources/TestData.robot
 Library         Browser
 Resource        Resources/TestData.robot
-#Resource        ../../../Cviceni/Data_and_Config/TestData.robot
+#Resource        ../../../Cviceni/Projekt/TestData.robot
 
 *** Variables ***
 ${URL}                 https://rohlik.cz

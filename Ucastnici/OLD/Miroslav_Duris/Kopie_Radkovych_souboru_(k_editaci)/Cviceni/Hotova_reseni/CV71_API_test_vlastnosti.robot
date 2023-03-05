@@ -15,7 +15,7 @@ CVIČENÍ: Vytvořte klíčové slovo pro testy registrace na kurz z pohledu fun
 Library	        Collections
 Library	        RequestsLibrary
 Library         String
-#Resource        Data_and_Config/DU_TestData.robot
+#Resource        Projekt/DU_TestData.robot
 
 
 *** Variables ***

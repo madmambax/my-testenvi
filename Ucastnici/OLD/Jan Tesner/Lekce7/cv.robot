@@ -13,7 +13,7 @@ Inspirujte se ve cvičení CV17_API_test_komunikace.robot klíčové slovo "API 
 Library	        Collections
 Library	        RequestsLibrary
 Library         String
-#Resource        Data_and_Config/TestData.robot
+#Resource        Projekt/TestData.robot
 
 *** Variables ***
 ${url}		        http://testovani.kitner.cz/
