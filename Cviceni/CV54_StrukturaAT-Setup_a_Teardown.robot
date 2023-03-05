@@ -7,8 +7,8 @@
 Documentation   CV: akce pred testem a po skonceni testu
 Library         Browser
 
-Resource        Data_and_Config/TestData.robot
-Resource        Data_and_Config/Configuration.robot
+Resource        Data_and_Config\TestData.robot
+Resource        Data_and_Config\Configuration.robot
 
 
 *** Variables ***

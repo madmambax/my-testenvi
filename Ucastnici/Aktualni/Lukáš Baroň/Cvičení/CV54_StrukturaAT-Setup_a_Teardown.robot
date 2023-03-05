@@ -7,18 +7,12 @@
 Documentation   CV: akce pred testem a po skonceni testu
 Library         Browser
 
-Resource        C:\Users\lucyb\PycharmProjects\jak_automatizovat_testy_nové\Ucastnici\Aktualni\Lukáš Baroň\Data_and_Config\TestData.robot
-Resource        C:\Users\lucyb\PycharmProjects\jak_automatizovat_testy_nové\Ucastnici\Aktualni\Lukáš Baroň\Data_and_Config\Configuration.robot
+Resource        Data_and_Config\TestData.robot
+Resource        Data_and_Config\Configuration.robot
 
-Test Setup      Pred_testem
-Test Teardown   Po_testu
-Suite Setup     Pred_sadou
-Suite Teardown  Po_sade
 
 
 *** Variables ***
-
-
 
 
 *** Test Cases ***
@@ -64,9 +58,8 @@ Test Objednavky
 Login
     [Arguments]                 ${Email}                            ${Heslo}                                ${Text}
 
-    Set Browser Timeout         20                                  #20s je vhodné pro rohlik.cz
-
-    New Browser        headless=false     #dá se použít pro nastavení dalších parametru - umožňuje např vypnout headless mode
+    Pred_testem
+    Pred_sadou
 
     New Page                    ${URL}
 
