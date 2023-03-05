@@ -1,22 +1,20 @@
 *** Settings ***
 Library  Browser
+Resource  Projekt/TestData.robot
+Resource  Projekt/Configuration.robot
 
 *** Variables ***
-${URL}         https://www.vonavazastavka.cz/
-${URL_client}  https://www.vonavazastavka.cz/klient/
-${URL_trash}   https://www.vonavazastavka.cz/kosik/
-
 
 
 *** Test Cases ***
 Přidání zboží do košíku
-    Login                     lukasbaron@seznam.cz        tajneheslo
-    Přidání zboží             mýdlo       181        1
-    Odstranění zboží          mýdlo       181        1
+    Login                     ${USER1_NAME}      ${USER1_PASSWORD}
+    Přidání zboží             ${ARTICLE01}       ${ARTICLE01ID}        ${ARTICLE01PCS}
+    Odstranění zboží          ${ARTICLE01}       ${ARTICLE01ID}        ${ARTICLE01PCS}
     Logout
 
 Negativní testy
-    Login                     neco@seznam.cz        tajneheslo
+    Login                     ${USER2_NAME}      ${USER2_PASSWORD}
 
 
 *** Keywords ***
@@ -25,16 +23,16 @@ Login
 
     Open Browser        ${URL}                              headless=false
     Sleep               0
-    Get Title           contains                            Voňavá zastávka
+    Get Title           contains                            ${TEXT_MainTitle}
     Sleep               0
     Cookie              AcceptAll
 
 
-    Click               css=[data-testid=signin]
+    Click               ${SEL_LOGIN}
 
-    Type Text           css=[name="email"]          ${email}
-    Type Text           css=[name="password"]        ${heslo}
-    Click               xpath=//*[@id="formLoginIncluded"]/div[3]/div/button
+    Type Text           ${SEL_EMAIL}         ${email}
+    Type Text           ${SEL_PASSWORD}      ${heslo}
+    Click               ${SEL_LOGIN_BUT}
     Sleep               0
 #    Get Text            xpath=//*[@id="content"]/div/h1  contains  Klientské centrum
 #    ${log}   Get Text   xpath=//*[@id="content-wrapper"]/div[2]/aside/div/div/ul/li[1]/a/strong
@@ -42,39 +40,41 @@ Login
 #    Take Screenshot
     ${URL_actual}  Get Url
     IF    "${URL_actual}" == "${URL_client}"
-        ${log}   Get Text   xpath=//*[@id="content-wrapper"]/div[2]/aside/div/div/ul/li[1]/a/strong
+        ${log}   Get Text   ${LOG_USER}
     Log                 ${log}
     Take Screenshot
     ELSE
-    Log    Neplatné přihlášení
+    Log    ${WRONG_LOGIN}
 
     END
 Cookie
     [Arguments]         ${type}
     IF  "${type}" == "AcceptAll"
-        Click           data-testid=btnCookiesAccept
+        Click           ${SEL_Cookie_AllowAll}
     ELSE
-        Click           data-testid=btnCookiesReject
+        Click           ${SEL_Cookie_Decline}
     END
     sleep               1
 
 Logout
     Go To               ${URL_client}
-    Click               css=[data-testid="signout"]
+    Click               ${SEL_LOGOUT}
 
 Přidání zboží
     [Arguments]         ${Zbozi}     ${Value}     ${Pocet_ks}
-    Click               data-testid=searchIcon
-    Type Text           data-testid=searchInput        ${Zbozi}
-    Click               data-testid=searchBtn
-    Click               css=[data-micro-product-id="${Value}"] >> data-testid=addToCart
-    Click               id=cboxClose
+    Click               ${SEL_SEARCH_ICON}
+    Sleep    1
+    Type Text           ${SEL_SEARCH_AREA}        ${Zbozi}
+    Sleep    2
+    Click               ${SEL_SEARCH_BUT}
+    Click               ${SEL_PROD_ID}"${Value}"] >> ${SEL_PROD_ADD}
+    Click               ${SEL_CLOSEBOX}
     Sleep               2
 
 Odstranění zboží
     [Arguments]        ${Zbozi}     ${Value}     ${Pocet_ks}
     Go To              ${URL_trash}
-    Click              css=[class="remove-item"]
+    Click              ${REMOVE_TRASH}
     Sleep              2
     
 
