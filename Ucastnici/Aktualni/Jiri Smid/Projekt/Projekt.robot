@@ -1,4 +1,4 @@
-#DÚ3
+#DÚ5
 
 *** Settings ***
 Library  Browser
@@ -11,6 +11,8 @@ Test Setup      Pred_testem
 Test Teardown   Po_testu
 Suite Teardown  Po_sade
 
+Test Timeout    ${TC_TIMEOUT_ROBOT_KW}
+
 
 *** Variables ***
 
@@ -20,17 +22,17 @@ Suite Teardown  Po_sade
 Prihlaseni OK
     Login           ${USER_NAME_OK}        ${USER_PASSWORD_OK}        ${USER_CHECK_OK}
     [Teardown]      Logout
-Prihlaseni NOT OK 1
+Prihlaseni NOT OK 1 (spatny email, heslo ok)
     Login           ${USER_NAME_NOTOK}     ${USER_PASSWORD_OK}        ${USER_CHECK_NOTOK}
     Check not login
-Prihlaseni NOT OK 2
+Prihlaseni NOT OK 2 (email ok, spatne heslo)
     Login           ${USER_NAME_OK}        ${USER_PASSWORD_NOTOK}     ${USER_CHECK_NOTOK}
     Check not login
-Prihlaseni NOT OK 3
+Prihlaseni NOT OK 3 (spatny format emailu, heslo ok)
     Login           ${USER_NAME_NOTOK2}    ${USER_PASSWORD_OK}        ${USER_CHECK_NOTOK}
     Check not login 2
-Prihlaseni NOT OK 4
-    Login           ${USER_NAME_EMPTY}    ${USER_PASSWORD_EMPTY}      ${USER_CHECK_NOTOK}
+Prihlaseni NOT OK 4 (email a heslo nevyplneno)
+    Login           ${USER_NAME_EMPTY}     ${USER_PASSWORD_EMPTY}     ${USER_CHECK_NOTOK}
     Check not login 3
 
 *** Keywords ***

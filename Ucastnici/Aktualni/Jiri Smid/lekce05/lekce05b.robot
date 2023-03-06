@@ -8,8 +8,8 @@ Documentation   CV: Testovaci data - pripravit ciselnik chybovych hlasek
 Library         Browser
 
 
-Resource        Data_and_Config_AT/TestData.robot
-Resource        Data_and_Config_AT/Configuration.robot
+Resource        lekce05/Data_and_Config_AT/TestData.robot
+Resource        lekce05/Data_and_Config_AT/Configuration.robot
 
 Test Setup      Pred_testem
 Test Teardown   Po_testu
