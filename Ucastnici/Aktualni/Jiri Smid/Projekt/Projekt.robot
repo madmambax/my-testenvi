@@ -22,24 +22,28 @@ Test Timeout    ${TC_TIMEOUT_ROBOT_KW}
 
 Prihlaseni OK
     Login           ${USER_NAME_OK}        ${USER_PASSWORD_OK}        ${USER_CHECK_OK}
-    [Teardown]      Logout
-    Log To Console  Úšpěsný test přihlášení
+    [Teardown]      Logout                 #k odhlášení dojde vždy, i kdyby test spadnul
+    Log To Console  Úšpěsný test Prihlaseni OK
 
 Prihlaseni NOT OK 1 (spatny email, heslo ok)
     Login           ${USER_NAME_NOTOK}     ${USER_PASSWORD_OK}        ${USER_CHECK_NOTOK}
     Check not login
+    Log To Console  Úspěšný test Prihlaseni NOT OK 1 (spatny email, heslo ok)
 
 Prihlaseni NOT OK 2 (email ok, spatne heslo)
     Login           ${USER_NAME_OK}        ${USER_PASSWORD_NOTOK}     ${USER_CHECK_NOTOK}
     Check not login
+    Log To Console  Úspěšný test Prihlaseni NOT OK 2 (email ok, spatne heslo)
 
 Prihlaseni NOT OK 3 (spatny format emailu, heslo ok)
     Login           ${USER_NAME_NOTOK2}    ${USER_PASSWORD_OK}        ${USER_CHECK_NOTOK}
     Check not login 2
+    Log To Console  Úspěšný test Prihlaseni NOT OK 3 (spatny format emailu, heslo ok)
 
 Prihlaseni NOT OK 4 (email a heslo nevyplneno)
     Login           ${USER_NAME_EMPTY}     ${USER_PASSWORD_EMPTY}     ${USER_CHECK_NOTOK}
     Check not login 3
+    Log To Console  Úspěšný test Prihlaseni NOT OK 4 (email a heslo nevyplneno)
 
 *** Keywords ***
 
@@ -55,18 +59,15 @@ Login
 
     #klikne na "Účet"
     Click          ${SEL_HeaderUserIcon}      #${headerusericon}
-    Sleep          1
 
     #zadá email ${pemail} do místa pro zadání emailu
     Type Text      ${SEL_LoginEmail}       ${pemail}
 
     #zadá heslo ${pheslo} do místa pro zadání hesla
     Type Text      ${SEL_LoginPassword}    ${pheslo}
-    Sleep          1
 
     #klikne na tlačítko "Přihlásit se"
     Click          ${SEL_BtnSignIn}
-    Sleep          1
 
     #ověří, že jsem přihlášený; data-test=header-user-icon musí obsahovat to co je v ${pnastane}
     Get Text       ${SEL_HeaderUserIcon}    ==    ${pnastane}    #Get Text   text="${pnastane}"
@@ -76,7 +77,6 @@ Logout
     #klikne na data-test=header-user-icon (JŠ), kde se nachází tlačítko "Odhlásit se" a ověří jej
     Click          ${SEL_HeaderUserIcon}
     Get Text       ${SEL_UserBoxLogoutBtn}    contains     ${TEXT_Logout}
-    Sleep          1
 
     #klikne na "Odhlásit se"
     Click          ${SEL_UserBoxLogoutBtn}
@@ -123,4 +123,3 @@ Po_sade
     Log            Úklid po sadě
     #Go To         ${URL}
     Close Browser
-
