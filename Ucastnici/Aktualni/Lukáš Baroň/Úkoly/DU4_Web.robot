@@ -13,7 +13,6 @@ Přidání zboží do košíku
     Přidání zboží             ${ARTICLE01}       ${ARTICLE01ID}        ${ARTICLE01PCS}
     Odstranění zboží          ${ARTICLE01}       ${ARTICLE01ID}        ${ARTICLE01PCS}
     [Teardown]  Logout
-teset
     Po testu
 
 Negativní testy
