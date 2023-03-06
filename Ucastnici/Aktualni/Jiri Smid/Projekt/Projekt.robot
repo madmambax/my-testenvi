@@ -69,10 +69,8 @@ Login
     #klikne na tlačítko "Přihlásit se"
     Click          ${SEL_BtnSignIn}
 
-    #ověří, že jsem přihlášený; data-test=header-user-icon musí obsahovat to co je v ${pnastane}
+    #ověří, že jsem přihlášený/nepřihlášený; data-test=header-user-icon musí obsahovat to co je v ${pnastane}
     Get Text       ${SEL_HeaderUserIcon}    ==    ${pnastane}    #Get Text   text="${pnastane}"
-
-    Sleep          1
 
 
 Logout
