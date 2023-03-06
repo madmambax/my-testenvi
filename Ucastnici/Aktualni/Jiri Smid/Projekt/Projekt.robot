@@ -23,27 +23,27 @@ Test Timeout    ${TC_TIMEOUT_ROBOT_KW}
 Prihlaseni OK
     Login           ${USER_NAME_OK}        ${USER_PASSWORD_OK}        ${USER_CHECK_OK}
     [Teardown]      Logout                 #k odhlášení dojde vždy, i kdyby test spadnul
-    Log To Console  Úšpěsný test Prihlaseni OK
+    Log To Console  ${TEXT_LogToConsole} OK
 
 Prihlaseni NOT OK 1 (spatny email, heslo ok)
     Login           ${USER_NAME_NOTOK}     ${USER_PASSWORD_OK}        ${USER_CHECK_NOTOK}
     Check not login
-    Log To Console  Úspěšný test Prihlaseni NOT OK 1 (spatny email, heslo ok)
+    Log To Console  ${TEXT_LogToConsole} NOT OK 1 (spatny email, heslo ok)
 
 Prihlaseni NOT OK 2 (email ok, spatne heslo)
     Login           ${USER_NAME_OK}        ${USER_PASSWORD_NOTOK}     ${USER_CHECK_NOTOK}
     Check not login
-    Log To Console  Úspěšný test Prihlaseni NOT OK 2 (email ok, spatne heslo)
+    Log To Console  ${TEXT_LogToConsole} NOT OK 2 (email ok, spatne heslo)
 
 Prihlaseni NOT OK 3 (spatny format emailu, heslo ok)
     Login           ${USER_NAME_NOTOK2}    ${USER_PASSWORD_OK}        ${USER_CHECK_NOTOK}
     Check not login 2
-    Log To Console  Úspěšný test Prihlaseni NOT OK 3 (spatny format emailu, heslo ok)
+    Log To Console  ${TEXT_LogToConsole} NOT OK 3 (spatny format emailu, heslo ok)
 
 Prihlaseni NOT OK 4 (email a heslo nevyplneno)
     Login           ${USER_NAME_EMPTY}     ${USER_PASSWORD_EMPTY}     ${USER_CHECK_NOTOK}
     Check not login 3
-    Log To Console  Úspěšný test Prihlaseni NOT OK 4 (email a heslo nevyplneno)
+    Log To Console  ${TEXT_LogToConsole} NOT OK 4 (email a heslo nevyplneno)
 
 *** Keywords ***
 

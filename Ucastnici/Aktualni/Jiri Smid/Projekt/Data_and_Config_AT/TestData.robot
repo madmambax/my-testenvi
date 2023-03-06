@@ -5,7 +5,6 @@
 *** Variables ***
 
 #Webová stránka
-${URL}                      https://www.rohlik.cz/
 ${SEL_LogoMain}             data-test=logo-main
 
 #SELEKTORY pro Cookie
@@ -37,6 +36,7 @@ ${SEL_ErrorEmptyPassword}               data-test=user-login-form-password
 ${TEXT_MainTitle}            Online supermarket Rohlik.cz
 ${TEXT_Logout}               Odhlásit se
 ${TEXT_Ucet}                 Účet
+${TEXT_LogToConsole}         Uspesny test - Prihlaseni
 
 #Error strings
 ${ErrorText_LoginNotOK}          Zadal(a) jste nesprávný e-mail nebo heslo.
