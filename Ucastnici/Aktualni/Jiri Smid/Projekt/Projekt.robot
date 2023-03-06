@@ -6,9 +6,9 @@ Library  Browser
 Resource        Data_and_Config_AT/TestData.robot
 Resource        Data_and_Config_AT/Configuration.robot
 
+Suite Setup     Pred_sadou
 Test Setup      Pred_testem
-#Test Teardown   Po_testu
-#Suite Setup     Pred_sadou
+Test Teardown   Po_testu
 #Suite Teardown  Po_sade
 
 
@@ -41,9 +41,6 @@ Login
 
     #ověří, že se stránka otevřela
     Get Title      contains    ${TEXT_MainTitle}
-
-    #klikne na "Povolit všechny" a tím povolí cookies
-    Click          ${SEL_Cookie_AllowAll}
 
     #klikne na "Účet"
     Click          ${SEL_HeaderUserIcon}    #${headerusericon}
@@ -85,20 +82,28 @@ Check not login 2
     Get Text       ${SEL_ErrorLogin_BadEmailFormat}     contains     ${ErrorText_BadEmailFormat}
 
 
-Pred_testem
+Pred_sadou
     #otevře prohlížeč
     New Browser    chromium    headless=false
 
     #otevře stránku https://www.rohlik.cz/
     New Page       ${URL}
 
+    #klikne na "Povolit všechny" a tím povolí cookies
+    Click          ${SEL_Cookie_AllowAll}
 
-#Po_testu
-#
-#
-#Pred_sadou
-#
-#
+
+Pred_testem
+    #jde na stránku https://www.rohlik.cz/
+    Go To          ${URL}
+
+
+Po_testu
+    Log       Úklid po testu
+    Go To     ${URL}
+    Click     ${SEL_LogoMain}
+
+
 #Po_sade
 
 

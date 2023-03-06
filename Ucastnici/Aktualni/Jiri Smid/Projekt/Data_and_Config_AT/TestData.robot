@@ -6,6 +6,7 @@
 
 #Webová stránka
 ${URL}                      https://www.rohlik.cz/
+${SEL_LogoMain}             data-test=logo-main
 
 #SELEKTORY pro Cookie
 ${SEL_Cookie_AllowAll}      id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
