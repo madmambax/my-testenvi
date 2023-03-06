@@ -1,6 +1,6 @@
-{"level":30,"time":"2023-03-06T14:44:04.670Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Listening on 57246"}
-{"level":30,"time":"2023-03-06T14:44:04.745Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-03-06T14:44:04.746Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-06T14:53:13.943Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Listening on 57423"}
+{"level":30,"time":"2023-03-06T14:53:14.051Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-06T14:53:14.052Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\smidj\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9179:15)
@@ -13,81 +13,52 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1359:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 =============================================================
-{"level":30,"time":"2023-03-06T14:44:04.758Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2023-03-06T14:44:05.195Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method newBrowser"}
-{"level":30,"time":"2023-03-06T14:44:05.201Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method newPage"}
-{"level":30,"time":"2023-03-06T14:44:05.201Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"currentBrowser: [object Object]"}
-{"level":30,"time":"2023-03-06T14:44:05.221Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Changed active context"}
-{"level":30,"time":"2023-03-06T14:44:05.377Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Video path: undefined"}
-{"level":30,"time":"2023-03-06T14:44:05.377Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Changed active page"}
-{"level":30,"time":"2023-03-06T14:44:06.942Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method newPage"}
-{"level":30,"time":"2023-03-06T14:44:06.949Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method click"}
-{"level":30,"time":"2023-03-06T14:44:06.950Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Strict mode is enabled, find Locator with id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll in page."}
-{"level":30,"time":"2023-03-06T14:44:07.834Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method click"}
-{"level":30,"time":"2023-03-06T14:44:07.837Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-03-06T14:44:07.841Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2023-03-06T14:44:07.848Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method goTo"}
-{"level":30,"time":"2023-03-06T14:44:08.944Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method goTo"}
-{"level":30,"time":"2023-03-06T14:44:08.994Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method click"}
-{"level":30,"time":"2023-03-06T14:44:08.995Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Strict mode is enabled, find Locator with data-test=header-user-icon in page."}
-{"level":30,"time":"2023-03-06T14:44:09.085Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method click"}
-{"level":30,"time":"2023-03-06T14:44:09.097Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method typeText"}
-{"level":30,"time":"2023-03-06T14:44:09.097Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Strict mode is enabled, find Locator with id=email in page."}
-{"level":30,"time":"2023-03-06T14:44:09.382Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method typeText"}
-{"level":30,"time":"2023-03-06T14:44:09.386Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method typeText"}
-{"level":30,"time":"2023-03-06T14:44:09.386Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Strict mode is enabled, find Locator with xpath=//*[@id=\"password\"] in page."}
-{"level":30,"time":"2023-03-06T14:44:09.522Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method typeText"}
-{"level":30,"time":"2023-03-06T14:44:09.525Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method click"}
-{"level":30,"time":"2023-03-06T14:44:09.525Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Strict mode is enabled, find Locator with data-test=btnSignIn in page."}
-{"level":30,"time":"2023-03-06T14:44:09.710Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method click"}
-{"level":30,"time":"2023-03-06T14:44:09.715Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getText"}
-{"level":30,"time":"2023-03-06T14:44:09.716Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Strict mode is enabled, find Locator with data-test=header-user-icon in page."}
-{"level":30,"time":"2023-03-06T14:44:09.746Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Retrieved text for element data-test=header-user-icon containing Účet"}
-{"level":30,"time":"2023-03-06T14:44:09.746Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getText"}
-{"level":30,"time":"2023-03-06T14:44:09.759Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getText"}
-{"level":30,"time":"2023-03-06T14:44:09.759Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Strict mode is enabled, find Locator with data-test=header-user-icon in page."}
-{"level":30,"time":"2023-03-06T14:44:09.782Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Retrieved text for element data-test=header-user-icon containing Účet"}
-{"level":30,"time":"2023-03-06T14:44:09.782Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getText"}
-{"level":30,"time":"2023-03-06T14:44:09.795Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getText"}
-{"level":30,"time":"2023-03-06T14:44:09.795Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Strict mode is enabled, find Locator with data-test=header-user-icon in page."}
-{"level":30,"time":"2023-03-06T14:44:09.811Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Retrieved text for element data-test=header-user-icon containing Účet"}
-{"level":30,"time":"2023-03-06T14:44:09.811Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getText"}
-{"level":30,"time":"2023-03-06T14:44:09.825Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getText"}
-{"level":30,"time":"2023-03-06T14:44:09.825Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Strict mode is enabled, find Locator with data-test=header-user-icon in page."}
-{"level":30,"time":"2023-03-06T14:44:09.842Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Retrieved text for element data-test=header-user-icon containing Účet"}
-{"level":30,"time":"2023-03-06T14:44:09.842Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getText"}
-{"level":30,"time":"2023-03-06T14:44:09.855Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getText"}
-{"level":30,"time":"2023-03-06T14:44:09.855Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Strict mode is enabled, find Locator with data-test=header-user-icon in page."}
-{"level":30,"time":"2023-03-06T14:44:09.884Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Retrieved text for element data-test=header-user-icon containing Účet"}
-{"level":30,"time":"2023-03-06T14:44:09.885Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getText"}
-{"level":30,"time":"2023-03-06T14:44:09.899Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getText"}
-{"level":30,"time":"2023-03-06T14:44:09.899Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Strict mode is enabled, find Locator with data-test=header-user-icon in page."}
-{"level":30,"time":"2023-03-06T14:44:09.926Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Retrieved text for element data-test=header-user-icon containing Účet"}
-{"level":30,"time":"2023-03-06T14:44:09.926Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getText"}
-{"level":30,"time":"2023-03-06T14:44:09.940Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getText"}
-{"level":30,"time":"2023-03-06T14:44:09.940Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Strict mode is enabled, find Locator with data-test=header-user-icon in page."}
-{"level":30,"time":"2023-03-06T14:44:10.280Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Retrieved text for element data-test=header-user-icon containing JŠ"}
-{"level":30,"time":"2023-03-06T14:44:10.281Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getText"}
-{"level":30,"time":"2023-03-06T14:44:10.287Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method click"}
-{"level":30,"time":"2023-03-06T14:44:10.287Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Strict mode is enabled, find Locator with data-test=header-user-icon in page."}
-{"level":30,"time":"2023-03-06T14:44:10.748Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method click"}
-{"level":30,"time":"2023-03-06T14:44:10.752Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getText"}
-{"level":30,"time":"2023-03-06T14:44:10.752Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Strict mode is enabled, find Locator with data-test=user-box-logout-button in page."}
-{"level":30,"time":"2023-03-06T14:44:11.728Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Retrieved text for element data-test=user-box-logout-button containing Odhlásit se"}
-{"level":30,"time":"2023-03-06T14:44:11.728Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getText"}
-{"level":30,"time":"2023-03-06T14:44:11.731Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method click"}
-{"level":30,"time":"2023-03-06T14:44:11.731Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Strict mode is enabled, find Locator with data-test=user-box-logout-button in page."}
-{"level":30,"time":"2023-03-06T14:44:14.458Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method click"}
-{"level":30,"time":"2023-03-06T14:44:14.461Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getText"}
-{"level":30,"time":"2023-03-06T14:44:14.461Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Strict mode is enabled, find Locator with data-test=header-user-icon in page."}
-{"level":30,"time":"2023-03-06T14:44:14.957Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Retrieved text for element data-test=header-user-icon containing Účet"}
-{"level":30,"time":"2023-03-06T14:44:14.957Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getText"}
-{"level":30,"time":"2023-03-06T14:44:14.959Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-03-06T14:44:14.974Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2023-03-06T14:44:14.980Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method closeBrowser"}
-{"level":30,"time":"2023-03-06T14:44:16.745Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Removed page=73665c92-f7e9-45f7-98ae-29048b3d2606 from context=e0bf5747-86e6-4a0b-85c8-27662d8c23ab page stack"}
-{"level":30,"time":"2023-03-06T14:44:17.011Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method closeBrowser"}
-{"level":30,"time":"2023-03-06T14:44:17.014Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-03-06T14:44:17.014Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2023-03-06T14:44:19.054Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method closeAllBrowsers"}
-{"level":30,"time":"2023-03-06T14:44:19.054Z","pid":21572,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2023-03-06T14:53:14.066Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-03-06T14:53:14.527Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method newBrowser"}
+{"level":30,"time":"2023-03-06T14:53:14.533Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method newPage"}
+{"level":30,"time":"2023-03-06T14:53:14.534Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2023-03-06T14:53:14.557Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Changed active context"}
+{"level":30,"time":"2023-03-06T14:53:14.718Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Video path: undefined"}
+{"level":30,"time":"2023-03-06T14:53:14.718Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Changed active page"}
+{"level":30,"time":"2023-03-06T14:53:16.303Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method newPage"}
+{"level":30,"time":"2023-03-06T14:53:16.309Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method click"}
+{"level":30,"time":"2023-03-06T14:53:16.309Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Strict mode is enabled, find Locator with id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll in page."}
+{"level":30,"time":"2023-03-06T14:53:17.157Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method click"}
+{"level":30,"time":"2023-03-06T14:53:17.161Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-06T14:53:17.178Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-06T14:53:17.184Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method goTo"}
+{"level":30,"time":"2023-03-06T14:53:18.354Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method goTo"}
+{"level":30,"time":"2023-03-06T14:53:18.397Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method click"}
+{"level":30,"time":"2023-03-06T14:53:18.397Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Strict mode is enabled, find Locator with data-test=header-user-icon in page."}
+{"level":30,"time":"2023-03-06T14:53:18.512Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method click"}
+{"level":30,"time":"2023-03-06T14:53:18.519Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method typeText"}
+{"level":30,"time":"2023-03-06T14:53:18.519Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Strict mode is enabled, find Locator with id=email in page."}
+{"level":30,"time":"2023-03-06T14:53:18.726Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method typeText"}
+{"level":30,"time":"2023-03-06T14:53:18.730Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method typeText"}
+{"level":30,"time":"2023-03-06T14:53:18.730Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Strict mode is enabled, find Locator with xpath=//*[@id=\"password\"] in page."}
+{"level":30,"time":"2023-03-06T14:53:18.963Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method typeText"}
+{"level":30,"time":"2023-03-06T14:53:18.968Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method click"}
+{"level":30,"time":"2023-03-06T14:53:18.968Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Strict mode is enabled, find Locator with data-test=btnSignIn in page."}
+{"level":30,"time":"2023-03-06T14:53:19.132Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method click"}
+{"level":30,"time":"2023-03-06T14:53:19.136Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getText"}
+{"level":30,"time":"2023-03-06T14:53:19.137Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Strict mode is enabled, find Locator with data-test=header-user-icon in page."}
+{"level":30,"time":"2023-03-06T14:53:19.168Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Retrieved text for element data-test=header-user-icon containing Účet"}
+{"level":30,"time":"2023-03-06T14:53:19.168Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getText"}
+{"level":30,"time":"2023-03-06T14:53:19.172Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getText"}
+{"level":30,"time":"2023-03-06T14:53:19.172Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Strict mode is enabled, find Locator with data-test=validation-message in page."}
+{"level":30,"time":"2023-03-06T14:53:19.188Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Retrieved text for element data-test=validation-message containing Zadejte platný email"}
+{"level":30,"time":"2023-03-06T14:53:19.188Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getText"}
+{"level":30,"time":"2023-03-06T14:53:19.193Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method goTo"}
+{"level":30,"time":"2023-03-06T14:53:20.277Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method goTo"}
+{"level":30,"time":"2023-03-06T14:53:20.282Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method click"}
+{"level":30,"time":"2023-03-06T14:53:20.282Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Strict mode is enabled, find Locator with data-test=logo-main in page."}
+{"level":30,"time":"2023-03-06T14:53:20.449Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method click"}
+{"level":30,"time":"2023-03-06T14:53:20.453Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-06T14:53:20.456Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-06T14:53:20.461Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2023-03-06T14:53:20.483Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Removed page=ab361ca7-5f75-41fa-b2bb-ff42a6558c37 from context=660eeadb-fd0e-48a7-b2ee-8cfcde1e98cc page stack"}
+{"level":30,"time":"2023-03-06T14:53:20.798Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method closeBrowser"}
+{"level":30,"time":"2023-03-06T14:53:20.801Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-06T14:53:20.801Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-03-06T14:53:22.845Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2023-03-06T14:53:22.846Z","pid":14060,"hostname":"LAPTOP-T3N65I2K","msg":"End of node method closeAllBrowsers"}
