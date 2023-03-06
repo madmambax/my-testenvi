@@ -72,6 +72,8 @@ Login
     #ověří, že jsem přihlášený; data-test=header-user-icon musí obsahovat to co je v ${pnastane}
     Get Text       ${SEL_HeaderUserIcon}    ==    ${pnastane}    #Get Text   text="${pnastane}"
 
+    Sleep          1
+
 
 Logout
     #klikne na data-test=header-user-icon (JŠ), kde se nachází tlačítko "Odhlásit se" a ověří jej
@@ -99,6 +101,8 @@ Check not login 3
 
 
 Pred_sadou
+    Set Browser Timeout     ${TIMEOUT_BROWSER}
+
     #otevře prohlížeč
     New Browser    chromium    headless=false
 
