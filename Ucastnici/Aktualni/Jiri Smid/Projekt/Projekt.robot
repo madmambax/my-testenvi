@@ -9,7 +9,7 @@ Resource        Data_and_Config_AT/Configuration.robot
 Suite Setup     Pred_sadou
 Test Setup      Pred_testem
 Test Teardown   Po_testu
-#Suite Teardown  Po_sade
+Suite Teardown  Po_sade
 
 
 *** Variables ***
@@ -19,7 +19,7 @@ Test Teardown   Po_testu
 
 Prihlaseni OK
     Login           ${USER_NAME_OK}        ${USER_PASSWORD_OK}        ${USER_CHECK_OK}
-    Logout
+    [Teardown]      Logout
 Prihlaseni NOT OK 1
     Login           ${USER_NAME_NOTOK}     ${USER_PASSWORD_OK}        ${USER_CHECK_NOTOK}
     Check not login
@@ -29,6 +29,9 @@ Prihlaseni NOT OK 2
 Prihlaseni NOT OK 3
     Login           ${USER_NAME_NOTOK2}    ${USER_PASSWORD_OK}        ${USER_CHECK_NOTOK}
     Check not login 2
+Prihlaseni NOT OK 4
+    Login           ${USER_NAME_EMPTY}    ${USER_PASSWORD_EMPTY}      ${USER_CHECK_NOTOK}
+    Check not login 3
 
 *** Keywords ***
 
@@ -82,6 +85,11 @@ Check not login 2
     Get Text       ${SEL_ErrorLogin_BadEmailFormat}     contains     ${ErrorText_BadEmailFormat}
 
 
+Check not login 3
+    Get Text       ${SEL_ErrorEmptyEmail}      contains       ${ErrorText_EmptyEmail}
+    Get Text       ${SEL_ErrorEmptyPassword}   contains       ${ErrorText_EmptyPassword}
+
+
 Pred_sadou
     #otevře prohlížeč
     New Browser    chromium    headless=false
@@ -94,7 +102,6 @@ Pred_sadou
 
 
 Pred_testem
-    #jde na stránku https://www.rohlik.cz/
     Go To          ${URL}
 
 
@@ -104,6 +111,7 @@ Po_testu
     Click     ${SEL_LogoMain}
 
 
-#Po_sade
-
+Po_sade
+    #Go To     ${URL}
+    Close Browser
 
