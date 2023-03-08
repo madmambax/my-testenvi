@@ -43,7 +43,7 @@ registrace volby telefonu (prázdný)
 #registrace chybny format JSON (bez klíče a hodnoty kurzu, tedy  "kurz":"2")
 #přidat test
 
-#BONUS: registrace chybny format JSON (vymyslet jinou chybu JSON dat)
+#BONUS: registrace chybny format JSON (vymyslet jinou chybu JSON dat) např scházející uvozovky nebo složené závorky
 #přidat test
 
 
