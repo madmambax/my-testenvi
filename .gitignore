@@ -7,3 +7,4 @@ report.html
 log/
 browser/
 video/
+log/playwright-log.txt
