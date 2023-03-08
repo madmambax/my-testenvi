@@ -55,6 +55,7 @@ Test Objednavky
 Login
     [Arguments]         ${Email}                         ${Heslo}                ${Text}
 
+    # Ověření nadpisu stránky
     Get Title           contains                        ${TEXT_MainTitle}
 
     #Kliknout na možnost se přihlásit
