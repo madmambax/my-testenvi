@@ -57,10 +57,19 @@ Login
 
     Get Title           contains                        ${TEXT_MainTitle}
 
+    #Kliknout na možnost se přihlásit
     Click               ${SEL_HeaderLogin}
+
+    #Zadání přihlašovacího emailu
     Type Text           ${SEL_LoginFormEmail}           ${Email}
+
+    #Zadání přihlašovacího hesla
     Type Text           ${SEL_LoginFormPwd}             ${Heslo}
+
+    #Kliknutí na tlačítko "Přihlášení"
     Click               ${SEL_BtnSignIn}
+
+    # Ověření, že uživatel je přihlášený
     Get Text            ${SEL_HeaderLoginErrorTxt}      contains                ${Text}
 
 Logout
