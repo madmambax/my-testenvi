@@ -23,7 +23,8 @@ Přihlášení, přidání, odebrání, odhlášení
     Click                   id=CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll
     Přihlášení              tester.olda@gmail.com    Test12345    TO
     Sleep                   6
-    Přidání do košíku       meloun      1353365     1
+#    Přidání do košíku       meloun      1353365     1
+    Přidání do košíku       chleba       1435296     1
 
 
 
@@ -50,10 +51,13 @@ Přihlášení
 
 Přidání do košíku
    [Arguments]          ${nazev-produktu}               ${id-produktu}      ${pocet}
+
    Type text            id=searchGlobal                 ${nazev-produktu}
-   Sleep                5
+   Sleep                1
+   Click                text=Hledat      #klik na tlačítko Hledat
+   Sleep                1
    Click                css=[data-product-id="${id-produktu}"][data-test="btnAdd"]
-   Sleep                5
+   Sleep                1
    ${pocet}             Evaluate                ${pocet}-1
 
 Odebrání z košíku
