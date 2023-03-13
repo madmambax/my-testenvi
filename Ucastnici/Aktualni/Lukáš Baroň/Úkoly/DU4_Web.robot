@@ -131,6 +131,3 @@ Po_testu
     Go To    ${URL}
     Click    ${SEL_HEAD}
 
-
-
-
