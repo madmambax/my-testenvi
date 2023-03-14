@@ -5,6 +5,9 @@
 *** Variables ***
 #webové stránky
 ${Rohlik web}                   https://www.rohlik.cz/
+${url testovani kitner}		    http://testovani.kitner.cz/
+${app regkurz}                  /regkurz/formsave.php
+${urlapp}                       ${url testovani kitner}${app regkurz}
 
 #uživatel
 ${USER1_NAME}                   jt5@seznam.cz
