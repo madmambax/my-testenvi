@@ -35,6 +35,9 @@ Registrace na kurz pravnicka osoba
 Registrace na kurz háčky a čárky
     Registrace na kurz  2  Janěščřžýáíéů  Novakěščřžýáíéů  jan.novak@abc.cz  777123123  fyz  Udolniěščřžýáíéů, Brno  1  nic  false  200
 
+#Přidat testy, třeba s prázdným komentářem
+
+
 *** Keywords ***
 
 
