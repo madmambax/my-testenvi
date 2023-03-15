@@ -7,7 +7,7 @@ pip install robotframework-requests
 CVIČENÍ: Vytvořte klíčové slovo pro testy registrace na kurz z pohledu funkcionality +
                                                           přidejte další testy pro kompletní otestování
 
-Inspirujte se ve cvičení CV17_API_test_komunikace.robot klíčové slovo "API Comunication"
+Inspirujte se ve cvičení CV64_API_test_komunikace.robot klíčové slovo "API Comunication"
 """
 
 
