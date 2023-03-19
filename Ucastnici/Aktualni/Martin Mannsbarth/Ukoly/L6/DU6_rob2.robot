@@ -30,18 +30,18 @@ registration long phone number
     API Comunication   {"targetid":"","kurz":"1","name":"Jan","surname":"Zrokycan","email":"jan.novak@abc.cz","phone":"608123123235694","person":"fyz","address":"Brno","ico":"234563234","count":"1","comment":null,"souhlas":true}   ${status_error}   phone   format
 
 registration prefix phone invalid format
-    API Comunication   {"targetid":"","kurz":"1","name":"Jan","surname":"Zrokycan","email":"jan.novak@abc.cz","phone":"+420 777587479","person":"pra","ico":"62560131","count":"1","comment":null,"souhlas":true}   ${status_error}   phone   format
+    API Comunication   {"targetid":"","kurz":"1","name":"Jan","surname":"Zrokycan","email":"jan.novak@abc.cz","phone":"+420 777587479","person":"pra","ico":"62560131","count":"1","comment":null,"souhlas":true}  ${status_error}    phone   format
 
 *** Keywords ***
 
 API Comunication
 # add 3rd argument -- expected error, field and issue
-    [Arguments]       ${json}     ${error_resp}    ${field}      ${field_value}
+    [Arguments]       ${json}     ${error_resp}     ${field}      ${field_value}
     #transformation to UTF-8
     ${json_utf8} =      Encode String To Bytes     ${json}     UTF-8
 
     #POST query
-    ${resp} =           POST  ${urlapp}  data=${json_utf8}  expected_status=${error_resp}
+    ${resp} =           POST  ${urlapp}  data=${json_utf8}     expected_status=${error_resp}
 
     #Save responce to log
     Log                             ${resp.json()}
