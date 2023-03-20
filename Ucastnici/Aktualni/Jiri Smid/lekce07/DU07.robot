@@ -42,7 +42,7 @@ Registrace na kurz spatny format emailu (napr. jan.novak@abc)
 Registrace na kurz chybny pocet osob (např. 0)
     Registrace na kurz  2  Jan787878  Novak  jan.novak@abc.cz  777123123  fyz  Udolni 21, Brno  0  komentar  false  500
 
-Registrace na kurz chybny format pocet osob (např. A)
+Registrace na kurz chybny format poctu osob (např. A)
     Registrace na kurz  2  Jan787878  Novak  jan.novak@abc.cz  777123123  fyz  Udolni 21, Brno  A  komentar  false  500
 
 Registrace na kurz prazdne telefonni cislo
