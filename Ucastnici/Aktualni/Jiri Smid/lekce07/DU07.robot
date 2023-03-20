@@ -30,6 +30,9 @@ Registrace na kurz prazdny komentar
 Registrace na kurz spatny format telefonniho cisla (napr. abcde0)
     Registrace na kurz  2  Janěščřžýáíéů  Novakěščřžýáíéů  jan.novak@abc.cz  abcde0  fyz  Udolniěščřžýáíéů, Brno  1  neconeco  false  500
 
+Registrace na kurz telefonni cislo s predvolbou
+    Registrace na kurz  2  Jan  Novak  jan.novak@abc.cz  +420777123456  fyz  Udolniěščřžýáíéů, Brno  1  neconeco  false  200
+
 Registrace na kurz chybny format ICO (o 1 cislo mene)
     Registrace na kurz  2  Janěščřžýáíéů  Novakěščřžýáíéů  jan.novak@abc.cz  777147852  pra  2722333  2  neconeco  false  500
 
