@@ -2,7 +2,8 @@
 Library	        Collections
 Library	        RequestsLibrary
 Library         String
-Resource        Data_and_Config/LFDU7_TestData.robot
+Resource        Data/LFDU7_TestData.robot
+
 
 
 
