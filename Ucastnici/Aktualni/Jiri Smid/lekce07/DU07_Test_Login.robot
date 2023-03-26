@@ -19,7 +19,7 @@ Prihlaseni OK Chrome
     Login   admin   tajneadmin   Chrome 111.0.5563.111   200
 
 Prihlaseni OK Firefox
-    Login   admin   tajneadmin   Firefox  200
+    Login   admin   tajneadmin   Firefox 111.0.1  200
 #nedojde k prihlaseni, prestoze by melo - FAIL
 
 Prihlaseni 2 OK Chrome
