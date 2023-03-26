@@ -26,7 +26,7 @@ Prihlaseni 2 OK Chrome
     Login   novak   tajnenovak   Chrome   200
 
 Prihlaseni 2 OK Firefox
-    Login   novak   tajnenovak   Firefox   200
+    Login   novak   tajnenovak   Firefox 111.0.1   200
 
 Prihlaseni NOT OK, spatny username
     Login   spatnyusername   tajneadmin   Chrome 111.0.5563.111   403
