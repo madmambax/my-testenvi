@@ -1,4 +1,4 @@
-#DÚ 07
+#DÚ 07 Registrace na kurz http://testovani.kitner.cz/regkurz/
 
 *** Settings ***
 Library	        Collections
