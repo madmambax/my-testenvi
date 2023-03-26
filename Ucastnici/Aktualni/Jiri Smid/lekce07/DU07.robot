@@ -57,7 +57,7 @@ Registrace na kurz nevyplnene povinne pole - telefonni cislo
 Registrace na kurz nevyplnene povinne pole - nazev kurzu
     Registrace na kurz  ${EMPTY}  Jan787878  Novak  jan.novak@abc.cz  777123123  fyz  Udolni 21, Brno  2  komentar  true  500
 
-Registrace na kurz nezatrzena fyzicka/pravnicka osoba a prazdna adresa/ICO
+Registrace na kurz nevyplnene povinne pole - fyzicka/pravnicka osoba a adresa/ICO
     Registrace na kurz  1  Jan787878  Novak  jan.novak@abc.cz  777123123  ${EMPTY}  ${EMPTY}  2  komentar  true  500
 
 Registrace na kurz nevyplnene povinne pole - jmeno
