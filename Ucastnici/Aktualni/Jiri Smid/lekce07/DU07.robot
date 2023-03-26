@@ -21,7 +21,7 @@ Registrace na kurz fyzicka osoba
 Registrace na kurz pravnicka osoba
     Registrace na kurz  2  Jan787878  Novak  jan.novak@abc.cz  777123123  pra  27232433  1  dekuji  false  200
 
-Registrace na kurz hacky a carky
+Registrace na kurz hacky a carky - u jmena, prijmeni, adresy
     Registrace na kurz  2  Janěščřžýáíéů  Novakěščřžýáíéů  jan.novak@abc.cz  777123123  fyz  Udolniěščřžýáíéů, Brno  1  nic  false  200
 
 Registrace na kurz prazdny komentar
@@ -39,21 +39,32 @@ Registrace na kurz chybny format ICO (o 1 cislo mene)
 Registrace na kurz spatny format emailu (napr. jan.novak@abc)
     Registrace na kurz  2  Jan787878  Novak  jan.novak@abc  777123123  fyz  Udolni 21, Brno  1  komentar  false  500
 
+Registrace na kurz nevyplnene povinne pole - email
+    Registrace na kurz  2  Jan  Novak  ${EMPTY}  777123123  fyz  Udolni 21, Brno  1  komentar  false  500
+
 Registrace na kurz chybny pocet osob (např. 0)
     Registrace na kurz  2  Jan787878  Novak  jan.novak@abc.cz  777123123  fyz  Udolni 21, Brno  0  komentar  false  500
 
 Registrace na kurz chybny format poctu osob (např. A)
     Registrace na kurz  2  Jan787878  Novak  jan.novak@abc.cz  777123123  fyz  Udolni 21, Brno  A  komentar  false  500
 
-Registrace na kurz prazdne telefonni cislo
+Registrace na kurz nevyplnene povinne pole - pocet osob
+    Registrace na kurz  2  Jan787878  Novak  jan.novak@abc.cz  777123123  fyz  Udolni 21, Brno  ${EMPTY}  komentar  false  500
+
+Registrace na kurz nevyplnene povinne pole - telefonni cislo
     Registrace na kurz  2  Jan787878  Novak  jan.novak@abc.cz  ${EMPTY}  fyz  Udolni 21, Brno  2  komentar  true  500
 
-Registrace na kurz prazdny nazev kurzu
+Registrace na kurz nevyplnene povinne pole - nazev kurzu
     Registrace na kurz  ${EMPTY}  Jan787878  Novak  jan.novak@abc.cz  777123123  fyz  Udolni 21, Brno  2  komentar  true  500
 
 Registrace na kurz nezatrzena fyzicka/pravnicka osoba a prazdna adresa/ICO
     Registrace na kurz  1  Jan787878  Novak  jan.novak@abc.cz  777123123  ${EMPTY}  ${EMPTY}  2  komentar  true  500
 
+Registrace na kurz nevyplnene povinne pole - jmeno
+    Registrace na kurz  2  ${EMPTY}  Novak  jan.novak@abc.cz  777123123  fyz  Udolni 21, Brno  1  komentar  false  500
+
+Registrace na kurz nevyplnene povinne pole - prijmeni
+    Registrace na kurz  2  Jan  ${EMPTY}  jan.novak@abc.cz  777123123  fyz  Udolni 21, Brno  1  komentar  false  500
 
 *** Keywords ***
 
