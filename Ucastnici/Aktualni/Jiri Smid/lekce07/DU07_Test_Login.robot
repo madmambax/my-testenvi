@@ -1,4 +1,5 @@
 #DÚ 07 Přihlašovací formulář http://testovani.kitner.cz/login_app/
+
 *** Settings ***
 Library	        Collections
 Library	        RequestsLibrary
@@ -19,7 +20,10 @@ Prihlaseni OK Chrome
 
 Prihlaseni OK Firefox
     Login   admin   tajneadmin   Firefox  200
-#nedojde k prihlaseni, FAIL
+#nedojde k prihlaseni, prestoze by melo - FAIL
+
+Prihlaseni 2 OK Chrome
+    Login   novak   tajnenovak   Chrome   200
 
 Prihlaseni 2 OK Firefox
     Login   novak   tajnenovak   Firefox   200
@@ -39,9 +43,6 @@ Prihlaseni NOT OK, nevyplnene password
 Prihlaseni NOT OK, nevyplnene username a password
     Login   ${EMPTY}   ${EMPTY}   Chrome 111.0.5563.111   403
 
-Prihlaseni 2 OK Chrome
-    Login   admin   @   Chrome 111.0.5563.111   200
-
 
 *** Keywords ***
 
@@ -60,7 +61,7 @@ Login
 
     # odeslání zprávy a uložení odpovědi do ${resp}
     ${resp} =           POST  ${urlapp}   data=${json_utf8}  headers=${header}  expected_status=200
-    Log	                Responce: @{resp}
+    Log	                Response: @{resp}
 
     #vyhodnocení status kódu
     Status should be    200
