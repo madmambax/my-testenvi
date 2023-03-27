@@ -47,3 +47,4 @@ API Comunication
     ${resp} =           POST  ${urlapp}  data=${json_utf8}  expected_status=${error_resp}
     Status Should Be     ${error_resp}
     Should Start With    ${resp.json()}[response]    ${status_resp}
+
