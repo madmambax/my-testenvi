@@ -60,7 +60,7 @@ Login
     &{header}=          Create Dictionary   Content-Type=application/json
 
     # odeslání zprávy a uložení odpovědi do ${resp}
-    ${resp} =           POST  ${urlapp}   data=${json_utf8}  headers=${header}  expected_status=200
+    ${resp} =           POST  ${urlapp}   data=${json_utf8}   headers=${header}   expected_status=200
     Log	                Response: @{resp}
 
     #vyhodnocení status kódu
