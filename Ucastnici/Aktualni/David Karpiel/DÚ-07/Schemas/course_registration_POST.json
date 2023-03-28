@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "response": {
+      "type": "string",
+      "const": "200"
+    },
+    "kurz": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "surname": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "person": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "ico": {
+      "type": "string"
+    },
+    "count": {
+      "type": "string"
+    },
+    "comment": {
+      "type": "string"
+    },
+    "souhlas": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "response",
+    "kurz",
+    "name",
+    "surname",
+    "email",
+    "phone",
+    "person",
+    "address",
+    "ico",
+    "count",
+    "comment",
+    "souhlas"
+  ]
+}

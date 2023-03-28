@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "response": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "problem": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "issue": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "field",
+            "issue"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "response",
+    "reason",
+    "problem"
+  ]
+}

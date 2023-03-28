@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "response": {
+      "type": "string",
+      "const": "403"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "agent": {
+      "type": "object",
+      "properties": {
+        "browser": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "browser",
+        "version"
+      ]
+    }
+  },
+  "required": [
+    "response",
+    "reason",
+    "agent"
+  ]
+}
